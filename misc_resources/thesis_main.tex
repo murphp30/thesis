@@ -1,0 +1,113 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11.5pt,a4paper,twoside]{report}
+
+\usepackage[fontsize=11.5pt]{scrextend}
+%TCD REQUIREMENTS: 
+%https://www.tcd.ie/itservices/assets/samples/Planning_Thesis/Thesis%20Submission%20Guidelines%20AUGUST11.pdf
+%- Initial Soft-bound single-sided, hard-bound double-sided
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%MIN MARGINS REQUIREMENT BY TCD >35mm -gutter margins & >20 other margins
+%\usepackage[a4paper,includehead,width=148mm,top=20mm,bottom=30mm,bindingoffset=10mm]{geometry}
+\usepackage[a4paper]{geometry}
+\geometry{includehead,top=25mm,bottom=25mm,left=35mm,right=25mm,twoside}
+\usepackage{setspace} % text spacing 
+\usepackage{multirow} % stretch over multiple rows/cols in tables
+\usepackage{graphicx} 
+\usepackage{amsmath,mathtools,amssymb,amsfonts,mathrsfs} %advanced maths tools
+\usepackage[skip=1pt,font=normalsize]{caption}
+\usepackage[skip=0.5pt]{subcaption}
+\captionsetup{compatibility=false}
+\usepackage[flushleft]{threeparttable}
+\usepackage{rotating}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{natbib}
+\usepackage{wrapfig}
+\usepackage{mathptmx}
+\usepackage{nomencl,appendix}
+\usepackage{leftidx,multicol}
+\usepackage[outercaption]{sidecap}   
+\usepackage[hidelinks]{hyperref}
+\usepackage{cleveref}
+%\usepackage{aas_macros}
+\usepackage{pdfpages}
+\usepackage{longtable}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{booktabs}
+%\usepackage[math]{iwona}
+\usepackage{cmbright}
+\usepackage[OT1]{fontenc}
+\interfootnotelinepenalty=10000
+
+% \usepackage{classicthesis}
+% \usepackage{amsmath,amssymb,bm}
+% \usepackage{garamondx}
+% \usepackage[garamondx,cmbraces]{newtxmath}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\raggedbottom
+
+\onehalfspacing  %1.5 spacing between lines of text
+%\doublespacing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%\input{my_cmds.tex}
+
+ \begin{titlepage}
+ \input{titlepage.tex}
+ \end{titlepage}
+\pagenumbering{gobble}
+
+\pagenumbering{roman}
+%\input{declaration.tex}
+\newpage
+%\input{dedication.tex}
+\newpage
+%SUMMARY MAX 2 PAGES (TCD REQUIREMENTS)
+%\input{abstract}
+\newpage
+%\input{acknowledgement}
+\newpage
+%\input{listofpublications}
+\tableofcontents 
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+
+\fancyhead{}
+\setlength{\headheight}{15pt}
+
+\fancyhead[L]{\leftmark}      % show chapter title on the Left side of the header
+\fancyhead[R]{\rightmark}     % show section title on the Right side of the header; **replace [R] with [RO,LE] for Even and Odd pages in twosided format**
+\fancyfoot{}
+\fancyfoot[C]{\thepage}       % show page no. in footnote in the Center
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+\pagenumbering{arabic}
+\setcounter{page}{1}
+%\input{intro.tex}
+%\input{methods.tex}
+%\input{results1.tex}
+%\input{results2.tex}
+%\input{results3.tex}
+%\input{outlook.tex}
+
+\appendix
+% \input{AppendixE.tex}
+% \input{AppendixA.tex}
+% \input{AppendixB.tex}
+% \input{AppendixC.tex}
+
+\bibliography{refpapers}
+\bibliographystyle{aa}
+
+\end{document}

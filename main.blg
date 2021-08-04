@@ -1,0 +1,63 @@
+This is BibTeX, Version 0.99d (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+A level-1 auxiliary file: 0/declaration.aux
+A level-1 auxiliary file: 0/abstract.aux
+A level-1 auxiliary file: 0/publications.aux
+A level-1 auxiliary file: 1/introduction.aux
+The style file: aa.bst
+Database file #1: thesis_references.bib
+Repeated entry---line 926 of file thesis_references.bib
+ : @article{Reid2014
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1236 of file thesis_references.bib
+ : @article{Reid2014
+ :                  ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "VanHaarlem2013b"
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--empty journal in Clarke2019
+Warning--empty publisher in NelsonandMelrose1985
+You've used 31 entries,
+            3039 wiz_defined-function locations,
+            909 strings with 11460 characters,
+and the built_in function-call counts, 15705 in all, are:
+= -- 1301
+> -- 1273
+< -- 25
++ -- 424
+- -- 393
+* -- 1282
+:= -- 2899
+add.period$ -- 31
+call.type$ -- 31
+change.case$ -- 253
+chr.to.int$ -- 31
+cite$ -- 33
+duplicate$ -- 604
+empty$ -- 847
+format.name$ -- 483
+if$ -- 3111
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 27
+newline$ -- 97
+num.names$ -- 128
+pop$ -- 268
+preamble$ -- 1
+purify$ -- 253
+quote$ -- 0
+skip$ -- 534
+stack$ -- 0
+substring$ -- 621
+swap$ -- 34
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 279
+warning$ -- 2
+while$ -- 126
+width$ -- 0
+write$ -- 309
+(There were 2 error messages)
