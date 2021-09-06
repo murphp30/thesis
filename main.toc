@@ -1,25 +1,74 @@
 \babel@toc {english}{}
 \contentsline {chapter}{List of Publications}{iii}{chapter*.2}%
-\contentsline {chapter}{List of Figures}{vi}{chapter*.4}%
+\contentsline {chapter}{List of Figures}{vii}{chapter*.4}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}The Sun}{1}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}The Corona}{1}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Solar Flares}{2}{subsection.1.1.2}%
-\contentsline {subsection}{\numberline {1.1.3}Coronal Mass Ejections (CMEs)}{4}{subsection.1.1.3}%
-\contentsline {subsection}{\numberline {1.1.4}Radio Phenomena in the Solar Corona}{4}{subsection.1.1.4}%
-\contentsline {paragraph}{Type I bursts}{5}{figure.caption.9}%
-\contentsline {paragraph}{Type II bursts}{5}{figure.caption.9}%
-\contentsline {paragraph}{Type IV burst}{6}{Item.19}%
-\contentsline {paragraph}{Type V burst}{7}{Item.19}%
-\contentsline {paragraph}{Fine Structure: S bursts}{7}{Item.19}%
-\contentsline {subsection}{\numberline {1.1.5}Type III Bursts}{7}{subsection.1.1.5}%
-\contentsline {paragraph}{Reverse and bi-directional bursts}{8}{figure.caption.10}%
-\contentsline {paragraph}{Type IIIb bursts}{9}{figure.caption.10}%
-\contentsline {paragraph}{Type U and J bursts}{9}{figure.caption.10}%
-\contentsline {subsection}{\numberline {1.1.6}Source Sizes in the Corona}{9}{subsection.1.1.6}%
-\contentsline {section}{\numberline {1.2}Plasma Emission}{9}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Generation of Langmuir Waves}{10}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Wave-Wave Interaction}{11}{subsection.1.2.2}%
-\contentsline {section}{\numberline {1.3}Radio Interferometry}{13}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Beam-forming}{16}{subsection.1.3.1}%
-\contentsline {chapter}{References}{17}{chapter*.15}%
+\contentsline {subsection}{\numberline {1.1.1}The Chromosphere}{2}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}The Transition Region}{2}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}The Corona}{2}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Solar Flares}{4}{subsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.1.5}Coronal Mass Ejections (CMEs)}{4}{subsection.1.1.5}%
+\contentsline {section}{\numberline {1.2}Solar Radio Bursts}{6}{section.1.2}%
+\contentsline {paragraph}{Type I bursts}{6}{figure.caption.8}%
+\contentsline {paragraph}{Type II bursts}{7}{figure.caption.8}%
+\contentsline {paragraph}{Type IV burst}{9}{Item.11}%
+\contentsline {paragraph}{Type V burst}{9}{Item.11}%
+\contentsline {paragraph}{Fine Structure: S bursts}{9}{Item.11}%
+\contentsline {subsection}{\numberline {1.2.1}Type III Bursts}{10}{subsection.1.2.1}%
+\contentsline {paragraph}{Reverse and bi-directional bursts}{11}{figure.caption.9}%
+\contentsline {paragraph}{Type IIIb bursts}{12}{figure.caption.9}%
+\contentsline {paragraph}{Type U and J bursts}{12}{figure.caption.9}%
+\contentsline {section}{\numberline {1.3}Low Frequency Radio Wave Scattering}{12}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Source Sizes in the Corona}{12}{subsection.1.3.1}%
+\contentsline {section}{\numberline {1.4}Radio Interferometry}{13}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Beam-forming}{16}{subsection.1.4.1}%
+\contentsline {section}{\numberline {1.5}Thesis Outline}{16}{section.1.5}%
+\contentsline {chapter}{\numberline {2}Theoretical Background}{19}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introductory Concepts in Plasma Physics}{19}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Plasma Frequency}{19}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}Radio Emission Mechanisms in the Solar Corona}{19}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Bremstrahlung}{19}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Gyroemission}{19}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}ECMI}{19}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Plasma Emission}{19}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}Plasma Emission}{19}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Generation of Langmuir Waves}{20}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Wave-Wave Interaction}{22}{subsection.2.3.2}%
+\contentsline {chapter}{\numberline {3}Instrumentation}{27}{chapter.3}%
+\contentsline {section}{\numberline {3.1}The LOw Frequency ARray (LOFAR)}{27}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Antennas}{27}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Digital Signal Pipeline}{27}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}RSP-CEP Beamlets}{27}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}TBB-CEP Packets}{27}{subsection.3.1.4}%
+\contentsline {section}{\numberline {3.2}The REALtime Transient Acquisition Backend (REALTA)}{27}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Introduction}{28}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}REALTA}{32}{subsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.1}Local networking}{32}{subsubsection.3.2.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2.2}Hardware description}{33}{subsubsection.3.2.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Software and pipelines}{35}{subsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.3.1}Recording data}{37}{subsubsection.3.2.3.1}%
+\contentsline {subsubsection}{\numberline {3.2.3.2}Pre-processing data}{37}{subsubsection.3.2.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.3.3}Pulsar and single pulse processing}{38}{subsubsection.3.2.3.3}%
+\contentsline {subsubsection}{\numberline {3.2.3.4}SETI data processing}{39}{subsubsection.3.2.3.4}%
+\contentsline {subsubsection}{\numberline {3.2.3.5}Future development and real-time analysis}{40}{subsubsection.3.2.3.5}%
+\contentsline {subsection}{\numberline {3.2.4}First results}{41}{subsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.4.1}Pulsars}{42}{subsubsection.3.2.4.1}%
+\contentsline {subsubsection}{\numberline {3.2.4.2}Rotating radio transients}{44}{subsubsection.3.2.4.2}%
+\contentsline {subsubsection}{\numberline {3.2.4.3}Fast radio bursts}{46}{subsubsection.3.2.4.3}%
+\contentsline {subsubsection}{\numberline {3.2.4.4}Solar radio bursts}{47}{subsubsection.3.2.4.4}%
+\contentsline {subsubsection}{\numberline {3.2.4.5}Jovian auroral radio emission}{51}{subsubsection.3.2.4.5}%
+\contentsline {subsubsection}{\numberline {3.2.4.6}SETI}{53}{subsubsection.3.2.4.6}%
+\contentsline {subsection}{\numberline {3.2.5}Conclusions and future work}{55}{subsection.3.2.5}%
+\contentsline {chapter}{\numberline {4}Measuring Source Sizes in Visibility Space}{59}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{59}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Observation}{62}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Data analysis and results}{63}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Fitting the visibilities}{66}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Type IIIb striae}{70}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Discussion}{70}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Conclusion}{73}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Scatterig Observations vs Theory}{75}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Future Work}{77}{chapter.6}%
+\contentsline {section}{\numberline {6.1}TBB data}{77}{section.6.1}%
+\contentsline {section}{\numberline {6.2}More Scattering}{77}{section.6.2}%
+\contentsline {chapter}{References}{79}{chapter*.28}%

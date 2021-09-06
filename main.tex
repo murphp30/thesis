@@ -8,7 +8,7 @@
 %: Style file for Latex
 % Most style definitions are in the external file PhDthesisPSnPDF.
 % In this template package, it can be found in ./Latex/Classes/
-\documentclass[a4paper,oneside,12pt,usenatbib]{Latex/Classes/PhDthesisPSnPDF}
+\documentclass[a4paper,twoside,12pt,usenatbib]{Latex/Classes/PhDthesisPSnPDF}
 \setcitestyle{numbers}
 
 %Change "oneside" to "twoside" for final submission-grade thesis after viva/corrections
@@ -41,7 +41,10 @@
 
 \usepackage[font={footnotesize}]{caption}
 \usepackage[capitalise]{cleveref}
-\usepackage[left=2.5cm, right=2.5cm, top=3.3cm, bottom=2.0cm, footskip=1cm]{geometry}
+%\usepackage[inner=3.5cm, outer=2cm,top=3.3cm, bottom=2.0cm, footskip=1cm, includeall]{geometry}
+\usepackage[bindingmargin=1.5cm, right=2cm, left=2cm, top=2.0cm, bottom=2.0cm, footskip=1.0cm, includeall]{geometry}
+
+%\usepackage[twoside, bindingoffset=3.5cm, margin=2cm,includeall]{geometry}
 \usepackage[font={footnotesize}]{subcaption}
 
 \Crefname{figure}{Fig.}{Figs.}% {<type>}{<singular>}{<plural>}
@@ -49,6 +52,10 @@
 \renewcommand{\bibpreamble}{\begin{multicols}{2}}
 \renewcommand{\bibpostamble}{\end{multicols}}
 
+% David McKenna: Macro to make the Specs Tables align better
+\usepackage{array}
+\usepackage{ragged2e}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 %\usepackage{geometry}
 
@@ -92,9 +99,9 @@
 
 
 %Added by SM 13 Sep 2011 to get backref to read ''Cited on page''
-%   \usepackage{Latex/StyleFiles/backrefx}
-%       \renewcommand{\backrefpagesname}{Cited on page~}
-%       \renewcommand{\backrefpagesnames}{Cited on pages~}
+   \usepackage{Latex/StyleFiles/backrefx}
+       \renewcommand{\backrefpagesname}{Cited on page~}
+       \renewcommand{\backrefpagesnames}{Cited on pages~}
 
 \newcommand{\BibTeX}{\textsc{Bib}\TeX}
 \newcommand{\etal}{{\it et al.}}
@@ -212,7 +219,7 @@
 
 \renewcommand{\baselinestretch}{1}
 \newpage \thispagestyle{empty}
-\vspace*{1.5cm}
+%\vspace*{1.5cm}
 \begin{flushright}
 
 
@@ -222,7 +229,7 @@
 
 \end{flushright}
 
-\vspace*{3cm}
+\vspace*{2cm}
 \begin{flushright}
 A dissertation submitted to the University of Dublin \\
 for the degree of Doctor of Philosophy
@@ -246,12 +253,13 @@ Dr. Eoin P. Carley}\\[0.5mm]
 \rule{0.9\textwidth}{0.5mm}\\[4mm]
 %
 \begin{figure}[ht!]
-\hspace{102mm}
+\hspace{1mm}
 \raggedleft
-\includegraphics[height=20mm]{tcd_logo.png}
+\includegraphics[height=30mm]{tcd_logo.png}
 \end{figure}
 
-}%
+%
+}
 \end{flushright}
 
 %: -----------------------tie in front matter------------------------
@@ -281,13 +289,18 @@ Dr. Eoin P. Carley}\\[0.5mm]
 %:                  MAIN DOCUMENT SECTION
 % --------------------------------------------------------------
 
-
+\pagestyle{fancy}
 \mainmatter
 
-\pagestyle{fancy}
-%\fancyhf{}
-%\rhead{\leftmark}
+%
+\fancyhf{}
+\fancyhead[LE]{\leftmark}
+\fancyhead[RO]{\rightmark}
+\fancyfoot[C]{\thepage}
+%%\rhead{\rightmark}
 %\lhead{\leftmark}
+
+
 \include{1/introduction}
 \include{2/theory}
 \include{3/instrumentation}
@@ -301,10 +314,10 @@ Dr. Eoin P. Carley}\\[0.5mm]
 
 %: ----------------------- bibliography ------------------------
 
-\newgeometry{left=1.6cm, right=1.6cm, top=-2.0cm, bottom=1.0cm, footskip=0cm}
+\newgeometry{left=1.6cm, right=1.6cm, top=1.0cm, bottom=1.0cm, footskip=0cm}
 \singlespacing
 \begin{footnotesize} 
-\bibliographystyle{natbib}
+\bibliographystyle{rusnat}
 \renewcommand{\bibname}{References} 
 %\begin{multicols}{2}
 

@@ -1,5 +1,8 @@
-\onehalfspacing
+%!TEX root = ../main.tex
+\doublespacing
 \chapter{Instrumentation}
+\label{chap:instrumentation}
+This chapter describes the instrumentation used throughout the work for this thesis including a detailed description of the signal processing pipeline of an international LOFAR station such as I-LOFAR. Here I also describe the REALtime Transient Acquisition Backend (REALTA) that was developed over the course of this work.
 
 \section{The LOw Frequency ARray (LOFAR)}
 \subsection{Antennas}
@@ -24,7 +27,7 @@ The LOw Frequency ARray \citep[LOFAR;][]{VanHaarlem2013} is a radio interferomet
 \begin{figure*}[ht]
     \centering
     \includegraphics[width=0.8\linewidth]{I_LOFAR_balloon_labeled.png}
-    \caption{Aerial photograph of the Irish Low Frequency Array station IE613 (I-LOFAR) at Birr Castle, County Offaly. Data from the LBAs and HBAs are transferred to the ILT Cabinet (centre right) via coaxial cables where they are amplified, filtered and digitised. In international mode, data are transported to Groningen in the Netherlands at $\sim$3.2~Gbps. In local mode, data are processed using REALTA in the I-LOFAR Control Room (bottom left). Image credit: Alison Delaney (Birr Castle).}
+    \caption[Aerial photograph of the Irish Low Frequency Array station IE613 (I-LOFAR) at Birr Castle, County Offaly.]{Aerial photograph of the Irish Low Frequency Array station IE613 (I-LOFAR) at Birr Castle, County Offaly. Data from the LBAs and HBAs are transferred to the ILT Cabinet (centre right) via coaxial cables where they are amplified, filtered and digitised. In international mode, data are transported to Groningen in the Netherlands at $\sim$3.2~Gbps. In local mode, data are processed using REALTA in the I-LOFAR Control Room (bottom left). Image credit: Alison Delaney (Birr Castle).}
     \label{fig:ILOFAR}
 \end{figure*}
 
@@ -67,7 +70,7 @@ REALTA is ultimately designed to perform real-time analysis of radio data genera
 \begin{figure*}[h]
     \centering
     \includegraphics[width=0.7\linewidth]{REALTA_block_ref.png}
-    \caption{Block diagram for REALTA and I-LOFAR. Data recorded at the Remote Station Processing (RSP) boards are sent to the S1 fibre switch in the I-LOFAR container. Here the data are split into four `lanes' where each lane contains the data from a maximum of one quarter of the beamlets from the observation. The four lanes of data are then sent over a fibre connection to the I-LOFAR control room where it is recorded by REALTA. Orange arrows indicate the data path along fibre connections. Blue arrows are 1~Gbps Ethernet links and red arrows show infiniband connectivity. The dotted orange line is a fibre link to the BL compute node currently under development.}
+    \caption[Block diagram for REALTA and I-LOFAR.]{Block diagram for REALTA and I-LOFAR. Data recorded at the Remote Station Processing (RSP) boards are sent to the S1 fibre switch in the I-LOFAR container. Here the data are split into four `lanes' where each lane contains the data from a maximum of one quarter of the beamlets from the observation. The four lanes of data are then sent over a fibre connection to the I-LOFAR control room where it is recorded by REALTA. Orange arrows indicate the data path along fibre connections. Blue arrows are 1~Gbps Ethernet links and red arrows show infiniband connectivity. The dotted orange line is a fibre link to the BL compute node currently under development.}
     \label{fig:block}
 \end{figure*}
 
@@ -107,7 +110,7 @@ GPU & N/A & 11GB NVIDIA RTX 2080Ti \\
 \end{tabular}
 
 %\bigskip removed because causing weird gaps in text
-\caption{Table of hardware specifications for REALTA. Note that the specifications are given for individual UCC 1-4 compute nodes, except for storage which is the total amount dedicated to archival of data distributed across all four. }
+\caption[Table of hardware specifications for REALTA.]{Table of hardware specifications for REALTA. Note that the specifications are given for individual UCC 1-4 compute nodes, except for storage which is the total amount dedicated to archival of data distributed across all four. }
 \label{table:REALTAspecs}
 \end{table*}
 
@@ -168,14 +171,14 @@ In the future, the capture and formatting of data will occur simultaneously in r
 \begin{figure*}[t]
     \centering
     \includegraphics[width=0.75\linewidth]{REALTA_future_alt.png}
-    \caption{System diagram for REALTA, including future data preparation, processing, and archiving capabilities. Solid lines indicate existing features, while dashed lines denote stages under development. REALTA is currently capable of capturing data from the I-LOFAR radio telescope and archiving it in near real-time. We are in the process of developing a variety of data processing pipelines that will flag RFI, identify and characterise SRBs, pulsars, RRATs, FRBs, and SETI signals. Machine learning methods are being explored for a number of these tasks.}
+    \caption[System diagram for REALTA.]{System diagram for REALTA, including future data preparation, processing, and archiving capabilities. Solid lines indicate existing features, while dashed lines denote stages under development. REALTA is currently capable of capturing data from the I-LOFAR radio telescope and archiving it in near real-time. We are in the process of developing a variety of data processing pipelines that will flag RFI, identify and characterise SRBs, pulsars, RRATs, FRBs, and SETI signals. Machine learning methods are being explored for a number of these tasks.}
     \label{fig:REALTA_future}
 \end{figure*}
 
 \begin{figure*}[t]
     \centering
     \includegraphics[width=0.92\textwidth]{psr_profiles.jpg}
-    \caption{Sample of 19 pulsars observed with I-LOFAR and REALTA. Each of these observations is 6 minutes in duration and were taken on 4--5 March 2020 using the HBA antennas (\SIrange{110}{190}{\mega \hertz}). The data were processed using the method described in \S \ref{sec:pulsarproc} and plotted using \texttt{PSRCHIVE}. The x-axis in each plot is the pulse phase in radians, while the y-axis is flux density in arbitrary units.}
+    \caption[Sample of 19 pulsars observed with I-LOFAR and REALTA.]{Sample of 19 pulsars observed with I-LOFAR and REALTA. Each of these observations is 6 minutes in duration and were taken on 4--5 March 2020 using the HBA antennas (\SIrange{110}{190}{\mega \hertz}). The data were processed using the method described in \S \ref{sec:pulsarproc} and plotted using \texttt{PSRCHIVE}. The x-axis in each plot is the pulse phase in radians, while the y-axis is flux density in arbitrary units.}
     \label{fig:pulsar-pc1}
 \end{figure*}
 
@@ -189,7 +192,7 @@ The REALTA use cases are complementary to the Key Science Projects of the ILT \c
 \begin{figure*}[t]
     \centering
     \includegraphics[width=0.92\textwidth]{rrat_observed.png}
-    \caption{Overview of the sky positions of the RRATs observed during the census discussed in \S \ref{sec:rratsurvey} as of May 2021. Filled red dots indicate sources that have been observed and detected with either single pulses or periodic emission while blue circles indicate sources that were observed but not detected in I-LOFAR data.}
+    \caption[Overview of the sky positions of RRATs observed during RRAT census.]{Overview of the sky positions of the RRATs observed during the census discussed in \S \ref{sec:rratsurvey} as of May 2021. Filled red dots indicate sources that have been observed and detected with either single pulses or periodic emission while blue circles indicate sources that were observed but not detected in I-LOFAR data.}
     \label{fig:rrat-pc1}
 \end{figure*}
 
@@ -209,7 +212,7 @@ As of May 2021, over 80 hours of observations of the Crab pulsar have been captu
 \begin{figure}
     \centering
     \includegraphics[width=\columnwidth]{quickcrab.png}
-    \caption{Observation of the Crab Pulsar performed on 30 June 2020, (left) without incoherent dedispersion and (right) with incoherent dedispersion. The plot on the left contains several giant pulses and both temporal- and spectral-variable ionospheric scintillation.  The plot on the right focuses on the brightest pulse in the group, which is the brightest pulse observed from the Crab Pulsar with I--LOFAR to date. Here data were processed to channel bandwidths of 24~kHz, resulting in a sampling rate of 40.96$\mu$s. The data were time integrated to a temporal resolution of 1.31~ms prior to plotting.}
+    \caption[Observation of the Crab Pulsar performed on 30 June 2020.]{Observation of the Crab Pulsar performed on 30 June 2020, (left) without incoherent dedispersion and (right) with incoherent dedispersion. The plot on the left contains several giant pulses and both temporal- and spectral-variable ionospheric scintillation.  The plot on the right focuses on the brightest pulse in the group, which is the brightest pulse observed from the Crab Pulsar with I--LOFAR to date. Here data were processed to channel bandwidths of 24~kHz, resulting in a sampling rate of 40.96$\mu$s. The data were time integrated to a temporal resolution of 1.31~ms prior to plotting.}
     \label{fig:giant_pulse}
 \end{figure}
 
@@ -234,7 +237,7 @@ On 2 November 2020, I-LOFAR observed a solar radio noise storm in mode 357. The 
 \begin{figure}
     \centering
     \includegraphics[width=0.75\columnwidth]{bursts.png}
-    \caption{Solar radio noise storm observed on 2 November 2020. a) In this mode 357 observation, a number of bright bursts can be seen at frequencies greater than 110~MHz (yellow in the dynamic spectrum). %\SIrange{110}{190}{\mega\hertz}
+    \caption[Solar radio noise storm observed on 2 November 2020.]{Solar radio noise storm observed on 2 November 2020. a) In this mode 357 observation, a number of bright bursts can be seen at frequencies greater than 110~MHz (yellow in the dynamic spectrum). %\SIrange{110}{190}{\mega\hertz}
     Here the data spans 2 hours from 12:00 UTC and has a temporal resolution of 10~ms.
     %\SI{10}{\milli \second}. 
     b) Zoom-in of panel a at 1~ms temporal resolution. A number of short duration SRBs are observed. The inset shows the sub-second variation of an individual burst in the noise storm, also at a temporal resolution of 1~ms.}
@@ -248,7 +251,7 @@ The high temporal resolution of REALTA observations with I-LOFAR will allow the 
 \begin{figure}
     \centering
     \includegraphics[width=\columnwidth]{Uburst_1ms_1090MHz.png}
-    \caption{Two solar radio bursts observed on 2 June 2020. The earlier burst is likely a Type III SRB while the later burst shows the morphology typical of a U burst. The observation has a spectral resolution of $\sim$ \SI{195}{\kilo \hertz} and a temporal resolution of \SI{1}{\milli \second}.}
+    \caption[Two solar radio bursts observed on 2 June 2020.]{Two solar radio bursts observed on 2 June 2020. The earlier burst is likely a Type III SRB while the later burst shows the morphology typical of a U burst. The observation has a spectral resolution of $\sim$ \SI{195}{\kilo \hertz} and a temporal resolution of \SI{1}{\milli \second}.}
     \label{fig:uburst}
 \end{figure}
 
@@ -259,7 +262,7 @@ The high temporal resolution of REALTA observations with I-LOFAR will allow the 
     \centering
 %       \includegraphics[width=\columnwidth]{Jupiter_Io_IE613.png}
         \includegraphics[width=\columnwidth]{Jupiter_Io_IE613.png}              
-    \caption{Observation of a Jovian Decametric emission produced by the Io-Jupiter interaction. Panel (a) shows Stokes I (in dB above background). Panel (b) displays Stokes V (in arbitrary units). The resolution is $84$~ms per $12.2$~kHz. The emission displays a strong negative value in Stokes V, which means a strong right-hand circular polarization. Panels (c) and (d) show respectively a $60$~s and $10$~s zoom-in of panel (a) (Stokes I), processed with the highest resolution available for this observation ($81.92$~$\mu$s per $12.2$~kHz). Millisecond drifting bursts are visible panel (d).}
+    \caption[Observation of a Jovian Decametric emission produced by the Io-Jupiter interaction.]{Observation of a Jovian Decametric emission produced by the Io-Jupiter interaction. Panel (a) shows Stokes I (in dB above background). Panel (b) displays Stokes V (in arbitrary units). The resolution is $84$~ms per $12.2$~kHz. The emission displays a strong negative value in Stokes V, which means a strong right-hand circular polarization. Panels (c) and (d) show respectively a $60$~s and $10$~s zoom-in of panel (a) (Stokes I), processed with the highest resolution available for this observation ($81.92$~$\mu$s per $12.2$~kHz). Millisecond drifting bursts are visible panel (d).}
     \label{fig:io-stokesI}
 \end{figure*}
 
@@ -295,7 +298,7 @@ Recently, we also conducted observations of PSR B2217+47 on 21 April 2021 using 
 \begin{figure}
     \centering
     \includegraphics[width=\columnwidth]{B2217+47_crop.png}
-    \caption{Narrowband signal detected using REALTA and the \texttt{turboSETI} algorithm. Dynamic spectra of an example narrowband signal detected in an observation pointing toward PSR B2217+47 using \texttt{turboSETI} with the BL nodes in REALTA. The colour bar shows intensity in arbitrary units while the red dotted line shows a relative frequency of 0~Hz from 150.0977~MHz. The signal does not show any drifting and thus likely has a terrestrial origin.}
+    \caption[Narrowband signal detected using REALTA and the \texttt{turboSETI} algorithm.]{Narrowband signal detected using REALTA and the \texttt{turboSETI} algorithm. Dynamic spectra of an example narrowband signal detected in an observation pointing toward PSR B2217+47 using \texttt{turboSETI} with the BL nodes in REALTA. The colour bar shows intensity in arbitrary units while the red dotted line shows a relative frequency of 0~Hz from 150.0977~MHz. The signal does not show any drifting and thus likely has a terrestrial origin.}
     \label{fig:BL_fig}
 \end{figure}
 

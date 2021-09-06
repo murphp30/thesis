@@ -2,14 +2,13 @@
 %Adding the above line, with the name of your base .tex file (in this case "thesis.tex") will allow you to compile the whole thesis even when working inside one of the chapter tex files
 \newgeometry{left=2.5cm, right=2.5cm, top=2.0cm, bottom=2.0cm, footskip=1cm}
 \begin{abstracts} 
-
 The solar corona is the outermost layer of the Sun's atmosphere. Advancements in radio astronomy over the last 50 years have revealed a number of radio phenomena which occur in the corona each with different temporal and spectral characteristics. Current generation interferometers such as the LOw Frequency ARray (LOFAR) give an unprecedented insight into the fine structure of these radio bursts. Of particular interest are what are known as Type III radio bursts. These are indicative of electrons being accelerated along open magnetic field lines in the solar corona. Particularly bright radio bursts can have devastating effects on terrestrial communication including GPS positioning and satellite communication. Given that much of modern society relies on satellite communication, being better able to understand and perhaps predict radio bursts is essential. High temporal resolution data allow the study of rapid temporal variability in radio spectra which are indicative of small-scale turbulence in the solar corona. It is thought that the density inhomogeneities produced by this small-scale turbulence causes scattering of radio waves as they propagate out from the corona and thus pose a fundamental limit on the source size of observed radio bursts. Analysis of a radio burst at the plasma frequency, such as a Type III burst, with highly spatially resolved interferometric data is the most direct way of testing this hypothesis.% and is one of the fundamental pieces of this PhD. Following this, exploratory work with 5 ns temporal resolution data from the Irish LOFAR station (I-LOFAR) to delve further into the small-scale variations with time in the solar corona will be undertaken.
 
 The nature of this PhD is twofold, firstly to observe low frequency radio emission from the Sun at spatial resolution of the order of 15 arcseconds. This will determine whether or not scattering of radio waves in the corona imposes a fundamental limit on spatial resolution and give insight into the processes that might cause this limit. The second aspect of this PhD is to observe the Sun at radio wavelengths at the highest temporal resolution ever. In order to do this, the TBB Acquisition Cluster (TACl) located in the I-LOFAR control room must be further developed to record and store TBB data without corruption. Observing the Sun at nanosecond temporal resolution has yet to be attempted and as such the potential to discover new radio phenomena and temporal variability in existing phenomena is great. It is, of course, possible that such events do not occur or are difficult to detect and as such the focus for this PhD will lie mainly on interferometric observations of the Sun.
 
 %The goal for this project is to study known radio phenomena at nanosecond resolution in order to discover new temporal variability, if this exists, and new sub-microsecond radio bursts if they exist. In order to do this a computer cluster dedicated to the recording and storage of such data, which is real, must be further developed
 
-This report is an overview of my PhD thus far and is as follows. Chapter \ref{chap:intro} describes the Sun and the corona. It introduces the role radio bursts have to play in determining source sizes in the corona and outlines the theory behind plasma emission, radio interferometry and beam-forming. Chapter \ref{chap:inst} gives a technical description of LOFAR, its hardware and the digital signal processing pipeline of an international LOFAR station. Observations using high temporal resolution data from I-LOFAR are explained in chapter \ref{chap:obs} along with interferometric images from the core and remote LOFAR stations. The results of analysis of this data is also given in chapter \ref{chap:obs} before the report is concluded in \ref{chap:conc}. Future work for this PhD is outlined in chapter \ref{chap:future}.
+%This report is an overview of my PhD thus far and is as follows. Chapter \ref{chap:intro} describes the Sun and the corona. It introduces the role radio bursts have to play in determining source sizes in the corona and outlines the theory behind plasma emission, radio interferometry and beam-forming. Chapter \ref{chap:inst} gives a technical description of LOFAR, its hardware and the digital signal processing pipeline of an international LOFAR station. Observations using high temporal resolution data from I-LOFAR are explained in chapter \ref{chap:obs} along with interferometric images from the core and remote LOFAR stations. The results of analysis of this data is also given in chapter \ref{chap:obs} before the report is concluded in \ref{chap:conc}. Future work for this PhD is outlined in chapter \ref{chap:future}.
 \end{abstracts}
 
 
@@ -19,9 +18,6 @@ This report is an overview of my PhD thus far and is as follows. Chapter \ref{ch
 
 % ---------------------------------------------------------------------- 
 % ---------------------------------------------------------------------- 
-
-
-
 %!TEX root = ../thesis.tex
 %Adding the above line, with the name of your base .tex file (in this case "thesis.tex") will allow you to compile the whole thesis even when working inside one of the chapter tex files
 
@@ -61,40 +57,74 @@ I declare that this report is my own work, is not copied from any other person's
 \vspace{-5mm}
 
 %
-\section*{Oral Presentations}
-\begin{enumerate}
-\item \textit{Finding Fast Solar Radio Transients in I-LOFAR Transient Buffer Board Data},\\ Irish National Astronomy Meeting (INAM), 2018
-\item \textit{Finding Fast Solar Radio Transients in I-LOFAR Transient Buffer Board Data},\\ Community of European Solar Radio Astronomers (CESRA) Summer School, 2018
-\end{enumerate}
-
+%\section*{Oral Presentations}
+%\begin{enumerate}
+%STELLAR Space Weather Workshop
+%Virtual
+%12th - 15th July 2021
 %
-\section*{Poster Presentations}
-\begin{enumerate}
-\item \textit{The Irish LOw Frequency ARray (I-LOFAR)}, \\ International Workshop on Solar, Heliospheric and Magnetospheric Radioastronomy, 2017
-\\ DOI: \url{https://doi.org/10.6084/m9.figshare.5572660.v1}
-\item \textit{Nanosecond Sampling of the Radio Sky with I-LOFAR's Transient Buffer Boards (TBB)}, \\ 17th RHESSI (Reuven Ramaty High Energy Solar Spectroscopic Imager) Workshop, 2018
-\\ DOI: \url{https://doi.org/10.6084/m9.figshare.6669173.v1}
-\end{enumerate}
-
-
+%\item \textit{LOFAR Single Station Radio Data Analysis Tutorial}
+%I-LOFAR Science and Techniques Workshop
+%I-LOFAR Education Centre, Birr Castle, Co. Offaly, Ireland
+%2nd - 4th March 2020
 %
-\section*{Workshops \& Conferences Attended}
-\begin{enumerate}
-\item INAM, Maynooth University, 2017
-\item International Workshop on Solar, Heliospheric and Magnetospheric Radioastronomy, Observatoire de Paris, 2017
-\item I-LOFAR User's Data Workshop, University College Dublin, 2018
-\item 17th RHESSI Workshop, Trinity College Dublin, 2018
-\item Astro Hack Week, Lorentz Cetnre, Leiden University, 2018
-\item INAM, Birr Theatre, Birr, Co. Offaly, 2018
-\item CESRA Summer School, Observatoire Royal de Belgique, 2018 
-\item LOFAR Data Processing School, Netherlands Institute for Radio Astronomy (ASTRON), 2018
-\end{enumerate}
+%Scattering of Radio Waves in the Solar Corona
+%I-LOFAR Science and Techniques Workshop
+%I-LOFAR Education Centre, Birr Castle, Co. Offaly, Ireland
+%2nd - 4th March 2020
+%
+%Single Station Data Analysis Tutorial
+%Young European Radio Astronomers Conference
+%Dublin Institute for Advanced Studies/Trinity College Dublin, Ireland
+%26th - 29th August 2019
+%
+%Interferometric Imaging of Type III Bursts in the Solar Corona
+%Community of European Solar Radio Astronomers Workshop
+%Leibniz-Institut für Astrophysik Potsdam, Germany
+%8th - 12th July 2019
+%
+%Interferometric Imaging of Type III Bursts in the Solar Corona
+%\item \textit{Finding Fast Solar Radio Transients in I-LOFAR Transient Buffer Board Data},\\ Irish National Astronomy Meeting (INAM), 2018
+%\item \textit{Finding Fast Solar Radio Transients in I-LOFAR Transient Buffer Board Data},\\ Community of European Solar Radio Astronomers (CESRA) Summer School, 2018
+%\end{enumerate}
+%
+%%
+%\section*{Poster Presentations}
+%\begin{enumerate}
+%\item \textit{The Irish LOw Frequency ARray (I-LOFAR)}, \\ International Workshop on Solar, Heliospheric and Magnetospheric Radioastronomy, 2017
+%\\ DOI: \url{https://doi.org/10.6084/m9.figshare.5572660.v1}
+%\item \textit{Nanosecond Sampling of the Radio Sky with I-LOFAR's Transient Buffer Boards (TBB)}, \\ 17th RHESSI (Reuven Ramaty High Energy Solar Spectroscopic Imager) Workshop, 2018
+%\\ DOI: \url{https://doi.org/10.6084/m9.figshare.6669173.v1}
+%\end{enumerate}
+%
+%
+%%
+%\section*{Workshops \& Conferences Attended}
+%\begin{enumerate}
+%\item INAM, Maynooth University, 2017
+%\item International Workshop on Solar, Heliospheric and Magnetospheric Radioastronomy, Observatoire de Paris, 2017
+%\item I-LOFAR User's Data Workshop, University College Dublin, 2018
+%\item 17th RHESSI Workshop, Trinity College Dublin, 2018
+%\item Astro Hack Week, Lorentz Cetnre, Leiden University, 2018
+%\item INAM, Birr Theatre, Birr, Co. Offaly, 2018
+%\item CESRA Summer School, Observatoire Royal de Belgique, 2018 
+%\item LOFAR Data Processing School, Netherlands Institute for Radio Astronomy (ASTRON), 2018
+%\end{enumerate}
 
 \section*{Publications}
 \begin{enumerate}
-\item Pearse C. Murphy, Eoin P. Carely, Aoife Maria Ryan, Pietro Zucca, Peter T. Gallagher.
+\item \textbf{P. C. Murphy}, P. Callanan, J. McCauley, D. J. McKenna, D. Ó Fionnagáin, C. K. Louis, M. P. Redman, L. A. Cañizares, E. P. Carley, S. A. Maloney, B. Coghlan, M. Daly, J. Scully, J. Dooley, V. Gajjar, C. Giese, A. Brennan, E. F. Keane, C. A. Maguire, J. Quinn, S. Mooney, A. M. Ryan, J. Walsh, C. M. Jackman, A. Golden, T. P. Ray, J. G. Doyle, J. Rigney, M. Burton, P. T. Gallagher.
+\\``First Results from the REAL-time Transient Acquisition backend (REALTA) at the Irish LOFAR station",
+\\ \textit{Astronomy and Astrophysics} (accepted 2021)
+\item A. M. Ryan, P. T. Gallagher, E. P. Carley, M. A. Brentjens,\textbf{ P. C. Murphy}, C. Vocks, D. E. Morosan, H. Reid, J. Magdalenic, F. Breitling, P. Zucca, R. Fallows, G. Mann, A. Kerdraon, R. Halfwerk.
+\\``LOFAR imaging of the solar corona during the 2015 March 20 solar eclipse",
+\\ \textit{Astronomy and Astrophysics}, Volume 648, A43 (2021)
+\item \textbf{Pearse C. Murphy}, Eoin P. Carely, Aoife Maria Ryan, Pietro Zucca, Peter T. Gallagher.
 \\ ``LOFAR Observations of Radio Burst Source Sizes and Scattering in the Solar Corona",
-\\ \textit{Astronomy and Astrophysics}, Volume 645, A11, (.2021)
+\\ \textit{Astronomy and Astrophysics}, Volume 645, A11 (2021)
+\item Vishal Gajjar, Andrew Siemion, Steve Croft, Bryan Brzycki, Marta Burgay, Tobia Carozzi, Raimondo Concu, Daniel Czech, David DeBoer, Julia DeMarines, Jamie Drew, J. Emilio Enriquez, James Fawcett, Peter Gallagher, Michael Gerret, Nectaria Gizani, Greg Hellbourg, Jamie Holder, Howard Isaacson, Sanjay Kudale, Brian Lacki, Matthew Lebofsky, Di Li, David H. E. MacMahon, Joe McCauley, Andrea Melis, Emilio Molinari, \textbf{Pearse Murphy}, Delphine Perrodin, Maura Pilia, Danny C. Price, Claire Webb, Dan Werthimer, David Williams, Pete Worden, Philippe Zarka, and Yunfan Gerry Zhang.
+\\``The Breakthrough Listen Search for Extraterrestrial Intelligence ",
+\\ \textit{Astro2020: Decadal Survey on Astronomy and Astrophysics, APC white papers, no. 223; Bulletin of the American Astronomical Society}, Vol. 51, Issue 7, id. 223 (2019)
 \item David M. Long, \textbf{Pearse C. Murphy}, Georgina Graham, Eoin P. Carley, David P\'{e}rez-Su\'{a}rez.
 \\ ``A Statistical Analysis of the Solar Phenomena Associated with Global EUV Waves",
 \\ \textit{Solar Physics}, Volume 292 , Issue 185, (2017).

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.24)  28 JUN 2021 11:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.24)  6 SEP 2021 17:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -421,33 +421,15 @@ Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
 \Gin@req@height=\dimen159
 \Gin@req@width=\dimen160
 ))
-(/usr/local/texlive/2020/texmf-dist/tex/latex/lineno/lineno.sty
-Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count270
-\output=\toks20
-\linenoprevgraf=\count271
-\linenumbersep=\dimen161
-\linenumberwidth=\dimen162
-\c@linenumber=\count272
-\c@pagewiselinenumber=\count273
-\c@LN@truepage=\count274
-\c@internallinenumber=\count275
-\c@internallinenumbers=\count276
-\quotelinenumbersep=\dimen163
-\bframerule=\dimen164
-\bframesep=\dimen165
-\bframebox=\box92
-LaTeX Info: Redefining \\ on input line 3056.
-)
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks21
-\ex@=\dimen166
+\@emptytoks=\toks20
+\ex@=\dimen161
 )
-\pmbraise@=\dimen167
+\pmbraise@=\dimen162
 )
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2020/01/20 v2.17e AMS math features
@@ -460,69 +442,48 @@ Package: amstext 2000/06/29 v2.01 AMS text
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count277
+\inf@bad=\count270
 LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count278
-\leftroot@=\count279
+\uproot@=\count271
+\leftroot@=\count272
 LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count280
-\DOTSCASE@=\count281
+\classnum@=\count273
+\DOTSCASE@=\count274
 LaTeX Info: Redefining \ldots on input line 486.
 LaTeX Info: Redefining \dots on input line 489.
 LaTeX Info: Redefining \cdots on input line 610.
-\Mathstrutbox@=\box93
-\strutbox@=\box94
-\big@size=\dimen168
+\Mathstrutbox@=\box92
+\strutbox@=\box93
+\big@size=\dimen163
 LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count282
-\c@MaxMatrixCols=\count283
+\macc@depth=\count275
+\c@MaxMatrixCols=\count276
 \dotsspace@=\muskip17
-\c@parentequation=\count284
-\dspbrk@lvl=\count285
-\tag@help=\toks22
-\row@=\count286
-\column@=\count287
-\maxfields@=\count288
-\andhelp@=\toks23
-\eqnshift@=\dimen169
-\alignsep@=\dimen170
-\tagshift@=\dimen171
-\tagwidth@=\dimen172
-\totwidth@=\dimen173
-\lineht@=\dimen174
-\@envbody=\toks24
+\c@parentequation=\count277
+\dspbrk@lvl=\count278
+\tag@help=\toks21
+\row@=\count279
+\column@=\count280
+\maxfields@=\count281
+\andhelp@=\toks22
+\eqnshift@=\dimen164
+\alignsep@=\dimen165
+\tagshift@=\dimen166
+\tagwidth@=\dimen167
+\totwidth@=\dimen168
+\lineht@=\dimen169
+\@envbody=\toks23
 \multlinegap=\skip66
 \multlinetaggap=\skip67
-\mathdisplay@stack=\toks25
+\mathdisplay@stack=\toks24
 LaTeX Info: Redefining \[ on input line 2859.
 LaTeX Info: Redefining \] on input line 2860.
 )
-(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/xspace.sty
-Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
-) (./wtmmPkg.sty) (/usr/local/texlive/2020/texmf-dist/tex/latex/multirow/multir
-ow.sty
-Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
-\multirow@colwidth=\skip68
-\multirow@cntb=\count289
-\multirow@dima=\skip69
-\bigstrutjot=\dimen175
-)
-(/usr/local/texlive/2020/texmf-dist/tex/latex/paralist/paralist.sty
-Package: paralist 2017/01/22 v2.7 Extended list environments
-\pltopsep=\skip70
-\plpartopsep=\skip71
-\plitemsep=\skip72
-\plparsep=\skip73
-\pl@lab=\toks26
-)
-(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/lscape.sty
-Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
-)
-(/usr/local/texlive/2020/texmf-dist/tex/latex/quotchap/quotchap.sty
-Package: quotchap 2019/07/09 v1.2 Decorative Chapter Headings with Quotes
-\@quotebox=\box95
-)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write4
+
+Excluding comment 'comment')
 (/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf.sty
 Package: epstopdf 2020-01-24 v2.11 Conversion with epstopdf on the fly (HO)
 
@@ -541,7 +502,158 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 )))
-(/usr/local/texlive/2020/texmf-dist/tex/latex/cleveref/cleveref.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count282
+\output=\toks25
+\linenoprevgraf=\count283
+\linenumbersep=\dimen170
+\linenumberwidth=\dimen171
+\c@linenumber=\count284
+\c@pagewiselinenumber=\count285
+\c@LN@truepage=\count286
+\c@internallinenumber=\count287
+\c@internallinenumbers=\count288
+\quotelinenumbersep=\dimen172
+\bframerule=\dimen173
+\bframesep=\dimen174
+\bframebox=\box94
+LaTeX Info: Redefining \\ on input line 3056.
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip68
+\multirow@cntb=\count289
+\multirow@dima=\skip69
+\bigstrutjot=\dimen175
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/paralist/paralist.sty
+Package: paralist 2017/01/22 v2.7 Extended list environments
+\pltopsep=\skip70
+\plpartopsep=\skip71
+\plitemsep=\skip72
+\plparsep=\skip73
+\pl@lab=\toks26
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/quotchap/quotchap.sty
+Package: quotchap 2019/07/09 v1.2 Decorative Chapter Headings with Quotes
+\@quotebox=\box95
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/rotating.sty
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+\c@r@tfl@t=\count290
+\rotFPtop=\skip74
+\rotFPbot=\skip75
+\rot@float@box=\box96
+\rot@mess@toks=\toks27
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/sidecap/sidecap.sty
+Package: sidecap 2003/06/06 v1.6f SideCap Package (RN/HjG)
+\SC@BOXWD=\dimen176
+\SC@CAPWD=\dimen177
+\SC@tempdima=\dimen178
+\SC@tempdimb=\dimen179
+\c@SC@C=\count291
+\SC@BOX=\box97
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2020-03-06 L3 programming layer (loader) 
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count292
+\l__pdf_internal_box=\box98
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2020-03-06 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count293
+\g__xparse_grabber_int=\count294
+\l__xparse_m_args_int=\count295
+\l__xparse_v_nesting_int=\count296
+)
+Package: siunitx 2020/02/25 v2.8b A comprehensive (SI) units package
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen180
+\ar@mcellbox=\box99
+\extrarowheight=\dimen181
+\NC@list=\toks28
+\extratabsurround=\skip76
+\backup@length=\skip77
+\ar@cellbox=\box100
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2020-03-06 LaTeX2e option processing using LaTeX3 keys
+)
+\l__siunitx_tmp_box=\box101
+\l__siunitx_tmp_dim=\dimen182
+\l__siunitx_tmp_int=\count297
+\l__siunitx_number_mantissa_length_int=\count298
+\l__siunitx_number_uncert_length_int=\count299
+\l__siunitx_round_int=\count300
+\l__siunitx_process_decimal_int=\count301
+\l__siunitx_process_uncertainty_int=\count302
+\l__siunitx_process_fixed_int=\count303
+\l__siunitx_process_integer_min_int=\count304
+\l__siunitx_process_precision_int=\count305
+\l__siunitx_group_min_int=\count306
+\l__siunitx_angle_marker_box=\box102
+\l__siunitx_angle_unit_box=\box103
+\l__siunitx_angle_marker_dim=\dimen183
+\l__siunitx_angle_unit_dim=\dimen184
+\l__siunitx_unit_int=\count307
+\l__siunitx_unit_denominator_int=\count308
+\l__siunitx_unit_numerator_int=\count309
+\l__siunitx_unit_prefix_int=\count310
+\l__siunitx_unit_prefix_base_int=\count311
+\l__siunitx_unit_prefix_gram_int=\count312
+\l__siunitx_number_product_int=\count313
+\c__siunitx_one_fill_skip=\skip78
+\l__siunitx_table_unit_align_skip=\skip79
+\l__siunitx_table_exponent_dim=\dimen185
+\l__siunitx_table_integer_dim=\dimen186
+\l__siunitx_table_mantissa_dim=\dimen187
+\l__siunitx_table_marker_dim=\dimen188
+\l__siunitx_table_result_dim=\dimen189
+\l__siunitx_table_uncert_dim=\dimen190
+\l__siunitx_table_fill_pre_dim=\dimen191
+\l__siunitx_table_fill_post_dim=\dimen192
+\l__siunitx_table_fill_mid_dim=\dimen193
+\l__siunitx_table_pre_box=\box104
+\l__siunitx_table_post_box=\box105
+\l__siunitx_table_mantissa_box=\box106
+\l__siunitx_table_result_box=\box107
+\l__siunitx_table_number_align_skip=\skip80
+\l__siunitx_table_text_align_skip=\skip81
+(/usr/local/texlive/2020/texmf-dist/tex/latex/translator/translator.sty
+Package: translator 2019-05-31 v1.12a Easy translation of strings in LaTeX
+))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
+\c@subfigure=\count314
+\c@subtable=\count315
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen194
+\WF@size=\dimen195
+\c@WF@wrappedlines=\count316
+\WF@box=\box108
+\WF@everypar=\toks29
+Package: wrapfig 2003/01/31  v 3.6
+)
+(./wtmmPkg.sty) (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/cleveref/cleveref.sty
 Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
 Package cleveref Info: `hyperref' support loaded on input line 2370.
 LaTeX Info: Redefining \cref on input line 2370.
@@ -559,64 +671,57 @@ Package cleveref Info: always capitalise cross-reference names on input line 78
 Package cleveref Info: always capitalise cross-reference names on input line 78
 52.
 )
-(/usr/local/texlive/2020/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen176
-\WF@size=\dimen177
-\c@WF@wrappedlines=\count290
-\WF@box=\box96
-\WF@everypar=\toks27
-Package: wrapfig 2003/01/31  v 3.6
-)
-(/usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
-\c@subfigure=\count291
-\c@subtable=\count292
-)
-(/usr/local/texlive/2020/texmf-dist/tex/latex/sidecap/sidecap.sty
-Package: sidecap 2003/06/06 v1.6f SideCap Package (RN/HjG)
-\SC@BOXWD=\dimen178
-\SC@CAPWD=\dimen179
-\SC@tempdima=\dimen180
-\SC@tempdimb=\dimen181
-\c@SC@C=\count293
-\SC@BOX=\box97
-)
-(/usr/local/texlive/2020/texmf-dist/tex/latex/comment/comment.sty
-\CommentStream=\write4
-
-Excluding comment 'comment')
 (/usr/local/texlive/2020/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
 (/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count294
-\Gm@cntv=\count295
-\c@Gm@tempcnt=\count296
-\Gm@bindingoffset=\dimen182
-\Gm@wd@mp=\dimen183
-\Gm@odd@mp=\dimen184
-\Gm@even@mp=\dimen185
-\Gm@layoutwidth=\dimen186
-\Gm@layoutheight=\dimen187
-\Gm@layouthoffset=\dimen188
-\Gm@layoutvoffset=\dimen189
-\Gm@dimlist=\toks28
+\Gm@cnth=\count317
+\Gm@cntv=\count318
+\c@Gm@tempcnt=\count319
+\Gm@bindingoffset=\dimen196
+\Gm@wd@mp=\dimen197
+\Gm@odd@mp=\dimen198
+\Gm@even@mp=\dimen199
+\Gm@layoutwidth=\dimen256
+\Gm@layoutheight=\dimen257
+\Gm@layouthoffset=\dimen258
+\Gm@layoutvoffset=\dimen259
+\Gm@dimlist=\toks30
+
+
+! Package xkeyval Error: `bindingmargin' undefined in families `Gm'.
+
+See the xkeyval package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1005 \ProcessOptionsKV[p]{Gm}
+                               %
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/ragged2e/ragged2e.sty
+Package: ragged2e 2019/07/28 v2.2 ragged2e Package (MS)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/ms/everysel.sty
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 )
-(/usr/local/texlive/2020/texmf-dist/tex/latex/setspace/setspace.sty
-Package: setspace 2011/12/19 v6.7a set line spacing
-)
-(/usr/local/texlive/2020/texmf-dist/tex/latex/base/textcomp.sty
-Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-)
-(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/rotating.sty
-Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
-\c@r@tfl@t=\count297
-\rotFPtop=\skip74
-\rotFPbot=\skip75
-\rot@float@box=\box98
-\rot@mess@toks=\toks29
+\CenteringLeftskip=\skip82
+\RaggedLeftLeftskip=\skip83
+\RaggedRightLeftskip=\skip84
+\CenteringRightskip=\skip85
+\RaggedLeftRightskip=\skip86
+\RaggedRightRightskip=\skip87
+\CenteringParfillskip=\skip88
+\RaggedLeftParfillskip=\skip89
+\RaggedRightParfillskip=\skip90
+\JustifyingParfillskip=\skip91
+\CenteringParindent=\skip92
+\RaggedLeftParindent=\skip93
+\RaggedRightParindent=\skip94
+\JustifyingParindent=\skip95
 )
 (/usr/local/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
@@ -636,67 +741,76 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 63.
+Package hyperref Info: Option `colorlinks' set `true' on input line 73.
 
 (./titlesec.sty
 Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
-\ttl@box=\box99
-\beforetitleunit=\skip76
-\aftertitleunit=\skip77
-\ttl@plus=\dimen190
-\ttl@minus=\dimen191
-\ttl@toksa=\toks30
-\titlewidth=\dimen192
-\titlewidthlast=\dimen193
-\titlewidthfirst=\dimen194
+\ttl@box=\box109
+\beforetitleunit=\skip96
+\aftertitleunit=\skip97
+\ttl@plus=\dimen260
+\ttl@minus=\dimen261
+\ttl@toksa=\toks31
+\titlewidth=\dimen262
+\titlewidthlast=\dimen263
+\titlewidthfirst=\dimen264
+) (./Latex/StyleFiles/backrefx.sty
+
+LaTeX Warning: You have requested package `Latex/StyleFiles/backrefx',
+               but the package provides `backrefx'.
+
+Package: backrefx 2004/07/10 v2.0 Backref enhancements (DNJ Els)
 )
 \@input{Latex/Macros/MacroFile1.aux}
 \openout2 = `Latex/Macros/MacroFile1.aux'.
 
 (./Latex/Macros/MacroFile1.tex)
-(/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
-File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count298
-\l__pdf_internal_box=\box100
-)
 
 LaTeX Warning: Unused global option(s):
     [usenatbib].
 
 (./main.aux (./0/declaration.aux) (./0/abstract.aux) (./0/publications.aux)
-(./1/introduction.aux))
+(./1/introduction.aux) (./2/theory.aux) (./3/instrumentation.aux)
+(./4/work_chapter_1.aux
+
+LaTeX Warning: Label `sec:intro' multiply defined.
+
+
+LaTeX Warning: Label `sec:intro@cref' multiply defined.
+
+) (./5/work_chapter_2.aux) (./6/future_work.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 189.
-LaTeX Font Info:    ... okay on input line 189.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 189.
-LaTeX Font Info:    ... okay on input line 189.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 189.
-LaTeX Font Info:    ... okay on input line 189.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 189.
-LaTeX Font Info:    ... okay on input line 189.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 189.
-LaTeX Font Info:    ... okay on input line 189.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 189.
-LaTeX Font Info:    ... okay on input line 189.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 189.
-LaTeX Font Info:    ... okay on input line 189.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 189.
-LaTeX Font Info:    ... okay on input line 189.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
 
 (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count299
-\scratchdimen=\dimen195
-\scratchbox=\box101
-\nofMPsegments=\count300
-\nofMParguments=\count301
-\everyMPshowfont=\toks31
-\MPscratchCnt=\count302
-\MPscratchDim=\dimen196
-\MPnumerator=\count303
-\makeMPintoPDFobject=\count304
-\everyMPtoPDFconversion=\toks32
+\scratchcounter=\count320
+\scratchdimen=\dimen265
+\scratchbox=\box110
+\nofMPsegments=\count321
+\nofMParguments=\count322
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count323
+\MPscratchDim=\dimen266
+\MPnumerator=\count324
+\makeMPintoPDFobject=\count325
+\everyMPtoPDFconversion=\toks33
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
@@ -704,9 +818,9 @@ Package caption Info: rotating package is loaded.
 Package caption Info: sidecap package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package backref Info: ** backref set up for natbib ** on input line 189.
-\AtBeginShipoutBox=\box102
-Package hyperref Info: Link coloring ON on input line 189.
+Package backref Info: ** backref set up for natbib ** on input line 199.
+\AtBeginShipoutBox=\box111
+Package hyperref Info: Link coloring ON on input line 199.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
@@ -717,39 +831,22 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count305
+\c@section@level=\count326
 )
-LaTeX Info: Redefining \ref on input line 189.
-LaTeX Info: Redefining \pageref on input line 189.
-LaTeX Info: Redefining \nameref on input line 189.
+LaTeX Info: Redefining \ref on input line 199.
+LaTeX Info: Redefining \pageref on input line 199.
+LaTeX Info: Redefining \nameref on input line 199.
  (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
 
-(/usr/local/texlive/2020/texmf-dist/tex/latex/ragged2e/ragged2e.sty
-Package: ragged2e 2019/07/28 v2.2 ragged2e Package (MS)
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/ms/everysel.sty
-Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
-
-ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 126.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/translator/translator-basic-dicti
+onary-English.dict
+Dictionary: translator-basic-dictionary, Language: English 
 )
-\CenteringLeftskip=\skip78
-\RaggedLeftLeftskip=\skip79
-\RaggedRightLeftskip=\skip80
-\CenteringRightskip=\skip81
-\RaggedLeftRightskip=\skip82
-\RaggedRightRightskip=\skip83
-\CenteringParfillskip=\skip84
-\RaggedLeftParfillskip=\skip85
-\RaggedRightParfillskip=\skip86
-\JustifyingParfillskip=\skip87
-\CenteringParindent=\skip88
-\RaggedLeftParindent=\skip89
-\RaggedRightParindent=\skip90
-\JustifyingParindent=\skip91
+(/usr/local/texlive/2020/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
+File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -758,16 +855,16 @@ LaTeX Info: Redefining \selectfont on input line 126.
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
-* v-part:(T,H,B)=(93.89418pt, 694.24716pt, 56.9055pt)
+* modes: includehead includefoot includemp twoside 
+* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=455.24411pt
-* \textheight=694.24716pt
-* \oddsidemargin=-1.1381pt
-* \evensidemargin=-1.1381pt
-* \topmargin=-44.31721pt
+* \textwidth=438.17249pt
+* \textheight=636.84169pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=30.1599pt
+* \topmargin=-15.36449pt
 * \headheight=37.48866pt
 * \headsep=28.45274pt
 * \topskip=12.0pt
@@ -780,24 +877,40 @@ LaTeX Info: Redefining \selectfont on input line 126.
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
+* \@twosidetrue
+* \@mparswitchtrue
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<tcd_logo.png, id=68, 1719.42375pt x 593.21625pt>
-File: tcd_logo.png Graphic file (type png)
-<use tcd_logo.png>
-Package pdftex.def Info: tcd_logo.png  used on input line 248.
-(pdftex.def)             Requested size: 164.92113pt x 56.9055pt.
-[1
+ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 199.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 199
+.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 199
+.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+<Images/tcd_logo.png, id=257, 1719.42375pt x 593.21625pt>
+File: Images/tcd_logo.png Graphic file (type png)
+<use Images/tcd_logo.png>
+Package pdftex.def Info: Images/tcd_logo.png  used on input line 258.
+(pdftex.def)             Requested size: 247.40793pt x 85.35826pt.
+ [1
 
 
 
 \FN@pp@footnotehinttrue 
 
-{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./tcd_l
-ogo.png>]
+{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Image
+s/tcd_logo.png>] [2
+
+]
 \openout2 = `0/declaration.aux'.
 
 
@@ -810,7 +923,7 @@ No file 0/declaration.tex.
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
+* modes: twoside 
 * h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
 * v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
 * \paperwidth=597.50787pt
@@ -832,87 +945,53 @@ No file 0/declaration.tex.
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
+* \@twosidetrue
+* \@mparswitchtrue
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-
-
-LaTeX Warning: Reference `chap:inst' on page i undefined on input line 12.
-
-
-LaTeX Warning: Reference `chap:obs' on page i undefined on input line 12.
-
-
-LaTeX Warning: Reference `chap:obs' on page i undefined on input line 12.
-
-
-LaTeX Warning: Reference `chap:conc' on page i undefined on input line 12.
-
-
-LaTeX Warning: Reference `chap:future' on page i undefined on input line 12.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.13 \end{abstracts}
+l.12 \end{abstracts}
                      [1
 
 
 
 
+]pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.43 \end{declaration}
+                       [2
 
-]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 31.
-
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 31.
-
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Overfull \hbox (87.72632pt too wide) in paragraph at lines 33--34
-\OT1/cmr/m/n/12 Steady, Write', lo-cated at [][]$\OT1/cmtt/m/n/12 http : / / tc
-d-[]ie . libguides . com / plagiarism / ready-[]steady-[]write$[][] 
- []
-
-[2
-
-]
-Overfull \hbox (2.78885pt too wide) in paragraph at lines 95--99
-\OT1/cmr/m/n/12 ``A Sta-tis-ti-cal Anal-y-sis of the So-lar Phe-nom-ena As-so-c
-i-ated with Global EUV Waves", 
- []
-
-[3
+] [3
 
 ]) [4]
 \openout2 = `0/publications.aux'.
 
 
 No file 0/publications.tex.
-(./main.toc)
-\tf@toc=\write6
-\openout6 = `main.toc'.
-
- [5
+(./main.toc [5
 
 
 
 \FN@pp@footnotehinttrue 
 
 
-] (./main.lof)
+])
+\tf@toc=\write6
+\openout6 = `main.toc'.
+
+ [6] (./main.lof)
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
- [6
+ [7
+
+] [8
 
 ]
 \openout2 = `1/introduction.aux'.
@@ -927,113 +1006,332 @@ LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <55> not available
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <55> not available
 (Font)              size <24.88> substituted on input line 5.
 
-<Images/Sun_interior.jpg, id=170, 303.534pt x 303.534pt>
-File: Images/Sun_interior.jpg Graphic file (type jpg)
-<use Images/Sun_interior.jpg>
-Package pdftex.def Info: Images/Sun_interior.jpg  used on input line 27.
-(pdftex.def)             Requested size: 227.62206pt x 227.62215pt.
-<Images/Corona_temp.png, id=172, 486.81876pt x 312.16624pt>
+[1
+
+
+]
+<Images/Corona_temp.png, id=441, 486.81876pt x 312.16624pt>
 File: Images/Corona_temp.png Graphic file (type png)
 <use Images/Corona_temp.png>
-Package pdftex.def Info: Images/Corona_temp.png  used on input line 37.
-(pdftex.def)             Requested size: 341.43307pt x 218.93881pt.
-[1
+Package pdftex.def Info: Images/Corona_temp.png  used on input line 42.
+(pdftex.def)             Requested size: 328.62936pt x 210.72693pt.
+ [2]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3 <./Images/Corona_temp.png>]
+<Images/GOES_Xclass.png, id=463, 462.528pt x 346.896pt>
+File: Images/GOES_Xclass.png Graphic file (type png)
+<use Images/GOES_Xclass.png>
+Package pdftex.def Info: Images/GOES_Xclass.png  used on input line 67.
+(pdftex.def)             Requested size: 328.62936pt x 246.48314pt.
+ [4]
+<Images/LASCO_C2_CME.jpg, id=472, 501.875pt x 501.875pt>
+File: Images/LASCO_C2_CME.jpg Graphic file (type jpg)
+<use Images/LASCO_C2_CME.jpg>
+Package pdftex.def Info: Images/LASCO_C2_CME.jpg  used on input line 79.
+(pdftex.def)             Requested size: 219.08624pt x 219.08731pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5 <./Images/GOES_Xclass.png>]
+
+LaTeX Warning: Reference `app:plasma' on page 6 undefined on input line 100.
+
+<Images/Burst_cartoon.jpg, id=489, 208.49895pt x 148.51485pt>
+File: Images/Burst_cartoon.jpg Graphic file (type jpg)
+<use Images/Burst_cartoon.jpg>
+Package pdftex.def Info: Images/Burst_cartoon.jpg  used on input line 103.
+(pdftex.def)             Requested size: 328.62936pt x 234.11604pt.
+[6 <./Images/LASCO_C2_CME.jpg>] [7 <./Images/Burst_cartoon.jpg>] [8]
+
+LaTeX Warning: Reference `app:plasma' on page 9 undefined on input line 129.
+
+[9]
+
+LaTeX Warning: Reference `sec:event' on page 10 undefined on input line 134.
+
+[10]
+<Images/Pietro_typeIII.png, id=574, 356.0803pt x 429.85594pt>
+File: Images/Pietro_typeIII.png Graphic file (type png)
+<use Images/Pietro_typeIII.png>
+Package pdftex.def Info: Images/Pietro_typeIII.png  used on input line 149.
+(pdftex.def)             Requested size: 219.08624pt x 264.47461pt.
+ [11 <./Images/Pietro_typeIII.png>] [12] [13]
+<Images/2_elem_int.png, id=608, 599.23875pt x 584.1825pt>
+File: Images/2_elem_int.png Graphic file (type png)
+<use Images/2_elem_int.png>
+Package pdftex.def Info: Images/2_elem_int.png  used on input line 182.
+(pdftex.def)             Requested size: 219.08624pt x 213.57693pt.
+
+Underfull \vbox (badness 2717) has occurred while \output is active []
+
+ [14 <./Images/2_elem_int.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15]
+[16]) [17]
+\openout2 = `2/theory.aux'.
+
+ (./2/theory.tex [18
 
 
 
 ]
-<Images/GOES_Xclass.png, id=189, 462.528pt x 346.896pt>
-File: Images/GOES_Xclass.png Graphic file (type png)
-<use Images/GOES_Xclass.png>
-Package pdftex.def Info: Images/GOES_Xclass.png  used on input line 62.
-(pdftex.def)             Requested size: 341.43307pt x 256.08499pt.
- [2 <./Images/Sun_interior.jpg>] [3 <./Images/Corona_temp.png> <./Images/GOES_X
-class.png>]
-<Images/LASCO_C2_CME.jpg, id=207, 501.875pt x 501.875pt>
-File: Images/LASCO_C2_CME.jpg Graphic file (type jpg)
-<use Images/LASCO_C2_CME.jpg>
-Package pdftex.def Info: Images/LASCO_C2_CME.jpg  used on input line 74.
-(pdftex.def)             Requested size: 227.62206pt x 227.62596pt.
- [4 <./Images/LASCO_C2_CME.jpg>]
+Chapter 2.
 
-LaTeX Warning: Reference `app:plasma' on page 5 undefined on input line 98.
+Overfull \hbox (9.31935pt too wide) in paragraph at lines 9--9
+|[]\OT1/cmr/bx/n/17.28 Radio Emis-sion Mech-a-nisms in the So-lar Corona| 
+ []
 
-<Images/Burst_cartoon.jpg, id=228, 208.49895pt x 148.51485pt>
-File: Images/Burst_cartoon.jpg Graphic file (type jpg)
-<use Images/Burst_cartoon.jpg>
-Package pdftex.def Info: Images/Burst_cartoon.jpg  used on input line 101.
-(pdftex.def)             Requested size: 341.43307pt x 243.2373pt.
-[5 <./Images/Burst_cartoon.jpg>] [6]
-
-LaTeX Warning: Reference `app:plasma' on page 7 undefined on input line 127.
-
-
-LaTeX Warning: Reference `sec:event' on page 7 undefined on input line 132.
-
-[7]
-<Images/Pietro_typeIII.png, id=301, 356.0803pt x 429.85594pt>
-File: Images/Pietro_typeIII.png Graphic file (type png)
-<use Images/Pietro_typeIII.png>
-Package pdftex.def Info: Images/Pietro_typeIII.png  used on input line 147.
-(pdftex.def)             Requested size: 227.62206pt x 274.7789pt.
- [8 <./Images/Pietro_typeIII.png>]
-
-Package natbib Warning: Citation `VanHaarlem2013b' on page 9 undefined on input
- line 194.
-
-
-Package natbib Warning: Citation `VanHaarlem2013b' on page 9 undefined on input
- line 194.
-
-[9] [10]
-<Images/L_wave_growth.png, id=370, 357.58594pt x 228.855pt>
+[19] [20]
+<Images/L_wave_growth.png, id=688, 357.58594pt x 228.855pt>
 File: Images/L_wave_growth.png Graphic file (type png)
 <use Images/L_wave_growth.png>
-Package pdftex.def Info: Images/L_wave_growth.png  used on input line 218.
-(pdftex.def)             Requested size: 341.43307pt x 218.52846pt.
- [11 <./Images/L_wave_growth.png>]
-<Images/Fundamental_emission_Lwaves.png, id=392, 249.18094pt x 161.85469pt>
+Package pdftex.def Info: Images/L_wave_growth.png  used on input line 41.
+(pdftex.def)             Requested size: 328.62936pt x 210.33264pt.
+ [21]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22 <./Images/L_wave_growth.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23]
+<Images/Fundamental_emission_Lwaves.png, id=725, 249.18094pt x 161.85469pt>
 File: Images/Fundamental_emission_Lwaves.png Graphic file (type png)
 <use Images/Fundamental_emission_Lwaves.png>
 Package pdftex.def Info: Images/Fundamental_emission_Lwaves.png  used on input 
-line 242.
-(pdftex.def)             Requested size: 227.62206pt x 147.856pt.
-<Images/Harmonic_emission_Lwaves.png, id=394, 283.0575pt x 128.73094pt>
+line 65.
+(pdftex.def)             Requested size: 219.08624pt x 142.31154pt.
+<Images/Harmonic_emission_Lwaves.png, id=727, 283.0575pt x 128.73094pt>
 File: Images/Harmonic_emission_Lwaves.png Graphic file (type png)
 <use Images/Harmonic_emission_Lwaves.png>
 Package pdftex.def Info: Images/Harmonic_emission_Lwaves.png  used on input lin
-e 251.
-(pdftex.def)             Requested size: 227.62206pt x 103.52309pt.
- [12] [13 <./Images/Fundamental_emission_Lwaves.png> <./Images/Harmonic_emissio
-n_Lwaves.png>]
-<Images/2_elem_int.png, id=410, 599.23875pt x 584.1825pt>
-File: Images/2_elem_int.png Graphic file (type png)
-<use Images/2_elem_int.png>
-Package pdftex.def Info: Images/2_elem_int.png  used on input line 330.
-(pdftex.def)             Requested size: 227.62206pt x 221.90251pt.
+e 74.
+(pdftex.def)             Requested size: 219.08624pt x 99.63971pt.
+)
+[24 <./Images/Fundamental_emission_Lwaves.png>] [25 <./Images/Harmonic_emission
+_Lwaves.png>]
+\openout2 = `3/instrumentation.aux'.
 
-Overfull \hbox (4.3981pt too wide) in paragraph at lines 336--338
-\OT1/cmr/m/n/12 where $\OML/cmm/m/it/12 c$ \OT1/cmr/m/n/12 is the speed of ligh
-t. The out-put from each an-tenna is a volt-age $\OML/cmm/m/it/12 V[] \OT1/cmr/
-m/n/12 = \OML/cmm/m/it/12 V [] []$
+ (./3/instrumentation.tex [26
+
+
+
+]
+Chapter 3.
+[27] [28]
+<Images/I_LOFAR_balloon_labeled.png, id=778, 796.47563pt x 518.6878pt>
+File: Images/I_LOFAR_balloon_labeled.png Graphic file (type png)
+<use Images/I_LOFAR_balloon_labeled.png>
+Package pdftex.def Info: Images/I_LOFAR_balloon_labeled.png  used on input line
+ 29.
+(pdftex.def)             Requested size: 350.53932pt x 228.27873pt.
+ [29 <./Images/I_LOFAR_balloon_labeled.png>] [30] [31] [32] [33]
+<Images/REALTA_block_ref.png, id=868, 965.6075pt x 647.41875pt>
+File: Images/REALTA_block_ref.png Graphic file (type png)
+<use Images/REALTA_block_ref.png>
+Package pdftex.def Info: Images/REALTA_block_ref.png  used on input line 72.
+(pdftex.def)             Requested size: 306.71939pt x 205.64702pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[34]
+Underfull \vbox (badness 1127) has occurred while \output is active []
+
+ [35 <./Images/REALTA_block_ref.png>] [36]
+
+LaTeX Warning: Hyper reference `zstandard' on page 37 undefined on input line 1
+25.
+
+
+LaTeX Warning: Hyper reference `udpPacketManager' on page 37 undefined on input
+ line 134.
+
+
+LaTeX Warning: Hyper reference `dreamBeam' on page 37 undefined on input line 1
+34.
+
+[37] [38]
+
+LaTeX Warning: Hyper reference `Heimdall' on page 39 undefined on input line 15
+2.
+
+
+Overfull \hbox (14.477pt too wide) in paragraph at lines 152--153
+[]\OT1/cmr/m/n/12 Single-pulse sources, such as in-ter-mit-tent ro-tat-ing ra-d
+io tran-sients (RRATs; [][][]McLaugh-
  []
 
-[14 <./Images/2_elem_int.png>] [15]) [16]
+
+LaTeX Warning: Hyper reference `GUPPI' on page 39 undefined on input line 163.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39]
+<Images/REALTA_future_alt.png, id=955, 1914.4323pt x 578.8827pt>
+File: Images/REALTA_future_alt.png Graphic file (type png)
+<use Images/REALTA_future_alt.png>
+Package pdftex.def Info: Images/REALTA_future_alt.png  used on input line 173.
+(pdftex.def)             Requested size: 328.62936pt x 99.36272pt.
+<Images/psr_profiles.jpg, id=956, 3558.29375pt x 2338.7375pt>
+File: Images/psr_profiles.jpg Graphic file (type jpg)
+<use Images/psr_profiles.jpg>
+Package pdftex.def Info: Images/psr_profiles.jpg  used on input line 180.
+(pdftex.def)             Requested size: 403.11787pt x 264.93446pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [40 <./Images/REALTA_future_alt.png>]
+Underfull \vbox (badness 1852) has occurred while \output is active []
+
+ [41 <./Images/psr_profiles.jpg>]
+<Images/rrat_observed.png, id=990, 867.24pt x 289.08pt>
+File: Images/rrat_observed.png Graphic file (type png)
+<use Images/rrat_observed.png>
+Package pdftex.def Info: Images/rrat_observed.png  used on input line 194.
+(pdftex.def)             Requested size: 403.11787pt x 134.37228pt.
+ [42 <./Images/rrat_observed.png>] [43]
+<Images/quickcrab.png, id=1061, 462.528pt x 346.896pt>
+File: Images/quickcrab.png Graphic file (type png)
+<use Images/quickcrab.png>
+Package pdftex.def Info: Images/quickcrab.png  used on input line 214.
+(pdftex.def)             Requested size: 438.17249pt x 328.64418pt.
+ [44] [45 <./Images/quickcrab.png>]
+
+LaTeX Warning: Hyper reference `RRatalog' on page 46 undefined on input line 22
+4.
+
+
+LaTeX Warning: Hyper reference `CHIME-FRB Galactic Sources' on page 46 undefine
+d on input line 224.
+
+
+LaTeX Warning: Hyper reference `BSA LPI Transients Catalogue' on page 46 undefi
+ned on input line 224.
+
+[46] [47]
+<Images/bursts.png, id=1175, 1003.75pt x 1606.0pt>
+File: Images/bursts.png Graphic file (type png)
+<use Images/bursts.png>
+Package pdftex.def Info: Images/bursts.png  used on input line 239.
+(pdftex.def)             Requested size: 328.62936pt x 525.8157pt.
+<Images/Uburst_1ms_1090MHz.png, id=1195, 722.7pt x 578.16pt>
+File: Images/Uburst_1ms_1090MHz.png Graphic file (type png)
+<use Images/Uburst_1ms_1090MHz.png>
+Package pdftex.def Info: Images/Uburst_1ms_1090MHz.png  used on input line 253.
+
+(pdftex.def)             Requested size: 438.17249pt x 350.54216pt.
+<Images/Jupiter_Io_IE613.png, id=1196, 1027.9203pt x 681.747pt>
+File: Images/Jupiter_Io_IE613.png Graphic file (type png)
+<use Images/Jupiter_Io_IE613.png>
+Package pdftex.def Info: Images/Jupiter_Io_IE613.png  used on input line 264.
+(pdftex.def)             Requested size: 438.17249pt x 290.60725pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [48]
+[49 <./Images/bursts.png>] [50 <./Images/Uburst_1ms_1090MHz.png>]
+Underfull \vbox (badness 5893) has occurred while \output is active []
+
+ [51 <./Images/Jupiter_Io_IE613.png>]
+
+LaTeX Warning: Hyper reference `Juno' on page 52 undefined on input line 278.
+
+[52] [53]
+<Images/B2217+47_crop.png, id=1289, 416.2752pt x 315.8199pt>
+File: Images/B2217+47_crop.png Graphic file (type png)
+<use Images/B2217+47_crop.png>
+Package pdftex.def Info: Images/B2217+47_crop.png  used on input line 300.
+(pdftex.def)             Requested size: 438.17249pt x 332.44954pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [54 <./Images/B2217+47_crop.png>]
+
+LaTeX Warning: Hyper reference `LOFAR4SW' on page 55 undefined on input line 31
+6.
+
+[55]) [56] [57]
+\openout2 = `4/work_chapter_1.aux'.
+
+ (./4/work_chapter_1.tex [58
+
+
+
+]
+Chapter 4.
+
+Package natbib Warning: Citation `VanHaarlem2013b' on page 59 undefined on inpu
+t line 15.
+
+[59] [60] [61] [62]
+<Images/Burst_inset_goes_20200730.png, id=1462, 722.7pt x 939.51pt>
+File: Images/Burst_inset_goes_20200730.png Graphic file (type png)
+<use Images/Burst_inset_goes_20200730.png>
+Package pdftex.def Info: Images/Burst_inset_goes_20200730.png  used on input li
+ne 41.
+(pdftex.def)             Requested size: 438.17249pt x 569.63101pt.
+
+
+LaTeX Warning: Float too large for page by 26.78932pt on input line 44.
+
+[63] [64 <./Images/Burst_inset_goes_20200730.png>] [65] [66]
+<Images/uv_fit_remote_20200826.png, id=1543, 445.36388pt x 1071.40276pt>
+File: Images/uv_fit_remote_20200826.png Graphic file (type png)
+<use Images/uv_fit_remote_20200826.png>
+Package pdftex.def Info: Images/uv_fit_remote_20200826.png  used on input line 
+74.
+(pdftex.def)             Requested size: 219.08624pt x 527.05183pt.
+<Images/im_recreate_remote_20200730.png, id=1549, 660.90915pt x 628.20697pt>
+File: Images/im_recreate_remote_20200730.png Graphic file (type png)
+<use Images/im_recreate_remote_20200730.png>
+Package pdftex.def Info: Images/im_recreate_remote_20200730.png  used on input 
+line 83.
+(pdftex.def)             Requested size: 438.17249pt x 416.48708pt.
+
+
+LaTeX Warning: Command \r invalid in math mode on input line 84.
+
+
+LaTeX Warning: Command \r invalid in math mode on input line 84.
+
+[67] [68 <./Images/uv_fit_remote_20200826.png>] [69 <./Images/im_recreate_remot
+e_20200730.png>] [70] [71] [72]) [73] [74]
+\openout2 = `5/work_chapter_2.aux'.
+
+ (./5/work_chapter_2.tex
+Chapter 5.
+) [75
+
+
+
+]
+\openout2 = `6/future_work.aux'.
+
+ (./6/future_work.tex [76
+
+
+
+]
+Chapter 6.
+) [77]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
+* modes: twoside 
 * h-part:(L,W,R)=(45.52458pt, 506.45871pt, 45.52458pt)
-* v-part:(T,H,B)=(-56.9055pt, 873.4996pt, 28.45274pt)
+* v-part:(T,H,B)=(28.45274pt, 788.14136pt, 28.45274pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
 * \textwidth=506.45871pt
-* \textheight=873.4996pt
+* \textheight=788.14136pt
 * \oddsidemargin=-26.7454pt
 * \evensidemargin=-26.7454pt
-* \topmargin=-195.1169pt
+* \topmargin=-109.75865pt
 * \headheight=37.48866pt
 * \headsep=28.45274pt
 * \topskip=12.0pt
@@ -1046,8 +1344,8 @@ m/n/12 = \OML/cmm/m/it/12 V [] []$
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
+* \@twosidetrue
+* \@mparswitchtrue
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
@@ -1056,63 +1354,210 @@ m/n/12 = \OML/cmm/m/it/12 V [] []$
 \openout8 = `main.brf'.
 
 
-! Undefined control sequence.
-<argument> ...gher, P.~T., {et~al.} 2019 [\eprint 
-                                                  [arXiv]{1901.07424}] 
-l.22 
-     
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...nomy and Astrophysics, 606 [\eprint 
-                                                  [arXiv]{1706.07410}] 
-l.89 
-     
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-)
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
 Make it at least 14.49998pt.
 We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
-[17
+[78
 
 
 
 ]
+! Undefined control sequence.
+<argument> ...} Astrophysics (submitted) [\eprint 
+                                                  [arXiv]{2009.02076}] 
+l.104 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Package caption Warning: Unused \captionsetup[sub] on input line 37.
+! Undefined control sequence.
+<argument> ...gher, P.~T., {et~al.} 2019 [\eprint 
+                                                  [arXiv]{1901.07424}] 
+l.152 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[79]
+! Undefined control sequence.
+<argument> ...9, Bulletin of the AAS, 51 [\eprint 
+                                                  [arXiv]{1907.05519}] 
+l.224 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--281
+\OT1/cmr/m/n/10 https://researchdata.edu.au/psrdada-acquisition-
+ []
+
+
+Underfull \hbox (badness 5771) in paragraph at lines 281--281
+\OT1/cmr/m/n/10 distributed-analysis-software/185603  (Cited on
+ []
+
+! Undefined control sequence.
+<argument> ... Armour, W., {et~al.} 2015 [\eprint 
+                                                  [arXiv]{1506.03370}] 
+l.309 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...simovic, M., {et~al.} 2020 [\eprint 
+                                                  [arXiv]{2001.03476}] 
+l.354 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[80]
+! Undefined control sequence.
+<argument> ...in, C. 2019{\natexlab {b}} [\eprint 
+                                                  [arXiv]{1902.01140}] 
+l.544 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[81]
+! Undefined control sequence.
+<argument> ... A.~R. \& Smirnov, O. 2017 [\eprint 
+                                                  [arXiv]{1706.06786}] 
+l.592 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ..., J., {et~al.} 2020, arXiv [\eprint 
+                                                  [arXiv]{2012.08348}] 
+l.601 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 622--622
+[]\OT1/cmr/m/n/10 Postel, J. 1980, In-ter-net Pro-to-col, RFC 768,
+ []
+
+! Undefined control sequence.
+<argument> ...nomy and Astrophysics, 606 [\eprint 
+                                                  [arXiv]{1706.07410}] 
+l.634 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... Ramesh, R., {et~al.} 2016 [\eprint 
+                                                  [arXiv]{1611.04282}] 
+l.668 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...rma, R. \& Oberoi, D. 2020 [\eprint 
+                                                  [arXiv]{2009.10604}] 
+l.690 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[82]
+! Undefined control sequence.
+<argument> ...me 556, id.A2, 53 pp., 556 [\eprint 
+                                                  [arXiv]{1305.3550}] 
+l.816 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...dhar, S.~S., {et~al.} 2020 [\eprint 
+                                                  [arXiv]{2005.09419}] 
+l.874 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+) [83]
+
+Package caption Warning: Unused \captionsetup[sub] on input line 49.
 See the caption package documentation for explanation.
 
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 319.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 319.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 336.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 336.
 (./main.aux (./0/declaration.aux) (./0/abstract.aux) (./0/publications.aux)
-(./1/introduction.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 319.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 319.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A41DCBA8A112CFB7D86CA390D71E062F;1107.
+(./1/introduction.aux) (./2/theory.aux) (./3/instrumentation.aux)
+(./4/work_chapter_1.aux) (./5/work_chapter_2.aux) (./6/future_work.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 336.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 336.
 
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 5FEB3BF2ACF483F2EF972C003D79BB16;4721
+(rerunfilecheck)             After:  1238A565FD9C7F35A74A45A42A749CBB;4876.
 
 Package rerunfilecheck Warning: File `main.brf' has changed.
 (rerunfilecheck)                Rerun to get bibliographical references right.
 
 Package rerunfilecheck Info: Checksums for `main.brf':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  79C304135B86708B29BF7C773DDBA061;2204.
+(rerunfilecheck)             Before: 51C3D4FA48607EDBB94F2B608ABA45DD;13828
+(rerunfilecheck)             After:  AFAC6A8761A0BD0F9AD87B5A7089BC5B;13821.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 30.12pt have occurred.
@@ -1121,21 +1566,65 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 319.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 336.
  ) 
 Here is how much of TeX's memory you used:
- 14694 strings out of 480608
- 235297 string characters out of 5903629
- 576674 words of memory out of 5000000
- 30138 multiletter control sequences out of 15000+600000
- 543523 words of font info for 66 fonts, out of 8000000 for 9000
+ 19219 strings out of 480608
+ 344430 string characters out of 5903629
+ 674784 words of memory out of 5000000
+ 34296 multiletter control sequences out of 15000+600000
+ 547870 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,18n,82p,1732b,507s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+ 61i,18n,82p,2177b,1313s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.17} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.28} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.16} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter*.29} has been referenced but does not exist
+, replaced by a fixed one
+
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
+/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></
+usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></u
+sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
+r/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><
 /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
 usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
 sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
@@ -1147,19 +1636,24 @@ exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/tex
 live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texli
 ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/
 2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/202
-0/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/2020/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2020/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2020/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2020/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2020/texmf-dist/
-fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (24 pages, 2157033 bytes).
+0/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/2020/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2020/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2020/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2020/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2020/texmf-dist/fon
+ts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2020/texmf-dist
+/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2020/texmf-dist/f
+onts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2020/texmf-dist/fon
+ts/type1/public/cm-super/sfrm1200.pfb>
+Output written on main.pdf (93 pages, 28240854 bytes).
 PDF statistics:
- 529 PDF objects out of 1000 (max. 8388607)
- 447 compressed objects within 5 object streams
- 107 named destinations out of 1000 (max. 500000)
- 184 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2106 PDF objects out of 2487 (max. 8388607)
+ 1907 compressed objects within 20 object streams
+ 381 named destinations out of 1000 (max. 500000)
+ 620 words of extra memory for PDF output out of 10000 (max. 10000000)
 

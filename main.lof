@@ -1,13 +1,30 @@
 \babel@toc {english}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Diagram of Sun's interior and atmospheric layers.}}{2}{figure.caption.5}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Model of electron density and temperature with height in the solar atmosphere.}}{3}{figure.caption.6}%
-\contentsline {figure}{\numberline {1.3}{\ignorespaces GOES lightcurve for X9 class flare on 2017-09-10}}{3}{figure.caption.7}%
-\contentsline {figure}{\numberline {1.4}{\ignorespaces CME observed with the LASCO C2 instrument on 2000-02-27. The blank area shows the extent of the coronograph and the white circle represents the solar disk.\relax }}{4}{figure.caption.8}%
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Cartoon of Type I-V radio bursts}}{5}{figure.caption.9}%
-\contentsline {figure}{\numberline {1.6}{\ignorespaces A number of Type III bursts observed by \cite {Zucca2012} on 21 October 2011.}}{8}{figure.caption.10}%
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Langmuir wave distriburtion function and spectral energy density.}}{11}{figure.caption.11}%
-\contentsline {figure}{\numberline {1.8}{\ignorespaces A three wave process of fundamental plasma emission L$\rightarrow $T+S}}{13}{figure.caption.12}%
-\contentsline {figure}{\numberline {1.9}{\ignorespaces Three wave process of second harmonic plasma emission L+L' $\rightarrow $ T}}{13}{figure.caption.13}%
-\contentsline {figure}{\numberline {1.10}{\ignorespaces A two element interferometer}}{14}{figure.caption.14}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Model of electron density and temperature with height in the solar atmosphere.}}{3}{figure.caption.5}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces GOES lightcurve for X9 class flare on 2017-09-10}}{5}{figure.caption.6}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces CME observed with the LASCO C2 instrument on 2000-02-27. The blank area shows the extent of the coronograph and the white circle represents the solar disk.\relax }}{6}{figure.caption.7}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Cartoon of Type I-V radio bursts}}{7}{figure.caption.8}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces A number of Type III bursts observed by \cite {Zucca2012} on 21 October 2011.}}{11}{figure.caption.9}%
+\contentsline {figure}{\numberline {1.6}{\ignorespaces A two element interferometer}}{14}{figure.caption.10}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Langmuir wave distriburtion function and spectral energy density.}}{22}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces A three wave process of fundamental plasma emission L$\rightarrow $T+S}}{24}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Three wave process of second harmonic plasma emission L+L' $\rightarrow $ T}}{25}{figure.caption.13}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Aerial photograph of the Irish Low Frequency Array station IE613 (I-LOFAR) at Birr Castle, County Offaly.}}{29}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Block diagram for REALTA and I-LOFAR.}}{35}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces System diagram for REALTA.}}{40}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Sample of 19 pulsars observed with I-LOFAR and REALTA.}}{41}{figure.caption.18}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Overview of the sky positions of RRATs observed during RRAT census.}}{42}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Observation of the Crab Pulsar performed on 30 June 2020.}}{45}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Solar radio noise storm observed on 2 November 2020.}}{49}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Two solar radio bursts observed on 2 June 2020.}}{50}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Observation of a Jovian Decametric emission produced by the Io-Jupiter interaction.}}{51}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Narrowband signal detected using REALTA and the \texttt {turboSETI} algorithm.}}{54}{figure.caption.24}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces GOES X-ray lightcurves and dynamic spectrum for the duration of a LOFAR solar observation 2015-10-17.}}{64}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Results of directly fitting LOFAR visibilities.}}{68}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Recreated sky intensity profile of a Type IIIb radio burst}}{69}{figure.caption.27}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }

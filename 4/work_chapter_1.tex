@@ -1,6 +1,7 @@
-\onehalfspacing
+%!TEX root = ../main.tex
+\doublespacing
 \chapter{Measuring Source Sizes in Visibility Space}
-
+\label{chap:wc1}
 
 Low frequency radio wave scattering and refraction can have a dramatic effect on the observed size and position of radio sources in the solar corona.
 The scattering and refraction is thought to be due to fluctuations of electron density caused by turbulence. Hence, determining the true radio source size can provide information on the turbulence in coronal plasma.
@@ -38,12 +39,12 @@ The maximum baseline of the LOFAR observation is 84\,km giving sub-arcminute res
 \begin{figure}
     \centering
     \includegraphics[width=\columnwidth]{Images/Burst_inset_goes_20200730.png}
-    \caption{\textbf{a)} GOES X-ray lightcurves for the duration of the LOFAR solar observation. Minimal activity other than a number of C class flares prior to 13:00 UTC is observed. Red vertical lines indicate the time range of radio analysis. \textbf{b)} Dynamic spectrum of a Type III solar radio burst observed with LOFAR station RS509. We note the striations in frequency which are particularly apparent below 40 MHz. The inset is a zoom of the region in the white box showing striation in the burst. The white cross indicates the time and frequency at which the images described in Section \ref{sec:data} are made.}
+    \caption[GOES X-ray lightcurves and dynamic spectrum for the duration of a LOFAR solar observation 2015-10-17.]{\textbf{a)} GOES X-ray lightcurves for the duration of the LOFAR solar observation. Minimal activity other than a number of C class flares prior to 13:00 UTC is observed. Red vertical lines indicate the time range of radio analysis. \textbf{b)} Dynamic spectrum of a Type III solar radio burst observed with LOFAR station RS509. We note the striations in frequency which are particularly apparent below 40 MHz. The inset is a zoom of the region in the white box showing striation in the burst. The white cross indicates the time and frequency at which the images described in Section \ref{sec:data} are made.}
     \label{fig:context}
 \end{figure}
 
 \section{Data analysis and results} \label{sec:data}
-The source sizes and positions of solar radio bursts in LOFAR data have typically been obtained by the "tied-array imaging mode" \citep{Morosan2014} whereby a number of beams are tessellated across the sun and the response in each beam is interpolated to produce an image \citep[e.g.][]{Reid2017,Kontar2017,Zucca2018, Morosan2019b}. Tied-array imaging has the distinct advantage over interferometric observations in that it retains the ${\sim} 12$ kHz frequency resolution and ${\sim} 0.01$ s temporal resolution from LOFAR beamformed observations but it also contains a significant limitation. Tied-array observations can only be made using the LOFAR core stations as they share a single clock \citep{DeGasperin2019}, which makes it possible to add beamformed data coherently. This means that the maximum baseline from tied-array observations is approximately 2 km corresponding to an angular resolution of ${\sim} 17^\prime$ at ${\sim} 30$\,MHz. Not only this, but the effect of interpolation between each tied-array beam on the observed source size has not yet been compared to observations done interferometrically. It is therefore unclear whether previously observed source sizes are in fact due to the underlying source, or an effect of the imaging technique. Solar campaigns with LOFAR are now performed with a new mode which allow for simultaneous interferometric and tied-array observations. A detailed comparison of these modes is currently under study, which should resolve the ambiguity in source sizes determined with tied-array observations (Morosan, D. E. 2020, private communication). 
+The source sizes and positions of solar radio bursts in LOFAR data have typically been obtained by the ``tied-array imaging mode" \citep{Morosan2014} whereby a number of beams are tessellated across the sun and the response in each beam is interpolated to produce an image \citep[e.g.][]{Reid2017,Kontar2017,Zucca2018, Morosan2019b}. Tied-array imaging has the distinct advantage over interferometric observations in that it retains the ${\sim} 12$ kHz frequency resolution and ${\sim} 0.01$ s temporal resolution from LOFAR beamformed observations but it also contains a significant limitation. Tied-array observations can only be made using the LOFAR core stations as they share a single clock \citep{DeGasperin2019}, which makes it possible to add beamformed data coherently. This means that the maximum baseline from tied-array observations is approximately 2 km corresponding to an angular resolution of ${\sim} 17^\prime$ at ${\sim} 30$\,MHz. Not only this, but the effect of interpolation between each tied-array beam on the observed source size has not yet been compared to observations done interferometrically. It is therefore unclear whether previously observed source sizes are in fact due to the underlying source, or an effect of the imaging technique. Solar campaigns with LOFAR are now performed with a new mode which allow for simultaneous interferometric and tied-array observations. A detailed comparison of these modes is currently under study, which should resolve the ambiguity in source sizes determined with tied-array observations (Morosan, D. E. 2020, private communication). 
 %a result of this interpolation or
 
 In order to avoid such limitations of the tied-array mode, here we use interferometric observations from the LOFAR core and remote stations, offering a longer baseline of 84\,km and hence much better spatial resolution.
@@ -71,7 +72,7 @@ Figure \ref{fig:uv_fit}c shows the increase in the amplitude of recorded visibil
 \begin{figure}
     \centering
     \includegraphics[width=0.5\columnwidth]{uv_fit_remote_20200826.png}
-    \caption{\textbf{a)} Amplitudes of visibilities in the \textit{uv} plane for LOFAR observation. Background colour map shows a Gaussian fit. Red ellipse shows the FWHM of the normalised amplitude. \textbf{b)} Visibility phase in the \textit{uv} plane. Background colour map shows fitted phase angle. \textbf{c)} Visibility amplitudes received from different angular scales. Red curves indicate the FWHM of the semi-major and semi-minor axes of the fitted Gaussian.}
+    \caption[Results of directly fitting LOFAR visibilities.]{\textbf{a)} Amplitudes of visibilities in the \textit{uv} plane for LOFAR observation. Background colour map shows a Gaussian fit. Red ellipse shows the FWHM of the normalised amplitude. \textbf{b)} Visibility phase in the \textit{uv} plane. Background colour map shows fitted phase angle. \textbf{c)} Visibility amplitudes received from different angular scales. Red curves indicate the FWHM of the semi-major and semi-minor axes of the fitted Gaussian.}
     \label{fig:uv_fit}
 \end{figure}
 
@@ -80,7 +81,7 @@ The visibility fit reveals a source with a FWHM in real space of $18.8^\prime$ $
 \begin{figure}
     \centering
     \includegraphics[width=\columnwidth]{im_recreate_remote_20200730.png}
-    \caption{Recreated sky intensity profile of a Type IIIb radio burst occurring at 13:21:46 on 17 October 2015. The background solar image is an AIA 171$\AA$ image at 17 October 2015 13:21:46 UTC.} 
+    \caption[Recreated sky intensity profile of a Type IIIb radio burst]{Recreated sky intensity profile of a Type IIIb radio burst occurring at 13:21:46 on 17 October 2015. The background solar image is an AIA 171$\AA$ image at 17 October 2015 13:21:46 UTC.} 
     \label{fig:recreate}
 \end{figure}
 

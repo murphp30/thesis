@@ -5,59 +5,205 @@ A level-1 auxiliary file: 0/declaration.aux
 A level-1 auxiliary file: 0/abstract.aux
 A level-1 auxiliary file: 0/publications.aux
 A level-1 auxiliary file: 1/introduction.aux
+A level-1 auxiliary file: 2/theory.aux
+A level-1 auxiliary file: 3/instrumentation.aux
+A level-1 auxiliary file: 4/work_chapter_1.aux
+A level-1 auxiliary file: 5/work_chapter_2.aux
+A level-1 auxiliary file: 6/future_work.aux
 The style file: aa.bst
 Database file #1: thesis_references.bib
-Repeated entry---line 926 of file thesis_references.bib
+Repeated entry---line 1067 of file thesis_references.bib
+ : @article{VanHaarlem2013
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1787 of file thesis_references.bib
  : @article{Reid2014
  :                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1236 of file thesis_references.bib
+Repeated entry---line 1902 of file thesis_references.bib
  : @article{Reid2014
  :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2260 of file thesis_references.bib
+ : @article{Lonsdale2009
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2429 of file thesis_references.bib
+ : @article{VanHaarlem2013
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2713 of file thesis_references.bib
+ : @article{Zhang2020
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2792 of file thesis_references.bib
+ : @article{Lonsdale2009
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2806 of file thesis_references.bib
+ : @article{Ellis1967
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2909 of file thesis_references.bib
+ : @article{Boischot1957
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2918 of file thesis_references.bib
+ : @article{Reid2018
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3035 of file thesis_references.bib
+ : @article{Chrysaphi2018
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3050 of file thesis_references.bib
+ : @article{Pick2008
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3125 of file thesis_references.bib
+ : @article{Melnik2010
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3154 of file thesis_references.bib
+ : @misc{McKenna2020
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3162 of file thesis_references.bib
+ : @article{Ginzburg1958
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3329 of file thesis_references.bib
+ : @article{Melrose1987
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3391 of file thesis_references.bib
+ : @article{Morosan2019
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3438 of file thesis_references.bib
+ : @article{Ellis1969
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3513 of file thesis_references.bib
+ : @article{Tan2020
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3530 of file thesis_references.bib
+ : @article{Reid2014
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3545 of file thesis_references.bib
+ : @article{Serylak2012
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3634 of file thesis_references.bib
+ : @article{Wild1950b
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3644 of file thesis_references.bib
+ : @article{Wild1959
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3653 of file thesis_references.bib
+ : @article{Kontar2017
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3694 of file thesis_references.bib
+ : @article{Worden2017
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3771 of file thesis_references.bib
+ : @article{McKay-Bukowski2015
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4027 of file thesis_references.bib
+ : @article{McConnell1980
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4168 of file thesis_references.bib
+ : @article{Dewdney2009
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4304 of file thesis_references.bib
+ : @article{Broekema2018
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4351 of file thesis_references.bib
+ : @article{Wild1950
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4521 of file thesis_references.bib
+ : @article{VanHaarlem2013
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4548 of file thesis_references.bib
+ : @article{Karastergiou2015
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4668 of file thesis_references.bib
+ : @article{Karastergiou2015
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4711 of file thesis_references.bib
+ : @article{VanHaarlem2013
+ :                        ,
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "VanHaarlem2013b"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--empty journal in Clarke2019
+Warning--empty journal in Karastergiou2015
+Warning--empty journal in Krupar2020
+Warning--empty institution in Lubberhuizen2009
+Warning--empty journal in McKenna2020
+Warning--empty journal in Morosan2019
 Warning--empty publisher in NelsonandMelrose1985
-You've used 31 entries,
+Warning--empty journal in Offringa2017
+Warning--empty journal in SasikumarRaja2016
+Warning--Proceedings of the International Astronomical Union, Vol.~8Both volume and number fields in Serylak2012
+You can't pop an empty literal stack for entry Serylak2012
+while executing---line 1684 of file aa.bst
+Warning--empty journal in Sharma2020
+Reallocated str_pool (elt_size=1) to 130000 items from 65000.
+Warning--empty journal in Zhang2020
+You've used 168 entries,
             3039 wiz_defined-function locations,
-            909 strings with 11460 characters,
-and the built_in function-call counts, 15705 in all, are:
-= -- 1301
-> -- 1273
-< -- 25
-+ -- 424
-- -- 393
-* -- 1282
-:= -- 2899
-add.period$ -- 31
-call.type$ -- 31
-change.case$ -- 253
-chr.to.int$ -- 31
-cite$ -- 33
-duplicate$ -- 604
-empty$ -- 847
-format.name$ -- 483
-if$ -- 3111
-int.to.chr$ -- 1
+            1816 strings with 62424 characters,
+and the built_in function-call counts, 145683 in all, are:
+= -- 10931
+> -- 18598
+< -- 69
++ -- 6213
+- -- 6042
+* -- 13688
+:= -- 27358
+add.period$ -- 168
+call.type$ -- 168
+change.case$ -- 2685
+chr.to.int$ -- 165
+cite$ -- 180
+duplicate$ -- 3194
+empty$ -- 4512
+format.name$ -- 6468
+if$ -- 28356
+int.to.chr$ -- 4
 int.to.str$ -- 1
-missing$ -- 27
-newline$ -- 97
-num.names$ -- 128
-pop$ -- 268
+missing$ -- 150
+newline$ -- 508
+num.names$ -- 676
+pop$ -- 2719
 preamble$ -- 1
-purify$ -- 253
+purify$ -- 2684
 quote$ -- 0
-skip$ -- 534
+skip$ -- 2726
 stack$ -- 0
-substring$ -- 621
-swap$ -- 34
-text.length$ -- 3
+substring$ -- 3433
+swap$ -- 119
+text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 279
-warning$ -- 2
-while$ -- 126
+type$ -- 1512
+warning$ -- 12
+while$ -- 664
 width$ -- 0
-write$ -- 309
-(There were 2 error messages)
+write$ -- 1670
+(There were 35 error messages)

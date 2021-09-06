@@ -2,15 +2,64 @@
 \BOOKMARK [0][]{chapter*.4}{List of Figures}{}% 2
 \BOOKMARK [0][]{chapter.1}{1 Introduction}{}% 3
 \BOOKMARK [1][]{section.1.1}{1.1 The Sun}{chapter.1}% 4
-\BOOKMARK [2][]{subsection.1.1.1}{1.1.1 The Corona}{section.1.1}% 5
-\BOOKMARK [2][]{subsection.1.1.2}{1.1.2 Solar Flares}{section.1.1}% 6
-\BOOKMARK [2][]{subsection.1.1.3}{1.1.3 Coronal Mass Ejections \(CMEs\)}{section.1.1}% 7
-\BOOKMARK [2][]{subsection.1.1.4}{1.1.4 Radio Phenomena in the Solar Corona}{section.1.1}% 8
-\BOOKMARK [2][]{subsection.1.1.5}{1.1.5 Type III Bursts}{section.1.1}% 9
-\BOOKMARK [2][]{subsection.1.1.6}{1.1.6 Source Sizes in the Corona}{section.1.1}% 10
-\BOOKMARK [1][]{section.1.2}{1.2 Plasma Emission}{chapter.1}% 11
-\BOOKMARK [2][]{subsection.1.2.1}{1.2.1 Generation of Langmuir Waves}{section.1.2}% 12
-\BOOKMARK [2][]{subsection.1.2.2}{1.2.2 Wave-Wave Interaction}{section.1.2}% 13
-\BOOKMARK [1][]{section.1.3}{1.3 Radio Interferometry}{chapter.1}% 14
-\BOOKMARK [2][]{subsection.1.3.1}{1.3.1 Beam-forming}{section.1.3}% 15
-\BOOKMARK [0][]{chapter*.15}{References}{}% 16
+\BOOKMARK [2][]{subsection.1.1.1}{1.1.1 The Chromosphere}{section.1.1}% 5
+\BOOKMARK [2][]{subsection.1.1.2}{1.1.2 The Transition Region}{section.1.1}% 6
+\BOOKMARK [2][]{subsection.1.1.3}{1.1.3 The Corona}{section.1.1}% 7
+\BOOKMARK [2][]{subsection.1.1.4}{1.1.4 Solar Flares}{section.1.1}% 8
+\BOOKMARK [2][]{subsection.1.1.5}{1.1.5 Coronal Mass Ejections \(CMEs\)}{section.1.1}% 9
+\BOOKMARK [1][]{section.1.2}{1.2 Solar Radio Bursts}{chapter.1}% 10
+\BOOKMARK [2][]{subsection.1.2.1}{1.2.1 Type III Bursts}{section.1.2}% 11
+\BOOKMARK [1][]{section.1.3}{1.3 Low Frequency Radio Wave Scattering}{chapter.1}% 12
+\BOOKMARK [2][]{subsection.1.3.1}{1.3.1 Source Sizes in the Corona}{section.1.3}% 13
+\BOOKMARK [1][]{section.1.4}{1.4 Radio Interferometry}{chapter.1}% 14
+\BOOKMARK [2][]{subsection.1.4.1}{1.4.1 Beam-forming}{section.1.4}% 15
+\BOOKMARK [1][]{section.1.5}{1.5 Thesis Outline}{chapter.1}% 16
+\BOOKMARK [0][]{chapter.2}{2 Theoretical Background}{}% 17
+\BOOKMARK [1][]{section.2.1}{2.1 Introductory Concepts in Plasma Physics}{chapter.2}% 18
+\BOOKMARK [2][]{subsection.2.1.1}{2.1.1 Plasma Frequency}{section.2.1}% 19
+\BOOKMARK [1][]{section.2.2}{2.2 Radio Emission Mechanisms in the Solar Corona}{chapter.2}% 20
+\BOOKMARK [2][]{subsection.2.2.1}{2.2.1 Bremstrahlung}{section.2.2}% 21
+\BOOKMARK [2][]{subsection.2.2.2}{2.2.2 Gyroemission}{section.2.2}% 22
+\BOOKMARK [2][]{subsection.2.2.3}{2.2.3 ECMI}{section.2.2}% 23
+\BOOKMARK [2][]{subsection.2.2.4}{2.2.4 Plasma Emission}{section.2.2}% 24
+\BOOKMARK [1][]{section.2.3}{2.3 Plasma Emission}{chapter.2}% 25
+\BOOKMARK [2][]{subsection.2.3.1}{2.3.1 Generation of Langmuir Waves}{section.2.3}% 26
+\BOOKMARK [2][]{subsection.2.3.2}{2.3.2 Wave-Wave Interaction}{section.2.3}% 27
+\BOOKMARK [0][]{chapter.3}{3 Instrumentation}{}% 28
+\BOOKMARK [1][]{section.3.1}{3.1 The LOw Frequency ARray \(LOFAR\)}{chapter.3}% 29
+\BOOKMARK [2][]{subsection.3.1.1}{3.1.1 Antennas}{section.3.1}% 30
+\BOOKMARK [2][]{subsection.3.1.2}{3.1.2 Digital Signal Pipeline}{section.3.1}% 31
+\BOOKMARK [2][]{subsection.3.1.3}{3.1.3 RSP-CEP Beamlets}{section.3.1}% 32
+\BOOKMARK [2][]{subsection.3.1.4}{3.1.4 TBB-CEP Packets}{section.3.1}% 33
+\BOOKMARK [1][]{section.3.2}{3.2 The REALtime Transient Acquisition Backend \(REALTA\)}{chapter.3}% 34
+\BOOKMARK [2][]{subsection.3.2.1}{3.2.1 Introduction}{section.3.2}% 35
+\BOOKMARK [2][]{subsection.3.2.2}{3.2.2 REALTA}{section.3.2}% 36
+\BOOKMARK [3][]{subsubsection.3.2.2.1}{3.2.2.1 Local networking}{subsection.3.2.2}% 37
+\BOOKMARK [3][]{subsubsection.3.2.2.2}{3.2.2.2 Hardware description}{subsection.3.2.2}% 38
+\BOOKMARK [2][]{subsection.3.2.3}{3.2.3 Software and pipelines}{section.3.2}% 39
+\BOOKMARK [3][]{subsubsection.3.2.3.1}{3.2.3.1 Recording data}{subsection.3.2.3}% 40
+\BOOKMARK [3][]{subsubsection.3.2.3.2}{3.2.3.2 Pre-processing data}{subsection.3.2.3}% 41
+\BOOKMARK [3][]{subsubsection.3.2.3.3}{3.2.3.3 Pulsar and single pulse processing}{subsection.3.2.3}% 42
+\BOOKMARK [3][]{subsubsection.3.2.3.4}{3.2.3.4 SETI data processing}{subsection.3.2.3}% 43
+\BOOKMARK [3][]{subsubsection.3.2.3.5}{3.2.3.5 Future development and real-time analysis}{subsection.3.2.3}% 44
+\BOOKMARK [2][]{subsection.3.2.4}{3.2.4 First results}{section.3.2}% 45
+\BOOKMARK [3][]{subsubsection.3.2.4.1}{3.2.4.1 Pulsars}{subsection.3.2.4}% 46
+\BOOKMARK [3][]{subsubsection.3.2.4.2}{3.2.4.2 Rotating radio transients}{subsection.3.2.4}% 47
+\BOOKMARK [3][]{subsubsection.3.2.4.3}{3.2.4.3 Fast radio bursts}{subsection.3.2.4}% 48
+\BOOKMARK [3][]{subsubsection.3.2.4.4}{3.2.4.4 Solar radio bursts}{subsection.3.2.4}% 49
+\BOOKMARK [3][]{subsubsection.3.2.4.5}{3.2.4.5 Jovian auroral radio emission}{subsection.3.2.4}% 50
+\BOOKMARK [3][]{subsubsection.3.2.4.6}{3.2.4.6 SETI}{subsection.3.2.4}% 51
+\BOOKMARK [2][]{subsection.3.2.5}{3.2.5 Conclusions and future work}{section.3.2}% 52
+\BOOKMARK [0][]{chapter.4}{4 Measuring Source Sizes in Visibility Space}{}% 53
+\BOOKMARK [1][]{section.4.1}{4.1 Introduction}{chapter.4}% 54
+\BOOKMARK [1][]{section.4.2}{4.2 Observation}{chapter.4}% 55
+\BOOKMARK [1][]{section.4.3}{4.3 Data analysis and results}{chapter.4}% 56
+\BOOKMARK [2][]{subsection.4.3.1}{4.3.1 Fitting the visibilities}{section.4.3}% 57
+\BOOKMARK [2][]{subsection.4.3.2}{4.3.2 Type IIIb striae}{section.4.3}% 58
+\BOOKMARK [1][]{section.4.4}{4.4 Discussion}{chapter.4}% 59
+\BOOKMARK [1][]{section.4.5}{4.5 Conclusion}{chapter.4}% 60
+\BOOKMARK [0][]{chapter.5}{5 Scatterig Observations vs Theory}{}% 61
+\BOOKMARK [0][]{chapter.6}{6 Future Work}{}% 62
+\BOOKMARK [1][]{section.6.1}{6.1 TBB data}{chapter.6}% 63
+\BOOKMARK [1][]{section.6.2}{6.2 More Scattering}{chapter.6}% 64
+\BOOKMARK [0][]{chapter*.28}{References}{}% 65
