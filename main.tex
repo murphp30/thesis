@@ -24,7 +24,7 @@
 \usepackage{lineno}
 \usepackage{lscape}
 \usepackage{multirow}
-\usepackage{natbib}
+\usepackage[round]{natbib}
 \usepackage{paralist}
 \usepackage{quotchap}
 \usepackage{rotating}
@@ -41,8 +41,8 @@
 
 \usepackage[font={footnotesize}]{caption}
 \usepackage[capitalise]{cleveref}
-%\usepackage[inner=3.5cm, outer=2cm,top=3.3cm, bottom=2.0cm, footskip=1cm, includeall]{geometry}
-\usepackage[bindingmargin=1.5cm, right=2cm, left=2cm, top=2.0cm, bottom=2.0cm, footskip=1.0cm, includeall]{geometry}
+%\usepackage[inner=3.5cm, outer=2cm,top=3.3cm, bottom=2.0cm, footskip=1cm, twoside, includeall]{geometry}
+\usepackage[bindingoffset=1.5cm, right=2cm, left=2cm, top=3.3cm, bottom=2.0cm, footskip=1.0cm]{geometry}
 
 %\usepackage[twoside, bindingoffset=3.5cm, margin=2cm,includeall]{geometry}
 \usepackage[font={footnotesize}]{subcaption}
@@ -188,7 +188,6 @@
 %\graphicspath{{/Users/josephroche/Work/log_of_learning/images/}}
 \graphicspath{{Images/}}
 
-
 %: --------------------------------------------------------------
 %:                  FRONT MATTER: dedications, abstract,..
 % --------------------------------------------------------------
@@ -317,7 +316,7 @@ Dr. Eoin P. Carley}\\[0.5mm]
 \newgeometry{left=1.6cm, right=1.6cm, top=1.0cm, bottom=1.0cm, footskip=0cm}
 \singlespacing
 \begin{footnotesize} 
-\bibliographystyle{rusnat}
+\bibliographystyle{plainnat}
 \renewcommand{\bibname}{References} 
 %\begin{multicols}{2}
 
