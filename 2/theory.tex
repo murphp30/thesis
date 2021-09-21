@@ -4,6 +4,7 @@
 \label{chap:theory}
 The following chapter describes the core concepts relevant to this thesis in more detail than Chapter \ref{chap:intro}. Here I discuss the various mechanisms for radio wave emission in the solar corona, with particular emphasis on the plasma emission process. I will also give an introduction to the mathematical formalisms of radio interferometry.
 \section{Introductory Concepts in Plasma Physics}
+\label{sec:plasma_intro}
 Plasma was the name given by Langmuir to the new, exotic type of matter he was studying in the 1920s. It is essentially an ionized gas that exhibits quasi-neutrality on a macroscopic scale. The solar corona is a shell of hot plasma surrounding the Sun and as such, the study of emission from the corona is a study of the plasma itself. A plasma's tendency to remain in quasi-neutrality means that any change to the charge separation between electrons and ions generates an electric field which acts as a restoring force and thus oscillations are induced in the plasma. To determine the frequency of these oscillations imagine the following, a plasma with equal number density of electrons and ions $N_e = N_i = N_0$ is perturbed so that a group of electrons are moved by some distance $x$ a restoring force $\mathbf{E} = q_e E_x$ acts to bring the electrons back to their initial position. Due to their mass, the electrons overshoot their initial position and the process begins again in the opposite direction. Here we have made the safe assumption that, due to electrons being much lighter, the ions remain stationary. For electrons with mass $m_e$, Newton's second law gives us,
 \begin{equation}
 \label{eq:fma}
@@ -121,20 +122,93 @@ $$
 $$
 where $\mu_n$ is the $n$th order moment. This procedure gives up our knowledge on the velocity distribution of particles in order to instead obtain single-value macroscopic particles of a plasma fluid. The main results for the first 3 moments are shown here \footnote{The interested reader is referred to e.g. \cite{Inan2010} for a full derivation of these equations}:
 \begin{align*}
-\mu_0 \rightarrow  \mbox{continuity equation or conservation of mass} \\
-\mu_1 \rightarrow  \mbox{momentum transport equation or conservation of momentum} \\
-\mu_2 \rightarrow  \mbox{energy transport equation or conservation of energy}
+& \mu_0 \rightarrow  \mbox{continuity equation or conservation of mass} \\
+& \mu_1 \rightarrow  \mbox{momentum transport equation or conservation of momentum} \\
+& \mu_2 \rightarrow  \mbox{energy transport equation or conservation of energy}
 \end{align*}
-The moments of the Boltzmann equation allows us to develop the theory of plasmas as being made up of multiple fluids each of their different particle species, e.g. electrons and ions. Under certain conditions it is possible to consider the entire plasma as a single fluid and it is this approach, called magnetohydrodynamics, that I discuss next \footnote{The derivations of the equations of motion for a two-fluid plasma and their subsequent combination to a single fluid are complex and tedious. I therefore once again refer an interested reader to e.g. \cite{Inan2010}}.
+The moments of the Boltzmann equation allows us to develop the theory of plasmas as being made up of multiple fluids each of their different particle species, e.g. electrons and ions. Under certain conditions it is possible to consider the entire plasma as a single fluid and it is this approach, called magnetohydrodynamics, that I discuss next\footnote{The derivations of the equations of motion for a two-fluid plasma and their subsequent combination to a single fluid are complex and tedious. I therefore once again refer an interested reader to e.g. \cite{Inan2010}}.
 \subsection{Magnetohydrodynamics}
+Magnetohydrodynamics (MHD) is a framework to describe the dynamics of an electrically conducting fluid in the presence of a magnetic field. It is a useful method that can be used to model large-scale, slowly varying plasma phenomena in a highly ionised plasma. For plasmas that are either collision-dominated or contain a strong external magnetic field the MHD description of a plasma is particularly appropriate. Given that these conditions are met in the solar corona, it is worth expanding upon some key ideas of MHD theory. For now we assume a collison-dominated plasma but the same ideas can be applied to collisionless plasmas with strong magnetic fields.
+
+The single fluid equations, derived from the moments of the Boltzmann equation, and the generalised Ohm's law can be simplified using several approximations to form what are known as the simplified MHD equations:
+\begin{subequations} \label{eq:MHD_simplified}
+\begin{align}
+\mathbf{J} = \sigma(\mathbf{E} + \mathbf{u}_m \times \mathbf{B}) \\
+\frac{\partial \rho_m}{\partial t} + \rho_{m0} \nabla \cdot \mathbf{u}_m = 0 \\
+\rho_m \frac{\partial \mathbf{u}_m}{\partial t} = - \nabla p + \mathbf{J} \times \mathbf{B}
+\end{align}
+\end{subequations}
+where $\mathbf{J}$ is the current density, $\sigma$ is the electrical conductivity, $\rho_m$ is the (variable) mass density, $\rho_{m0}$ is the (relatively constant) mass density,  $\mathbf{u}_m$ is the mass velocity and $p$ is the pressure.
+The electromagnetic fields inside a plasma are governed by Maxwell's equations,
+\begin{subequations} \label{eq:MHD_Maxwell}
+\begin{align}
+& \nabla \cdot \mathbf{E} = \frac{\rho}{\epsilon_0} = 0 \\
+& \nabla \cdot \mathbf{B} = 0 \\
+& \nabla \times \mathbf{E} = - \frac{\partial \mathbf{B}}{\partial t} \\
+& \nabla \times \mathbf{B} = \mu_0 \mathbf{J}
+\end{align}
+\end{subequations}
+where the assumption of no accumulation of charge inside the fluid gives rise to the charge density $\rho = 0$. Finally, by assuming an adiabatic equation of state,
+\begin{equation}
+\label{eq:MHD_eq_of_state}
+\frac{d}{dt} \left(p \rho_m^{-\gamma} \right) = 0
+\end{equation}
+Equations \ref{eq:MHD_simplified}, \ref{eq:MHD_Maxwell} and \ref{eq:MHD_eq_of_state} form a closed system which can be solved for any of the fluid or electromagnetic variables. These equations can be used to describe some simple wave phenomena that MHD plasmas exhibit which are relevant to the later discussion of the plasma emission mechanism.
+\subsection{MHD Waves}
+In the following we only consider waves of small amplitude superimposed on a background of a uniform plasma. Background quantities will be denoted by a subsrcipt of `0', while the perturbed quantities will be given a  subscript `1'. We also only consider the case where there is no steady fluid motion and no external electric field. Thus we can write the simplified MHD equations (assuming no collisions and an adiabatic equation of state) as
+\begin{subequations} \label{eq:MHDwaves_simplified}
+\begin{align}
+& \frac{\partial N_1}{\partial t} + N_0 \nabla \cdot \mathbf{u} = 0 \\
+& N_0 m \frac{\partial \mathbf{u}}{\partial t} = q N_0 (\mathbf{E} + \mathbf{u} \times \mathbf{B}_0) - \nabla p_1 \\
+& \frac{p_1}{p_0} = \gamma \frac{N_1}{N_0} \rightarrow p_1 = \gamma k_B T N_1 
+\end{align}
+\end{subequations}
+where the assumption that each particle species is an isothermal gas with temperature $T$ gives $p_0 = N_0 k_b T$. Maxwell's equations then become
+\begin{subequations} \label{eq:MHDwaves_Maxwell}
+\begin{align}
+& \nabla \cdot \mathbf{E} = \frac{\rho_1}{\epsilon_0} \\
+& \nabla \cdot \mathbf{B}_1 = 0 \\
+& \nabla \times \mathbf{E} = - \frac{\partial \mathbf{B}_1}{\partial t} \\
+& \nabla \times \mathbf{B}_1 = \mu_0 \mathbf{J} + \epsilon_0 \frac{\partial \mathbf{E}}{\partial t}
+\end{align}
+\end{subequations}
+In order to study plane waves, solutions of the above where all perturbation quantities vary proportionally to  $e^{i(\omega t - \mathbf{k} \cdot \mathbf{r}}$ are sought. In the following we use the fact that for solutions of this form $\partial / \partial t \rightarrow i \omega$ and $\nabla \rightarrow -i \mathbf{k}$.  For a cold plasma with $T=0$ the equation of motion of the electrons is reduced to 
+\begin{equation}
+\label{eq:MHDwave_clodplasma}
+m_e i \omega \mathbf{u}_e = q_e \mathbf{E}
+\end{equation}
+Taking the divergence of \ref{eq:MHDwave_clodplasma} and using \ref{eq:MHDwaves_simplified}a gives
+\begin{equation}
+N_1 = \frac{N_0 q_e}{m_e \omega^2} \nabla \cdot \mathbf{E} \rightarrow \rho_1 = N_1 q_e - \frac{N_0 q_e^2}{m_e \omega^2} \nabla \cdot \mathbf{E}.
+\end{equation}
+For a longitudinal wave $\nabla \mathbf{E} \neq 0$ and thus, using \ref{eq:MHDwaves_Maxwell}a, we must have
+\begin{equation}
+\label{eq:MHDwave_plasmafreq}
+\omega^2 = \frac{N_0 q_e^2}{m_e \epsilon_0} \equiv \omega^2_{p}
+\end{equation}
+which is the plasma frequency we found earlier from our discussion at the beginning of Section\ref{sec:plasma_intro}! Note also that, because $\omega$ does not depend on $\mathbf{k}$, the group velocity $v_g = d\omega / d k$ of this wave is 0. This means that the plasma oscillation does not propagate from the location where they are generated. Relaxing the restriction that $T=0$ and including the effects of pressure gradients leads to a dispersion relationship of 
+\begin{equation}
+\label{eq:MHDwave_langmuir}
+\omega^2 = \omega_p^2(1 + \gamma \lambda_D^2k^2).
+\end{equation}
+This propagating plasma oscillation is known as a Langmuir wave and will be instrumental in describing the process of plasma emission in a Type III radio burst.
+
+Electromagnetic waves traveling through a plasma have their own dispersion relation which can be found from the refractive index
+\begin{equation}
+\mu \equiv \frac{kc}{\omega} = (1 - \frac{\omega_p^2}{\omega^2})^{\frac{1}{2}}
+\end{equation}
+to be
+\begin{equation}
+\omega = (\omega_p +k^2 c^2)^\frac{1}{2}.
+\end{equation}
+Here it is obvious that $\omega_p$ acts as a cutoff frequency, below which electromagnetic waves become evanescent and are rapidly attenuated.
 \section{The Plasma Emission Mechanism for Type III Radio Bursts}
 \label{sec:plasma}
 In 1942 while Britain was on the look out for radar signals of enemy aircraft, a strong, noise like and highly variable signal was noticed by radar operators. Initially it was thought that Germany had managed to learn the secret of radar and create some sort of jamming device. On further investigation it was found that this jamming was in fact radio emission from the Sun. The discovery of this radio emission being associated with a major solar flare was kept secret until after the war and was published by \cite{Appleton1946}.
 Since then a number of major advancements in both instrumentation and theory have occurred. A culmination of the theory of solar radio emission is laid out in the book by \cite{McLean1985} while worldwide, a number of extraordinary radio telescopes and interferometers such as the LOw Frequency ARray \cite[LOFAR,][]{VanHaarlem2013}, the Nan\c{c}ay Radio Heliograph and the Murchison Widefield Array (MWA), to name but a few, have been built.
 
-Solar radio emission often comes in the form of bursts of varying timescales. These were initially classified into three types by \cite{Wild1950b} with a fourth and fifth type being discovered by \cite{Boischot1957} and \cite{Wild1959} respectively. Of these, the most frequently occurring are the so called Type III radio bursts. These are short bursts that can be observed over many frequencies and are found to be associated with solar flares \citep{Malville1962}. An initial study into how they are emitted was conducted by \cite{Ginzburg1958}.% This essay examines Type III bursts and in particular describes their observed characteristics, what causes them and the plasma emission process of their generation.
+Solar radio emission often comes in the form of bursts of varying timescales. These were initially classified into three types by \cite{Wild1950b} with a fourth and fifth type being discovered by \cite{Boischot1957} and \cite{Wild1959} respectively. Of these, the most frequently occurring are the so called Type III radio bursts. These are short bursts that can be observed over many frequencies and are found to be associated with solar flares \citep{Malville1962}. An initial study into how they are emitted was conducted by \cite{Ginzburg1958}.
 
-%\section{Process of Forming Type III Bursts} %(This is how they're made)}
 For a Type III radio burst to be emitted, an electron must generate Langmuir waves in the plasma. These Langmuir waves then go on to generate electromagnetic transverse waves by coalescing with other waves or by decaying. Theses electromagnetic waves are the radio bursts that are observed. In this section the generation of Langmuir waves and the process of plasma emission are discussed.
 
 \subsection{Generation of Langmuir Waves}
@@ -191,3 +265,5 @@ Second harmonic emission occurs when two Langmuir waves coalesce in the process 
      \caption[Three wave process of second harmonic plasma emission L+L' $\rightarrow$ T]{Three wave process of second harmonic plasma emission L+L' $\rightarrow$ T. A Langmuir wave (L) and a backwards propagating Langmuir wave (L') coalesce to form a transverse wave (T) at $2 \omega_p$. (Figure adapted from Solar (interplanetary) Radio Bursts: the Generation of Radio Waves,	an oral presentation by David Malaspina at the Jean Louis Steinberg International Workshop on Solar, Heliospheric and Magnetospheric Radioastronomy, November 2017)}
      \label{fig:Hemission}
  \end{figure}
+ 
+\section{Sattering of radio wave light in the solar corona}
