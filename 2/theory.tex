@@ -120,7 +120,7 @@ meaning that a particle moving through phase space will see a constant $f$ in it
 $$
 \mu_n = \int \mathbf{v}^n\left[\mbox{Boltzmann Eq.}\right]dv,
 $$
-where $\mu_n$ is the $n$th order moment. This procedure gives up our knowledge on the velocity distribution of particles in order to instead obtain single-value macroscopic particles of a plasma fluid. The main results for the first 3 moments are shown here \footnote{The interested reader is referred to e.g. \cite{Inan2010} for a full derivation of these equations}:
+where $\mu_n$ is the $n$th order moment. This procedure gives up our knowledge on the velocity distribution of particles in order to instead obtain single-value macroscopic particles of a plasma fluid. The main results for the first 3 moments are shown here \footnote{The interested reader is referred to e.g. \cite{Inan2010} for a full derivation of these equations.}:
 \begin{align*}
 & \mu_0 \rightarrow  \mbox{continuity equation or conservation of mass} \\
 & \mu_1 \rightarrow  \mbox{momentum transport equation or conservation of momentum} \\
@@ -204,11 +204,6 @@ to be
 Here it is obvious that $\omega_p$ acts as a cutoff frequency, below which electromagnetic waves become evanescent and are rapidly attenuated.
 \section{The Plasma Emission Mechanism for Type III Radio Bursts}
 \label{sec:plasma}
-In 1942 while Britain was on the look out for radar signals of enemy aircraft, a strong, noise like and highly variable signal was noticed by radar operators. Initially it was thought that Germany had managed to learn the secret of radar and create some sort of jamming device. On further investigation it was found that this jamming was in fact radio emission from the Sun. The discovery of this radio emission being associated with a major solar flare was kept secret until after the war and was published by \cite{Appleton1946}.
-Since then a number of major advancements in both instrumentation and theory have occurred. A culmination of the theory of solar radio emission is laid out in the book by \cite{McLean1985} while worldwide, a number of extraordinary radio telescopes and interferometers such as the LOw Frequency ARray \cite[LOFAR,][]{VanHaarlem2013}, the Nan\c{c}ay Radio Heliograph and the Murchison Widefield Array (MWA), to name but a few, have been built.
-
-Solar radio emission often comes in the form of bursts of varying timescales. These were initially classified into three types by \cite{Wild1950b} with a fourth and fifth type being discovered by \cite{Boischot1957} and \cite{Wild1959} respectively. Of these, the most frequently occurring are the so called Type III radio bursts. These are short bursts that can be observed over many frequencies and are found to be associated with solar flares \citep{Malville1962}. An initial study into how they are emitted was conducted by \cite{Ginzburg1958}.
-
 For a Type III radio burst to be emitted, an electron must generate Langmuir waves in the plasma. These Langmuir waves then go on to generate electromagnetic transverse waves by coalescing with other waves or by decaying. Theses electromagnetic waves are the radio bursts that are observed. In this section the generation of Langmuir waves and the process of plasma emission are discussed.
 
 \subsection{Generation of Langmuir Waves}
@@ -266,4 +261,143 @@ Second harmonic emission occurs when two Langmuir waves coalesce in the process 
      \label{fig:Hemission}
  \end{figure}
  
-\section{Sattering of radio wave light in the solar corona}
+\section{Scattering of radio wave light in the solar corona}
+\label{sec:scattering_theory}
+
+\cite{Chandrasekhar1952} outlined a statistical description of ``stellar scintillation" in order to account for observations with astronomical seeing.  The basis of this description is that a plane wave front travels through a turbulent layer whose refractive index, $\mu$, is subject to random fluctuations. The auto correlation function of these fluctuations at two different points $\mathbf{r_1}$ and $\mathbf{r_2}$ is given by
+$$
+\frac{\langle \delta \mu(\mathbf{r_1}) \delta \mu(\mathbf{r_2}) \rangle}{\langle \delta^2 \mu \rangle}, 
+$$
+and can be defined to be some function $M(r)$ only of the distance between the two points $r = \vert \mathbf{r_1} - \mathbf{r_2} \vert$. For the remainder of this section I will describe the \cite{Chandrasekhar1952} treatment of scintillations for a ``disturbed layer" in the atmosphere and how this was adopted by \cite{Fokker1965}, \cite{Steinberg1971} and \cite{Riddle1974} to explain observed characteristics of radio bursts before finally discussing the modern approach to radio wave scattering.
+
+The derivations below follow mainly from \cite{Chandrasekhar1952}. Under the assumptions of homogeneity and isotropy, the correlation between refractive index fluctuations in the layer will depend only on distance between two points. Thus
+\begin{equation}
+\label{eq:scattering_correlation}
+\langle \delta \mu(\mathbf{r_1}) \delta \mu(\mathbf{r_2}) \rangle = \langle \delta^2 \mu \rangle M(r),
+\end{equation}
+where $\langle \delta^2 \mu \rangle$ is the mean squared fluctuation of refractive index and $M(r)$ is some (even) function of $r$. For reasons that will become apparent, we introduce the tensor
+\begin{equation}
+\label{eq:scattering_tensor}
+R_{ij} = \bigg \langle \left( \frac{\partial}{\partial x_i} \delta \mu \right) \left( \frac{\partial}{\partial {x_j}' } \delta \mu \right) \bigg \rangle
+\end{equation}
+which gives the correlation of a component $\nabla \delta \mu$ at a point $x_i$ with that at a point ${x_i}'$. For $\xi_i = {x_i}' - x_i$ the tensor becomes
+\begin{equation}
+\label{eq:scattering_tensor2}
+R_{ij} = - \langle \delta^2 \mu \rangle \frac{\partial^2 M}{\partial \xi_i \partial \xi_j} = - \langle \delta^2 \mu \rangle \left[\left(\frac{M^{\prime\prime}}{r^2} - \frac{M^ \prime}{r^3}\right) \xi_i \xi_j + \frac{M^\prime}{r}\delta_{ij}\right],
+\end{equation} 
+where primes denote differentiation with respect to $r$.  In particular we can show that
+\begin{equation}
+\label{eq:scattering_transverse_correlation}
+\bigg \langle \left( \frac{\partial}{\partial x_i} \delta \mu \right) \left( \frac{\partial}{\partial {x_j}' } \delta \mu \right) \bigg \rangle_{(0,0,0;0,0,{x_s}'=r)} = - \langle \delta^2 \mu \rangle \frac{M^\prime}{r}
+\end{equation}
+We write this transverse correlation  as 
+\begin{equation}
+\langle \delta^2 \mu \rangle R(r) \mbox{, where } R(r) = - \frac{1}{r} \frac{dM}{dr}
+\end{equation}
+ Notably, $M(r)$ defines a ``micro-scale" $r_0$ such that for $r \gg r_0$, $M(r)$ becomes negligible.	
+ 
+The general equations for a ray traversing a medium of variable refractive index can be given as 
+\begin{equation}
+\label{eq:scattering_rayeq}
+\frac{d}{du}\left[\frac{\mu \dot{x_i}}{(\dot{x_1}^2 + \dot{x_2}^2 + \dot{x_3}^2 )^{1/2}} \right] = (\dot{x_1}^2 + \dot{x_2}^2 + \dot{x_3}^2 )^{1/2} \frac{\partial \mu}{\partial x_i} ,
+\end{equation}
+where 
+\begin{equation}
+\dot{x_i} = \frac{dx_i}{du},
+\end{equation}
+and $u$ is a single valued parameter along the ray. By only considering small fluctuations of $\mu$, the departure from linearity of a ray traversing  a medium can also be considered to be small and, consequently, the general equations above can be greatly simplified. By letting $u=s$, where $s$ is the distance along an undeflected linear trajectory, denoting the (small) displacements along the directions $x_1$ and $x_2$ normal to $\mathbf{s}$ as $\xi (s)$ and $\eta (s)$ and ignoring terms higher than first order in Equation \ref{eq:scattering_rayeq}, we find
+\begin{equation}
+\label{eq:scattering_displacement}
+\frac{d^2 \xi}{ds^s} = \left( \frac{\partial}{\partial x_1	} \delta \mu \right)_s \mbox{, } \frac{d^2 \eta}{ds^s} = \left( \frac{\partial}{\partial x_2} \delta \mu \right)_s.
+\end{equation}
+
+As we shall see later, one of the key quantities of interest is the angular deflection of the ray from its linear trajectory. These are denoted as $\psi_1$ and $\psi_2$ in the planes containing $x_1$ and $x_2$ respectively. Under the small angle approximation we took earlier
+\begin{equation}
+\label{eq_scattering_smallangle}
+\psi_1 = \frac{d \xi}{ds} \mbox{, } \psi_2 = \frac{d \eta}{ds},
+\end{equation}
+and thus
+\begin{equation}
+\label{eq:scattering_angulardisplacement}
+\frac{d \psi_1}{ds} =  \left( \frac{\partial}{\partial x_1} \delta \mu \right)_s \mbox{, } \frac{d \psi_2}{ds} = \left( \frac{\partial}{\partial x_2} \delta \mu \right)_s.
+\end{equation}
+
+Equations \ref{eq:scattering_displacement} and \ref{eq:scattering_angulardisplacement}, the mean square deflection and displacement of a ray can be found after it has traversed a known distance, in terms of $M(r)$. First we consider the deflection
+\begin{equation}
+\langle \psi_1^2(s) \rangle = \int_0^s \int_0^s \bigg \langle \left( \frac{\partial}{\partial x_1} \delta \mu \right)_{s_1} \left( \frac{\partial}{\partial {x_1} } \delta \mu \right)_{s_2} \bigg \rangle ds_1 ds_2
+\end{equation}
+where the averaged quantity under the integral is the transverse correlation from Equation \ref{eq:scattering_transverse_correlation}.
+Thus,
+\begin{equation}
+\label{eq:scattering_msdeflection}
+\langle \psi_1^2(s) \rangle  = langle \delta^2 \mu \rangle \int_0^s \int_0^s R(\vert s_1 - s_2 \vert) ds_1 ds_2 = 2 langle \delta^2 \mu \rangle int_0^s R(r) (s - r) dr
+\end{equation}
+Since there is no correlation between deflections in the directions $x_1$ and $x_2$ the mean square total deflection can be written as
+\begin{equation}
+\label{eq:scattering_mstotaldeflection}
+\langle \psi^2(s) \rangle = \langle \psi_1^2(s) \rangle + \langle \psi_2^2(s) \rangle = 2 \langle \psi_1^2(s) \rangle
+\end{equation}
+and similarly\footnote{see \cite{Chandrasekhar1952} for full derivation} for mean square radial displacement $\rho$
+\begin{equation}
+\label{eq:scattering_mstotaldisplacement}
+\langle \rho^2(s) \rangle = \langle \xi^2(s) \rangle + \langle \eta^2(s) \rangle = 2 \langle \xi^2(s) \rangle
+\end{equation}
+Assuming that in any further applications $s \gg r_0$, and substituting for $R(r)$, Equation \ref{eq:scattering_msdeflection} is approximated by
+\begin{equation}
+\label{eq:scattering}
+\langle \psi^2(s) \rangle = 4 \alpha  \langle \delta^2 \mu \rangle \left( \frac{s}{r} \right),
+\end{equation}
+where $\alpha = \sqrt{\pi}$ in the case $M(r) = \exp{(-r^2/r_0^2)}$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
