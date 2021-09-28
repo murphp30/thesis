@@ -199,6 +199,7 @@ Electromagnetic waves traveling through a plasma have their own dispersion relat
 \end{equation}
 to be
 \begin{equation}
+\label{eq:MHDwave_emdispersion}
 \omega = (\omega_p +k^2 c^2)^\frac{1}{2}.
 \end{equation}
 Here it is obvious that $\omega_p$ acts as a cutoff frequency, below which electromagnetic waves become evanescent and are rapidly attenuated.
@@ -270,7 +271,7 @@ $$
 $$
 and can be defined to be some function $M(r)$ only of the distance between the two points $r = \vert \mathbf{r_1} - \mathbf{r_2} \vert$. For the remainder of this section I will describe the \cite{Chandrasekhar1952} treatment of scintillations for a ``disturbed layer" in the atmosphere and how this was adopted by \cite{Fokker1965}, \cite{Steinberg1971} and \cite{Riddle1974} to explain observed characteristics of radio bursts before finally discussing the modern approach to radio wave scattering.
 
-The derivations below follow mainly from \cite{Chandrasekhar1952}. Under the assumptions of homogeneity and isotropy, the correlation between refractive index fluctuations in the layer will depend only on distance between two points. Thus
+Under the assumptions of homogeneity and isotropy, the correlation between refractive index fluctuations in the layer will depend only on distance between two points. Thus
 \begin{equation}
 \label{eq:scattering_correlation}
 \langle \delta \mu(\mathbf{r_1}) \delta \mu(\mathbf{r_2}) \rangle = \langle \delta^2 \mu \rangle M(r),
@@ -330,7 +331,7 @@ where the averaged quantity under the integral is the transverse correlation fro
 Thus,
 \begin{equation}
 \label{eq:scattering_msdeflection}
-\langle \psi_1^2(s) \rangle  = langle \delta^2 \mu \rangle \int_0^s \int_0^s R(\vert s_1 - s_2 \vert) ds_1 ds_2 = 2 langle \delta^2 \mu \rangle int_0^s R(r) (s - r) dr
+\langle \psi_1^2(s) \rangle  = \langle \delta^2 \mu \rangle \int_0^s \int_0^s R(\vert s_1 - s_2 \vert) ds_1 ds_2 = 2 \langle \delta^2 \mu \rangle \int_0^s R(r) (s - r) dr
 \end{equation}
 Since there is no correlation between deflections in the directions $x_1$ and $x_2$ the mean square total deflection can be written as
 \begin{equation}
@@ -345,15 +346,64 @@ and similarly\footnote{see \cite{Chandrasekhar1952} for full derivation} for mea
 Assuming that in any further applications $s \gg r_0$, and substituting for $R(r)$, Equation \ref{eq:scattering_msdeflection} is approximated by
 \begin{equation}
 \label{eq:scattering}
-\langle \psi^2(s) \rangle = 4 \alpha  \langle \delta^2 \mu \rangle \left( \frac{s}{r} \right),
+\langle \psi^2(s) \rangle = 4 \alpha  \langle \delta^2 \mu \rangle \left( \frac{s}{r_0} \right),
 \end{equation}
 where $\alpha = \sqrt{\pi}$ in the case $M(r) = \exp{(-r^2/r_0^2)}$.
 
+This framework was first used by \cite{Fokker1965} to statistically model rays in a spherically stratified corona however, they did not include the effects of spherical refraction which are relevant when describing radio bursts that are produced near where $\mu = 0$. \cite{Hollweg1967} extended upon the \cite{Chandrasekhar1952} description in particular, for the case $\mu \neq 1$. Using this, \cite{Steinberg1971} consider an unmagnetised, spherical corona with an electron density distribution not dissimilar to \cite{Newkirk1961} and perform a similar ray tracing experiment to \cite{Fokker1965} in order to determine the centre to limb variation of the apparent source intensity and the brightness distribution over a scattered image and its time variability. \cite{Steinberg1971} describe the correlation of refractive index functions in an identical manner to Equation \ref{eq:scattering_correlation} with $M(r) =  \exp{(-r^2/r_0^2)}$. They also introduce the variable 
+$$
+\varepsilon =\left( \frac{\langle \delta n^2 \rangle}{n}\right)^{1/2},
+$$
+which is the root mean squared (r.m.s) relative fluctuation of electron density $n$ and note that all observable quantities from their model vary as $\varepsilon^2/r_0$ only.
+
+This statistical approach to radio wave scattering fell dormant until the early 21st century where it saw renewed interest and a development of a Fokker-Planck framework began. This approach is based off the Hamiltonian equations of the evolution of a wavevector $\mathbf{k}$ and position $\mathbf{r}$
+
+\begin{align}
+\frac{d \mathbf{r}}{dt} = v_g = \frac{\partial \omega}{\partial \mathbf{k}} = \frac{c^2}{\omega} \mathbf{k} \label{eq:scattering_Hamiltonian_r}\\
+\frac{d \mathbf{k}}{dt} = - \frac{\partial \omega}{\partial \mathbf{r}} = - \frac{\omega_p}{\omega}\frac{\partial \omega_p}{\partial \mathbf{r}} \label{eq:scattering_Hamiltonian_k}
+\end{align}
+
+using the dispersion relation for an electromagnetic wave in a plasma given in Equation \ref{eq:MHDwave_emdispersion}. The spectral number density (photon number) $N(\mathbf{k}, \mathbf{r}, t)$ can be described using a Fokker-Planck equation
+
+\begin{equation}
+\label{eq:scattering_Fokker_Planck}
+\frac{\partial N}{dt} +\frac{d \mathbf{r}}{dt} \cdot \frac{\partial N}{\partial \mathbf{r}} + \frac{d \mathbf{k}}{dt} \cdot \frac{\partial N}{\partial \mathbf{k}} = \frac{\partial}{\partial k_i} D_{ij} \frac{\partial N}{\partial k_j} - \gamma N,
+\end{equation}
+
+where $k_i$ are the Cartesian coordinates of $\mathbf{k}$ and $\gamma$ is the collisional absorption coefficient for radio waves in a plasma. The diffusion tensor, $D_{ij}$, is given by
+
+\begin{equation}
+\label{eq:scattering_diffusion_tensor}
+\begin{aligned}
+D_{ij} = \frac{\pi \omega_p^4}{4 \omega^2} \int q_i q_j S(\mathbf{q}) \delta(\mathbf{q} \cdot \mathbf{v}_g) \frac{d^3 q}{(2 \pi)^3} \\
+= \frac{\pi \omega_p^4}{4 \omega c^2} \int q_i q_j S(\mathbf{q}) \delta(\mathbf{q} \cdot \mathbf{k}) \frac{d^3 q}{(2 \pi)^3},
+\end{aligned}
+\end{equation}
+where $\mathbf{q}$ is the wavevector of electron density fluctuations and $S(\mathbf{q})$ is the electron density fluctuation spectrum normalised to the relative desnity fluctuation variance:
+\begin{equation}
+\varepsilon^2 = \int S(\mathbf{q})  \frac{d^3 q}{(2 \pi)^3}.
+\end{equation}
+
+In the case of anisotropic scattering in the solar corona (which is more consistent with observations than isotropic scattering) the spectrum of density fluctuations can be written as
+
+\begin{equation}
+\label{eq:scattering_aniso_ne_fluctuations}
+S(\mathbf{q}) = S([q_\perp^2 + \alpha^{-2}q_\parallel^2]^{1/2})
+\end{equation}
+where $\alpha = h_\perp/h_\parallel$, the ratio of perpendicular and parallel correlation lengths (the ``micro-scale" or $r_0$ in the \cite{Chandrasekhar1952} description of scattering). It is now convenient to introduce the anisotropy matrix 
+\begin{equation}
+\label{eq:scattering_anisomatrix}
+\mathbf{A}=
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & \alpha^{-1}
+\end{pmatrix}
+\end{equation}
+and defining $\mathbf{\tilde{q}} = \mathbf{A} \mathbf{q}$ such that $\mathbf{q} = \mathbf{A}^{-1} \mathbf{\tilde{q}}$
 
 
-
-
-
+\section{The Power Spectrum of Coronal Density Inhomogeneities.}
 
 
 
