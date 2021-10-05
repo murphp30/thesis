@@ -2,7 +2,9 @@
 \doublespacing
 \chapter{Theoretical Background}
 \label{chap:theory}
-The following chapter describes the core concepts relevant to this thesis in more detail than Chapter \ref{chap:intro}. Here I discuss the various mechanisms for radio wave emission in the solar corona, with particular emphasis on the plasma emission process. I will also give an introduction to the mathematical formalisms of radio interferometry.
+The following chapter describes the core concepts relevant to this thesis in more detail than Chapter \ref{chap:intro}. In order to understand the corona, one must understand the plasma it is made of. Thus, I start in section \ref{sec:plasma_intro} with some fundamental concepts of plasma physics and introduce the kinetic theory of plasmas by considering the distribution of many particles in a six dimensional phase space. This lays the groundwork for a fluid description of plasmas, magnetohydrodynamics (MHD), arguably the most useful description of a plasma in the context of the solar corona which is discussed in section \ref{sec:MHD}. The MHD equations are investigated further to determine how longitudinal and transverse waves propagate in a plasma which is relevant for the subsequent discussion of Langmuir wave generation and the plasma emission mechanism of Type III radio bursts in section \ref{sec:plasma_emission}. An overview of the theory of radio wave scattering in the corona, and how it has been developed over time, is given in section \ref{sec:scattering_theory} and a discussion about the power spectrum of electron density fluctuations in section \ref{sec:density_fluctuations} concludes this chapter.
+
+
 \section{Introductory Concepts in Plasma Physics}
 \label{sec:plasma_intro}
 Plasma was the name given by Langmuir to the new, exotic type of matter he was studying in the 1920s. It is essentially an ionized gas that exhibits quasi-neutrality on a macroscopic scale. The solar corona is a shell of hot plasma surrounding the Sun and as such, the study of emission from the corona is a study of the plasma itself. A plasma's tendency to remain in quasi-neutrality means that any change to the charge separation between electrons and ions generates an electric field which acts as a restoring force and thus oscillations are induced in the plasma. To determine the frequency of these oscillations imagine the following, a plasma with equal number density of electrons and ions $N_e = N_i = N_0$ is perturbed so that a group of electrons are moved by some distance $x$ a restoring force $\mathbf{E} = q_e E_x$ acts to bring the electrons back to their initial position. Due to their mass, the electrons overshoot their initial position and the process begins again in the opposite direction. Here we have made the safe assumption that, due to electrons being much lighter, the ions remain stationary. For electrons with mass $m_e$, Newton's second law gives us,
@@ -127,7 +129,8 @@ where $\mu_n$ is the $n$th order moment. This procedure gives up our knowledge o
 & \mu_2 \rightarrow  \mbox{energy transport equation or conservation of energy}
 \end{align*}
 The moments of the Boltzmann equation allows us to develop the theory of plasmas as being made up of multiple fluids each of their different particle species, e.g. electrons and ions. Under certain conditions it is possible to consider the entire plasma as a single fluid and it is this approach, called magnetohydrodynamics, that I discuss next\footnote{The derivations of the equations of motion for a two-fluid plasma and their subsequent combination to a single fluid are complex and tedious. I therefore once again refer an interested reader to e.g. \cite{Inan2010}}.
-\subsection{Magnetohydrodynamics}
+\section{Magnetohydrodynamics}
+\label{sec:MHD}
 Magnetohydrodynamics (MHD) is a framework to describe the dynamics of an electrically conducting fluid in the presence of a magnetic field. It is a useful method that can be used to model large-scale, slowly varying plasma phenomena in a highly ionised plasma. For plasmas that are either collision-dominated or contain a strong external magnetic field the MHD description of a plasma is particularly appropriate. Given that these conditions are met in the solar corona, it is worth expanding upon some key ideas of MHD theory. For now we assume a collison-dominated plasma but the same ideas can be applied to collisionless plasmas with strong magnetic fields.
 
 The single fluid equations, derived from the moments of the Boltzmann equation, and the generalised Ohm's law can be simplified using several approximations to form what are known as the simplified MHD equations:
@@ -204,7 +207,7 @@ to be
 \end{equation}
 Here it is obvious that $\omega_p$ acts as a cutoff frequency, below which electromagnetic waves become evanescent and are rapidly attenuated.
 \section{The Plasma Emission Mechanism for Type III Radio Bursts}
-\label{sec:plasma}
+\label{sec:plasma_emission}
 For a Type III radio burst to be emitted, an electron must generate Langmuir waves in the plasma. These Langmuir waves then go on to generate electromagnetic transverse waves by coalescing with other waves or by decaying. Theses electromagnetic waves are the radio bursts that are observed. In this section the generation of Langmuir waves and the process of plasma emission are discussed.
 
 \subsection{Generation of Langmuir Waves}
@@ -354,7 +357,9 @@ This framework was first used by \cite{Fokker1965} to statistically model rays i
 $$
 \varepsilon =\left( \frac{\langle \delta n^2 \rangle}{n}\right)^{1/2},
 $$
-which is the root mean squared (r.m.s) relative fluctuation of electron density $n$ and note that all observable quantities from their model vary as $\varepsilon^2/r_0$ only.
+which is the root mean squared (r.m.s) relative fluctuation of electron density $n$ and note that all observable quantities from their model vary as $\varepsilon^2/r_0$ only. For convenience, although admittedly confusingly, I will use the lower case $n$ for electron density for the remainder of the section as the upper case $N$ is needed to describe photon number, as we shall see.
+
+The modelling by \cite{Steinberg1971} was able to explain...
 
 This statistical approach to radio wave scattering fell dormant until the early 21st century where it saw renewed interest and a development of a Fokker-Planck framework began. This approach is based off the Hamiltonian equations of the evolution of a wavevector $\mathbf{k}$ and position $\mathbf{r}$
 
@@ -367,7 +372,7 @@ using the dispersion relation for an electromagnetic wave in a plasma given in E
 
 \begin{equation}
 \label{eq:scattering_Fokker_Planck}
-\frac{\partial N}{dt} +\frac{d \mathbf{r}}{dt} \cdot \frac{\partial N}{\partial \mathbf{r}} + \frac{d \mathbf{k}}{dt} \cdot \frac{\partial N}{\partial \mathbf{k}} = \frac{\partial}{\partial k_i} D_{ij} \frac{\partial N}{\partial k_j} - \gamma N,
+\frac{\partial N}{\partial t} +\frac{d \mathbf{r}}{dt} \cdot \frac{\partial N}{\partial \mathbf{r}} + \frac{d \mathbf{k}}{dt} \cdot \frac{\partial N}{\partial \mathbf{k}} = \frac{\partial}{\partial k_i} D_{ij} \frac{\partial N}{\partial k_j} - \gamma N,
 \end{equation}
 
 where $k_i$ are the Cartesian coordinates of $\mathbf{k}$ and $\gamma$ is the collisional absorption coefficient for radio waves in a plasma. The diffusion tensor, $D_{ij}$, is given by
@@ -375,8 +380,8 @@ where $k_i$ are the Cartesian coordinates of $\mathbf{k}$ and $\gamma$ is the co
 \begin{equation}
 \label{eq:scattering_diffusion_tensor}
 \begin{aligned}
-D_{ij} = \frac{\pi \omega_p^4}{4 \omega^2} \int q_i q_j S(\mathbf{q}) \delta(\mathbf{q} \cdot \mathbf{v}_g) \frac{d^3 q}{(2 \pi)^3} \\
-= \frac{\pi \omega_p^4}{4 \omega c^2} \int q_i q_j S(\mathbf{q}) \delta(\mathbf{q} \cdot \mathbf{k}) \frac{d^3 q}{(2 \pi)^3},
+D_{ij} &= \frac{\pi \omega_p^4}{4 \omega^2} \int q_i q_j S(\mathbf{q}) \delta(\mathbf{q} \cdot \mathbf{v}_g) \frac{d^3 q}{(2 \pi)^3} \\
+&= \frac{\pi \omega_p^4}{4 \omega c^2} \int q_i q_j S(\mathbf{q}) \delta(\mathbf{q} \cdot \mathbf{k}) \frac{d^3 q}{(2 \pi)^3},
 \end{aligned}
 \end{equation}
 where $\mathbf{q}$ is the wavevector of electron density fluctuations and $S(\mathbf{q})$ is the electron density fluctuation spectrum normalised to the relative desnity fluctuation variance:
@@ -400,13 +405,35 @@ where $\alpha = h_\perp/h_\parallel$, the ratio of perpendicular and parallel co
 0 & 0 & \alpha^{-1}
 \end{pmatrix}
 \end{equation}
-and defining $\mathbf{\tilde{q}} = \mathbf{A} \mathbf{q}$ such that $\mathbf{q} = \mathbf{A}^{-1} \mathbf{\tilde{q}}$
+and defining $\widetilde{\mathbf{q}} = \mathbf{A} \mathbf{q}$ such that $\mathbf{q} = \mathbf{A}^{-1} \widetilde{\mathbf{q}}$. This allows us to write
+\begin{equation}
+\label{eq:scattering_aniso_ne_wavevector}
+q_\perp^2 + \alpha^{-2} q_\parallel^2 =  \mathbf{q}\mathbf{A}^2\mathbf{q} = q_i A_{ij}^2 q_j = \widetilde{\mathbf{q}} \cdot \widetilde{\mathbf{q}} = \widetilde{q}_i \widetilde{q}_j
+\end{equation}
+where $q_\perp$ and $q_\parallel$ are the perpendicular and parallel componenets of $\mathbf{q}$, respectively. Equations \ref{eq:scattering_aniso_ne_fluctuations} and \ref{eq:scattering_aniso_ne_wavevector} can be used to write the diffusion coefficient $D_{ij}$ as follows.
+\begin{equation}
+\label{eq:scattering_aniso_diffusion}
+\begin{aligned}
+D_{ij} & = \frac{\pi \omega_p^4}{4 \omega c^2} \int q_i q_j S(\vert \mathbf{Aq} \vert) \delta(\mathbf{q} \cdot \mathbf{k}) \frac{d^3 q}{(2 \pi)^3} \\
+& = \frac{\omega_p^4}{32 \pi^2 \omega c^2} \int (\mathbf{A}^{-1} \widetilde{\mathbf{q}})_i  (\mathbf{A}^{-1} \widetilde{\mathbf{q}})_j S(\widetilde{\mathbf{q}}) \delta(\widetilde{\mathbf{q}} \cdot \mathbf{A}^{-1} \mathbf{k)} d^3q \\
+& = \frac{\omega_p^4}{32 \pi^2 \omega c^2} A_{i\alpha}^{-1} A_{i \beta}^{-1} \int \widetilde{\mathbf{q}}_\alpha \widetilde{\mathbf{q}}_\beta S(\widetilde{\mathbf{q}}) \delta(\widetilde{\mathbf{q}} \cdot \widetilde{\mathbf{k}}) \mbox{det}(\mathbf{J}) d^3 \widetilde{q}
+\end{aligned}
+\end{equation}
+where $\widetilde{\mathbf{k}} = \mathbf{A}^{-1} \mathbf{k}$ and $\mbox{det}(\mathbf{J}) =\mbox{det}(\mathbf{A}^{-1}) = \alpha$ is the determinant of the Jacobian matrix $\mathbf{J}$ which facilitates the transformation between $\mathbf{q}$ and $\widetilde{\mathbf{q}}$. The above can be written as
+\begin{equation}
+D_{ij} = \frac{\omega_p^4}{32 \pi^2 \omega c^2} A_{i\alpha}^{-1} A_{i \beta}^{-1} \left(\delta_{\alpha \beta} - \frac{\widetilde{k}\alpha \widetilde{k}\beta}{\widetilde{k}^2}\right) \frac{\pi \alpha}{\widetilde{k}} \int_0^\infty \widetilde{q}^3 S(\widetilde{q}) d\widetilde{q},
+\end{equation}
+which can be given in the original quantities of $\mathbf{k}$
+\begin{equation}
+D_{ij} = \left[ \frac{A_{ij}^{-2}}{(\mathbf{k}\mathbf{A}^{-2}\mathbf{k})^{1/2}} - \frac{(\mathbf{A}^{-2}\mathbf{k})_i (\mathbf{A}	^{-2}\mathbf{k})_j}{(\mathbf{k}\mathbf{A}^{-2}\mathbf{k})^{3/2}} \right] \frac{\omega_p^4}{32 \pi \omega c^2} \alpha \int_0^\infty \widetilde{q}^3 S(\widetilde{q}) d\widetilde{q}
+\end{equation}
 
+The Fokker-Planck equation \ref{eq:scattering_Fokker_Planck} can be solved numerically (see \cite{Kontar2019} for details) to give the results of \cite{Kontar2019}
 
 \section{The Power Spectrum of Coronal Density Inhomogeneities.}
+\label{sec:density_fluctuations}
 
-
-
+IN the discussion of the correlation coefficient for density fluctuations above we only discussed the case of $M(r) = \exp-{r^2/r_0^2} $. There are however, a number of reasons to suggest that this is not the case. \cite{Coles1989} and \cite{Bastian1994} both describe the fluctuation power spectrum in great detail and I surmise their discussions here
 
 
 
