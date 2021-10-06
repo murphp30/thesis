@@ -1,8 +1,10 @@
 **/*.aux
+**/*.log
 main.bbl
 main.blg
 main.brf
 main.lof
+main.dvi
 main.log
 main.nlo
 main.out
