@@ -40,51 +40,86 @@ The parameters for all 30 fitted bursts are given in Table \ref{tab:dataset} whe
 \label{fig:synoptic_bursts}
 \end{figure}
 
-\begin{landscape}
+%\begin{landscape}
 \begin{table}
 \centering
-\caption[Table of fitted burst parameters]{Table of fitted burst parameters for each of the 30 bursts described in Section \ref{sec:obsvtheory_method}. The units in each column are given. Here $I_0$ is the maximum intensity of the burst, $x_0$ and $y_0$ are the x and y  helioprojective coordinates of the burst, FWHM\textsubscript{x} and FWHM\textsubscript{y} are the burst sizes in the x and y direction and $\theta$ is the position angle of the fitted Gaussian.}
+\caption[Table of fitted burst parameters]{Table of fitted burst parameters for each of the 30 bursts described in Section \ref{sec:obsvtheory_method}. The units in each column are given in brackets. Here $I_0$ is the maximum intensity of the burst, $x_0$ and $y_0$ are the x and y helioprojective coordinates of the burst, FWHM\textsubscript{x} and FWHM\textsubscript{y} are the burst sizes along the minor and major axes and $\theta$ is the position angle of the fitted Gaussian.}
 \label{tab:dataset}
 \begin{tabular}{lcccccc}
 \toprule
-Burst Time & $I_0$ (arbitrary) & $x_0$ (arcsec) & $y_0$ (arcsec) & FWHM\textsubscript{x} (arcmin) & FWHM\textsubscript{y} (arcmin) & $\theta$ (degrees) \\
+Burst Time & $I_0$  & $x_0$ & $y_0$  & FWHM\textsubscript{x} & FWHM\textsubscript{y} & $\theta$ \\
+ & (arbitrary) & (arcsec) & (arcsec) & (arcmin) & (arcmin) &  (degrees) \\
 \midrule
-2019-04-05T12:08:08.082 &   90333.34 & -1772.89 &   213.66 &    8.76 &   17.58 &  -26.59 \\
-2019-04-07T12:02:28.512 &   83782.44 & -1924.03 &   411.53 &   10.28 &   14.48 &  -56.52 \\
-2019-04-07T12:04:21.926 &  108123.57 & -1990.30 &   372.36 &   11.29 &   14.52 &  -66.65 \\
-2019-04-07T12:15:07.681 &  160081.88 & -1677.12 &  1228.90 &   12.48 &   15.59 &  -43.79 \\
-2019-04-07T12:30:59.620 &  120107.74 & -1896.80 &   165.35 &   10.01 &   14.02 &  -56.17 \\
-2019-04-07T12:51:39.288 &   47916.36 & -1979.35 &   420.47 &   12.15 &   14.72 &  -67.42 \\
-2019-04-08T12:00:15.636 &  117196.69 & -1310.37 &  1020.77 &   11.16 &   16.93 &  -63.68 \\
-2019-04-08T12:00:15.636 &  117196.69 & -1310.37 &  1020.77 &   11.16 &   16.93 &  -63.68 \\
-2019-04-08T12:06:40.505 &  316272.33 & -1579.55 &   818.51 &   13.12 &   18.67 &  -65.64 \\
-2019-04-08T12:08:36.604 &   60696.79 & -1616.67 &   840.69 &   11.28 &   14.28 &  -50.02 \\
-2019-04-08T12:22:34.290 &  171058.10 & -1380.68 &   643.10 &   13.59 &   18.40 &  -60.80 \\
-2019-04-08T12:26:53.834 &  111428.17 & -1479.15 &   338.94 &   11.89 &   18.69 &  -58.46 \\
-2019-04-08T12:29:00.334 &   77443.59 & -1341.21 &   533.82 &   13.33 &   18.65 &  -58.68 \\
-2019-04-08T12:34:57.353 &  176944.04 &  -934.63 &   947.11 &   12.09 &   17.18 &  -71.76 \\
-2019-04-08T12:35:35.437 &  277659.44 &  -902.94 &   931.06 &   12.39 &   18.46 &  -61.85 \\
-2019-04-08T12:42:59.698 &  119228.99 & -1653.25 &   878.17 &   12.36 &   16.18 &  -60.06 \\
-2019-04-08T12:47:06.994 &  155057.08 & -1381.63 &   723.48 &   13.58 &   18.22 &  -62.20 \\
-2019-04-08T12:48:49.167 &  296662.11 & -1305.03 &   648.47 &   12.83 &   16.99 &  -61.59 \\
-2019-04-08T12:50:26.643 &  129463.84 & -1331.87 &   924.36 &   13.61 &   19.59 &  -89.59 \\
-2019-04-08T12:54:34.610 &  207041.12 & -1485.08 &   898.27 &   13.60 &   17.91 &  -71.72 \\
-2019-04-08T12:59:24.856 &  177435.14 & -1473.30 &   768.77 &   12.85 &   15.54 &  -65.86 \\
-2019-04-11T12:56:26.514 &  215905.79 & -1221.80 &  -105.80 &   13.30 &   17.15 &   -0.49 \\
-2019-04-12T12:00:18.153 &  179265.16 &  -362.53 &   500.60 &   11.41 &   14.77 &  -87.46 \\
-2019-04-12T12:04:55.480 &  130911.18 &     3.26 &   399.69 &   12.25 &   17.88 & -101.70 \\
-2019-04-12T12:14:50.568 &   43288.32 & -1438.75 &  -549.49 &   12.04 &   16.08 &  -83.24 \\
-2019-04-12T12:39:31.661 &   86016.46 & -1040.30 &  -146.83 &   11.04 &   15.73 &  -91.31 \\
-2019-04-12T12:49:33.963 &   74776.61 &  -888.52 &  -202.43 &   12.60 &   15.84 &  -79.74 \\
-2019-04-12T12:51:54.388 &  132627.29 &  -805.26 &  -338.33 &   11.73 &   16.05 &  -82.21 \\
-2019-04-12T12:53:51.493 &  127718.17 &  -687.98 &  -436.28 &   10.29 &   14.56 &  -83.17 \\
-2019-04-13T12:30:30.763 &  100613.83 &  -162.06 &  -766.36 &    7.21 &    8.98 &  -75.73 \\
+2019-04-05T12:08:08 &   90333.34 & -1772.89 &   213.66 &    8.76 &   17.58 &  -26.59 \\
+2019-04-07T12:02:28 &   83782.44 & -1924.03 &   411.53 &   10.28 &   14.48 &  -56.52 \\
+2019-04-07T12:04:21 &  108123.57 & -1990.30 &   372.36 &   11.29 &   14.52 &  -66.65 \\
+2019-04-07T12:15:07 &  160081.88 & -1677.12 &  1228.90 &   12.48 &   15.59 &  -43.79 \\
+2019-04-07T12:30:59 &  120107.74 & -1896.80 &   165.35 &   10.01 &   14.02 &  -56.17 \\
+2019-04-07T12:51:39 &   47916.36 & -1979.35 &   420.47 &   12.15 &   14.72 &  -67.42 \\
+2019-04-08T12:00:15 &  117196.69 & -1310.37 &  1020.77 &   11.16 &   16.93 &  -63.68 \\
+2019-04-08T12:00:15 &  117196.69 & -1310.37 &  1020.77 &   11.16 &   16.93 &  -63.68 \\
+2019-04-08T12:06:40 &  316272.33 & -1579.55 &   818.51 &   13.12 &   18.67 &  -65.64 \\
+2019-04-08T12:08:36 &   60696.79 & -1616.67 &   840.69 &   11.28 &   14.28 &  -50.02 \\
+2019-04-08T12:22:34 &  171058.10 & -1380.68 &   643.10 &   13.59 &   18.40 &  -60.80 \\
+2019-04-08T12:26:53 &  111428.17 & -1479.15 &   338.94 &   11.89 &   18.69 &  -58.46 \\
+2019-04-08T12:29:00 &   77443.59 & -1341.21 &   533.82 &   13.33 &   18.65 &  -58.68 \\
+2019-04-08T12:34:57 &  176944.04 &  -934.63 &   947.11 &   12.09 &   17.18 &  -71.76 \\
+2019-04-08T12:35:35 &  277659.44 &  -902.94 &   931.06 &   12.39 &   18.46 &  -61.85 \\
+2019-04-08T12:42:59 &  119228.99 & -1653.25 &   878.17 &   12.36 &   16.18 &  -60.06 \\
+2019-04-08T12:47:06 &  155057.08 & -1381.63 &   723.48 &   13.58 &   18.22 &  -62.20 \\
+2019-04-08T12:48:49 &  296662.11 & -1305.03 &   648.47 &   12.83 &   16.99 &  -61.59 \\
+2019-04-08T12:50:26 &  129463.84 & -1331.87 &   924.36 &   13.61 &   19.59 &  -89.59 \\
+2019-04-08T12:54:34 &  207041.12 & -1485.08 &   898.27 &   13.60 &   17.91 &  -71.72 \\
+2019-04-08T12:59:24 &  177435.14 & -1473.30 &   768.77 &   12.85 &   15.54 &  -65.86 \\
+2019-04-11T12:56:26 &  215905.79 & -1221.80 &  -105.80 &   13.30 &   17.15 &   -0.49 \\
+2019-04-12T12:00:18 &  179265.16 &  -362.53 &   500.60 &   11.41 &   14.77 &  -87.46 \\
+2019-04-12T12:04:55 &  130911.18 &     3.26 &   399.69 &   12.25 &   17.88 & -101.70 \\
+2019-04-12T12:14:50 &   43288.32 & -1438.75 &  -549.49 &   12.04 &   16.08 &  -83.24 \\
+2019-04-12T12:39:31 &   86016.46 & -1040.30 &  -146.83 &   11.04 &   15.73 &  -91.31 \\
+2019-04-12T12:49:33 &   74776.61 &  -888.52 &  -202.43 &   12.60 &   15.84 &  -79.74 \\
+2019-04-12T12:51:54 &  132627.29 &  -805.26 &  -338.33 &   11.73 &   16.05 &  -82.21 \\
+2019-04-12T12:53:51 &  127718.17 &  -687.98 &  -436.28 &   10.29 &   14.56 &  -83.17 \\
+2019-04-13T12:30:30 &  100613.83 &  -162.06 &  -766.36 &    7.21 &    8.98 &  -75.73 \\
 \bottomrule
 
 \end{tabular}
 
 \end{table}
-\end{landscape}
+%\end{landscape}
+%original table with milliseconds
+%\midrule
+%2019-04-05T12:08:08.082 &   90333.34 & -1772.89 &   213.66 &    8.76 &   17.58 &  -26.59 \\
+%2019-04-07T12:02:28.512 &   83782.44 & -1924.03 &   411.53 &   10.28 &   14.48 &  -56.52 \\
+%2019-04-07T12:04:21.926 &  108123.57 & -1990.30 &   372.36 &   11.29 &   14.52 &  -66.65 \\
+%2019-04-07T12:15:07.681 &  160081.88 & -1677.12 &  1228.90 &   12.48 &   15.59 &  -43.79 \\
+%2019-04-07T12:30:59.620 &  120107.74 & -1896.80 &   165.35 &   10.01 &   14.02 &  -56.17 \\
+%2019-04-07T12:51:39.288 &   47916.36 & -1979.35 &   420.47 &   12.15 &   14.72 &  -67.42 \\
+%2019-04-08T12:00:15.636 &  117196.69 & -1310.37 &  1020.77 &   11.16 &   16.93 &  -63.68 \\
+%2019-04-08T12:00:15.636 &  117196.69 & -1310.37 &  1020.77 &   11.16 &   16.93 &  -63.68 \\
+%2019-04-08T12:06:40.505 &  316272.33 & -1579.55 &   818.51 &   13.12 &   18.67 &  -65.64 \\
+%2019-04-08T12:08:36.604 &   60696.79 & -1616.67 &   840.69 &   11.28 &   14.28 &  -50.02 \\
+%2019-04-08T12:22:34.290 &  171058.10 & -1380.68 &   643.10 &   13.59 &   18.40 &  -60.80 \\
+%2019-04-08T12:26:53.834 &  111428.17 & -1479.15 &   338.94 &   11.89 &   18.69 &  -58.46 \\
+%2019-04-08T12:29:00.334 &   77443.59 & -1341.21 &   533.82 &   13.33 &   18.65 &  -58.68 \\
+%2019-04-08T12:34:57.353 &  176944.04 &  -934.63 &   947.11 &   12.09 &   17.18 &  -71.76 \\
+%2019-04-08T12:35:35.437 &  277659.44 &  -902.94 &   931.06 &   12.39 &   18.46 &  -61.85 \\
+%2019-04-08T12:42:59.698 &  119228.99 & -1653.25 &   878.17 &   12.36 &   16.18 &  -60.06 \\
+%2019-04-08T12:47:06.994 &  155057.08 & -1381.63 &   723.48 &   13.58 &   18.22 &  -62.20 \\
+%2019-04-08T12:48:49.167 &  296662.11 & -1305.03 &   648.47 &   12.83 &   16.99 &  -61.59 \\
+%2019-04-08T12:50:26.643 &  129463.84 & -1331.87 &   924.36 &   13.61 &   19.59 &  -89.59 \\
+%2019-04-08T12:54:34.610 &  207041.12 & -1485.08 &   898.27 &   13.60 &   17.91 &  -71.72 \\
+%2019-04-08T12:59:24.856 &  177435.14 & -1473.30 &   768.77 &   12.85 &   15.54 &  -65.86 \\
+%2019-04-11T12:56:26.514 &  215905.79 & -1221.80 &  -105.80 &   13.30 &   17.15 &   -0.49 \\
+%2019-04-12T12:00:18.153 &  179265.16 &  -362.53 &   500.60 &   11.41 &   14.77 &  -87.46 \\
+%2019-04-12T12:04:55.480 &  130911.18 &     3.26 &   399.69 &   12.25 &   17.88 & -101.70 \\
+%2019-04-12T12:14:50.568 &   43288.32 & -1438.75 &  -549.49 &   12.04 &   16.08 &  -83.24 \\
+%2019-04-12T12:39:31.661 &   86016.46 & -1040.30 &  -146.83 &   11.04 &   15.73 &  -91.31 \\
+%2019-04-12T12:49:33.963 &   74776.61 &  -888.52 &  -202.43 &   12.60 &   15.84 &  -79.74 \\
+%2019-04-12T12:51:54.388 &  132627.29 &  -805.26 &  -338.33 &   11.73 &   16.05 &  -82.21 \\
+%2019-04-12T12:53:51.493 &  127718.17 &  -687.98 &  -436.28 &   10.29 &   14.56 &  -83.17 \\
+%2019-04-13T12:30:30.763 &  100613.83 &  -162.06 &  -766.36 &    7.21 &    8.98 &  -75.73 \\
+%\bottomrule
+
 
 The size of each burst, is plotted against the distance from the disk centre in the x and y direction in Figure \ref{fig:fwhm_comp}. There is no obvious trend towards bigger/smaller bursts with increasing distance from disk centre and, most strikingly, in direct contrast to the prediction by \cite{Kontar2019} there is no trend in the aspect ratio of the bursts, which is expected to trend towards 1 near disk centre and $< 1$ near the limb. Figure \ref{fig:fwhm_hist} shows a histogram of FWHM\textsubscript{x} and FWHM\textsubscript{y}in the range of 6 to 20 arcmins. The mean size of the bursts is indicated by a vertical grey dashed line and is $11.86$ arcmin for FWHM\textsubscript{x} and $16.35$ arcmin for FWHM\textsubscript{y}.
 
@@ -104,6 +139,9 @@ The size of each burst, is plotted against the distance from the disk centre in 
 
 \section{Discussion}
 \label{sec:obsvtheory_discussion}
-The observed source sizes of Type III bursts are largely consistent with previous observations at similar frequencies in both interferometric and tied-array observations \citep{Kontar2017, Murphy2021} which, in turn, have been explained by \cite{Kontar2019} as being due to scattering off of anisotropic density inhomogeneities in the solar corona. Not only this but all 30 of the fitted bursts have an aspect ratio (defined above) of less than 1 which is suggestive of preferential scattering in a particular direction \citep{Anantharamaiah1994, Bastian1994}.
+The observed source sizes of Type III bursts are largely consistent with previous observations at similar frequencies in both interferometric and tied-array observations \citep{Kontar2017, Zhang2020}. In particular, the mean of the size in the major and minor axes is in agreement a previous measurement using the visibility fitting method \citep{Murphy2021}. The large sources sizes have been explained by \cite{Kontar2019} as being due to scattering off of anisotropic density inhomogeneities in the solar corona. As well as this, all 30 of the fitted bursts have an aspect ratio (defined above) of less than 1 which is suggestive of preferential scattering in a particular direction, \citep{Anantharamaiah1994, Bastian1994} although a more thorough analysis of the local magnetic field line direction would be necessary to confirm this, a similar finding was made by \cite{Murphy2021}. 
 
-with models of scattering through anisotropic density fluctuations in a spherically symmetric corona as presented by \cite{Kontar2019}. However, there is one major deviation in the results; no trend of source size vs heliocentric angle is evident in the data. The simplest, and perhaps most appropriate, answer to why this is the case is mentioned in the discussion of \cite{Kontar2019}. Since their work only analyses the path of photons from a point source, it is possible that Type III (and all other) radio bursts have an intrinsic source size. The total observed size then can be considered as the intrinsic size and the size due to scattering of a point source added in quadrature FWHM\textsubscript{total} = (FWHM\textsuperscript{2}\textsubscript{intrinsic} + FWHM\textsuperscript{2}\textsubscript{scattering})$^{1/2}$. Therefore, no trend in source sizes could suggest an intrinsic size greater than the size due to scattering. Interestingly, however, there appears to be a relationship in the orientation of the major axis of bursts being almost perpendicular to the radial line from solar centre. This suggest some form of aniostropic process... Another alternative is that the degree of aniostropy is in fact smaller than suggested by \cite{Kontar2019} and is closer to $\alpha = 0.5$, or even that it is not constant with time and or position (i.e. not axially symmetric as the MC method is based off of)
+There is one major deviation between the model of scattering through anisotropic density fluctuations in a spherically symmetric corona and these results. \cite{Kontar2019} predict that, for a point source, the aspect ratio of a radio burst should decrease with increasing heliocentric angle, i.e. distance away from the disk centre along the solar equator. However, as shown in Figure \ref{fig:fwhm_comp}, no such trend is evident in the data. The simplest, and perhaps most appropriate, answer to why this is the case is mentioned in the discussion of \cite{Kontar2019}. Since their work only analyses the path of photons from a point source, it is possible that Type III (and other) radio bursts have an intrinsic source size. The total observed size then can be considered as the intrinsic size and the size due to scattering of a point source added in quadrature FWHM\textsubscript{total} = (FWHM\textsuperscript{2}\textsubscript{intrinsic} + FWHM\textsuperscript{2}\textsubscript{scattering})$^{1/2}$. Therefore, no trend in source sizes could suggest an intrinsic size greater than the size due to scattering. An alternative explanation could be that the anisotropy is much less than \cite{Kontar2019} suggest, perhaps having a value closer to $\alpha = 0.5$.
+
+Perhaps a more damning indictment for all scattering models comes when one relaxes the assumption of a spherically symmetric solar corona. The observations in this study were made over the course of a number of days. If, as is widely accepted, radio burst generation is concentrated above an evolving active region then spectrum of density inhomogeneities will surely be different from one day to another. The time scale of this change is an important parameter that is not considered in scattering models nor is it understood by the author
+
