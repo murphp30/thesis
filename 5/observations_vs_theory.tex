@@ -16,7 +16,14 @@ The conclusions of \cite{Kontar2019} have not yet been qualitatively compared to
 
 \section{Observations}
 \label{obsvtheory_observations}
-During the period 04 April 2019 to 14 April 2019 a Type III radio noise storm occurred on the sun. This storm was observed in the frequency range of 20 - 80 MHz using LOFAR in both tied-array and interferometric mode. Interferometric visibilities at a frequency of 30.47 MHz from 12:00 UTC - 13:00 UTC on April 4-8 and 11-14 were obtained. During this time a large active region rotated across the solar disk. Assuming Type III radio bursts occur above this active region, it offers a perfect opportunity to study the variation of source size and shape with respect to position under vaguely constant coronal conditions. 
+During the period 04 April 2019 to 14 April 2019 a Type III radio noise storm occurred on the sun. This storm was observed in the frequency range of 20 - 80 MHz using LOFAR in both tied-array and interferometric mode. Interferometric visibilities at a frequency of 30.47 MHz from 12:00 UTC - 13:00 UTC on April 4-8 and 11-14 were obtained. During this time a large active region rotated across the solar disk. Figure \ref{fig:ar_evolve} shows how a the active region with NOAA identification number 12738 revolves onto the disk. The active region is first classified on 08 April 2019 as a unipolar sunspot under the Hale classification and evolves to a bipolar structure by 14 April 2019. The active region remains relatively simple over the duration of the observation period. Assuming Type III radio bursts occur above this active region, it offers a perfect opportunity to study the variation of source size and shape with respect to position. 
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\columnwidth]{aia193_ar_evolve.png}
+\caption[Evolution of active region 12738 as it revolves around the disk.]{Evolution of active region 12738 as it revolves around the disk. Images are in the 193 \AA \ passband of AIA showing hot material in the solar corona. It is expected that Type III bursts should be centred above the active region.}
+\label{fig:ar_evolve}
+\end{figure}
 
 \section{Method}
 \label{sec:obsvtheory_method}
@@ -31,12 +38,12 @@ By fitting their interferometric visibilities as described in Chapter \ref{chap:
 
 \section{Results}
 \label{sec:obsvtheory_results}
-The parameters for all 30 fitted bursts are given in Table \ref{tab:dataset} where $I_0$ is the maximum intensity of the burst, $x_0$ and $y_0$ are the x and y  helioprojective coordinates of the burst, FWHM\textsubscript{x} and FWHM\textsubscript{y} are the burst sizes in the x and y direction and $\theta$ is the position angle of the fitted Gaussian. Each fitted type III burst is overlayed on a synoptic AIA 193\AA \ map in Figure \ref{fig:synoptic_bursts}. It is clear from the figure that most bursts share a similar size and aspect ratio despite their relatively widespread origin in relation to the Sun's disk.
+The parameters for all 30 fitted bursts are given in Table \ref{tab:dataset} where $I_0$ is the maximum intensity of the burst, $x_0$ and $y_0$ are the x and y  helioprojective coordinates of the burst, FWHM\textsubscript{x} and FWHM\textsubscript{y} are the burst sizes in the x and y direction and $\theta$ is the position angle of the fitted Gaussian. Each fitted type III burst is plotted in helioprojective coordinates in Figure \ref{fig:synoptic_bursts}. It is clear from the figure that most bursts share a similar size and aspect ratio despite their relatively widespread origin in relation to the Sun's disk.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=\columnwidth]{burst_ellipses_carrington.png}
-\caption[Synoptic AIA 193\AA \ map overlayed with Type III radio bursts.]{A 193 \AA \ AIA synoptic map where each fitted radio burst is overplotted. }
+\includegraphics[width=\columnwidth]{burst_ellipses_best.png}
+\caption[Plot of Type III radio bursts in helioprojecive coordinates.]{Plot of Type III radio bursts in helioprojecive coordinates. Each ellipse has the size and location determined from direct visibility fitting. The colour of each ellipse is the aspect ratio. The red circle indicates the visible solar limb. }
 \label{fig:synoptic_bursts}
 \end{figure}
 
@@ -48,7 +55,7 @@ The parameters for all 30 fitted bursts are given in Table \ref{tab:dataset} whe
 \begin{tabular}{lcccccc}
 \toprule
 Burst Time & $I_0$  & $x_0$ & $y_0$  & FWHM\textsubscript{x} & FWHM\textsubscript{y} & $\theta$ \\
- & (arbitrary) & (arcsec) & (arcsec) & (arcmin) & (arcmin) &  (degrees) \\
+ & (arbitrary) & (arcsec) & (arcsec) & (arcmin) & (arcmin) &  (deg) \\
 \midrule
 2019-04-05T12:08:08 &   90333.34 & -1772.89 &   213.66 &    8.76 &   17.58 &  -26.59 \\
 2019-04-07T12:02:28 &   83782.44 & -1924.03 &   411.53 &   10.28 &   14.48 &  -56.52 \\
@@ -121,7 +128,7 @@ Burst Time & $I_0$  & $x_0$ & $y_0$  & FWHM\textsubscript{x} & FWHM\textsubscrip
 %\bottomrule
 
 
-The size of each burst, is plotted against the distance from the disk centre in the x and y direction in Figure \ref{fig:fwhm_comp}. There is no obvious trend towards bigger/smaller bursts with increasing distance from disk centre and, most strikingly, in direct contrast to the prediction by \cite{Kontar2019} there is no trend in the aspect ratio of the bursts, which is expected to trend towards 1 near disk centre and $< 1$ near the limb. Figure \ref{fig:fwhm_hist} shows a histogram of FWHM\textsubscript{x} and FWHM\textsubscript{y}in the range of 6 to 20 arcmins. The mean size of the bursts is indicated by a vertical grey dashed line and is $11.86$ arcmin for FWHM\textsubscript{x} and $16.35$ arcmin for FWHM\textsubscript{y}.
+The size of each burst, is plotted against the distance from the disk centre in the x and y direction in Figure \ref{fig:fwhm_comp}. There is no obvious trend towards bigger/smaller bursts with increasing distance from disk centre and, most strikingly, in direct contrast to the prediction by \cite{Kontar2019} there is no trend in the aspect ratio of the bursts, which is expected to trend towards 1 near disk centre and $< 1$ near the limb. Figure \ref{fig:fwhm_hist} shows a histogram of FWHM\textsubscript{x} and FWHM\textsubscript{y}in the range of 6 to 20 arcmins. The mean size of the bursts is indicated by a vertical grey dashed line and is $11.86$ arcmin for FWHM\textsubscript{x} and $16.35$ arcmin for FWHM\textsubscript{y}. The mean aspect ratio of the bursts is $\sim 0.73$.
 
 \begin{figure}[ht]
 \centering
@@ -133,9 +140,17 @@ The size of each burst, is plotted against the distance from the disk centre in 
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\columnwidth]{burst_fwhm_histogram.png}
-\caption[Histogram of type III burst sizes.]{Histogram of type III burst sizes. Bins are 1 arcmin wide and the vertical grey dashed lines indicate the mean value for FWHM\textsubscript{x} and FWHM\textsubscript{y}}
+\caption[Histogram of type III burst sizes.]{Histogram of type III burst sizes. Bins are 1 arcmin wide and the vertical grey dashed lines indicate the mean value for FWHM\textsubscript{x} and FWHM\textsubscript{y}.}
 \label{fig:fwhm_hist}
 \end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\columnwidth]{burst_fwhm_ratio_histogram.png}
+\caption[Histogram of type III burst aspect ratios.]{Histogram of type III burst aspect ratios. The vertical grey dashed line indicate the mean value for the aspect ratio FWHM\textsubscript{x}/FWHM\textsubscript{y}.}
+\label{fig:fwhm_ratio_hist}
+\end{figure}
+
 
 \section{Discussion}
 \label{sec:obsvtheory_discussion}
@@ -143,5 +158,8 @@ The observed source sizes of Type III bursts are largely consistent with previou
 
 There is one major deviation between the model of scattering through anisotropic density fluctuations in a spherically symmetric corona and these results. \cite{Kontar2019} predict that, for a point source, the aspect ratio of a radio burst should decrease with increasing heliocentric angle, i.e. distance away from the disk centre along the solar equator. However, as shown in Figure \ref{fig:fwhm_comp}, no such trend is evident in the data. The simplest, and perhaps most appropriate, answer to why this is the case is mentioned in the discussion of \cite{Kontar2019}. Since their work only analyses the path of photons from a point source, it is possible that Type III (and other) radio bursts have an intrinsic source size. The total observed size then can be considered as the intrinsic size and the size due to scattering of a point source added in quadrature FWHM\textsubscript{total} = (FWHM\textsuperscript{2}\textsubscript{intrinsic} + FWHM\textsuperscript{2}\textsubscript{scattering})$^{1/2}$. Therefore, no trend in source sizes could suggest an intrinsic size greater than the size due to scattering. An alternative explanation could be that the anisotropy is much less than \cite{Kontar2019} suggest, perhaps having a value closer to $\alpha = 0.5$.
 
-Perhaps a more damning indictment for all scattering models comes when one relaxes the assumption of a spherically symmetric solar corona. The observations in this study were made over the course of a number of days. If, as is widely accepted, radio burst generation is concentrated above an evolving active region then spectrum of density inhomogeneities will surely be different from one day to another. The time scale of this change is an important parameter that is not considered in scattering models nor is it understood by the author
+Perhaps a more damning indictment for all scattering models comes when one relaxes the assumption of a spherically symmetric solar corona that is constant in time.  If, as is widely accepted, radio burst generation is concentrated in open magnetic field lines above the active region seen in Figure \ref{fig:ar_evolve} then the spectrum of density inhomogeneities is sure to change as the active region evolves. The time scale for this change is clearly less than the order of a few days, otherwise the trend in aspect ratio should be observed in Figure \ref{fig:fwhm_comp}. A lower limit on this time scale is more elusive. Bursts observed over the course of one hour on a given day all share a similar size, orientation and aspect ratio which gives a lower limit of at least one hour. Thus it is reasonable to assume that the power spectrum of density inhomogeneities is constant on the order of a few hours but not for time scales over a number of days. The exact change to the power spectrum during this time remains unknown but is undoubtedly linked to magnetic flux emergence in the active region and it is likely that the assumption of constant $\varepsilon$ is also incorrect and that either the level r.m.s fluctuations change or the actual electron density of the emitting region changes.
+
+\section{Conclusion}
+In this chapter I outlined the development of scattering models for radio waves in the solar corona from seminal works to modern day advancements. I also stated the importance that comparisons between these models and contemporary observations. I then detail the observation of hundreds of Type III radio bursts during a radio noise storm over the period 04 April 2019 to 14 April 2019. Using LOFAR interferometric visibilities at $\sim 30$ MHz and a method similar to \cite{Murphy2021} I fit 30 of the calibrated bursts to determine their size and shape. I find that Type III radio bursts have a mean size in the minor and major axis of $11.86$ arcmin for and $16.35$ arcmin respectively and a mean aspect ratio of 0.73. No trend in aspect ratio with respect to burst location is evident in the observations and as such, I attribute this to the intrinsic size of Type III radio bursts being greater than the size due to scattering. Using the mean values achieved as a typical intrinsic size agrees well with previous observations with LOFAR in both interferometric and tied-array images at similar frequencies.
 
