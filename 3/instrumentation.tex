@@ -1,28 +1,29 @@
 %!TEX root = ../main.tex
 \doublespacing
-\chapter{Instrumentation and Interferometric imaging}
+\chapter{Instrumentation and Interferometric Imaging}
 \label{chap:instrumentation}
-Solar Radio bursts in the corona can be studied in both spectra and images using observations from radio telescopes and interferometers. This chapter describes the instrumentation used throughout the work for this thesis, namely the LOw Frequency ARray (LOFAR). In order to study the spatial extent of radio bursts, a number of LOFAR stations are used together to create interferometric images.  High temporal resolution spectra can be recorded using a single LOFAR station during ``local mode". I begin with a description of the entire LOFAR array adn give detailed description of the digital signal processing pipeline in an international LOFAR station such as the Irish LOFAR station (I-LOFAR) in Birr, County Offaly. Here I also describe the REALtime Transient Acquisition Backend (REALTA), which was developed to record data from I-LOFAR in real-time and perform a number of post-processing procedures. Finally, I outline the mathematical background for radio interferometry and give a brief description of a common deconvolution algorithm to generate interferometric images.
+Solar Radio bursts in the corona can be studied in both spectra and images using observations from radio telescopes and interferometers. This chapter describes the instrumentation used throughout the work for this thesis, namely the LOw Frequency ARray (LOFAR). In order to study the spatial extent of radio bursts, a number of LOFAR stations are used together to create interferometric images.  High temporal resolution spectra can be recorded using a single LOFAR station during ``local mode". I begin with a description of the entire LOFAR array and give a detailed description of the digital signal processing pipeline of an international LOFAR station such as the Irish LOFAR station (I-LOFAR) in Birr, County Offaly. Here I also describe the REALtime Transient Acquisition Backend (REALTA), which was developed to record data from I-LOFAR in real-time and perform a number of post-processing procedures. Finally, I outline the mathematical background for radio interferometry and give a brief description of a common deconvolution algorithm to generate interferometric images.
 
 \section{The LOw Frequency ARray (LOFAR)}
-The LOw Frequency ARray \citep[LOFAR;][]{VanHaarlem2013} is a radio interferometer located in eight countries across Europe. The majority of the LOFAR stations exist in a dense cluster in the Netherlands known as the core. There are a total of 52 LOFAR stations --- 24 core stations, 14 remote stations (also in the Netherlands), and 14 international stations (spread across Europe). The planned construction of an additional international station in Italy will increase this to a total of 53 LOFAR stations. A subset of densely packed core stations known as the ``superterp" is shown in Figure \ref{fig:superterp}. Although it is not dedicated to solar observations, LOFAR is the ideal instrument with which to observer solar radio bursts in the frequency range of 10 - 240 MHz. The temporal, spectral and spatial resolution are significantly improved upon the instruments first used to observe solar radio bursts from 60 years ago and as such, has ushered in a new wave of studies of low frequency radio emission from the solar corona. In particular, the Solar and Space Weather Key Science Project (KSP) have secured observational time to overlap with the perihelion passes of both Parker Solar Probe and Solar Orbiter allowing for simultaneous remote and \textit{in situ} observations of coronal plasma at distances $< 10 R_\odot$ for the first time in human history.
+The LOw Frequency ARray \citep[LOFAR;][]{VanHaarlem2013} is a radio interferometer located in eight countries across Europe. The majority of the LOFAR stations exist in a dense cluster in the Netherlands known as the core. There are a total of 52 LOFAR stations; 24 core stations, 14 remote stations (also in the Netherlands), and 14 international stations (spread across Europe). The planned construction of an additional international station in Italy will increase this to a total of 53 LOFAR stations. A subset of densely packed core stations known as the ``superterp" is shown in Figure \ref{fig:superterp}. Although it is not dedicated to solar observations, LOFAR is the ideal instrument with which to observer solar radio bursts in the frequency range of 10 - 240 MHz. The temporal, spectral and spatial resolution are significantly improved upon the instruments first used to observe solar radio bursts from 60 years ago and as such, has reinvigorated the study of low frequency radio emission from the solar corona. In particular, the Solar and Space Weather Key Science Project (KSP) for LOFAR have secured observational time to overlap with the perihelion passes of both Parker Solar Probe \citep[PSP;][]{Fox2016} and Solar Orbiter \citep{Muller2020}, allowing for simultaneous remote and \textit{in situ} observations of coronal plasma at distances $< 10 R_\odot$ for the first time in human history.
 
  
-\begin{figure}
+\begin{figure}[ht]
 \centering
 \includegraphics[width=\columnwidth]{LOFAR_Superterp.jpg}
-\caption[The LOFAR superterp]{A dense collection of LOFAR core stations known as the ``superterp". Image credit ASTRON/LOFAR.}
+\caption[The LOFAR superterp]{A dense collection of LOFAR core stations known as the ``superterp". Image credit ASTRON/LOFAR. The large black tiles are the HBAs while the smaller grey squares mark the locations of the LBAs.}
 \label{fig:superterp}
 \end{figure}
 %The LOw Frequncy ARray \citep[LOFAR;][]{VanHaarlem2013} is a radio interferometric array located in across Europe. The first LOFAR core station was completed in 2008. Since then, LOFAR has continued to grow to 40 stations in the Netherlands alone with a further 14 across the rest of Europe and another station planned for completion in Italy in the near future. Along with the addition of new stations, an extensive set of software for imaging, calibration, RFI flagging and more has been written for use with data produced by LOFAR. Imaging pipelines described in \cite{VanHaarlem2013} have also been developed to further maximise the quality of the sub-arcsecond spatial resolution data LOFAR can provide with its full $\sim 2000$ km baseline.
 %Every LOFAR station is connected to the CEntral Processor cluster (CEP) located in Groningen in the Netherlands by 10Gbps fibre optic cable where data is beamformed and correlated by the COrrelator and Beamformer Application for the LOFAR Telescope, a GPU based cluster designed with commercial components \citep{Broekema2018}.
 
-The observing range of LOFAR is split into two bands observed with a different type of antenna, both of which can be seen in Figure \ref{fig:superterp}. The range 10 - 90 MHz is observed with the Low Band Antennas (LBAs) and the range 110 - 240 MHz is observed with the High Band Antennas (HBAs). The gap between the two bands is included to avoid observing in the FM band, which is dominated by noise from commercial radio broadcasting. The observations in Chapters \ref{chap:measuring_source_sizes} and \ref{chap:observations_vs_theory} utilise data from the LBAs while monitoring of solar radio activity with the I-LOFAR uses both the LBAs and HBAs simulataneously, as discussed in section \ref{sec:I-LOFAR}. I now discuss the antennas and recording process for an international LOFAR station, how images are made from LOFAR observations will be discussed in section \ref{sec:interferometry}.
+The frequency bandwidth of LOFAR is split into two bands, observed with a different type of antenna, both of which can be seen in Figure \ref{fig:superterp}. The range 10 - 90 MHz is observed with the Low Band Antennas (LBAs) and the range 110 - 240 MHz is observed with the High Band Antennas (HBAs). The gap between the two bands is included to avoid observing in the FM band, which is dominated by noise from commercial radio broadcasting. The observations in Chapters \ref{chap:measuring_source_sizes} and \ref{chap:observations_vs_theory} were made using the LBAs while monitoring of solar radio activity with the I-LOFAR uses both the LBAs and HBAs simultaneously, as discussed in section \ref{sec:I-LOFAR}. I now discuss the antennas and recording process for an international LOFAR station.
+% how images are made from LOFAR observations will be discussed in section \ref{sec:interferometry}.
 %To observer in each band, two different antenna designs are utilised, the Low Band Antenna (LBA) for 10-90MHz and the High Band Antenna (HBA) for 110-240MHz. % In order to observe in these two bands, LOFAR uses two different antenna designs, the Low Band Antenna (LBA) for 10-90MHz and the High Band Antenna (HBA) for 110-240MHz. 
 \subsection{Low Band Antenna}
-The LBA is a cross dipole antenna in an inverted V shape consisting of two lengths of orthogonal copper wire. This enables measurements from two linear polarisations in the X and Y direction. Each wire is connected to a low noise amplifier inside of a mould on top of a 1.7m PVC pipe. The pipe is kept upright under tension from the wires which are attached to the ground with synthetic rubber straps and polyester rope. The LBA is placed on top of a steel ground plane made out of concrete reinforcement rods, which acts as a reflector for radio light. Figure \ref{fig:LBA} shows LBAs at I-LOFAR. The low noise amplifiers receive power over two coaxial cables, which also carry signals measured from the LBA.
+The LBA is a cross dipole antenna in an inverted V shape consisting of two lengths of orthogonal copper wire. This enables measurements from two linear polarisations in the X and Y direction. LBAs are oriented such that the X polarisation is in the Northeast to Southwest direction while the Y polarisation runs Northwest to Southeast. Each wire is connected to a low noise amplifier inside of a radio frequency interference (RFI) shielded mould on top of a 1.7m PVC pipe. The pipe is kept upright under tension from the wires which are attached to the ground with synthetic rubber straps and polyester rope. The LBA is placed on top of a steel ground plane made out of concrete reinforcement rods, which acts as a reflector for radio light. Figure \ref{fig:LBA} shows LBAs at I-LOFAR. The low noise amplifiers receive power over two coaxial cables, which also carry signals measured from the LBA.
 
-\begin{figure}
+\begin{figure}[ht]
 \centering
 \includegraphics[width=\columnwidth]{lba.jpg}
 \caption[Low Band Antennas at I-LOFAR]{Low Band Antennas on a rare sunny day at I-LOFAR. The dipoles are connected via coaxial cable down through the PVC pipe to the station container in the background.}
@@ -31,19 +32,17 @@ The LBA is a cross dipole antenna in an inverted V shape consisting of two lengt
 
 Each arm of the dipole is 1.38m long which results in a 52MHz resonance peak however, due to the impedance of the amplifier this is increased to 58MHz. A typical LBA power spectrum showing this resonance peak can be seen in Figure \ref{fig:LBA_power_spec}.
 
-\begin{figure}
+\begin{figure}[ht]
     \centering
     \includegraphics[width=\columnwidth]{lba_powerspec.png}
     \caption[Typical power spectrum for an LBA.]{Typical power spectrum for an LBA. The peak at 58 MHz is determined by the length of the dipole arms and the impedance of the low noise amplifier. The `knee' in the spectrum at $\sim 63$ MHz is due to the wires being turned up at the ends.}
     \label{fig:LBA_power_spec}
 \end{figure}
 
-The simple design of the LBA and the fact that it observes at such low frequencies means that it is sensitive to the entire sky at once. Figure \ref{fig:LBA_allsky} shows an all-sky radio image at 28.91 MHz using I-LOFAR.
-
-\begin{figure}
+\begin{figure}[ht]
 \centering
 \includegraphics[width=\columnwidth]{lba_allsky.png}
-\caption[An all sky image taken with I-LOFAR LBAs.]{An all-sky image taken with I-LOFAR LBAs at 28.91 MHz. The positions of Cas A and Cyg A are shown to line up well with the brightest parts of the image.}
+\caption[A total intensity all sky image taken with I-LOFAR LBAs.]{An all-sky image taken with I-LOFAR LBAs at 28.91 MHz. The positions of Cassiopeia A and Cygnus A are shown to line up well with the brightest parts of the image.}
 \label{fig:LBA_allsky}
 \end{figure}
 
@@ -52,7 +51,7 @@ The simple design of the LBA and the fact that it observes at such low frequenci
 \subsection{High Band Antenna}
 The spectrum above the FM band is observed by the HBA. In order to reduce system noise, the HBA design is drastically different to the simple design of the LBA. One HBA is a 5m x 5m tile consisting of a 4 $\times$ 4 array of 16 bow-tie cross dipole antenna elements supported in an expanded polystyrene structure. The HBA sits on top of a 5cm $\times$ 5cm wire mesh ground plane, which acts as a reflector to radio waves at these higher frequencies. The HBA tile is encased in two overlapping polypropylene foil layers in order to protect it from the weather. Figure \ref{fig:HBA} shows a fully assembled HBA tile before the tile lid is placed. The 4 $\times$ 4 grid of antenna elements expanded polystyrene structure is clearly seen.
 
-\begin{figure}
+\begin{figure}[ht]
 \centering
 \includegraphics[width=\columnwidth]{HBA.jpg}
 \caption[The inside of a High Band Antenna tile.]{A High Band Antenna before the tile lid has been placed. The  4 $\times$ 4 grid of bow-tie cross dipole antenna elements is clearly visible inside the expanded polystyrene casing.}
@@ -61,7 +60,7 @@ The spectrum above the FM band is observed by the HBA. In order to reduce system
 
 Each antenna element in a HBA tile is connected to a front-end which performs preamplification and analogue beamforming. Each front-end is then connected to a summator (one for each polarisation) where the signals from all antenna elements are summed before being sent for further signal processing in the station container, see section \ref{sec:sig_pipe}. The effect of analogue beamforming means that HBA observations are only sensitive to particular directions on the sky. Further to this, the regular gridding of the antenna elements leads to diffraction effects which makes all sky imaging with HBAs a less common observation type. The diffraction effects can be minimised by randomly excluding antenna elements however the reduces the sensitivity of such observations.
 
-\begin{figure}
+\begin{figure}[ht]
     \centering
     \includegraphics[width=\columnwidth]{hba_powerspec.png}
     \caption[Typical power spectrum for a HBA 100 - 200 MHz.]{Typical power spectrum for a HBA in the frequency range 100 - 200 MHz. Large peaks here are typically associated with noise from digital audio broadcasting (DAB) radio and other sources of RFI.}
@@ -72,7 +71,7 @@ Each antenna element in a HBA tile is connected to a front-end which performs pr
 \label{sec:rsp}
 The Remote Station Processing boards (RSPs) perform the bulk of digital signal processing in a LOFAR station. Each LOFAR station consists of 24 RSP boards capable of channelising, beamforming and correlating raw voltage data recorded by either the LBAs or HBAs. A polyphase filter converts recorded data into 1024 complex subband signal which, because the signal is real, is fully described by the positive 512 subbands. These 512 subbands offer $\sim 195$kHz frequency resolution across the band. In order to perform beamforming, each RSP is connected together in a ring. Data is passed along this ring and summed in each RSP where a phase correction is also applied in order to ``point" the telescope beam. A maximum of 488 subbands can be used to create beamlets, beams pointed in a particular direction observing in a particular frequency. Data from this process is streamed to an external storage node from 4 points in the ring (i.e. from 4 RSPs) each containing one quarter of the beamlets computed by the RSP boards. Figure \ref{fig:RSP} shows a single RSP board from I-LOFAR.
 
-\begin{figure}
+\begin{figure}[ht]
 \centering
 \includegraphics[width=\columnwidth]{RSP.png}
 \caption[A Remote Station Processing board.]{A Remote Station Processing board from I-LOFAR.}
@@ -88,7 +87,7 @@ A 32GB TBB can store up to 5 seconds worth of data recorded by a LOFAR station a
 Recording the radio Sun at 5ns has never been attempted before and as such could offer a wealth of never before studied phenomena or cast new light onto long standing questions.
 While the next generation telescopes like the Square Kilometre Array (SKA) and the Murchison Widefield Array (MWA) sample at higher rates than 5ns, none of them store full time resolution data. This gives LOFAR the unprecidented abiltiy to capture transient events at the highest temporal resolution ever. Figure \ref{fig:TBB} shows a single TBB.
 
-\begin{figure}
+\begin{figure}[ht]
 \centering
 \includegraphics[width=\columnwidth]{TBB_big.png}
 \caption[A Transient Buffer Board.]{A Transient Buffer Board.}
@@ -125,7 +124,7 @@ The LOFAR digital signal processing pipeline for a single station is outlined in
 The digital signal processing pipeline is much the same in Single Station Mode however, data is averaged out to 1 second before being saved as various ``statistics" files. These include subband statistics, which give the power spectrum for each antenna; beamlet statistics, give the power in each beamlet formed by the LOFAR station; and crosslet statistics, the correlation coefficients between each antenna which can be used to create all sky images.
 Parallel to this, the raw voltage signal with the full 5ns temporal resolution is stored in the memory of a TBB. A single LOFAR station has 12 TBBs which take 2 RSP boards as inputs each. The buffer will constantly overwrite itself until it is frozen and dumped either by an internal/external trigger signal or sending a dump command manually.
 
-\begin{figure}
+\begin{figure}[ht]
     \centering
     \includegraphics[width=0.75\columnwidth]{Images/Digital_signal_processing.png}
     \caption[Digital signal processing pipeline of an individual LOFAR station.]{Digital signal processing pipeline of an individual LOFAR station. Data is first digitised in the ReCiever Unit (RCU) before being sent to the RSP board. Here data is channelised by a polyphase filter and beamformed before being sent to the CEntral Processor (CEP) in the Netherlands. Also featured is the TBB which stores data in a ring buffer unless it is read out to an external storage system. }
@@ -353,7 +352,7 @@ Some SRBs can exhibit fine scale temporal and spectral features. These include, 
 A number of short duration radio bursts, which are not part of the five classified types, have also been reported \citep[for example,][]{Ellis1967, Ellis1969, Melnik2010}. 
 The high temporal resolution of REALTA observations with I-LOFAR will allow the study of these bursts at some of the highest temporal resolutions to date. Figure \ref{fig:357_10ms}b shows a zoom-in of the radio noise storm from Figure \ref{fig:357_10ms}a at 1~ms temporal resolution with an inset showing the sub-second variation of a particular burst. Figure \ref{fig:uburst} shows an LBA observation from 2 June 2020 of a Type III burst and a U burst, both described by \cite{Reid2014}, for example, as being generated by electron beams travelling along open and closed magnetic field lines away from the sun respectively. This observation also has a 1~ms temporal resolution. Although a single international LOFAR station can only make spectroscopic observations of Type III bursts and their sub-types, this is still a valuable tool in determining the characteristics of the accelerated electron beam that instigates plasma emission in these bursts \citep{Reid2018}. Further, short duration pulsations in radio bursts can give insight into magnetohydrodynamic oscillations in the solar corona \citep{Carley2019}.
 
-\begin{figure}
+\begin{figure}[ht]
     \centering
     \includegraphics[width=\columnwidth]{Uburst_1ms_1090MHz.png}
     \caption[Two solar radio bursts observed on 2 June 2020.]{Two solar radio bursts observed on 2 June 2020. The earlier burst is likely a Type III SRB while the later burst shows the morphology typical of a U burst. The observation has a spectral resolution of $\sim$ \SI{195}{\kilo \hertz} and a temporal resolution of \SI{1}{\milli \second}.}
@@ -456,18 +455,21 @@ By introducing the unit vector $\mathbf{s} = \mathbf{R}/ \vert \mathbf{R} \vert$
 \end{equation}
 where the surface element $dS$ is given by $\vert \mathbf{R} \vert ^2 d\Omega$.
 
-The most important conclusion to draw from Equation \ref{eq:int_correlation_final} is that it depends only on the distance between the two points, not their absolute position. Thus, $\mathsf{V}_\nu (\mathbf{r}_1, \mathbf{r}_2)$ can be determined from only one pair of points. The functnion $\mathsf{V}_\nu$ for a single separation $\mathbf{r}_1 - \mathbf{r}_2$ is called the spatial coherence function and is all that needs to be measured to study the emitting astronomical source.
+The most important conclusion to draw from Equation \ref{eq:int_correlation_final} is that it depends only on the distance between the two points, not their absolute position. Thus, $\mathsf{V}_\nu (\mathbf{r}_1, \mathbf{r}_2)$ can be determined from only one pair of points. The function $\mathsf{V}_\nu$ for a single separation $\mathbf{r}_1 - \mathbf{r}_2$ is called the spatial coherence function and is all that needs to be measured to study the emitting astronomical source.
 
-How then does one measure the spatial coherence function? Let's imaging putting two radio antennas (antenna 1 and antenna 2) at points $\mathbf{r}_1$ and $\mathbf{r}_2$. The vector distance between these antennas is given by $\overrightarrow{\Vec{b}} = \mathbf{r}_1 - \mathbf{r}_2$. As shown in Figure \ref{fig:2_el_int}, a radio wave approaching the antennas from direction $\hat{\Vec{s}}$  will hit antenna 2 first then antenna 1 after a time delay of $\tau_g$ such that,
-$$\tau_g = \frac{\overrightarrow{\Vec{b}} \cdot \hat{\Vec{s}}}{c} $$
-where $c$ is the speed of light. The output from each antenna is a voltage $V_1 = V \cos{\omega(t - \tau_g)}$ and $V_2 = V\cos{\omega t}$. 
-
-\begin{figure}
+\begin{figure}[ht]
     \centering
-    \includegraphics[width=\columnwidth]{Images/2_elem_int.png}
+    \includegraphics[width=0.75\columnwidth]{Images/2_elem_int.png}
     \caption[A two element interferometer]{A two element interferometer separated by a baseline $\overrightarrow{\Vec{b}}$. The signal from each antenna is correlated by first multiplying the two voltages then time averaging them.}
     \label{fig:2_el_int}
 \end{figure}
+
+How then does one measure the spatial coherence function? Let's imaging putting two radio antennas (antenna 1 and antenna 2) at points $\mathbf{r}_1$ and $\mathbf{r}_2$. The vector distance between these antennas is given by $\overrightarrow{\Vec{b}} = \mathbf{r}_1 - \mathbf{r}_2$. As shown in Figure \ref{fig:2_el_int}, a radio wave approaching the antennas from direction $\hat{\Vec{s}}$  will hit antenna 2 first then antenna 1 after a time delay of $\tau_g$ such that,
+\begin{equation}
+\label{eq:time_delay}
+\tau_g = \frac{\overrightarrow{\Vec{b}} \cdot \hat{\Vec{s}}}{c}
+\end{equation}
+where $c$ is the speed of light. The output from each antenna is a voltage $V_1 = V \cos{\omega(t - \tau_g)}$ and $V_2 = V\cos{\omega t}$. 
 
 
 The total response, $R_c$ of the interferometer is the correlation or multiplication and time average of these two voltages, $\langle V_1 V_2 \rangle$. 
@@ -508,9 +510,7 @@ n &= \sqrt{1-l^2-m^2}
 
 where $\delta, \delta_0$ are the declinations of an object and the phase centre, respectively, and $\Delta \alpha = \alpha -\alpha_0$ is the difference between the right ascension of the object and the right ascension of the phase centre.
 
-
-
-Baselines in radio interferometry are described using the \textit{uvw} coordinate system. For baseline $\mathbf{B} = \mathbf{r}_1 - \mathbf{r}_2$ where the compenents of $\mathbf{r}$ are $(x,y,z)$, the \textit{uvw} coordinates can be found from the matrix below.
+Baselines in radio interferometry are described using the \textit{uvw} coordinate system. For baseline $\overrightarrow{\Vec{b}} = \mathbf{r}_1 - \mathbf{r}_2$ where the compenents of $\mathbf{r}$ are $(x,y,z)$, the \textit{uvw} coordinates can be found from the matrix below.
 \[
 \begin{bmatrix}
     u \\
@@ -528,15 +528,15 @@ Baselines in radio interferometry are described using the \textit{uvw} coordinat
 \end{bmatrix}
 %
 \begin{bmatrix}
-    B_x \\
-    B_y \\
-    B_z
+    b_x \\
+    b_y \\
+    b_z
     
 
 \end{bmatrix}
 \]
 
-Here, $H$ is the hour angle of an object, $\delta$ is its declination, $\Vec{B}=(B_x, B_y, B_z)=(x_2-x_1,y_2-y_1,z_2-z_1)$ is the baseline or distance between two antennas and $\lambda$ is the wavelength of the radio waves being observed. An appropriate assumption to make for interferometers of short enough baselines is that all measurements are made in a plane where $w = 0$ called the \textit{uv} plane.
+Here, $H$ is the hour angle of an object, $\delta$ is its declination, $\overrightarrow{\Vec{b}} = (b_x, b_y, b_z)=(x_2-x_1,y_2-y_1,z_2-z_1)$ is the baseline or distance between two antennas and $\lambda$ is the wavelength of the radio waves being observed. An often appropriate assumption to make for interferometers of short enough baselines is that all measurements are made in a plane where $w = 0$ called the \textit{uv} plane.
 
 So far I've been allusive as to how to invert our measurement of complex visibilities into an image of the observed object, commenting only that they are the Fourier transform of each other. One would think then that you can simply perform the inverse Fourier transform via the readily available fast Fourier transform (FFT) algorithm. Unfortunately, you would be very much mistaken. The reason for this is because when measuring the spatial coherence function with a two element interferometer, we do so for one position in \textit{uv} space only. Adding more antennas to our interferometer will add more points to the \textit{uv} plane however in reality it will remain sparsely sampled. We can represent the sampling of the \textit{uv} plane by a sampling function $S(u,v)$ which is zero everywhere, except for the baseline positions, i.e. a collection of dirac deltas. We then represent the Fourier transform of our sampled visibilities as a \textit{dirty image}
 
@@ -556,16 +556,22 @@ B(l,m) = \int \int S(u,v) e^{2 \pi i(ul+vm)} du dv.
 \end{equation}
 We will discuss methods for undoing this convolution shortly but first, a brief digression on the topic of beamforming with a phased array interferometer such as LOFAR.
 
-\subsection{Beamforming}
+\subsection{Phase Delays and Beamforming}
 \label{sec:beamform_theory}
-In its most simple terms, beamforming  means pointing a phased array in a particular direction. It involves correcting for phase difference between the ``phase centre" of the beam and the position of the source of interest for each baseline and then summing it all together. 
-In order to beamform, one must account for the phase difference between the phase centre and the source (at an angular coordinate of \textit{(l,m)} with reference to the phase centre). As above, this phase difference for a baseline pq is given by, 
-$$\kappa_{pq} = 2\pi(u_{pq}l+v_{pq}m+w_{pq}(n-1))$$
-In order to correct for the phase difference and steer the beam, data for baseline pq is multiplied by the complex weight $e^{-i\kappa_{pq}}$, this is repeated for all baselines and finally all data is summed.
+For steerable antennas, pointing at a phase centre is simply a matter of steering the antennas to that direction. For phased arrays such as LOFAR, and in particular the LBAs, this is unsurprisingly not possible. Instead, a time delay is digitally added to the signal from each antenna. For example, in order to maximise the response of the two element interferometer in Figure \ref{fig:2_el_int} to the direction $\hat{\Vec{s}}$, a delay of exactly $\tau_g$ (defined above) must be added to the signal of antenna 2. Beamforming is a signal processing technique whereby all the signals are added together coherently to give a maximum sensitivity in a particular direction. The beamformed signal at the phase centre (subscript $pc$) can be described as \citep{Chen2021}
+\begin{equation}
+\label{eq_beamform}
+F(t_{pc}) = \sum_{n=1}^N f(t_{pc} - \tau_n) w (\tau_n)
+\end{equation}
+for an array of N antennas. Here the a delay correction $w(\tau_n)$ is made to the signal from each antenna $f(t_{pc} - \tau_n)$ before they are summed together. The time delay $\tau_n$ has the same form as Equation \ref{eq:time_delay} for $\overrightarrow{\Vec{b}} = \mathbf{r}_n - \mathbf{r}_{pc}$. Beamforming is implemented on LOFAR in a slightly different manner. Rather than correct this delay in the time domain, the Fourier transform of the outputs of each antenna are multiplied by a phase delay $e^{- i \omega \tau}$ before being summed.
+%In its most simple terms, beamforming  means pointing a phased array in a particular direction. It involves correcting for phase difference between the ``phase centre" of the beam and the position of the source of interest for each baseline and then summing it all together. 
+%In order to beamform, one must account for the phase difference between the phase centre and the source (at an angular coordinate of \textit{(l,m)} with reference to the phase centre). As above, this phase difference for a baseline pq is given by, 
+%$$\kappa_{pq} = 2\pi(u_{pq}l+v_{pq}m+w_{pq}(n-1))$$
+%In order to correct for the phase difference and steer the beam, data for baseline pq is multiplied by the complex weight $e^{-i\kappa_{pq}}$, this is repeated for all baselines and finally all data is summed.
 
 \subsection{Image Deconvolution}
 \label{sec:imaging}
-Real measurements from interferometers are bound to contain some amount of noise, which can be represented as $\epsilon$. Thus, Equation \ref{eq:int_convolution} is more accurately written as
+We now return to the discussion of radio interferometric imaging. Real measurements from interferometers are bound to contain some amount of noise, $\epsilon$. Thus, Equation \ref{eq:int_convolution} is more accurately written as
  
 \begin{equation}
 \label{eq:int_convolutionnoise}
@@ -584,4 +590,4 @@ You may have noticed that this is performed entirely in the image domain. This h
 
 The final implementation of the CLEAN algorithm that I will discuss, and the one that is in prevalent use in modern radio imaging software, is the Cotton-Schwab implementation from \cite{Schwab1984}. It follows the same major cycle minor cycle format as the Clark clean however the ungridded visibilities are computed for the sky model. This is done in two methods, for observations with only a few sources in the sky model, the direct Fourier transform is taken. In the more likely case of a large number of sources in the sky model, the visibilities are de-gridded after they have undergone an FFT. These model visibilities are then subtracted from the observed visibilities to produce residual visibilities. These are then imaged and the next iteration occurs.
 
-Despite its algorithmic origins, radio imaging can be a very subjective endeavour. Not only can things like the number of iterations or gain parameter be changed to give different results, each baseline can be weighted based on their distance from the centre of the \textit{uv} plane, how many are in a given region, and everything in between. As such, when trying to quantify the size of radio bursts with interferometric observations it can be undesirable to rely images that `look' correct. In the next chapter I outline a technique, never before used in the context of solar radio imaging, to directly fit the visibilities and thus avoid any undesired effects from the various tweaks that can be made with imaging algorithms.
+Despite its algorithmic origins, radio imaging can be a very subjective endeavour. Not only can things like the number of iterations or gain parameter be changed to give different results, each baseline can be weighted based on their distance from the centre of the \textit{uv} plane, how many are in a given region, and everything in between \citep{Briggs1995}. As such, when trying to quantify the size of radio bursts with interferometric observations it can be undesirable to rely images that `look' correct. In the next chapter I outline a technique, never before used in the context of solar radio imaging, to directly fit the visibilities and thus avoid any undesired effects from the various tweaks that can be made with imaging algorithms.
