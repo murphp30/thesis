@@ -7,16 +7,21 @@ Secondly, a new technique was implemented for the first time to directly measure
 This chapter highlights the next steps that can be taken to advance the knowledge of radio wave generation and propagation in the solar corona even further. I discuss the possibility of observing radio bursts with 5 ns temporal resolution using the Transient Buffer Boards from I-LOFAR. I also outline further work that should be done to fully tie together modern observations and computer simulations and the need for a statistical analysis of Type III and Type IIIb radio bursts in order to bring them in line under the most recent theory of Langmuir wave generation. I then draw this thesis to a close with some concluding remarks.
 
 \section{Primary Scientific Objectives}
-The research which has been presented in this thesis has contributed to our knowledge of solar radio emission at low frequencies. WOrk undertaken during this thesis has also resulted in a new facility to record and analyse radio emission using I-LOFAR and a new technique for measuring burst sizes from complex visibility data.
+The research which has been presented in this thesis has contributed to our knowledge of solar radio emission at low frequencies. Work undertaken during this thesis has also resulted in a new facility to record and analyse radio emission using I-LOFAR and a new technique for measuring burst sizes from complex visibility data.
+
 \subsection{Observing Radio Bursts at the Highest Temporal Resolutions.}
-Chapter \ref{chap:instrumentation} outlines the development of REALTA, a computing backend for I-LOFAR
+In order to record high time resolution data of solar radio bursts from I-LOFAR, a dedicated backend to record, store and analyse the data was necessary. Chapter \ref{chap:instrumentation} outlines the development of REALTA to serve this purpose. The 7 node computer cluster receives data from I-LOFAR along a 10~Gbps fibre optic cable in four data ``lanes". After data has been recorded to disk, one of many processing pipelines can be run including those for solar radio observations, pulsars, FRBs, RRATs, Jovian emission and SETI. Some of the first solar radio bursts observed with I-LOFAR and REALTA are shown in Chapter \ref{chap:instrumentation} while first observations and preliminary results are given in the published version of this work, in \textit{Astronomy and Astrophysics} \citep{Murphy2021b}. High temporal resolution observations of solar radio bursts are good. \cite{Morosan2015, Clarke2019}
+
 \subsection{Observing Radio Bursts at the Highest Spatial Resolutions.}
-In Chapter \ref{chap:measuring_source_sizes} I described a new method for determining the size of Type III radio bursts from LOFAR visibilities. Using this I was able to determine the size of a Type IIIb burst to be much beigger than expected from back of the envelope estimates.
+In Chapter \ref{chap:measuring_source_sizes} I described a new method for determining the size of Type III radio bursts from LOFAR visibilities. Using this I was able to determine the size of a Type IIIb burst. For a burst at 34.76~MHz, the full width at half maximum height (FWHM) along the major and minor axes was found to be $18.8^\prime$~$\pm~0.1^\prime$ and $10.2^\prime$~$\pm~0.1^\prime$ respectively at a plane of sky heliocentric distance of 1.75~R$_\odot$. The expected size of a burst at this frequency, based on the relationship between the spectral width of the striation and spatial extent of emission, was calculated to be 3.18 arcsec. The discrepancy between these two values was investigated and the results suggest that the level of density fluctuations in the solar corona is the major cause of the scattering of radio waves, resulting in large source sizes. However, because of its inherently lower spatial resolution, the magnitude of $\varepsilon$ may be smaller than previously derived in comparison to observations of radio wave scattering in tied-array images. This work was published in \textit{Astronomy and Astrophysics} as \cite{Murphy2021}.
+
 \subsection{Comparing Observations of Radio Bursts to Computational Simulations.}
-Chapter \ref{chap:observations_vs_theory} discusses the measured similarities and discrepancies between observations of Type III bursts and computer simulations of scattering.
+Using the new method for determining radio burst size from interferometric visibilities, the spatial properties of 30 Type III radio bursts were foud. Chapter \ref{chap:observations_vs_theory} discusses the measured similarities and discrepancies between these observations and computer simulations of scattering. It was found that theories of scattering are unable to account for the distribution of radio burst source sizes if they are intrinsically point sources. The more likely case is that Type III radio bursts have an inherent source size larger than the size due to scattering for a point source.
+
 \section{Future Work}
-The research outlined in this thesis has laid the path for conntinued development. I dive some examples of what's next here.
-\subsection{On Observing Radio Bursts with TBBs}
+The research outlined in this thesis has laid the path for continued development. I dive some examples of what's next here.
+
+\subsection{On Observing Radio Bursts with TBBs.}
 One of the greatest, unexplored potentials of solar radio astronomy is extremely high temporal resolution of radio bursts. The LOFAR TBBs are capable of recording 5 seconds of raw sampled data from the antennas at its native 5 ns temporal resolution. The TBBs are an extremely powerful tool that allow you to recreate the LFOAR data processing pipeline entirely in software. While this might sound like a nightmare, a young na\"ive Pearse Murphy thought it sounded pretty cool and dedicated too much time to trying them out. Unfortunately, this was during the depths of solar minimum with a radio burst once every few months and as such any data taken was essentially noise. Figure \ref{fig:TBB_timeseries} shows 10 ms of noise recorded by the TBBs from I-LOFAR.
 %
 %\begin{figure}[ht]
@@ -28,20 +33,43 @@ One of the greatest, unexplored potentials of solar radio astronomy is extremely
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\columnwidth]{TBBtimeseries.png}
-\caption[10 ms of data recorded with TBBs from I-LOFAR.]{10 ms of data recorded with TBBs from I-LOFAR, the data presented here is from LBA 3.}
+\caption[10 ms of data recorded with TBBs from I-LOFAR.]{10 ms of data recorded with TBBs from I-LOFAR, the data presented here is from LBA 3. The beating pattern is likely due to RFI.}
 \label{fig:TBB_timeseries}
 \end{figure}
-\subsection{On Calibrating Solar Interferometric Visibilities}
-Interferometric visibilities require calibration in order to account for the effects of the ionosphere. During bursty periods, this calibration can break down and as such more work is needed for a robust calibration procedure for LOFAR.
-\subsection{On Automatically Classifying Radio Bursts}
-\cite{Scully2021} recently showed promising results of using a convolutional neural network to automatically detect and characterise Type II and Type III radio bursts.
 
-\begin{figure}
+\subsection{On Calibrating Solar Interferometric Visibilities.}
+Interferometric visibilities require calibration in order to account for the effects of the ionosphere. During bursty periods, this calibration can break down and as such more work is needed for a robust calibration procedure for LOFAR.
+
+\subsection{On Automatically Classifying Radio Bursts.}
+\cite{Scully2021} recently showed promising results of using a convolutional neural network to automatically detect and characterise Type II and Type III radio bursts. This ties in well with the future development of REALTA and should be implemented at any large scale solar radio telescopes. They implement the YOLOv2 algorithm to detect and place a bounding box on Type III bursts. This could be run in real time such that during an observation with REALTA and I-LOFAR, data need not be stored until a trigger signal is sent from the CNN. THis trigger could also be used to call a readout on the TBBs (see above)
+
+\begin{figure}[ht]
 \centering
 \includegraphics[width=\columnwidth]{scully_yolo.png}
-\caption{Automatically detected Type III bursts using YOLO from \cite{Scully2021}
+\caption[Automatically detected Type III bursts using YOLO]{Automatically detected Type III bursts using YOLO from \cite{Scully2021}}
 \label{fig:yolo}
 \end{figure}
-\subsection{On the Statistical Comparisons of Type III and Type IIIb radio bursts}
-\cite{Reid2021} presented a theory on Langmuir waves TYpe III and Type IIIb 
-\section{Concluding Remarks}
+
+\subsection{On the Comparisons of Type III and Type IIIb radio bursts}
+Type IIIb radio bursts are briefly described in Section \ref{characteristics}. An early theory of the origin of the striations by \cite{Takakura1975} suggests that they are due to an electron beam passing through over dense regions in the solar corona. Recently, \cite{Reid2021} presented simulations and observations of Type IIIb radio bursts where they have determined how the striae fine structure is developed. Beam driven Langmuir wave modulation by turbulence in the solar corona and the spatial motion of these Langmuir waves due to a non-zero group velocity are both necessary in order to match simulations to dynamic spectra and account for individual striation frequency width and duration. Figure \ref{fig:reid_pds} shows the measured and simulated power density spectra for a number of Type IIIb bursts with various background coronas.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\columnwidth]{reid2021_powerdensityspectra.png}
+\caption[Power density spectrum of observed and simulated Type IIIb bursts by \cite{Reid2021}]{Power density spectrum of observed and simulated Type IIIb bursts by \cite{Reid2021}. Panel a shows power density spectra for Type IIIb bursts observed with LOFAR on 16 September 2015 (red), 16 April 2015 (blue) and 24 June 2015 (green). Panel b shows the power density spectra for simulated Type IIIb bursts with a background corona temperature of 1 MK (blue), 10 MK (red) and without a group velocity (green). The dashed balck lines indicate a power law of -5/3, consistent with a Kolmogorov description of turbulence.}
+\label{fig:reid_pds}
+\end{figure}
+
+Given the effect radio wave scattering has on the size of Type III bursts does not fully agree with scattering simulations (Chapter \ref{chap:observations_vs_theory}), more work is necessary to determine the probable causes of this discrepancy. One possible avenue of investigation would be to perform a similar analysis to Chapter \ref{chap:observations_vs_theory} for Type IIIb bursts. A previous case study of a Type IIIb-III pair (a fundamental-harmonic pair of Type III bursts where the fundamental is a Type IIIb and the harmonic a Type III) was carried out by \cite{Zhang2020}. They found that the fundamental and harmonic emission show different motion as can be seen in Figure \ref{fig:typeIIIbIII} and attribute this to radio wave propagation effects.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\columnwidth]{Zhang_2020.png}
+\caption[Type IIIb - III pair observed by \cite{Zhang2020}]{A Type IIIb - III pair observed by \cite{Zhang2020}. Panels a1-3 show the fundamental Type IIIb burst observed with LOFAR and imaged using WSCLEAN. Panels b1-6 show the harmonic Type III burst at a frequency of 26.56 MHz.  }
+\label{fig:typeIIIbIII}
+\end{figure}
+
+To date there has been no comparison between a large number of Type III and Type IIIb bursts where both are emitting at the fundamental plasma frequency using interferometric observations. Applying a technique similar to the visibility fitting described elsewhere in this thesis to determine a characteristic size could be extremely useful in quantifying the level of turbulence necessary to generate Type IIIb bursts in the first place. This is also an excellent opportunity to use \textit{in-situ} data from PSP and Solar Orbiter to confirm the predictions made with remote measurements from LOFAR and other radio telescopes. 
+
+\section{Concluding Remarks.}
+They say science is done incrementally. In that case, this thesis is as incremental as it gets. While I do not claim to have made any ground breaking discoveries, I do truly believe that the work and research undertaken as part of this thesis has improved our understanding of and ability to observe and analyse solar radio emission.
