@@ -37,28 +37,55 @@ One of the greatest, unexplored potentials of solar radio astronomy is extremely
 \label{fig:TBB_timeseries}
 \end{figure}
 
-The fact that TBB data is recorded before any of the signal processing described in section \ref{sec:sig_pipe} occurs is both a blessing and a curse. It gives you the freedom to recreate a radio telescope from the ground up in software and do some inovative things. Take the follwoing for an example. The polyphase filter bank in an RSP take 1024 time samples before performing a Fourier transform to get 512 subbands. This essentially results in a dynamic spectrum with a temporal resolution of 5.12 $\mu$ s and 192.125 kHz spectral resolution. Using TBB data it is possible to instead, perform an FFT on the entire time series, window the resulting spectrum with any desired frequency resolution and inverse FFT each to get a dynamic spectrum with 5 ns temporal resolution and the chosen spectral resolution. This of course runs into common effects due to numerical Fourier transforms but for carefully chosen parameters it works well. Software was developed not only to perform this algorithm but also to account for the delays 
+The fact that TBB data is recorded before any of the signal processing described in section \ref{sec:sig_pipe} occurs is both a blessing and a curse. It gives you the freedom to recreate a radio telescope from the ground up in software and do some inovative things. Take the follwoing for an example. The polyphase filter bank in an RSP take 1024 time samples before performing a Fourier transform to get 512 subbands. This essentially results in a dynamic spectrum with a temporal resolution of 5.12 $\mu$ s and 192.125 kHz spectral resolution. Using TBB data it is possible to instead, perform an FFT on the entire time series, window the resulting spectrum with any desired frequency resolution and inverse FFT each to get a dynamic spectrum with 5 ns temporal resolution and the chosen spectral resolution. 
 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\columnwidth]{TBB_dynamic_spectrum_power_spectrum.png}
+\caption[A dynamic spectrum generated with TBB data from I-LOFAR.]{The left panel shows the (smoothed) power spectrum of an LBA. The vertical red lines mark the chosen subband edges. The right panel is a dynamic spectrum with a time resolution of 5ns and frequency resolution of $\sim 10$ MHz as determined by the chosen number of subbands, whose edges are shown by the red horizontal lines.}
+\label{fig:TBB_dynamicspectrum}
+\end{figure}
 
-While it is unlikely that periodic pulsations of the order of 10s of nanoseconds will ever be observed due to the scattering of radio waves in the solar corona, there's no harm in trying.
-
-\subsection{On Calibrating Solar Interferometric Visibilities and Parametrising Interferometric Imaging.}
-Interferometric visibilities require calibration in order to account for the effects of the ionosphere. During bursty periods, this calibration can break down and as such more work is needed for a robust calibration procedure for LOFAR.
+Figure \ref{fig:TBB_dynamicspectrum} shows a dynamic spectrum generated from the same TBB data as shown in Figure \ref{fig:TBB_timeseries}. The left panel shows the (smoothed) power spectrum of the time series with a number of vertical red lines which indicate the edges of chosen subbands. By performing an inverse Fourier transform on each subband, a dynamic spectrum with a tmeporal resolution of 5 ns can be created, shown in the right panel where again, the red lines indicate the subband edges. Care must be taken to avoid spectral leakage between subbands although as Figure \ref{fig:TBB_dynamicspectrum} only shows noise, rectangular windows for the subbands are probably good enough.
+ 
+The ability to record dynamic spectra and retain the 5 ns temporal resolution of the raw LOFAR sampling means that, should they exist, extremely short duration pulsations in solar radio bursts could be studied. While it is unlikely that periodic pulsations of the order of 10s of nanoseconds will ever be observed due to the scattering of radio waves in the solar corona, there has been no report in scientific literature of solar radio emission at this time scale and thus, any such study opens the door into the domain of nanosecond observations of the sun.
 
 \subsection{On Automatically Classifying Radio Bursts.}
-\cite{Scully2021} recently showed promising results of using a convolutional neural network to automatically detect and characterise Type II and Type III radio bursts. This ties in well with the future development of REALTA and should be implemented at any large scale solar radio telescopes. They implement the YOLOv2 algorithm to detect and place a bounding box on Type III bursts. This could be run in real time such that during an observation with REALTA and I-LOFAR, data need not be stored until a trigger signal is sent from the CNN. This trigger could also be used to call a readout on the TBBs (see above)
+One of the big challenges facing radio astronomy is the dat produced during observations. I-LOFAR produces 3.2 gigabits of data per second while REALTA only has 5 TB of free storage at any given time. As such, observing the sun for long durations and saving the entire raw data set on the offchance that there is a radio burst is horrifically impractical. An ideal solution would be to automatically determine is a burst has occurred before choosing to save data to disk. \cite{Scully2021} recently showed promising results of using a convolutional neural network (CNN) to automatically detect and characterise Type III radio bursts. They implement the YOLOv2 \citep[You Only Look Once;][]{Yolo9000} algorithm to detect and place a bounding box on Type III bursts. Figure \ref{fig:yolo} from \cite{Scully2021} shows a dynamic spectrum with (left panel) and without (right panel) the colour bar for intensity being inverted and the bounding boxes detected by the CNN. Using a training dataset of simulated Type III bursts, the algorithm was able to achieve and accuracy of 82.63$\%$ and can run on data in real time.  
 
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\columnwidth]{scully_yolo.png}
-\caption[Automatically detected Type III bursts using YOLO]{Automatically detected Type III bursts using YOLO from \cite{Scully2021}}
+\caption[Automatically detected Type III bursts using YOLO]{Automatically detected Type III bursts using YOLO from \cite{Scully2021}. The colourbar has been inverted in the right panel in order to better display the Type III bursts. }
 \label{fig:yolo}
+\end{figure}
+
+Implementing this algorithm on REALTA and I-LOFAR would be an ideal test case on real data in real time, especially as we enter into the next solar cycle. Not only this but a detection from the algorithm could be used to trigger a readout off the TBBs too.
+In their conclusions, \cite{Scully2021} outline some future developments that could improve their results. In particular, a more physical model of Type III emission is necessary, rather than the simple morphological model presently used.
+
+\subsection{On the Calibration and Interferometric Imaging of Solar Radio Bursts.}
+While I at no point doubt the usefulness of imaging algorithms such as CLEAN, the ability to produce different results with the same data and only changing the parameters of the algorithm is too subjective when the main focus of your research is to determine the size of a radio burst. Figure \ref{fig:briggs_comparison} shows how changing the Briggs robustness parameter for weighting the visibilites affects the resulting image. The top panel shows the results for the CLEAN algorithm implemented in WSCLEAN and the bottom panel shows the results when using multiscale cleaning.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\columnwidth]{briggs_comparison.png}
+\caption[An example of the same solar radio burst imaged with different weighting parameters.]{A solar radio burst imaged mulitple times changing the Briggs robustness parameter with (bottom) and without (top) mulitscale cleaning.}
+\label{fig:briggs_comparison}
+\end{figure}
+
+Interferometric visibilities require calibration in order to account for the effects of the ionosphere. During bursty periods, this calibration can break down and as such more work is needed for a robust calibration procedure for LOFAR. The image in Figure \ref{fig:bad_cal} was made with a bad calibration solution and as such, multiple sources can be seen.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\columnwidth]{2019-04-11T12:21:36.283-image.png}
+\caption[An example of a solar radio burst imaged with poor calibration.]{A solar radio burst imaged with poor calibration. The colourbar shows intensity in units of Jy/beam. The red circle indicates the solar limb while the dashed white ellipse is the CLEAN beam.}
+\label{fig:bad_cal}
 \end{figure}
 
 \subsection{On the Comparisons of Type III and Type IIIb radio bursts}
 Type IIIb radio bursts are briefly described in Section \ref{characteristics}. An early theory of the origin of the striations by \cite{Takakura1975} suggests that they are due to an electron beam passing through over dense regions in the solar corona. Recently, \cite{Reid2021} presented simulations and observations of Type IIIb radio bursts where they have determined how the striae fine structure is developed. Beam driven Langmuir wave modulation by turbulence in the solar corona and the spatial motion of these Langmuir waves due to a non-zero group velocity are both necessary in order to match simulations to dynamic spectra and account for individual striation frequency width and duration. Figure \ref{fig:reid_pds} shows the measured and simulated power density spectra for a number of Type IIIb bursts with various background coronas.
 
-\begin{figure}[ht]
+\begin{figure}
 \centering
 \includegraphics[width=\columnwidth]{reid2021_powerdensityspectra.png}
 \caption[Power density spectrum of observed and simulated Type IIIb bursts by \cite{Reid2021}]{Power density spectrum of observed and simulated Type IIIb bursts by \cite{Reid2021}. Panel a shows power density spectra for Type IIIb bursts observed with LOFAR on 16 September 2015 (red), 16 April 2015 (blue) and 24 June 2015 (green). Panel b shows the power density spectra for simulated Type IIIb bursts with a background corona temperature of 1 MK (blue), 10 MK (red) and without a group velocity (green). The dashed balck lines indicate a power law of -5/3, consistent with a Kolmogorov description of turbulence.}
@@ -67,7 +94,7 @@ Type IIIb radio bursts are briefly described in Section \ref{characteristics}. A
 
 Given the effect radio wave scattering has on the size of Type III bursts does not fully agree with scattering simulations (Chapter \ref{chap:observations_vs_theory}), more work is necessary to determine the probable causes of this discrepancy. One possible avenue of investigation would be to perform a similar analysis to Chapter \ref{chap:observations_vs_theory} for Type IIIb bursts. A previous case study of a Type IIIb-III pair (a fundamental-harmonic pair of Type III bursts where the fundamental is a Type IIIb and the harmonic a Type III) was carried out by \cite{Zhang2020}. They found that the fundamental and harmonic emission show different motion as can be seen in Figure \ref{fig:typeIIIbIII} and attribute this to radio wave propagation effects.
 
-\begin{figure}[ht]
+\begin{figure}
 \centering
 \includegraphics[width=\columnwidth]{Zhang_2020.png}
 \caption[Type IIIb - III pair observed by \cite{Zhang2020}]{A Type IIIb - III pair observed by \cite{Zhang2020}. Panels a1-3 show the fundamental Type IIIb burst observed with LOFAR and imaged using WSCLEAN. Panels b1-6 show the harmonic Type III burst at a frequency of 26.56 MHz.  }
