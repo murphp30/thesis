@@ -64,7 +64,7 @@ Implementing this algorithm on REALTA and I-LOFAR would be an ideal test case on
 In their conclusions, \cite{Scully2021} outline some future developments that could improve their results. In particular, a more physical model of Type III emission is necessary, rather than the simple morphological model presently used.
 
 \subsection{On the Calibration and Interferometric Imaging of Solar Radio Bursts.}
-While I at no point doubt the usefulness of imaging algorithms such as CLEAN, the ability to produce different results with the same data and only changing the parameters of the algorithm is too subjective when the main focus of your research is to determine the size of a radio burst. Figure \ref{fig:briggs_comparison} shows how changing the Briggs robustness parameter for weighting the visibilites affects the resulting image. The top panel shows the results for the CLEAN algorithm implemented in WSCLEAN and the bottom panel shows the results when using multiscale cleaning.
+While I at no point doubt the usefulness of imaging algorithms such as CLEAN, the ability to produce different results with the same data and only changing the parameters of the algorithm is too subjective when the main focus of your research is to determine the size of a radio burst. Figure \ref{fig:briggs_comparison} shows how changing the Briggs robustness parameter for weighting the visibilites affects the resulting image. The top panel shows the results for the CLEAN algorithm implemented in WSCLEAN and the bottom panel shows the results when using multiscale cleaning. 
 
 \begin{figure}[ht]
 \centering
@@ -73,7 +73,12 @@ While I at no point doubt the usefulness of imaging algorithms such as CLEAN, th
 \label{fig:briggs_comparison}
 \end{figure}
 
-Interferometric visibilities require calibration in order to account for the effects of the ionosphere. During bursty periods, this calibration can break down and as such more work is needed for a robust calibration procedure for LOFAR. The image in Figure \ref{fig:bad_cal} was made with a bad calibration solution and as such, multiple sources can be seen.
+Interferometric visibilities require calibration in order to account for the effects of the ionosphere. For LOFAR data this is performed using the Default Pre-Processing Pipeline (DPPP). An observation is made of a known calibrator source for which there are a sky model of model visibilities. The DPPP calibration algorithm aims to minimise the following equation
+\begin{equation}
+\label{eq:gain}
+\vert \vert \mathbf{V}_{pq} - \mathbf{G}_p \mathbf{M}_{pq} \mathbf{G}^\dag_q \vert \vert
+\end{equation}
+for each baseline $pq$. Here $\mathbf{V}$ are the measured visibilities, $\mathbf{M}$ are the modelled visibilities and $\mathbf{G}$ are known as the gain matrices for each antenna $p$, $q$ and the superscript $\dag$ indicates the Hermitian conjugate. Calibration is done under the assumption of time invariability of the calibrator source. Unfortunately, if the calibrator is close enough to the sun so that it can be seen in the sidelobes, during bursty periods such as solar radio noise storms this assumption breaks down. Calibration during these periods are essentially impossible. The image in Figure \ref{fig:bad_cal} was made with a bad calibration solution and as such, multiple sources can be seen.
 
 \begin{figure}[ht]
 \centering
@@ -82,26 +87,48 @@ Interferometric visibilities require calibration in order to account for the eff
 \label{fig:bad_cal}
 \end{figure}
 
+In order to consistently image the sun it is important to determine which parameters are important. Currently, there is little in the way of consensus as to how interferometric solar imaging should be done. \cite{Maguire2021} and \cite{Ryan2021} show interferometric imaging of radio burst and the quiet radio sun respectively using LOFAR. Their methodology is broadly similar however, was only finalised after multiple trial and error attempts. Unlike wide-field imaging or other astrophysical sources which can build upon years of research using aperture synthesis techniques, the Sun is a time dependent source and most likely in the near field and does not enjoy the legacy (poorly documented and user unfriendly) software that has been developed for other radio astronomy applications. The next step for the field of solar radio interferometry is developing a calibration and imaging pipeline specifically for the solar case such as those implemented at the MWA \citep[e.g.][]{Mondal2019}.
+
 \subsection{On the Comparisons of Type III and Type IIIb radio bursts}
 Type IIIb radio bursts are briefly described in Section \ref{characteristics}. An early theory of the origin of the striations by \cite{Takakura1975} suggests that they are due to an electron beam passing through over dense regions in the solar corona. Recently, \cite{Reid2021} presented simulations and observations of Type IIIb radio bursts where they have determined how the striae fine structure is developed. Beam driven Langmuir wave modulation by turbulence in the solar corona and the spatial motion of these Langmuir waves due to a non-zero group velocity are both necessary in order to match simulations to dynamic spectra and account for individual striation frequency width and duration. Figure \ref{fig:reid_pds} shows the measured and simulated power density spectra for a number of Type IIIb bursts with various background coronas.
 
-\begin{figure}
+\begin{figure}[ht]
 \centering
-\includegraphics[width=\columnwidth]{reid2021_powerdensityspectra.png}
+\includegraphics[width=0.75\columnwidth]{reid2021_powerdensityspectra.png}
 \caption[Power density spectrum of observed and simulated Type IIIb bursts by \cite{Reid2021}]{Power density spectrum of observed and simulated Type IIIb bursts by \cite{Reid2021}. Panel a shows power density spectra for Type IIIb bursts observed with LOFAR on 16 September 2015 (red), 16 April 2015 (blue) and 24 June 2015 (green). Panel b shows the power density spectra for simulated Type IIIb bursts with a background corona temperature of 1 MK (blue), 10 MK (red) and without a group velocity (green). The dashed balck lines indicate a power law of -5/3, consistent with a Kolmogorov description of turbulence.}
 \label{fig:reid_pds}
 \end{figure}
 
 Given the effect radio wave scattering has on the size of Type III bursts does not fully agree with scattering simulations (Chapter \ref{chap:observations_vs_theory}), more work is necessary to determine the probable causes of this discrepancy. One possible avenue of investigation would be to perform a similar analysis to Chapter \ref{chap:observations_vs_theory} for Type IIIb bursts. A previous case study of a Type IIIb-III pair (a fundamental-harmonic pair of Type III bursts where the fundamental is a Type IIIb and the harmonic a Type III) was carried out by \cite{Zhang2020}. They found that the fundamental and harmonic emission show different motion as can be seen in Figure \ref{fig:typeIIIbIII} and attribute this to radio wave propagation effects.
 
-\begin{figure}
+\begin{figure}[ht]
 \centering
-\includegraphics[width=\columnwidth]{Zhang_2020.png}
-\caption[Type IIIb - III pair observed by \cite{Zhang2020}]{A Type IIIb - III pair observed by \cite{Zhang2020}. Panels a1-3 show the fundamental Type IIIb burst observed with LOFAR and imaged using WSCLEAN. Panels b1-6 show the harmonic Type III burst at a frequency of 26.56 MHz.  }
+\includegraphics[width=0.75\columnwidth]{Zhang_2020.png}
+\caption[Type IIIb - III pair observed by \cite{Zhang2020}]{A Type IIIb - III pair observed by \cite{Zhang2020}. Panels a1-3 show the fundamental Type IIIb burst observed with LOFAR and imaged using WSCLEAN. Panels b1-6 show the harmonic Type III burst at a frequency of 26.56 MHz.}
 \label{fig:typeIIIbIII}
 \end{figure}
 
 To date there has been no comparison between a large number of Type III and Type IIIb bursts where both are emitting at the fundamental plasma frequency using interferometric observations. Applying a technique similar to the visibility fitting described elsewhere in this thesis to determine a characteristic size could be extremely useful in quantifying the level of turbulence necessary to generate Type IIIb bursts in the first place. This is also an excellent opportunity to use \textit{in-situ} data from PSP and Solar Orbiter to confirm the predictions made with remote measurements from LOFAR and other radio telescopes. 
 
+\subsection{On the Structure Function of Density Turbulence in the Corona.}
+\cite{Bastian1994} describes the
+
 \section{Concluding Remarks.}
-They say science is done incrementally. In that case, this thesis is as incremental as it gets. While I do not claim to have made any ground breaking discoveries, I do truly believe that the work and research undertaken as part of this thesis has improved our understanding of and ability to observe and analyse solar radio emission.  I have but marked the path, it is for others to now follow it.
+The research presented in this thesis is a study of the low radio frequency Sun at some of the highest temporal, spectral and spatial resolutions to date. Our knowledge of radio wave propagation in the solar corona has been expanded as a result and the potential for further study is great. Using a new method in the context of LOFAR solar observations that I developed, I determined that the large size observed for a Type IIIb radio burst is due to radio wave scattering in the corona and that this effect may be over estimated by previous tied array imaging observations of the same. Following from this, I investigated the source size and position of 30 Type III bursts using the same method. My conclusion from this is that the level of anisotropy of radio wave scattering is lower than first expected by simulations and that Type III bursts have an intrinsic source size of the order of 10 arcmins. Parallel to this, I helped develop and install REALTA at I-LOFAR which has recorded numerous radio noise storms at the native 5.12 $\mu$s temporal resolution and 195.12 kHz spectral resolution.
+
+With the upgrade to LOFAR2.0 and other next generation radio telescopes such as the SKA imminent automatic detection of solar radio bursts will become all the more important. The future of solar radio astronomy is bright.
+%They say science is done incrementally. In that case, this thesis is as incremental as it gets. While I do not claim to have made any ground breaking discoveries, I do truly believe that the work and research undertaken as part of this thesis has improved our understanding of and ability to observe and analyse solar radio emission. I have but marked the path, it is for others to now follow it.	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
