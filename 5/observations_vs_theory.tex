@@ -27,9 +27,9 @@ During the period 04 April 2019 to 14 April 2019 a Type III radio noise storm oc
 
 \section{Method}
 \label{sec:obsvtheory_method}
-Description of MCMC
-Corner plot Plot of walkers
-Basically copy description from emcee.
+In order to deterime if the fit a 2D Gaussian in visibility space is appropriate, a Markov Chain Monte Carlo (MCMC) method was employed. MCMC samples a given distribution, in this case the model parameters. By constantly updating in a chain the entire distribution is sampled and a most probable estimate is obtained. The corner plot in Figure \ref{fig:corner} shows the individual histograms as well as the 2D correlations between various parameters. This gives an excellent and robust measure of the error in each parameter.
+
+
 
 
 By fitting their interferometric visibilities as described in Chapter \ref{chap:measuring_source_sizes}, the size and position of 30 Type III radio bursts over the period of 04 April 2019 to 14 April 2019 were found. The bursts were identified in LOFAR beamformed observations and their peak time determined using an automatic peak finding algorithm. Figure \ref{fig:dynamic_spectrum_070419} shows the automatically identified bursts at 30 MHz. In total, 320 bursts were identified in this way. Unfortunately, due to the strength of these bursts, the calibration of interferometric data failed for $\sim 90 \%$ of them. 30 bursts were identified manually as having successfully been calibrated and their properties fit. As well as determining the source shape and position at its peak, the area of the source over its duration was also measured. This was done by fitting a straight line to the source area over the duration of the burst, which was estimated to be 1 second before its peak and 2 seconds afterwards.
