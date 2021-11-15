@@ -158,7 +158,7 @@ where the assumption of no accumulation of charge inside the fluid gives rise to
 \end{equation}
 Equations \ref{eq:MHD_simplified}, \ref{eq:MHD_Maxwell} and \ref{eq:MHD_eq_of_state} form a closed system which can be solved for any of the fluid or electromagnetic variables. These equations can be used to describe some simple wave phenomena that MHD plasmas exhibit which are relevant to the later discussion of the plasma emission mechanism.
 \subsection{MHD Waves}
-In the following we only consider waves of small amplitude superimposed on a background of a uniform plasma. Background quantities will be denoted by a subsrcipt of `0', while the perturbed quantities will be given a  subscript `1'. We also only consider the case where there is no steady fluid motion and no external electric field. Thus we can write the simplified MHD equations (assuming no collisions and an adiabatic equation of state) as
+As we shall see shortly, the generation and propagation of MHD waves can result in the emission of electromagnetic radiation which in turn must travel through a magnetised medium. Consequently, it is important to outline the basics of MHD waves. In the following we only consider waves of small amplitude superimposed on a background of a uniform plasma. Background quantities will be denoted by a subsrcipt of `0', while the perturbed quantities will be given a  subscript `1'. We also only consider the case where there is no steady fluid motion and no external electric field. Thus we can write the simplified MHD equations (assuming no collisions and an adiabatic equation of state) as
 \begin{subequations} \label{eq:MHDwaves_simplified}
 \begin{align}
 & \frac{\partial N_1}{\partial t} + N_0 \nabla \cdot \mathbf{u} = 0 \\
@@ -175,7 +175,7 @@ where the assumption that each particle species is an isothermal gas with temper
 & \nabla \times \mathbf{B}_1 = \mu_0 \mathbf{J} + \epsilon_0 \frac{\partial \mathbf{E}}{\partial t}
 \end{align}
 \end{subequations}
-In order to study plane waves, solutions of the above where all perturbation quantities vary proportionally to  $e^{i(\omega t - \mathbf{k} \cdot \mathbf{r}}$ are sought. In the following we use the fact that for solutions of this form $\partial / \partial t \rightarrow i \omega$ and $\nabla \rightarrow -i \mathbf{k}$.  For a cold plasma with $T=0$ the equation of motion of the electrons is reduced to 
+In order to study plane waves, solutions of the above where all perturbation quantities vary proportionally to  $e^{i(\omega t - \mathbf{k} \cdot \mathbf{r})}$ are sought. In the following we use the fact that for solutions of this form $\partial / \partial t \rightarrow i \omega$ and $\nabla \rightarrow -i \mathbf{k}$.  For a cold plasma with $T=0$ the equation of motion of the electrons is reduced to 
 \begin{equation}
 \label{eq:MHDwave_clodplasma}
 m_e i \omega \mathbf{u}_e = q_e \mathbf{E}
@@ -208,11 +208,13 @@ to be
 Here it is obvious that $\omega_p$ acts as a cutoff frequency, below which electromagnetic waves become evanescent and are rapidly attenuated.
 \section{The Plasma Emission Mechanism for Type III Radio Bursts}
 \label{sec:plasma_emission}
-For a Type III radio burst to be emitted, an electron must generate Langmuir waves in the plasma. These Langmuir waves then go on to generate electromagnetic transverse waves by coalescing with other waves or by decaying. Theses electromagnetic waves are the radio bursts that are observed. In this section the generation of Langmuir waves and the process of plasma emission are discussed.
+For a Type III radio burst to be emitted, an electron beam must generate Langmuir waves in the background plasma. These Langmuir waves in turn generate electromagnetic transverse waves by coalescing with other waves or by decaying. These electromagnetic waves are the radio bursts that are observed. In this section the generation of Langmuir waves and the process of plasma emission are discussed under the framework of quasi-linear theory.
 
 \subsection{Generation of Langmuir Waves}
-During magnetic reconnection in a solar flare electrons are accelerated along magnetic field lines. As these beams of electrons propagate, faster electrons begin to outpace slower electrons and stationary ions in the background plasma. This leads to a second peak on the Maxwell Boltzmann distribution of velocities as seen in Figure \ref{fig:Lwavegrowth}. Energy is transferred from electrons electrons travelling at the phase velocity, $v_{\phi}$ , to Langmuir waves creating a resonance.
+During magnetic reconnection electrons can be accelerated along magnetic field lines. As these beams of electrons propagate, faster electrons begin to outpace slower electrons and stationary ions in the background plasma. This leads to a second peak on the Maxwell Boltzmann distribution of velocities as seen in Figure \ref{fig:Lwavegrowth}. Energy is transferred from electrons electrons travelling at the phase velocity, $v_{\phi}$ , to Langmuir waves creating a resonance.
 The positive velocity gradient of this resonance means that there are more electrons with velocity greater than $v_{\phi}$ than there are electrons with velocities less than  $v_{\phi}$ (where energy is transferred from the wave to the particles), this causes Langmuir waves to become unstable and their magnitudes to grow exponentially. Particles with velocities near $v_{\phi}$ are in resonance with the Langmuir waves and drive this instability.
+
+BUMP ON TAIL FIGURE
 
 This instability is alleviated by what is known as quasi-linear relaxation \citep{Melrose1987} whereby the resonant behaviour of the electrons and Langmuir waves results in a plateau in the Maxwell Boltzmann distribution rather than a second peak. It can be shown that \citep{Vedenov1963} the electron distribution function, $f(v,t)$ where $\int f(v,t) dv = n_e$, and the spectral energy index of Langmuir waves, $W(v,t)$ such that $\int W(v,t) dv = E_L$ the total energy density, can be expressed as follows \citep{Reid2014},
 \begin{equation}\label{eq:dfdt}
@@ -225,10 +227,10 @@ This instability is alleviated by what is known as quasi-linear relaxation \cite
 
 Equation \ref{eq:dWdt} shows that the growth rate of Langmuir waves is proportional to $\frac{\partial f(v,t)}{\partial v}$, hence a positive gradient in the Maxwell Boltzmann distribution leads to a growth in Langmuir waves. The right hand side of Eq. \ref{eq:dfdt} has a diffusion operator $D=\frac{W}{v}$. This states that the transfer of energy from particles to waves and back leads to the distribution function being smoothed out and eventually becoming a plateau. The evolution of $f(v,t)$ and $W(v,t)$ with time is shown in Figure \ref{fig:Lwavegrowth}. Figure \ref{fig:Lwavegrowth} shows how the plateau in the distribution function and a broadening in the spectral energy density develop as time progresses.
 
-\begin{figure}
+\begin{figure}[ht]
     \centering
     \includegraphics[width=0.75\columnwidth]{Images/L_wave_growth.png}
-    \caption[Langmuir wave distriburtion function and spectral energy density.]{Left: Evolution of distribution function (normalised by the electron thermal velocity $v_{Te}=V_e$) in time. The diffusive term in \ref{eq:dfdt} causes the bump-on-tail Gaussian to turn into a plateau, thereby eliminating the instability caused by the positive velocity gradient. Right: The spectral energy density of generated Langmuir waves, x-axis normalised to the Debye length $\lambda_D=\sqrt{\frac{\epsilon_0 k_B T_e}{e^2 n_e}}$. As time passes the spectral range of Langmuir waves increases. Each panel shows successive times of t=0.15s (green, dot-dashed line) and t=2.50s (red, dotted line). \citep[Figure taken from][]{Reid2014}.} %(Figure taken from \citeauthor{Reid2014} \citeyear{Reid2014})}
+    \caption[Langmuir wave distriburtion function and spectral energy density.]{Left: Evolution of distribution function (normalised by the electron thermal velocity $v_{Te}=V_e$) in time. The diffusive term in \ref{eq:dfdt} causes the bump-on-tail Gaussian to turn into a plateau, thereby eliminating the instability caused by the positive velocity gradient. Right: The spectral energy density of generated Langmuir waves, x-axis normalised to the Debye length $\lambda_D=\sqrt{\frac{\epsilon_0 k_B T_e}{e^2 n_e}}$. As time passes the spectral range of Langmuir waves increases. Each panel shows successive times of t=0.15s (green, dot-dashed line) and t=2.50s (red, dotted line). Figure taken from \cite{Reid2014}.} %(Figure taken from \citeauthor{Reid2014} \citeyear{Reid2014})}
     \label{fig:Lwavegrowth}
 \end{figure}
 
@@ -245,9 +247,9 @@ $$ \sigma \rightleftarrows \sigma' + \sigma '' $$
 where $\sigma$, $\sigma'$  and  $\sigma ''$ represent different wave modes. Conservation of energy and momentum state,
 $$ \omega^{\sigma}(k)=\omega^{\sigma'}(k')+\omega^{\sigma''}(k'')$$
 $$ k=k'+k''$$
-where $ \omega^{\sigma}(k)$ is the frequency of a particular wave mode with the wave vector $k$. For Langmuir (L), ion sound (S) and transverse (T) wave modes the allowed processes are L+S$\rightarrow$L', L+S$\rightarrow$T,  T+S$\rightarrow$L,  T+S$\rightarrow$T' and  L+L'$\rightarrow$T. Of these L+S$\rightarrow$T,  L$\rightarrow$T+S are responsible for fundamental emission while harmonic emission is associated with the three wave process L+L'$\rightarrow$T.
+where $ \omega^{\sigma}(k)$ is the frequency of a particular wave mode with the wave vector $k$. For Langmuir (L), ion sound (S) and transverse (T) wave modes the allowed processes are L+S$\rightarrow$L$^\prime$, L+S$\rightarrow$T,  T+S$\rightarrow$L,  T+S$\rightarrow$T$^\prime$ and  L+L$^\prime \rightarrow$T. Of these L+S$\rightarrow$T,  L$\rightarrow$T+S are responsible for fundamental emission while harmonic emission is associated with the three wave process L+L$^\prime \rightarrow$T.
 
-Originally \cite{Ginzburg1958} considered fundamental emission to be due to Langmuir waves scattering off of thermal ions in the plasma. It is now commonly accepted that the biggest cause of fundamental emission is due to the three wave processes of a Langmuir wave coalescing with an ion sound wave generated by L$\rightarrow$L'+S or when a Langmuir wave decays into an ion sound wave and an electromagnetic transverse wave. The process L$\rightarrow$T+S can be visualised as in Figure \ref{fig:Femission}. In solar radio physics it is often assumed that $k_L \gg k_T$, knowing this and that the wave vectors must satisfy $\mathbf{k}_L \pm \mathbf{k}_s = \mathbf{k}_T$ ($+$ for L+S$\rightarrow$T , $-$ for L$\rightarrow$T+S) implies $\mathbf{k}_s \approx \mp \mathbf{k}_L$ 
+Originally \cite{Ginzburg1958} considered fundamental emission to be due to Langmuir waves scattering off of thermal ions in the plasma. It is now commonly accepted that the biggest cause of fundamental emission is due to the three wave processes of a Langmuir wave coalescing with an ion sound wave generated by L$\rightarrow$L$^\prime$+S or when a Langmuir wave decays into an ion sound wave and an electromagnetic transverse wave. The process L$\rightarrow$T+S can be visualised as in Figure \ref{fig:Femission}. In solar radio physics it is often assumed that $k_L \gg k_T$, knowing this and that the wave vectors must satisfy $\mathbf{k}_L \pm \mathbf{k}_s = \mathbf{k}_T$ ($+$ for L+S$\rightarrow$T , $-$ for L$\rightarrow$T+S) implies $\mathbf{k}_s \approx \mp \mathbf{k}_L$ 
 
 \begin{figure}
 \centering
@@ -256,7 +258,7 @@ Originally \cite{Ginzburg1958} considered fundamental emission to be due to Lang
 \label{fig:Femission}
 \end{figure}
 
-Second harmonic emission occurs when two Langmuir waves coalesce in the process L+L'$\rightarrow$=T, shown in Figure \ref{fig:Hemission}. Conservation of momentum requires that $\mathbf{k}_L + \mathbf{k'}_L = \mathbf{k}_T$ and for second harmonic (H) generation, $k_T=k_H \approx \frac{\sqrt{3} \omega_p}{c}$. The phase speed $v_\phi$ of Langmuir waves is much less than $\frac{c}{\sqrt{3}}$ meaning that $k_L \gg k_T$ which results in $\mathbf{k}_L \approx -\mathbf{k'}_L$. This means that for a transverse wave at the second harmonic to be created, two Langmuir waves must coalesce almost exactly head on. These backward propagating Langmuir waves are generated: in the three wave processes of L+S$\rightarrow$L' and L$\rightarrow$L'+S; scattering off of thermal ions; and refraction at density inhomogeneities.
+Second harmonic emission occurs when two Langmuir waves coalesce in the process L+L$^\prime \rightarrow$=T, shown in Figure \ref{fig:Hemission}. Conservation of momentum requires that $\mathbf{k}_L + \mathbf{k'}_L = \mathbf{k}_T$ and for second harmonic (H) generation, $k_T=k_H \approx \frac{\sqrt{3} \omega_p}{c}$. The phase speed $v_\phi$ of Langmuir waves is much less than $\frac{c}{\sqrt{3}}$ meaning that $k_L \gg k_T$ which results in $\mathbf{k}_L \approx -\mathbf{k'}_L$. This means that for a transverse wave at the second harmonic to be created, two Langmuir waves must coalesce almost exactly head on. These backward propagating Langmuir waves are generated: in the three wave processes of L+S$\rightarrow$L$^\prime$ and L$\rightarrow$L$^\prime$+S; scattering off of thermal ions; and refraction at density inhomogeneities.
  \begin{figure}
 
      \centering
