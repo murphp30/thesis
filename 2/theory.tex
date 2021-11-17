@@ -156,9 +156,10 @@ where the assumption of no accumulation of charge inside the fluid gives rise to
 \label{eq:MHD_eq_of_state}
 \frac{d}{dt} \left(p \rho_m^{-\gamma} \right) = 0
 \end{equation}
+where $\gamma $ is the adiabatic index.
 Equations \ref{eq:MHD_simplified}, \ref{eq:MHD_Maxwell} and \ref{eq:MHD_eq_of_state} form a closed system which can be solved for any of the fluid or electromagnetic variables. These equations can be used to describe some simple wave phenomena that MHD plasmas exhibit which are relevant to the later discussion of the plasma emission mechanism.
-\subsection{MHD Waves}
-As we shall see shortly, the generation and propagation of MHD waves can result in the emission of electromagnetic radiation which in turn must travel through a magnetised medium. Consequently, it is important to outline the basics of MHD waves. In the following we only consider waves of small amplitude superimposed on a background of a uniform plasma. Background quantities will be denoted by a subsrcipt of `0', while the perturbed quantities will be given a  subscript `1'. We also only consider the case where there is no steady fluid motion and no external electric field. Thus we can write the simplified MHD equations (assuming no collisions and an adiabatic equation of state) as
+\subsection{Waves in Plasmas}
+As we shall see shortly, the generation and propagation of waves in plasmas can result in the emission of electromagnetic radiation which in turn must travel through the plasma. Consequently, it is important to outline the basics of waves in plasmas. In the following we only consider waves of small amplitude superimposed on a background of a uniform, unmagnetised plasma. Background quantities will be denoted by a subsrcipt of `0', while the perturbed quantities will be given a  subscript `1'. We also only consider the case where there is no steady fluid motion and no external electric field. Thus we can write the simplified MHD equations (assuming no collisions and an adiabatic equation of state) as
 \begin{subequations} \label{eq:MHDwaves_simplified}
 \begin{align}
 & \frac{\partial N_1}{\partial t} + N_0 \nabla \cdot \mathbf{u} = 0 \\
@@ -184,12 +185,12 @@ Taking the divergence of \ref{eq:MHDwave_clodplasma} and using \ref{eq:MHDwaves_
 \begin{equation}
 N_1 = \frac{N_0 q_e}{m_e \omega^2} \nabla \cdot \mathbf{E} \rightarrow \rho_1 = N_1 q_e - \frac{N_0 q_e^2}{m_e \omega^2} \nabla \cdot \mathbf{E}.
 \end{equation}
-For a longitudinal wave $\nabla \mathbf{E} \neq 0$ and thus, using \ref{eq:MHDwaves_Maxwell}a, we must have
+For a longitudinal wave $\nabla \cdot \mathbf{E} \neq 0$ and thus, using \ref{eq:MHDwaves_Maxwell}a, we must have
 \begin{equation}
 \label{eq:MHDwave_plasmafreq}
 \omega^2 = \frac{N_0 q_e^2}{m_e \epsilon_0} \equiv \omega^2_{p}
 \end{equation}
-which is the plasma frequency we found earlier from our discussion at the beginning of Section\ref{sec:plasma_intro}! Note also that, because $\omega$ does not depend on $\mathbf{k}$, the group velocity $v_g = d\omega / d k$ of this wave is 0. This means that the plasma oscillation does not propagate from the location where they are generated. Relaxing the restriction that $T=0$ and including the effects of pressure gradients leads to a dispersion relationship of 
+which is the plasma frequency we found earlier from our discussion at the beginning of Section\ref{sec:plasma_intro}! Note also that, because $\omega$ does not depend on $\mathbf{k}$, the group velocity $v_g = d\omega / d k$ of this wave is 0. This means that the plasma oscillation does not propagate from the location where they are generated. For a magnetised plasma with finite temperature the dispersion relation of Langmuir waves becomes 
 \begin{equation}
 \label{eq:MHDwave_langmuir}
 \omega^2 = \omega_p^2(1 + \gamma \lambda_D^2k^2).
@@ -206,15 +207,20 @@ to be
 \omega = (\omega_p +k^2 c^2)^\frac{1}{2}.
 \end{equation}
 Here it is obvious that $\omega_p$ acts as a cutoff frequency, below which electromagnetic waves become evanescent and are rapidly attenuated.
-\section{The Plasma Emission Mechanism for Type III Radio Bursts}
+\section{The Plasma Emission Mechanism}
 \label{sec:plasma_emission}
-For a Type III radio burst to be emitted, an electron beam must generate Langmuir waves in the background plasma. These Langmuir waves in turn generate electromagnetic transverse waves by coalescing with other waves or by decaying. These electromagnetic waves are the radio bursts that are observed. In this section the generation of Langmuir waves and the process of plasma emission are discussed under the framework of quasi-linear theory.
+The plasma emission mechanism occurs over a number of stages. First, an instability must be generated in the velocity distribution function. This leads to the growth of Langmuir waves before finally these Langmuir waves are converted to transverse electromagnetic waves. In a Type III radio burst a high velocity, low density, electron beam passes through the background plasma to form a "bump on tail" distribution. This distribution is unstable and leads to the growth of Langmuir waves. These Langmuir waves in turn generate electromagnetic waves by coalescing with other Langmuir waves or by decaying. The electromagnetic waves are the radio bursts that are observed. In this section the generation of Langmuir waves in 1D and the process of plasma emission are discussed under the framework of quasi-linear theory.
 
 \subsection{Generation of Langmuir Waves}
-During magnetic reconnection electrons can be accelerated along magnetic field lines. As these beams of electrons propagate, faster electrons begin to outpace slower electrons and stationary ions in the background plasma. This leads to a second peak on the Maxwell Boltzmann distribution of velocities as seen in Figure \ref{fig:Lwavegrowth}. Energy is transferred from electrons electrons travelling at the phase velocity, $v_{\phi}$ , to Langmuir waves creating a resonance.
+During magnetic reconnection electrons can be accelerated along magnetic field lines. As these beams of electrons propagate, faster electrons begin to outpace slower electrons and stationary ions in the background plasma. This leads to a second peak on the Maxwell Boltzmann distribution of velocities as seen in Figure \ref{fig:bumpontail}. Energy is transferred from electrons travelling at the phase velocity, $v_{\phi}$ , to Langmuir waves creating a resonance.
 The positive velocity gradient of this resonance means that there are more electrons with velocity greater than $v_{\phi}$ than there are electrons with velocities less than  $v_{\phi}$ (where energy is transferred from the wave to the particles), this causes Langmuir waves to become unstable and their magnitudes to grow exponentially. Particles with velocities near $v_{\phi}$ are in resonance with the Langmuir waves and drive this instability.
 
-BUMP ON TAIL FIGURE
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.75\columnwidth]{bump_on_tail.png}
+\caption[A "bump on tail" distribution.]{The 1D electron velocity distribution function of a background plasma and a low density, high velocity electron beam. This is known as the "bump on tail" distribution. The shaded region indicates where the gradient of the distribution function is positive and can excite Langmuir waves in the background plasma.}
+\label{fig:bumpontail}
+\end{figure}
 
 This instability is alleviated by what is known as quasi-linear relaxation \citep{Melrose1987} whereby the resonant behaviour of the electrons and Langmuir waves results in a plateau in the Maxwell Boltzmann distribution rather than a second peak. It can be shown that \citep{Vedenov1963} the electron distribution function, $f(v,t)$ where $\int f(v,t) dv = n_e$, and the spectral energy index of Langmuir waves, $W(v,t)$ such that $\int W(v,t) dv = E_L$ the total energy density, can be expressed as follows \citep{Reid2014},
 \begin{equation}\label{eq:dfdt}
@@ -225,11 +231,11 @@ This instability is alleviated by what is known as quasi-linear relaxation \cite
     \frac{\partial W(v,t)}{\partial t}= \frac{\pi \omega_p}{n_e} v^2 W \frac{\partial f(v,t)}{\partial v}
 \end{equation}
 
-Equation \ref{eq:dWdt} shows that the growth rate of Langmuir waves is proportional to $\frac{\partial f(v,t)}{\partial v}$, hence a positive gradient in the Maxwell Boltzmann distribution leads to a growth in Langmuir waves. The right hand side of Eq. \ref{eq:dfdt} has a diffusion operator $D=\frac{W}{v}$. This states that the transfer of energy from particles to waves and back leads to the distribution function being smoothed out and eventually becoming a plateau. The evolution of $f(v,t)$ and $W(v,t)$ with time is shown in Figure \ref{fig:Lwavegrowth}. Figure \ref{fig:Lwavegrowth} shows how the plateau in the distribution function and a broadening in the spectral energy density develop as time progresses.
+Equation \ref{eq:dWdt} shows that the growth rate of Langmuir waves is proportional to $\frac{\partial f(v,t)}{\partial v}$, hence a positive gradient in the Maxwell Boltzmann distribution leads to a growth in Langmuir waves. The right hand side of Eq. \ref{eq:dfdt} has a diffusion operator $D=\frac{W}{v}$. This states that the transfer of energy from particles to waves and back leads to the distribution function being smoothed out and eventually becoming a plateau. The evolution of $f(v,t)$ and $W(v,t)$ with time is shown in Figure \ref{fig:Lwavegrowth}.  As time progresses, a plateau is formed in the distribution function and a broadening of the spectral energy density develops.	
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.75\columnwidth]{Images/L_wave_growth.png}
+    \includegraphics[width=\columnwidth]{Images/L_wave_growth.png}
     \caption[Langmuir wave distriburtion function and spectral energy density.]{Left: Evolution of distribution function (normalised by the electron thermal velocity $v_{Te}=V_e$) in time. The diffusive term in \ref{eq:dfdt} causes the bump-on-tail Gaussian to turn into a plateau, thereby eliminating the instability caused by the positive velocity gradient. Right: The spectral energy density of generated Langmuir waves, x-axis normalised to the Debye length $\lambda_D=\sqrt{\frac{\epsilon_0 k_B T_e}{e^2 n_e}}$. As time passes the spectral range of Langmuir waves increases. Each panel shows successive times of t=0.15s (green, dot-dashed line) and t=2.50s (red, dotted line). Figure taken from \cite{Reid2014}.} %(Figure taken from \citeauthor{Reid2014} \citeyear{Reid2014})}
     \label{fig:Lwavegrowth}
 \end{figure}
@@ -432,10 +438,10 @@ D_{ij} = \left[ \frac{A_{ij}^{-2}}{(\mathbf{k}\mathbf{A}^{-2}\mathbf{k})^{1/2}} 
 
 The Fokker-Planck equation \ref{eq:scattering_Fokker_Planck} can be solved numerically (see \cite{Kontar2019} for details) to give the results of \cite{Kontar2019}
 
-\section{The Power Spectrum of Coronal Density Inhomogeneities.}
-\label{sec:density_fluctuations}
-
-IN the discussion of the correlation coefficient for density fluctuations above we only discussed the case of $M(r) = \exp-{r^2/r_0^2} $. There are however, a number of reasons to suggest that this is not the case. \cite{Coles1989} and \cite{Bastian1994} both describe the fluctuation power spectrum in great detail and I surmise their discussions here
+%\section{The Power Spectrum of Coronal Density Inhomogeneities.}
+%\label{sec:density_fluctuations}
+%
+%IN the discussion of the correlation coefficient for density fluctuations above we only discussed the case of $M(r) = \exp-{(r^2/r_0^2)} $. There are however, a number of reasons to suggest that this is not the case. \cite{Coles1989} and \cite{Bastian1994} both describe the fluctuation power spectrum in great detail and I surmise their discussions here
 
 
 
