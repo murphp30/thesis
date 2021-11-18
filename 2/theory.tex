@@ -2,7 +2,8 @@
 \doublespacing
 \chapter{Theoretical Background}
 \label{chap:theory}
-The following chapter describes the core concepts relevant to this thesis in more detail than Chapter \ref{chap:intro}. In order to understand the corona, one must understand the plasma it is made of. Thus, I start in section \ref{sec:plasma_intro} with some fundamental concepts of plasma physics and introduce the kinetic theory of plasmas by considering the distribution of many particles in a six dimensional phase space. This lays the groundwork for a fluid description of plasmas, magnetohydrodynamics (MHD), arguably the most useful description of a plasma in the context of the solar corona which is discussed in section \ref{sec:MHD}. The MHD equations are investigated further to determine how longitudinal and transverse waves propagate in a plasma which is relevant for the subsequent discussion of Langmuir wave generation and the plasma emission mechanism of Type III radio bursts in section \ref{sec:plasma_emission}. An overview of the theory of radio wave scattering in the corona, and how it has been developed over time, is given in section \ref{sec:scattering_theory} and a discussion about the power spectrum of electron density fluctuations in section \ref{sec:density_fluctuations} concludes this chapter.
+The following chapter describes the core concepts relevant to this thesis. In order to understand the corona, one must understand the plasma it is made of. Thus, I start in section \ref{sec:plasma_intro} with some fundamental concepts of plasma physics and introduce the kinetic theory of plasmas by considering the distribution of many particles in a six dimensional phase space. This lays the groundwork for a fluid description of plasmas, magnetohydrodynamics (MHD), arguably the most useful description of a plasma in the context of the solar corona which is discussed in section \ref{sec:MHD}. The MHD equations are investigated further to determine how longitudinal and transverse waves propagate in a plasma which is relevant for the subsequent discussion of Langmuir wave generation and the plasma emission mechanism of Type III radio bursts in section \ref{sec:plasma_emission}. Section \ref{sec:scattering_theory} gives an overview of the theory of radio wave scattering in the corona and concludes this chapter. 
+% and a discussion about the power spectrum of electron density fluctuations in section \ref{sec:density_fluctuations} concludes this chapter.
 
 
 \section{Introductory Concepts in Plasma Physics}
@@ -209,7 +210,7 @@ to be
 Here it is obvious that $\omega_p$ acts as a cutoff frequency, below which electromagnetic waves become evanescent and are rapidly attenuated.
 \section{The Plasma Emission Mechanism}
 \label{sec:plasma_emission}
-The plasma emission mechanism occurs over a number of stages. First, an instability must be generated in the velocity distribution function. This leads to the growth of Langmuir waves before finally these Langmuir waves are converted to transverse electromagnetic waves. In a Type III radio burst a high velocity, low density, electron beam passes through the background plasma to form a "bump on tail" distribution. This distribution is unstable and leads to the growth of Langmuir waves. These Langmuir waves in turn generate electromagnetic waves by coalescing with other Langmuir waves or by decaying. The electromagnetic waves are the radio bursts that are observed. In this section the generation of Langmuir waves in 1D and the process of plasma emission are discussed under the framework of quasi-linear theory.
+The plasma emission mechanism occurs over a number of stages. First, an instability must be generated in the velocity distribution function. This leads to the growth of Langmuir waves before finally these Langmuir waves are converted to transverse electromagnetic waves. In a Type III radio burst a high velocity, low density, electron beam passes through the background plasma to form a ``bump on tail" distribution. This distribution is unstable and leads to the growth of Langmuir waves. These Langmuir waves in turn generate electromagnetic waves by coalescing with other Langmuir waves or by decaying. The electromagnetic waves are the radio bursts that are observed. In this section the generation of Langmuir waves in 1D and the process of plasma emission are discussed under the framework of quasi-linear theory.
 
 \subsection{Generation of Langmuir Waves}
 During magnetic reconnection electrons can be accelerated along magnetic field lines. As these beams of electrons propagate, faster electrons begin to outpace slower electrons and stationary ions in the background plasma. This leads to a second peak on the Maxwell Boltzmann distribution of velocities as seen in Figure \ref{fig:bumpontail}. Energy is transferred from electrons travelling at the phase velocity, $v_{\phi}$ , to Langmuir waves creating a resonance.
@@ -218,11 +219,21 @@ The positive velocity gradient of this resonance means that there are more elect
 \begin{figure}[ht]
 \centering
 \includegraphics[width=0.75\columnwidth]{bump_on_tail.png}
-\caption[A "bump on tail" distribution.]{The 1D electron velocity distribution function of a background plasma and a low density, high velocity electron beam. This is known as the "bump on tail" distribution. The shaded region indicates where the gradient of the distribution function is positive and can excite Langmuir waves in the background plasma.}
+\caption[A ``bump on tail" distribution.]{The 1D electron velocity distribution function of a background plasma and a low density, high velocity electron beam. This is known as the ``bump on tail" distribution. The shaded region indicates where the gradient of the distribution function is positive and can excite Langmuir waves in the background plasma.}
 \label{fig:bumpontail}
 \end{figure}
 
-This instability is alleviated by what is known as quasi-linear relaxation \citep{Melrose1987} whereby the resonant behaviour of the electrons and Langmuir waves results in a plateau in the Maxwell Boltzmann distribution rather than a second peak. It can be shown that \citep{Vedenov1963} the electron distribution function, $f(v,t)$ where $\int f(v,t) dv = n_e$, and the spectral energy index of Langmuir waves, $W(v,t)$ such that $\int W(v,t) dv = E_L$ the total energy density, can be expressed as follows \citep{Reid2014},
+In the following, the electron velocity distribution function is described as the sum of a slowly varying part $f_0$ and a rapidly oscillating part $f_1$, where $\vert f_1 \vert \ll f_0$
+\begin{equation}
+\label{eq:ql_distributionf}
+f(\mathbf{r}, \mathbf{v}, t) = f_0(\mathbf{v}) + f_1(\mathbf{r}, \mathbf{v}, t).
+\end{equation} 
+Equation \ref{eq:ql_distributionf} can now be substituted into the Vlasov Equation (Equation \ref{eq:KT_Vlasov_eq}), where we note that $\mathbf{E}$ and $f_1$ are perturbation quantities. By neglecting second order terms and assuming an unmagnetised plasma, i.e. $\mathbf{B} = 0$, we obtain the linearalised Vlasov Equation
+\begin{equation}
+\label{eq:linear_vlasov}
+\frac{\partial f_1}{\partial t} + (\mathbf{v} \cdot \nabla)f_1 + \frac{q_e}{m_e} \mathbf{E} \cdot \nabla_\mathbf{v}f_0 = 0.
+\end{equation} 
+It can be shown that in 1D the electron distribution function, $f(v,t)$ where $\int f(v,t) dv = n_e$, and the spectral energy index of Langmuir waves, $W(v,t)$ such that $\int W(v,t) dv = E_L$ the total energy density, can be expressed as follows \citep{Vedenov1963,Reid2014},
 \begin{equation}\label{eq:dfdt}
     \frac{\partial f(v,t)}{\partial t}=\frac{4 \pi^2 e^2}{m_e^2} \frac{\partial}{\partial v} \left( \frac{W}{v} \right) \frac{\partial f(v,t)}{\partial v}
 \end{equation}
@@ -231,17 +242,17 @@ This instability is alleviated by what is known as quasi-linear relaxation \cite
     \frac{\partial W(v,t)}{\partial t}= \frac{\pi \omega_p}{n_e} v^2 W \frac{\partial f(v,t)}{\partial v}
 \end{equation}
 
-Equation \ref{eq:dWdt} shows that the growth rate of Langmuir waves is proportional to $\frac{\partial f(v,t)}{\partial v}$, hence a positive gradient in the Maxwell Boltzmann distribution leads to a growth in Langmuir waves. The right hand side of Eq. \ref{eq:dfdt} has a diffusion operator $D=\frac{W}{v}$. This states that the transfer of energy from particles to waves and back leads to the distribution function being smoothed out and eventually becoming a plateau. The evolution of $f(v,t)$ and $W(v,t)$ with time is shown in Figure \ref{fig:Lwavegrowth}.  As time progresses, a plateau is formed in the distribution function and a broadening of the spectral energy density develops.	
-
+Equation \ref{eq:dWdt} shows that the growth rate of Langmuir waves is proportional to $\frac{\partial f(v,t)}{\partial v}$, hence a positive gradient in the Maxwell Boltzmann distribution leads to a growth in Langmuir waves. The right hand side of Eq. \ref{eq:dfdt} has a diffusion operator $D=\frac{W}{v}$. This states that the transfer of energy from particles to waves and back leads to the distribution function being smoothed out and eventually becoming a plateau. The evolution of $f(v,t)$ and $W(v,t)$ with time is shown in Figure \ref{fig:Lwavegrowth}.  As time progresses, a plateau is formed in the distribution function and a broadening of the spectral energy density develops.	 This process is known as quasi-linear relaxation \citep{Melrose1987}.
+%The instability is alleviated by what is known as quasi-linear relaxation \citep{Melrose1987} whereby the resonant behaviour of the electrons and Langmuir waves results in a plateau in the Maxwell Boltzmann distribution rather than a second peak. Figure \ref{fig:Lwavegrowth} shows the evolution of the velocity distribution fucntion (left) and spectral energy density of Langmuir waves (right) with time. 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\columnwidth]{Images/L_wave_growth.png}
-    \caption[Langmuir wave distriburtion function and spectral energy density.]{Left: Evolution of distribution function (normalised by the electron thermal velocity $v_{Te}=V_e$) in time. The diffusive term in \ref{eq:dfdt} causes the bump-on-tail Gaussian to turn into a plateau, thereby eliminating the instability caused by the positive velocity gradient. Right: The spectral energy density of generated Langmuir waves, x-axis normalised to the Debye length $\lambda_D=\sqrt{\frac{\epsilon_0 k_B T_e}{e^2 n_e}}$. As time passes the spectral range of Langmuir waves increases. Each panel shows successive times of t=0.15s (green, dot-dashed line) and t=2.50s (red, dotted line). Figure taken from \cite{Reid2014}.} %(Figure taken from \citeauthor{Reid2014} \citeyear{Reid2014})}
+    \caption[Langmuir wave distriburtion function and spectral energy density.]{Left: Evolution of distribution function (normalised by the electron thermal velocity $v_{Te}=V_e$) in time. The diffusive term in \ref{eq:dfdt} causes the bump-on-tail Gaussian to turn into a plateau, thereby eliminating the instability caused by the positive velocity gradient. Right: The spectral energy density of generated Langmuir waves, x-axis normalised to the Debye length $\lambda_D=\sqrt{\frac{\epsilon_0 k_B T_e}{e^2 n_e}}$. Each panel shows successive times of t=0.15s (green, dot-dashed line) and t=2.50s (red, dotted line). Figure taken from \cite{Reid2014}.} %(Figure taken from \citeauthor{Reid2014} \citeyear{Reid2014})}
     \label{fig:Lwavegrowth}
 \end{figure}
 
 \subsection{Wave-Wave Interaction}\label{Plasma Emission}
-Wave-wave interaction concerns the processes by which three types of waves interact. These are: transverse (T) waves, Langmuir (L) waves and ion sound (S) waves, and have the following, respective dispersion relations,
+Now that we know how Langmuir waves are generated by an unstable distribution, we must discuss how these Langmuir waves are converted to electromagnetic waves via wave-wave interactions. Wave-wave interaction concerns the processes by which three types of waves interact. These are: transverse (T) waves, Langmuir (L) waves and ion sound (S) waves, and have the following, respective, dispersion relations:
 $$ \omega=(\omega_p^2 +k^2c^2)^{\frac{1}{2}} $$
 $$ \omega \cong \omega_p + \frac{3k^2V_e^2}{2 \omega_p}$$
 $$ \omega = kv_s $$
@@ -255,17 +266,17 @@ $$ \omega^{\sigma}(k)=\omega^{\sigma'}(k')+\omega^{\sigma''}(k'')$$
 $$ k=k'+k''$$
 where $ \omega^{\sigma}(k)$ is the frequency of a particular wave mode with the wave vector $k$. For Langmuir (L), ion sound (S) and transverse (T) wave modes the allowed processes are L+S$\rightarrow$L$^\prime$, L+S$\rightarrow$T,  T+S$\rightarrow$L,  T+S$\rightarrow$T$^\prime$ and  L+L$^\prime \rightarrow$T. Of these L+S$\rightarrow$T,  L$\rightarrow$T+S are responsible for fundamental emission while harmonic emission is associated with the three wave process L+L$^\prime \rightarrow$T.
 
-Originally \cite{Ginzburg1958} considered fundamental emission to be due to Langmuir waves scattering off of thermal ions in the plasma. It is now commonly accepted that the biggest cause of fundamental emission is due to the three wave processes of a Langmuir wave coalescing with an ion sound wave generated by L$\rightarrow$L$^\prime$+S or when a Langmuir wave decays into an ion sound wave and an electromagnetic transverse wave. The process L$\rightarrow$T+S can be visualised as in Figure \ref{fig:Femission}. In solar radio physics it is often assumed that $k_L \gg k_T$, knowing this and that the wave vectors must satisfy $\mathbf{k}_L \pm \mathbf{k}_s = \mathbf{k}_T$ ($+$ for L+S$\rightarrow$T , $-$ for L$\rightarrow$T+S) implies $\mathbf{k}_s \approx \mp \mathbf{k}_L$ 
+Originally \cite{Ginzburg1958} considered fundamental emission to be due to Langmuir waves scattering off of thermal ions in the plasma. It is now commonly accepted that the biggest cause of fundamental emission is due to the three wave processes of a Langmuir wave coalescing with an ion sound wave generated by L$\rightarrow$L$^\prime$+S or when a Langmuir wave decays into an ion sound wave and an electromagnetic transverse wave. The process L$\rightarrow$T+S can be visualised as in Figure \ref{fig:Femission}. In solar radio physics it is often assumed that $k_L \gg k_T$, knowing this and that the wave vectors must satisfy $\mathbf{k}_L \pm \mathbf{k}_s = \mathbf{k}_T$ ($+$ for L+S$\rightarrow$T , $-$ for L$\rightarrow$T+S) implies $\mathbf{k}_s \approx \mp \mathbf{k}_L$.
 
-\begin{figure}
+\begin{figure}[ht]
 \centering
 \includegraphics[width=0.5\columnwidth]{Images/Fundamental_emission_Lwaves.png}
 \caption[A three wave process of fundamental plasma emission L$\rightarrow$T+S]{A three wave process of fundamental plasma emission L$\rightarrow$T+S. A Langmuir wave decaying into an ion sound wave and an electromagnetic transverse wave at the plasma frequency. (Figure adapted from Solar (interplanetary) Radio Bursts: the Generation of Radio Waves,	an oral presentation by David Malaspina at the Jean Louis Steinberg International Workshop on Solar, Heliospheric and Magnetospheric Radioastronomy, November 2017)}
 \label{fig:Femission}
 \end{figure}
 
-Second harmonic emission occurs when two Langmuir waves coalesce in the process L+L$^\prime \rightarrow$=T, shown in Figure \ref{fig:Hemission}. Conservation of momentum requires that $\mathbf{k}_L + \mathbf{k'}_L = \mathbf{k}_T$ and for second harmonic (H) generation, $k_T=k_H \approx \frac{\sqrt{3} \omega_p}{c}$. The phase speed $v_\phi$ of Langmuir waves is much less than $\frac{c}{\sqrt{3}}$ meaning that $k_L \gg k_T$ which results in $\mathbf{k}_L \approx -\mathbf{k'}_L$. This means that for a transverse wave at the second harmonic to be created, two Langmuir waves must coalesce almost exactly head on. These backward propagating Langmuir waves are generated: in the three wave processes of L+S$\rightarrow$L$^\prime$ and L$\rightarrow$L$^\prime$+S; scattering off of thermal ions; and refraction at density inhomogeneities.
- \begin{figure}
+Second harmonic emission occurs when two Langmuir waves coalesce in the process L+L$^\prime \rightarrow$=T, shown in Figure \ref{fig:Hemission}. Conservation of momentum requires that $\mathbf{k}_L + \mathbf{k'}_L = \mathbf{k}_T$ and for second harmonic (H) generation, $k_T=k_H \approx \frac{\sqrt{3} \omega_p}{c}$. The phase speed $v_\phi$ of Langmuir waves is much less than $\frac{c}{\sqrt{3}}$ meaning that $k_L \gg k_T$ which results in $\mathbf{k}_L \approx -\mathbf{k'}_L$. This means that for a transverse wave at the second harmonic to be created, two Langmuir waves must coalesce almost exactly head on. These backward propagating Langmuir waves are generated: in the three wave processes of L+S$\rightarrow$L$^\prime$ and L$\rightarrow$L$^\prime$+S, i.e. scattering off of thermal ions, and by refraction at density inhomogeneities.
+ \begin{figure}[ht]
 
      \centering
      \includegraphics[width=0.5\columnwidth]{Images/Harmonic_emission_Lwaves.png}
@@ -287,89 +298,101 @@ Under the assumptions of homogeneity and isotropy, the correlation between refra
 \label{eq:scattering_correlation}
 \langle \delta \mu(\mathbf{r_1}) \delta \mu(\mathbf{r_2}) \rangle = \langle \delta^2 \mu \rangle M(r),
 \end{equation}
-where $\langle \delta^2 \mu \rangle$ is the mean squared fluctuation of refractive index and $M(r)$ is some (even) function of $r$. For reasons that will become apparent, we introduce the tensor
-\begin{equation}
-\label{eq:scattering_tensor}
-R_{ij} = \bigg \langle \left( \frac{\partial}{\partial x_i} \delta \mu \right) \left( \frac{\partial}{\partial {x_j}' } \delta \mu \right) \bigg \rangle
-\end{equation}
-which gives the correlation of a component $\nabla \delta \mu$ at a point $x_i$ with that at a point ${x_i}'$. For $\xi_i = {x_i}' - x_i$ the tensor becomes
-\begin{equation}
-\label{eq:scattering_tensor2}
-R_{ij} = - \langle \delta^2 \mu \rangle \frac{\partial^2 M}{\partial \xi_i \partial \xi_j} = - \langle \delta^2 \mu \rangle \left[\left(\frac{M^{\prime\prime}}{r^2} - \frac{M^ \prime}{r^3}\right) \xi_i \xi_j + \frac{M^\prime}{r}\delta_{ij}\right],
-\end{equation} 
-where primes denote differentiation with respect to $r$.  In particular we can show that
-\begin{equation}
-\label{eq:scattering_transverse_correlation}
-\bigg \langle \left( \frac{\partial}{\partial x_i} \delta \mu \right) \left( \frac{\partial}{\partial {x_j}' } \delta \mu \right) \bigg \rangle_{(0,0,0;0,0,{x_s}'=r)} = - \langle \delta^2 \mu \rangle \frac{M^\prime}{r}
-\end{equation}
-We write this transverse correlation  as 
-\begin{equation}
-\langle \delta^2 \mu \rangle R(r) \mbox{, where } R(r) = - \frac{1}{r} \frac{dM}{dr}
-\end{equation}
- Notably, $M(r)$ defines a ``micro-scale" $r_0$ such that for $r \gg r_0$, $M(r)$ becomes negligible.	
+where $\langle \delta^2 \mu \rangle$ is the mean squared fluctuation of refractive index and $M(r)$ is some (even) function of $r$. 
+%For reasons that will become apparent, we introduce the tensor
+%\begin{equation}
+%\label{eq:scattering_tensor}
+%R_{ij} = \bigg \langle \left( \frac{\partial}{\partial x_i} \delta \mu \right) \left( \frac{\partial}{\partial {x_j}' } \delta \mu \right) \bigg \rangle
+%\end{equation}
+%which gives the correlation of a component $\nabla \delta \mu$ at a point $x_i$ with that at a point ${x_i}'$. For $\xi_i = {x_i}' - x_i$ the tensor becomes
+%\begin{equation}
+%\label{eq:scattering_tensor2}
+%R_{ij} = - \langle \delta^2 \mu \rangle \frac{\partial^2 M}{\partial \xi_i \partial \xi_j} = - \langle \delta^2 \mu \rangle \left[\left(\frac{M^{\prime\prime}}{r^2} - \frac{M^ \prime}{r^3}\right) \xi_i \xi_j + \frac{M^\prime}{r}\delta_{ij}\right],
+%\end{equation} 
+%where primes denote differentiation with respect to $r$.  In particular we can show that
+%\begin{equation}
+%\label{eq:scattering_transverse_correlation}
+%\bigg \langle \left( \frac{\partial}{\partial x_i} \delta \mu \right) \left( \frac{\partial}{\partial {x_j}' } \delta \mu \right) \bigg \rangle_{(0,0,0;0,0,{x_s}'=r)} = - \langle \delta^2 \mu \rangle \frac{M^\prime}{r}
+%\end{equation}
+%We write this transverse correlation  as 
+%\begin{equation}
+%\langle \delta^2 \mu \rangle R(r) \mbox{, where } R(r) = - \frac{1}{r} \frac{dM}{dr}
+%\end{equation}
+Notably, $M(r)$ defines a ``micro-scale" $r_0$ such that for $r \gg r_0$, $M(r)$ becomes negligible.	
  
-The general equations for a ray traversing a medium of variable refractive index can be given as 
-\begin{equation}
-\label{eq:scattering_rayeq}
-\frac{d}{du}\left[\frac{\mu \dot{x_i}}{(\dot{x_1}^2 + \dot{x_2}^2 + \dot{x_3}^2 )^{1/2}} \right] = (\dot{x_1}^2 + \dot{x_2}^2 + \dot{x_3}^2 )^{1/2} \frac{\partial \mu}{\partial x_i} ,
-\end{equation}
-where 
-\begin{equation}
-\dot{x_i} = \frac{dx_i}{du},
-\end{equation}
-and $u$ is a single valued parameter along the ray. By only considering small fluctuations of $\mu$, the departure from linearity of a ray traversing  a medium can also be considered to be small and, consequently, the general equations above can be greatly simplified. By letting $u=s$, where $s$ is the distance along an undeflected linear trajectory, denoting the (small) displacements along the directions $x_1$ and $x_2$ normal to $\mathbf{s}$ as $\xi (s)$ and $\eta (s)$ and ignoring terms higher than first order in Equation \ref{eq:scattering_rayeq}, we find
-\begin{equation}
-\label{eq:scattering_displacement}
-\frac{d^2 \xi}{ds^s} = \left( \frac{\partial}{\partial x_1	} \delta \mu \right)_s \mbox{, } \frac{d^2 \eta}{ds^s} = \left( \frac{\partial}{\partial x_2} \delta \mu \right)_s.
-\end{equation}
+%The general equations for a ray traversing a medium of variable refractive index can be given as \citep{Chandrasekhar1952}
+%\begin{equation}
+%\label{eq:scattering_rayeq}
+%\frac{d}{du}\left[\frac{\mu \dot{x_i}}{(\dot{x_1}^2 + \dot{x_2}^2 + \dot{x_3}^2 )^{1/2}} \right] = (\dot{x_1}^2 + \dot{x_2}^2 + \dot{x_3}^2 )^{1/2} \frac{\partial \mu}{\partial x_i} ,
+%\end{equation}
+%where 
+%\begin{equation}
+%\dot{x_i} = \frac{dx_i}{du},
+%\end{equation}
+%and $u$ is a single valued parameter along the ray. By only considering small fluctuations of $\mu$, the departure from linearity of a ray traversing  a medium can also be considered to be small and, consequently, the general equations above can be greatly simplified. By letting $u=s$, where $s$ is the distance along an undeflected linear trajectory, denoting the (small) displacements along the directions $x_1$ and $x_2$ normal to $\mathbf{s}$ as $\xi (s)$ and $\eta (s)$ and ignoring terms higher than first order in Equation \ref{eq:scattering_rayeq}, we find
+%\begin{equation}
+%\label{eq:scattering_displacement}
+%\frac{d^2 \xi}{ds^s} = \left( \frac{\partial}{\partial x_1	} \delta \mu \right)_s \mbox{, } \frac{d^2 \eta}{ds^s} = \left( \frac{\partial}{\partial x_2} \delta \mu \right)_s.
+%\end{equation}
 
-As we shall see later, one of the key quantities of interest is the angular deflection of the ray from its linear trajectory. These are denoted as $\psi_1$ and $\psi_2$ in the planes containing $x_1$ and $x_2$ respectively. Under the small angle approximation we took earlier
-\begin{equation}
-\label{eq_scattering_smallangle}
-\psi_1 = \frac{d \xi}{ds} \mbox{, } \psi_2 = \frac{d \eta}{ds},
-\end{equation}
-and thus
-\begin{equation}
-\label{eq:scattering_angulardisplacement}
-\frac{d \psi_1}{ds} =  \left( \frac{\partial}{\partial x_1} \delta \mu \right)_s \mbox{, } \frac{d \psi_2}{ds} = \left( \frac{\partial}{\partial x_2} \delta \mu \right)_s.
-\end{equation}
-
-Equations \ref{eq:scattering_displacement} and \ref{eq:scattering_angulardisplacement}, the mean square deflection and displacement of a ray can be found after it has traversed a known distance, in terms of $M(r)$. First we consider the deflection
-\begin{equation}
-\langle \psi_1^2(s) \rangle = \int_0^s \int_0^s \bigg \langle \left( \frac{\partial}{\partial x_1} \delta \mu \right)_{s_1} \left( \frac{\partial}{\partial {x_1} } \delta \mu \right)_{s_2} \bigg \rangle ds_1 ds_2
-\end{equation}
-where the averaged quantity under the integral is the transverse correlation from Equation \ref{eq:scattering_transverse_correlation}.
-Thus,
-\begin{equation}
-\label{eq:scattering_msdeflection}
-\langle \psi_1^2(s) \rangle  = \langle \delta^2 \mu \rangle \int_0^s \int_0^s R(\vert s_1 - s_2 \vert) ds_1 ds_2 = 2 \langle \delta^2 \mu \rangle \int_0^s R(r) (s - r) dr
-\end{equation}
+One of the key quantities of interest is the angular deflection of the ray from its linear trajectory. These are denoted as $\psi_1$ and $\psi_2$ in the planes containing $x_1$ and $x_2$ respectively.
 Since there is no correlation between deflections in the directions $x_1$ and $x_2$ the mean square total deflection can be written as
 \begin{equation}
 \label{eq:scattering_mstotaldeflection}
 \langle \psi^2(s) \rangle = \langle \psi_1^2(s) \rangle + \langle \psi_2^2(s) \rangle = 2 \langle \psi_1^2(s) \rangle
 \end{equation}
-and similarly\footnote{see \cite{Chandrasekhar1952} for full derivation} for mean square radial displacement $\rho$
-\begin{equation}
-\label{eq:scattering_mstotaldisplacement}
-\langle \rho^2(s) \rangle = \langle \xi^2(s) \rangle + \langle \eta^2(s) \rangle = 2 \langle \xi^2(s) \rangle
-\end{equation}
-Assuming that in any further applications $s \gg r_0$, and substituting for $R(r)$, Equation \ref{eq:scattering_msdeflection} is approximated by
+Following the derivation of \cite{Chandrasekhar1952} it can be shown that
 \begin{equation}
 \label{eq:scattering}
 \langle \psi^2(s) \rangle = 4 \alpha  \langle \delta^2 \mu \rangle \left( \frac{s}{r_0} \right),
 \end{equation}
 where $\alpha = \sqrt{\pi}$ in the case $M(r) = \exp{(-r^2/r_0^2)}$.
 
-This framework was first used by \cite{Fokker1965} to statistically model rays in a spherically stratified corona however, they did not include the effects of spherical refraction which are relevant when describing radio bursts that are produced near where $\mu = 0$. \cite{Hollweg1967} extended upon the \cite{Chandrasekhar1952} description in particular, for the case $\mu \neq 1$. Using this, \cite{Steinberg1971} consider an unmagnetised, spherical corona with an electron density distribution not dissimilar to \cite{Newkirk1961} and perform a similar ray tracing experiment to \cite{Fokker1965} in order to determine the centre to limb variation of the apparent source intensity and the brightness distribution over a scattered image and its time variability. \cite{Steinberg1971} describe the correlation of refractive index functions in an identical manner to Equation \ref{eq:scattering_correlation} with $M(r) =  \exp{(-r^2/r_0^2)}$. They also introduce the variable 
+%Under the small angle approximation we took earlier
+%\begin{equation}
+%\label{eq_scattering_smallangle}
+%\psi_1 = \frac{d \xi}{ds} \mbox{, } \psi_2 = \frac{d \eta}{ds},
+%\end{equation}
+%and thus
+%\begin{equation}
+%\label{eq:scattering_angulardisplacement}
+%\frac{d \psi_1}{ds} =  \left( \frac{\partial}{\partial x_1} \delta \mu \right)_s \mbox{, } \frac{d \psi_2}{ds} = \left( \frac{\partial}{\partial x_2} \delta \mu \right)_s.
+%\end{equation}
+%
+%Equations \ref{eq:scattering_displacement} and \ref{eq:scattering_angulardisplacement}, the mean square deflection and displacement of a ray can be found after it has traversed a known distance, in terms of $M(r)$. First we consider the deflection
+%\begin{equation}
+%\langle \psi_1^2(s) \rangle = \int_0^s \int_0^s \bigg \langle \left( \frac{\partial}{\partial x_1} \delta \mu \right)_{s_1} \left( \frac{\partial}{\partial {x_1} } \delta \mu \right)_{s_2} \bigg \rangle ds_1 ds_2
+%\end{equation}
+%where the averaged quantity under the integral is the transverse correlation from Equation \ref{eq:scattering_transverse_correlation}.
+%Thus,
+%\begin{equation}
+%\label{eq:scattering_msdeflection}
+%\langle \psi_1^2(s) \rangle  = \langle \delta^2 \mu \rangle \int_0^s \int_0^s R(\vert s_1 - s_2 \vert) ds_1 ds_2 = 2 \langle \delta^2 \mu \rangle \int_0^s R(r) (s - r) dr
+%\end{equation}
+%Since there is no correlation between deflections in the directions $x_1$ and $x_2$ the mean square total deflection can be written as
+%\begin{equation}
+%\label{eq:scattering_mstotaldeflection}
+%\langle \psi^2(s) \rangle = \langle \psi_1^2(s) \rangle + \langle \psi_2^2(s) \rangle = 2 \langle \psi_1^2(s) \rangle
+%\end{equation}
+%and similarly\footnote{see \cite{Chandrasekhar1952} for full derivation} for mean square radial displacement $\rho$
+%\begin{equation}
+%\label{eq:scattering_mstotaldisplacement}
+%\langle \rho^2(s) \rangle = \langle \xi^2(s) \rangle + \langle \eta^2(s) \rangle = 2 \langle \xi^2(s) \rangle
+%\end{equation}
+%Assuming that in any further applications $s \gg r_0$, and substituting for $R(r)$, Equation \ref{eq:scattering_msdeflection} is approximated by
+%\begin{equation}
+%\label{eq:scattering}
+%\langle \psi^2(s) \rangle = 4 \alpha  \langle \delta^2 \mu \rangle \left( \frac{s}{r_0} \right),
+%\end{equation}
+%where $\alpha = \sqrt{\pi}$ in the case $M(r) = \exp{(-r^2/r_0^2)}$.
+
+This framework was first used by \cite{Fokker1965} to statistically model rays in a spherically stratified corona however, they did not include the effects of spherical refraction which are relevant when describing radio bursts that are produced near where $\mu = 0$. \cite{Hollweg1967} extended upon the \cite{Chandrasekhar1952} description in particular, for the case $\mu \neq 1$. Using this, \cite{Steinberg1971} consider an unmagnetised, spherical corona with an electron density distribution not dissimilar to \cite{Newkirk1961} and performed a similar ray tracing experiment to \cite{Fokker1965} in order to determine the centre to limb variation of the apparent source intensity, the brightness distribution over a scattered image and its time variability. \cite{Steinberg1971} describe the correlation of refractive index functions in an identical manner to Equation \ref{eq:scattering_correlation} with $M(r) =  \exp{(-r^2/r_0^2)}$. They also introduce the variable 
 $$
 \varepsilon =\left( \frac{\langle \delta n^2 \rangle}{n}\right)^{1/2},
 $$
-which is the root mean squared (r.m.s) relative fluctuation of electron density $n$ and note that all observable quantities from their model vary as $\varepsilon^2/r_0$ only. For convenience, although admittedly confusingly, I will use the lower case $n$ for electron density for the remainder of the section as the upper case $N$ is needed to describe photon number, as we shall see.
+which is the root mean squared (r.m.s) relative fluctuation of electron density $n$ and note that all observable quantities from their model vary as $\varepsilon^2/r_0$ only. For convenience, I will use the lower case $n$ for electron density for the remainder of the section as the upper case $N$ is needed to describe photon number, as we shall see.
 
-The modelling by \cite{Steinberg1971} was able to explain...
-
-This statistical approach to radio wave scattering fell dormant until the early 21st century where it saw renewed interest and a development of a Fokker-Planck framework began. This approach is based off the Hamiltonian equations of the evolution of a wavevector $\mathbf{k}$ and position $\mathbf{r}$
+The modelling by \cite{Steinberg1971} made some of the first predictions of the effect of radio wave scattering on the source size of a solar radio burst some of which are still used to date \citep[e.g.][]{Chrysaphi2018}. \cite{Thejappa2007} were the first to perform a similar analysis using improved knowledge of the power spectrum of density fluctuations \citep{Coles1989}. Modern treatments of radio wave scattering are done under a Fokker-Planck framework \citep{Arzner1999, Bian2019}. This approach is based off the Hamiltonian equations of the evolution of a wavevector $\mathbf{k}$ and position $\mathbf{r}$
 
 \begin{align}
 \frac{d \mathbf{r}}{dt} = v_g = \frac{\partial \omega}{\partial \mathbf{k}} = \frac{c^2}{\omega} \mathbf{k} \label{eq:scattering_Hamiltonian_r}\\
@@ -392,52 +415,53 @@ D_{ij} &= \frac{\pi \omega_p^4}{4 \omega^2} \int q_i q_j S(\mathbf{q}) \delta(\m
 &= \frac{\pi \omega_p^4}{4 \omega c^2} \int q_i q_j S(\mathbf{q}) \delta(\mathbf{q} \cdot \mathbf{k}) \frac{d^3 q}{(2 \pi)^3},
 \end{aligned}
 \end{equation}
-where $\mathbf{q}$ is the wavevector of electron density fluctuations and $S(\mathbf{q})$ is the electron density fluctuation spectrum normalised to the relative desnity fluctuation variance:
+where $\mathbf{q}$ is the wavevector of electron density fluctuations and $S(\mathbf{q})$ is the electron density fluctuation spectrum normalised to the relative desnity fluctuation variance
 \begin{equation}
 \varepsilon^2 = \int S(\mathbf{q})  \frac{d^3 q}{(2 \pi)^3}.
 \end{equation}
 
-In the case of anisotropic scattering in the solar corona (which is more consistent with observations than isotropic scattering) the spectrum of density fluctuations can be written as
+%In the case of anisotropic scattering in the solar corona (which is more consistent with observations than isotropic scattering) the spectrum of density fluctuations can be written as
+%
+%\begin{equation}
+%\label{eq:scattering_aniso_ne_fluctuations}
+%S(\mathbf{q}) = S([q_\perp^2 + \alpha^{-2}q_\parallel^2]^{1/2})
+%\end{equation}
+%where $\alpha = h_\perp/h_\parallel$, the ratio of perpendicular and parallel correlation lengths (the ``micro-scale" or $r_0$ in the \cite{Chandrasekhar1952} description of scattering). It is now convenient to introduce the anisotropy matrix 
+%\begin{equation}
+%\label{eq:scattering_anisomatrix}
+%\mathbf{A}=
+%\begin{pmatrix}
+%1 & 0 & 0 \\
+%0 & 1 & 0 \\
+%0 & 0 & \alpha^{-1}
+%\end{pmatrix}
+%\end{equation}
+%and defining $\widetilde{\mathbf{q}} = \mathbf{A} \mathbf{q}$ such that $\mathbf{q} = \mathbf{A}^{-1} \widetilde{\mathbf{q}}$. This allows us to write
+%\begin{equation}
+%\label{eq:scattering_aniso_ne_wavevector}
+%q_\perp^2 + \alpha^{-2} q_\parallel^2 =  \mathbf{q}\mathbf{A}^2\mathbf{q} = q_i A_{ij}^2 q_j = \widetilde{\mathbf{q}} \cdot \widetilde{\mathbf{q}} = \widetilde{q}_i \widetilde{q}_j
+%\end{equation}
+%where $q_\perp$ and $q_\parallel$ are the perpendicular and parallel componenets of $\mathbf{q}$, respectively. Equations \ref{eq:scattering_aniso_ne_fluctuations} and \ref{eq:scattering_aniso_ne_wavevector} can be used to write the diffusion coefficient $D_{ij}$ as follows.
+%\begin{equation}
+%\label{eq:scattering_aniso_diffusion}
+%\begin{aligned}
+%D_{ij} & = \frac{\pi \omega_p^4}{4 \omega c^2} \int q_i q_j S(\vert \mathbf{Aq} \vert) \delta(\mathbf{q} \cdot \mathbf{k}) \frac{d^3 q}{(2 \pi)^3} \\
+%& = \frac{\omega_p^4}{32 \pi^2 \omega c^2} \int (\mathbf{A}^{-1} \widetilde{\mathbf{q}})_i  (\mathbf{A}^{-1} \widetilde{\mathbf{q}})_j S(\widetilde{\mathbf{q}}) \delta(\widetilde{\mathbf{q}} \cdot \mathbf{A}^{-1} \mathbf{k)} d^3q \\
+%& = \frac{\omega_p^4}{32 \pi^2 \omega c^2} A_{i\alpha}^{-1} A_{i \beta}^{-1} \int \widetilde{\mathbf{q}}_\alpha \widetilde{\mathbf{q}}_\beta S(\widetilde{\mathbf{q}}) \delta(\widetilde{\mathbf{q}} \cdot \widetilde{\mathbf{k}}) \mbox{det}(\mathbf{J}) d^3 \widetilde{q}
+%\end{aligned}
+%\end{equation}
+%where $\widetilde{\mathbf{k}} = \mathbf{A}^{-1} \mathbf{k}$ and $\mbox{det}(\mathbf{J}) =\mbox{det}(\mathbf{A}^{-1}) = \alpha$ is the determinant of the Jacobian matrix $\mathbf{J}$ which facilitates the transformation between $\mathbf{q}$ and $\widetilde{\mathbf{q}}$. The above can be written as
+%\begin{equation}
+%D_{ij} = \frac{\omega_p^4}{32 \pi^2 \omega c^2} A_{i\alpha}^{-1} A_{i \beta}^{-1} \left(\delta_{\alpha \beta} - \frac{\widetilde{k}\alpha \widetilde{k}\beta}{\widetilde{k}^2}\right) \frac{\pi \alpha}{\widetilde{k}} \int_0^\infty \widetilde{q}^3 S(\widetilde{q}) d\widetilde{q},
+%\end{equation}
+%which can be given in the original quantities of $\mathbf{k}$
+%\begin{equation}
+%D_{ij} = \left[ \frac{A_{ij}^{-2}}{(\mathbf{k}\mathbf{A}^{-2}\mathbf{k})^{1/2}} - \frac{(\mathbf{A}^{-2}\mathbf{k})_i (\mathbf{A}	^{-2}\mathbf{k})_j}{(\mathbf{k}\mathbf{A}^{-2}\mathbf{k})^{3/2}} \right] \frac{\omega_p^4}{32 \pi \omega c^2} \alpha \int_0^\infty \widetilde{q}^3 S(\widetilde{q}) d\widetilde{q}
+%\end{equation}
 
-\begin{equation}
-\label{eq:scattering_aniso_ne_fluctuations}
-S(\mathbf{q}) = S([q_\perp^2 + \alpha^{-2}q_\parallel^2]^{1/2})
-\end{equation}
-where $\alpha = h_\perp/h_\parallel$, the ratio of perpendicular and parallel correlation lengths (the ``micro-scale" or $r_0$ in the \cite{Chandrasekhar1952} description of scattering). It is now convenient to introduce the anisotropy matrix 
-\begin{equation}
-\label{eq:scattering_anisomatrix}
-\mathbf{A}=
-\begin{pmatrix}
-1 & 0 & 0 \\
-0 & 1 & 0 \\
-0 & 0 & \alpha^{-1}
-\end{pmatrix}
-\end{equation}
-and defining $\widetilde{\mathbf{q}} = \mathbf{A} \mathbf{q}$ such that $\mathbf{q} = \mathbf{A}^{-1} \widetilde{\mathbf{q}}$. This allows us to write
-\begin{equation}
-\label{eq:scattering_aniso_ne_wavevector}
-q_\perp^2 + \alpha^{-2} q_\parallel^2 =  \mathbf{q}\mathbf{A}^2\mathbf{q} = q_i A_{ij}^2 q_j = \widetilde{\mathbf{q}} \cdot \widetilde{\mathbf{q}} = \widetilde{q}_i \widetilde{q}_j
-\end{equation}
-where $q_\perp$ and $q_\parallel$ are the perpendicular and parallel componenets of $\mathbf{q}$, respectively. Equations \ref{eq:scattering_aniso_ne_fluctuations} and \ref{eq:scattering_aniso_ne_wavevector} can be used to write the diffusion coefficient $D_{ij}$ as follows.
-\begin{equation}
-\label{eq:scattering_aniso_diffusion}
-\begin{aligned}
-D_{ij} & = \frac{\pi \omega_p^4}{4 \omega c^2} \int q_i q_j S(\vert \mathbf{Aq} \vert) \delta(\mathbf{q} \cdot \mathbf{k}) \frac{d^3 q}{(2 \pi)^3} \\
-& = \frac{\omega_p^4}{32 \pi^2 \omega c^2} \int (\mathbf{A}^{-1} \widetilde{\mathbf{q}})_i  (\mathbf{A}^{-1} \widetilde{\mathbf{q}})_j S(\widetilde{\mathbf{q}}) \delta(\widetilde{\mathbf{q}} \cdot \mathbf{A}^{-1} \mathbf{k)} d^3q \\
-& = \frac{\omega_p^4}{32 \pi^2 \omega c^2} A_{i\alpha}^{-1} A_{i \beta}^{-1} \int \widetilde{\mathbf{q}}_\alpha \widetilde{\mathbf{q}}_\beta S(\widetilde{\mathbf{q}}) \delta(\widetilde{\mathbf{q}} \cdot \widetilde{\mathbf{k}}) \mbox{det}(\mathbf{J}) d^3 \widetilde{q}
-\end{aligned}
-\end{equation}
-where $\widetilde{\mathbf{k}} = \mathbf{A}^{-1} \mathbf{k}$ and $\mbox{det}(\mathbf{J}) =\mbox{det}(\mathbf{A}^{-1}) = \alpha$ is the determinant of the Jacobian matrix $\mathbf{J}$ which facilitates the transformation between $\mathbf{q}$ and $\widetilde{\mathbf{q}}$. The above can be written as
-\begin{equation}
-D_{ij} = \frac{\omega_p^4}{32 \pi^2 \omega c^2} A_{i\alpha}^{-1} A_{i \beta}^{-1} \left(\delta_{\alpha \beta} - \frac{\widetilde{k}\alpha \widetilde{k}\beta}{\widetilde{k}^2}\right) \frac{\pi \alpha}{\widetilde{k}} \int_0^\infty \widetilde{q}^3 S(\widetilde{q}) d\widetilde{q},
-\end{equation}
-which can be given in the original quantities of $\mathbf{k}$
-\begin{equation}
-D_{ij} = \left[ \frac{A_{ij}^{-2}}{(\mathbf{k}\mathbf{A}^{-2}\mathbf{k})^{1/2}} - \frac{(\mathbf{A}^{-2}\mathbf{k})_i (\mathbf{A}	^{-2}\mathbf{k})_j}{(\mathbf{k}\mathbf{A}^{-2}\mathbf{k})^{3/2}} \right] \frac{\omega_p^4}{32 \pi \omega c^2} \alpha \int_0^\infty \widetilde{q}^3 S(\widetilde{q}) d\widetilde{q}
-\end{equation}
+\cite{Kontar2019} solve the Fokker-Planck equation \ref{eq:scattering_Fokker_Planck} numerically for a spherical solar corona with an anisotropic spectrum of density fluctuations. They found that for particular values of $\varepsilon$ and $\alpha = h_\perp/h_\parallel$, the ratio of perpendicular and parallel correlation lengths (the ``micro-scale" or $r_0$ in the \cite{Chandrasekhar1952} description of scattering), their results match the typical sizes of radio bursts measured in observations. \cite{Zhang2021} explored the parameter space of this scattering model further but obtained different values for $\varepsilon$ and $\alpha$.
 
-The Fokker-Planck equation \ref{eq:scattering_Fokker_Planck} can be solved numerically (see \cite{Kontar2019} for details) to give the results of \cite{Kontar2019}
-
+The ultimate goal of scattering simulations and theory is to understand the microscopic processes in the solar corona. Observations of solar radio bursts provide and excellent opportunity to determine the plasma properties of the corona remotely. Thus, in the next chapter I detail one such instrument that can be used to this end and describe the mathematical background of radio interferometry and imaging.
 %\section{The Power Spectrum of Coronal Density Inhomogeneities.}
 %\label{sec:density_fluctuations}
 %
