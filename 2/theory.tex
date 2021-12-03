@@ -2,7 +2,7 @@
 \doublespacing
 \chapter{Theoretical Background}
 \label{chap:theory}
-The following chapter describes the core concepts relevant to this thesis. In order to understand the corona, one must understand the plasma it is made of. Thus, I start in section \ref{sec:plasma_intro} with some fundamental concepts of plasma physics and introduce the kinetic theory of plasmas by considering the distribution of many particles in a six dimensional phase space. This lays the groundwork for a fluid description of plasmas, magnetohydrodynamics (MHD), arguably the most useful description of a plasma in the context of the solar corona which is discussed in section \ref{sec:MHD}. The MHD equations are investigated further to determine how longitudinal and transverse waves propagate in a plasma which is relevant for the subsequent discussion of Langmuir wave generation and the plasma emission mechanism of Type III radio bursts in section \ref{sec:plasma_emission}. Section \ref{sec:scattering_theory} gives an overview of the theory of radio wave scattering in the corona and concludes this chapter. 
+The following chapter describes the main theoretical concepts relevant to this thesis. In order to understand the corona, one must understand the plasma it is made of. Thus, I start in section \ref{sec:plasma_intro} with some fundamental concepts of plasma physics and introduce the kinetic theory of plasmas by considering the distribution of many particles in a six dimensional phase space. This lays the groundwork for a fluid description of plasmas, magnetohydrodynamics (MHD), arguably the most useful description of a plasma in the context of the solar corona which is discussed in section \ref{sec:MHD}. The MHD equations are investigated further to determine how longitudinal and transverse waves propagate in a plasma which is relevant for the subsequent discussion of Langmuir wave generation and the plasma emission mechanism of Type III radio bursts in section \ref{sec:plasma_emission}. Section \ref{sec:scattering_theory} gives an overview of the theory of radio wave scattering in the corona and concludes this chapter. 
 % and a discussion about the power spectrum of electron density fluctuations in section \ref{sec:density_fluctuations} concludes this chapter.
 
 
@@ -13,7 +13,7 @@ Plasma was the name given by Langmuir to the new, exotic type of matter he was s
 \label{eq:fma}
 m_e \frac{d^2x}{dt^2} = q_e E_x.
 \end{equation}
-Guass' law for some closed, rectangular box surface, $S$, inside our perturbed plasma gives, 
+Gauss' law for some closed, rectangular box surface, $S$, inside our perturbed plasma gives, 
 $$
 \oint_S \mathbf{E} \cdot d\mathbf{s} = \frac{Q}{\epsilon_0}
 $$
@@ -68,7 +68,7 @@ The solution to the above can be found to be
 \end{equation} 
 which shows that for $r \gg \lambda_D$, the potential of the test charge disappears. Thus the Debye length of a plasma can be used to define a second plasma criterion: an ionised gas can only be considered a plasma if the length scale of the system, $L$, is much greater than the Debye length.
 \subsection{Kinetic Theory}
-Armed with some knowledge of fundamental plasma behaviour, we jump forward through plasma theory to determine the collective properties of plasmas using averages over large numbers of particles. In order to do so, the positions and velocities of plasma particles are described using a distribution function in what is called plasma kinetic theory. We start without worrying about the exact form of this distribution function and instead assume that the position of each particle in our plasma is given by a vector $\mathbf{r}$ from the origin where,
+Armed with some knowledge of fundamental plasma behaviour, we jump forward through plasma theory to determine the collective properties of plasmas using averages over large numbers of particles. In order to do so, the positions and velocities of plasma particles are described using a distribution function in an approach called plasma kinetic theory. For now the exact form of this distribution function does not matter. We start by assuming that the position of each particle in our plasma is given by a vector $\mathbf{r}$ from the origin where,
 \begin{equation}
 \label{eq:KT_position}
 \mathbf{r} = \mathbf{\hat{x}}x + \mathbf{\hat{y}}y + \mathbf{\hat{z}}z
@@ -134,7 +134,7 @@ The moments of the Boltzmann equation allows us to develop the theory of plasmas
 \label{sec:MHD}
 Magnetohydrodynamics (MHD) is a framework to describe the dynamics of an electrically conducting fluid in the presence of a magnetic field. It is a useful method that can be used to model large-scale, slowly varying plasma phenomena in a highly ionised plasma. For plasmas that are either collision-dominated or contain a strong external magnetic field the MHD description of a plasma is particularly appropriate. Given that these conditions are met in the solar corona, it is worth expanding upon some key ideas of MHD theory. For now we assume a collison-dominated plasma but the same ideas can be applied to collisionless plasmas with strong magnetic fields.
 
-The single fluid equations, derived from the moments of the Boltzmann equation, and the generalised Ohm's law can be simplified using several approximations to form what are known as the simplified MHD equations:
+The single fluid equations, derived from the moments of the Boltzmann equation, and the generalised Ohm's law can be simplified using several approximations to form what are known as the simplified MHD equations.
 \begin{subequations} \label{eq:MHD_simplified}
 \begin{align}
 \mathbf{J} = \sigma(\mathbf{E} + \mathbf{u}_m \times \mathbf{B}) \\
@@ -160,7 +160,7 @@ where the assumption of no accumulation of charge inside the fluid gives rise to
 where $\gamma $ is the adiabatic index.
 Equations \ref{eq:MHD_simplified}, \ref{eq:MHD_Maxwell} and \ref{eq:MHD_eq_of_state} form a closed system which can be solved for any of the fluid or electromagnetic variables. These equations can be used to describe some simple wave phenomena that MHD plasmas exhibit which are relevant to the later discussion of the plasma emission mechanism.
 \subsection{Waves in Plasmas}
-As we shall see shortly, the generation and propagation of waves in plasmas can result in the emission of electromagnetic radiation which in turn must travel through the plasma. Consequently, it is important to outline the basics of waves in plasmas. In the following we only consider waves of small amplitude superimposed on a background of a uniform, unmagnetised plasma. Background quantities will be denoted by a subsrcipt of `0', while the perturbed quantities will be given a  subscript `1'. We also only consider the case where there is no steady fluid motion and no external electric field. Thus we can write the simplified MHD equations (assuming no collisions and an adiabatic equation of state) as
+As we shall see shortly, the generation and propagation of waves in plasmas can result in the emission of electromagnetic radiation which, in turn, must travel through the plasma. Consequently, it is important to outline the basics of waves in plasmas. In the following we only consider waves of small amplitude superimposed on a background of a uniform, unmagnetised plasma. Background quantities will be denoted by a subsrcipt of `0', while the perturbed quantities will be given a  subscript `1'. We also only consider the case where there is no steady fluid motion and no external electric field. Thus we can write the simplified MHD equations (assuming no collisions and an adiabatic equation of state) as
 \begin{subequations} \label{eq:MHDwaves_simplified}
 \begin{align}
 & \frac{\partial N_1}{\partial t} + N_0 \nabla \cdot \mathbf{u} = 0 \\
@@ -212,16 +212,16 @@ Here it is obvious that $\omega_p$ acts as a cutoff frequency, below which elect
 \label{sec:plasma_emission}
 The plasma emission mechanism occurs over a number of stages. First, an instability must be generated in the velocity distribution function. This leads to the growth of Langmuir waves before finally these Langmuir waves are converted to transverse electromagnetic waves. In a Type III radio burst a high velocity, low density, electron beam passes through the background plasma to form a ``bump on tail" distribution. This distribution is unstable and leads to the growth of Langmuir waves. These Langmuir waves in turn generate electromagnetic waves by coalescing with other Langmuir waves or by decaying. The electromagnetic waves are the radio bursts that are observed. In this section the generation of Langmuir waves in 1D and the process of plasma emission are discussed under the framework of quasi-linear theory.
 
-\subsection{Generation of Langmuir Waves}
-During magnetic reconnection electrons can be accelerated along magnetic field lines. As these beams of electrons propagate, faster electrons begin to outpace slower electrons and stationary ions in the background plasma. This leads to a second peak on the Maxwell Boltzmann distribution of velocities as seen in Figure \ref{fig:bumpontail}. Energy is transferred from electrons travelling at the phase velocity, $v_{\phi}$ , to Langmuir waves creating a resonance.
-The positive velocity gradient of this resonance means that there are more electrons with velocity greater than $v_{\phi}$ than there are electrons with velocities less than  $v_{\phi}$ (where energy is transferred from the wave to the particles), this causes Langmuir waves to become unstable and their magnitudes to grow exponentially. Particles with velocities near $v_{\phi}$ are in resonance with the Langmuir waves and drive this instability.
-
 \begin{figure}[ht]
 \centering
 \includegraphics[width=0.75\columnwidth]{Bump_on_tail.png}
 \caption[A ``bump on tail" distribution.]{The 1D electron velocity distribution function of a background plasma and a low density, high velocity electron beam. This is known as the ``bump on tail" distribution. The shaded region indicates where the gradient of the distribution function is positive and can excite Langmuir waves in the background plasma.}
 \label{fig:bumpontail}
 \end{figure}
+
+\subsection{Generation of Langmuir Waves}
+During magnetic reconnection electrons can be accelerated along magnetic field lines. As these beams of electrons propagate, faster electrons begin to outpace slower electrons and stationary ions in the background plasma. This leads to a second peak on the Maxwell-Boltzmann distribution of velocities as seen in Figure \ref{fig:bumpontail}. Energy is transferred from electrons travelling at the phase velocity, $v_{\phi}$ , to Langmuir waves creating a resonance.
+The positive velocity gradient of this resonance means that there are more electrons with velocity greater than $v_{\phi}$ than there are electrons with velocities less than  $v_{\phi}$ (where energy is transferred from the wave to the particles), this causes Langmuir waves to become unstable and their magnitudes to grow exponentially. Particles with velocities near $v_{\phi}$ are in resonance with the Langmuir waves and drive this instability.
 
 In the following, the electron velocity distribution function is described as the sum of a slowly varying part $f_0$ and a rapidly oscillating part $f_1$, where $\vert f_1 \vert \ll f_0$
 \begin{equation}
@@ -253,34 +253,44 @@ Equation \ref{eq:dWdt} shows that the growth rate of Langmuir waves is proportio
 
 \subsection{Wave-Wave Interaction}\label{Plasma Emission}
 Now that we know how Langmuir waves are generated by an unstable distribution, we must discuss how these Langmuir waves are converted to electromagnetic waves via wave-wave interactions. Wave-wave interaction concerns the processes by which three types of waves interact. These are: transverse (T) waves, Langmuir (L) waves and ion sound (S) waves, and have the following, respective, dispersion relations:
-$$ \omega=(\omega_p^2 +k^2c^2)^{\frac{1}{2}} $$
-$$ \omega \cong \omega_p + \frac{3k^2V_e^2}{2 \omega_p}$$
-$$ \omega = kv_s $$
+$$ \omega_T=(\omega_p^2 +k^2c^2)^{\frac{1}{2}} $$
+$$ \omega_L \cong \omega_p + \frac{3k^2V_e^2}{2 \omega_p}$$
+$$ \omega_S = kv_s $$
 where $V_e$ is the thermal velocity of electrons in the plasma, $v_s$ is the ion sound speed and $k$ is the wave vector. Only transverse waves with $\omega > \omega_p $ can escape and thus a plasma emission mechanism is a process that generates these transverse waves. 
 
-As mentioned in Section \ref{characteristics}, Type III bursts have a harmonic structure associated with plasma emission at the plasma frequency and the second harmonic. Both of these transverse waves are formed in different three wave processes that will now be discussed.
+As mentioned in Section \ref{sec:typeIII}, Type III bursts have a harmonic structure associated with plasma emission at the plasma frequency and the second harmonic. Both of these transverse waves are formed in different three wave processes that will now be discussed.
 In a plasma, due to scattering from other wave modes and ions in the plasma, a wave mode can be changed from one to the other. This is expressed in the equation 
 $$ \sigma \rightleftarrows \sigma' + \sigma '' $$
 where $\sigma$, $\sigma'$  and  $\sigma ''$ represent different wave modes. Conservation of energy and momentum state,
 $$ \omega^{\sigma}(k)=\omega^{\sigma'}(k')+\omega^{\sigma''}(k'')$$
 $$ k=k'+k''$$
-where $ \omega^{\sigma}(k)$ is the frequency of a particular wave mode with the wave vector $k$. For Langmuir (L), ion sound (S) and transverse (T) wave modes the allowed processes are L+S$\rightarrow$L$^\prime$, L+S$\rightarrow$T,  T+S$\rightarrow$L,  T+S$\rightarrow$T$^\prime$ and  L+L$^\prime \rightarrow$T. Of these L+S$\rightarrow$T,  L$\rightarrow$T+S are responsible for fundamental emission while harmonic emission is associated with the three wave process L+L$^\prime \rightarrow$T.
+where $ \omega^{\sigma}(k)$ is the frequency of a particular wave mode with the wave vector $k$. For Langmuir (L), ion sound (S) and transverse (T) wave modes the allowed processes are \citep{Melrose1987}:
+\begin{align*}
+& L+S \rightarrow L^\prime \\
+& L+S \rightarrow T \\
+& L \rightarrow T + S \\
+& L \rightarrow L^\prime + S \\
+& T+S \rightarrow L \\
+& T+S\rightarrow T^\prime \\ 
+& L+L^\prime \rightarrow T.
+\end{align*}
+Of these L+S$\rightarrow$T and L$\rightarrow$T+S are responsible for fundamental emission while harmonic emission is associated with the three wave process L+L$^\prime \rightarrow$T \citep{Melrose1987}.
 
 Originally \cite{Ginzburg1958} considered fundamental emission to be due to Langmuir waves scattering off of thermal ions in the plasma. It is now commonly accepted that the biggest cause of fundamental emission is due to the three wave processes of a Langmuir wave coalescing with an ion sound wave generated by L$\rightarrow$L$^\prime$+S or when a Langmuir wave decays into an ion sound wave and an electromagnetic transverse wave. The process L$\rightarrow$T+S can be visualised as in Figure \ref{fig:Femission}. In solar radio physics it is often assumed that $k_L \gg k_T$, knowing this and that the wave vectors must satisfy $\mathbf{k}_L \pm \mathbf{k}_s = \mathbf{k}_T$ ($+$ for L+S$\rightarrow$T , $-$ for L$\rightarrow$T+S) implies $\mathbf{k}_s \approx \mp \mathbf{k}_L$.
 
 \begin{figure}[ht]
 \centering
 \includegraphics[width=0.5\columnwidth]{Images/Fundamental_emission_Lwaves.png}
-\caption[A three wave process of fundamental plasma emission L$\rightarrow$T+S]{A three wave process of fundamental plasma emission L$\rightarrow$T+S. A Langmuir wave decaying into an ion sound wave and an electromagnetic transverse wave at the plasma frequency. (Figure adapted from Solar (interplanetary) Radio Bursts: the Generation of Radio Waves,	an oral presentation by David Malaspina at the Jean Louis Steinberg International Workshop on Solar, Heliospheric and Magnetospheric Radioastronomy, November 2017)}
+\caption[A three wave process of fundamental plasma emission L$\rightarrow$T+S.]{A three wave process of fundamental plasma emission L$\rightarrow$T+S. A Langmuir wave decaying into an ion sound wave and an electromagnetic transverse wave at the plasma frequency. (Figure adapted from Solar (interplanetary) Radio Bursts: the Generation of Radio Waves,	an oral presentation by David Malaspina at the Jean Louis Steinberg International Workshop on Solar, Heliospheric and Magnetospheric Radioastronomy, November 2017)}
 \label{fig:Femission}
 \end{figure}
 
-Second harmonic emission occurs when two Langmuir waves coalesce in the process L+L$^\prime \rightarrow$=T, shown in Figure \ref{fig:Hemission}. Conservation of momentum requires that $\mathbf{k}_L + \mathbf{k'}_L = \mathbf{k}_T$ and for second harmonic (H) generation, $k_T=k_H \approx \frac{\sqrt{3} \omega_p}{c}$. The phase speed $v_\phi$ of Langmuir waves is much less than $\frac{c}{\sqrt{3}}$ meaning that $k_L \gg k_T$ which results in $\mathbf{k}_L \approx -\mathbf{k'}_L$. This means that for a transverse wave at the second harmonic to be created, two Langmuir waves must coalesce almost exactly head on. These backward propagating Langmuir waves are generated: in the three wave processes of L+S$\rightarrow$L$^\prime$ and L$\rightarrow$L$^\prime$+S, i.e. scattering off of thermal ions, and by refraction at density inhomogeneities.
+Second harmonic emission occurs when two Langmuir waves coalesce in the process L+L$^\prime \rightarrow$T, shown in Figure \ref{fig:Hemission}. Conservation of momentum requires that $\mathbf{k}_L + \mathbf{k'}_L = \mathbf{k}_T$ and for second harmonic (H) generation, $k_T=k_H \approx \frac{\sqrt{3} \omega_p}{c}$. The phase speed $v_\phi$ of Langmuir waves is much less than $\frac{c}{\sqrt{3}}$ meaning that $k_L \gg k_T$ which results in $\mathbf{k}_L \approx -\mathbf{k'}_L$. This means that for a transverse wave at the second harmonic to be created, two Langmuir waves must coalesce almost exactly head on. These backward propagating Langmuir waves are generated: in the three wave processes of L+S$\rightarrow$L$^\prime$ and L$\rightarrow$L$^\prime$+S, i.e. scattering off of thermal ions, and by refraction at density inhomogeneities.
  \begin{figure}[ht]
 
      \centering
      \includegraphics[width=0.5\columnwidth]{Images/Harmonic_emission_Lwaves.png}
-     \caption[Three wave process of second harmonic plasma emission L+L' $\rightarrow$ T]{Three wave process of second harmonic plasma emission L+L' $\rightarrow$ T. A Langmuir wave (L) and a backwards propagating Langmuir wave (L') coalesce to form a transverse wave (T) at $2 \omega_p$. (Figure adapted from Solar (interplanetary) Radio Bursts: the Generation of Radio Waves,	an oral presentation by David Malaspina at the Jean Louis Steinberg International Workshop on Solar, Heliospheric and Magnetospheric Radioastronomy, November 2017)}
+     \caption[Three wave process of second harmonic plasma emission L+L' $\rightarrow$ T.]{Three wave process of second harmonic plasma emission L+L' $\rightarrow$ T. A Langmuir wave (L) and a backwards propagating Langmuir wave (L') coalesce to form a transverse wave (T) at $2 \omega_p$. (Figure adapted from Solar (interplanetary) Radio Bursts: the Generation of Radio Waves,	an oral presentation by David Malaspina at the Jean Louis Steinberg International Workshop on Solar, Heliospheric and Magnetospheric Radioastronomy, November 2017)}
      \label{fig:Hemission}
  \end{figure}
  
@@ -318,7 +328,7 @@ where $\langle \delta^2 \mu \rangle$ is the mean squared fluctuation of refracti
 %\begin{equation}
 %\langle \delta^2 \mu \rangle R(r) \mbox{, where } R(r) = - \frac{1}{r} \frac{dM}{dr}
 %\end{equation}
-Notably, $M(r)$ defines a ``micro-scale" $r_0$ such that for $r \gg r_0$, $M(r)$ becomes negligible.	
+Notably, $M(r)$ defines a ``micro-scale" $r_0$ such that $M(r)$ becomes negligible for $r \gg r_0$.	
  
 %The general equations for a ray traversing a medium of variable refractive index can be given as \citep{Chandrasekhar1952}
 %\begin{equation}

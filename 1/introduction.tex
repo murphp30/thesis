@@ -6,7 +6,7 @@
 \label{chap:intro}
 Ancient passage tombs in Ireland show evidence that thousands of years ago, humans had an understanding of the movement of the Sun in the sky at different times of the year. These tombs are constructed such that only on the day of a solar solstice or equinox, is the passageway illuminated in full. Today the Sun is still a source of curiosity and has more than once shown that us humans are not the centre of the universe. The light and heat from the Sun are the essential source of energy for life on our planet however, our proximity to this star also comes with a risk. Explosive and energetic events such as coronal mass ejections and solar flares occur with varying frequency and intensity over the course of an eleven year cycle. Their effects on Earth were made known in a spectacular fashion in 1859 with the so called \textit{Carrington Event}. This was a solar eruptive event, the magnitude of which has not been seen in the subsequent 162 years. It induced currents into telegraph wires causing them to operate even though they had been removed from a power source. It also caused aurora to be seen as close to the equator as Cuba and bright enough at higher latitudes that a newspaper could be read at night time under their light. 
 
-The Sun emits across the electromagnetic spectrum, the focus of this thesis being low frequency radio waves. Similar mechanisms that drive large energy releases like the Carrington Event also generate radio wave emission. These ``solar radio bursts" can be used as a remote diagnostic of the Sun's atmosphere and determine the microphysics of the plasma that in the outer layers of the solar atmosphere.
+The Sun emits across the electromagnetic spectrum however, the focus of this thesis is low frequency radio waves. Similar mechanisms that drive large energy releases like the Carrington Event also generate radio wave emission in the form of ``solar radio bursts". These solar radio bursts can be used as a remote diagnostic of the Sun's atmosphere and determine the microphysics of the plasma that in the outer layers of the solar atmosphere.
 This chapter highlights some fundamental concepts of solar physics, different types of radio emission from the Sun and the implications of their study.
 
 \section{The Sun}
@@ -83,7 +83,7 @@ A timeseries of X-ray flux from a solar flare is often called a lightcurve and h
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\columnwidth]{Images/GOES_Xclass.png}
-    \caption[GOES lightcurve for X9 class flare on 2017-09-10.]{The GOES lightcurve of the X9 flare that occurred on 10 September 2017. The red curve shows the 1-8 {\AA} channel by which the flare is classified while the blue curve shows the 0.5-4 {\AA} band. The three characteristic phases of a solar flare are clearly displayed here. The pre-flare phase before $\sim$ 16:00 UTC, the impulsive phase indicated by the sharp rise in flux and the gradual decay phase where X-ray flux gradually returns to the pre-flare level.}
+    \caption[GOES lightcurve for X9 class flare on 10 September 2017.]{The GOES lightcurve of the X9 flare that occurred on 10 September 2017. The red curve shows the 1-8 {\AA} channel by which the flare is classified while the blue curve shows the 0.5-4 {\AA} band. The three characteristic phases of a solar flare are clearly displayed here. The pre-flare phase before $\sim$ 16:00 UTC, the impulsive phase indicated by the sharp rise in flux and the gradual decay phase where X-ray flux gradually returns to the pre-flare level.}
     \label{fig:GOES_Xclass}
 \end{figure}
 During solar flares, magnetic structures known as coronal loops fill with hot plasma and begin to emit in soft X-rays. At the same time, electrons are accelerated towards the solar surface where their energy is converted to hard X-rays in the collision via bremsstrahlung. 
@@ -151,16 +151,14 @@ Type III bursts are possibly the most useful radio burst for studying properties
 where $n_e$ is the number density of electrons, $m_e$ is the electron mass, $e$ is the electron charge and $\varepsilon_0$ is the permittivity of free space. A more detailed description of the plasma emission process is given in Section \ref{sec:plasma_emission}.
 Although Eq. \ref{eq:1} is relatively simple, it contains an important relationship in plasma physics. Namely, the plasma frequency is proportional to the square root of the electron density. This means that plasmas at higher electron densities will oscillate at higher frequencies than those of lower densities. The drift in type III bursts, which are emitted at $\omega_p$, is therefore an indication of the emission source moving from an area of high electron density to low density, i.e. from the lower to the upper corona. Using a model of electron density in the corona such as the \cite{Newkirk1961} model, it can be inferred that the exciter of type III bursts has a speed of $\sim 0.3$~c.
 
-
-Type III bursts are observed to be in two bands, a fundamental and harmonic band that are emitted at $\omega_p$ and $2 \omega_p$ respectively. Both bands exhibit the same frequency drift although the flux of the harmonic band is usually less than that of the fundamental band. The process of plasma emitting radio frequencies at $\omega_p$ and $2 \omega_p$ will be explained in more detail in Chapter \ref{chap:theory}. 
-
-\begin{figure}[t]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=0.75\columnwidth]{Images/Pietro_typeIII.png}
     \caption[A number of type III bursts observed by \cite{Zucca2012} on 21 October 2011.]{A number of type III bursts observed by \cite{Zucca2012} on 21 October 2011. Note the type III storm below 200 MHz and the type II burst between 140 and 330 MHz.}
     \label{fig:bursts}
 \end{figure}
 
+Type III bursts are observed to be in two bands, a fundamental and harmonic band that are emitted at $\omega_p$ and $2 \omega_p$ respectively. Both bands exhibit the same frequency drift although the flux of the harmonic band is usually less than that of the fundamental band. The process of plasma emitting radio frequencies at $\omega_p$ and $2 \omega_p$ will be explained in more detail in Chapter \ref{chap:theory}. 
 Figure \ref{fig:bursts} shows type III radio bursts below 400 MHz observed by \cite{Zucca2012}. A type II burst was also observed between 140 and 330 MHz and exhibits a much slower frequency drift than the type III bursts. A type III storm can be seen below 200 MHz. This is when type III emission is continuous over the span of large time scales and can last days. Type III bursts come in a number of subcategories described below.
 
 \paragraph{Reverse and bi-directional bursts.}
@@ -169,20 +167,20 @@ A typical type III burst is produced when an electron beam travels along a magne
 
 \paragraph{Type IIIb bursts.}
 
-Fine frequency structures are sometimes seen in type III bursts. Type IIIb radio bursts are defined as a number of narrow, nearly horizontal, frequency bands called striae, or striations, in the envelope of a type III. The frequency width of an individual striae is typically 0.05~MHz \citep{McLean1985} and they have a frequency drift rate of $\lesssim 150$~kHz~s$^{-1}$, which implies a speed of 0.6~Mm~s$^{-1}$ \cite{Sharykin2018}. Figure \ref{fig:typeIIIbKontar} shows a dynamic spectrum of a type IIIb burst from \cite{Kontar2017}. Individual striae can be clearly seen in panel b of Figure \ref{fig:typeIIIbKontar}. The theory describing the origin of this fine frequency structure has recently been revisited by \cite{Reid2021}.
-
 \begin{figure}[ht]
 \centering
-\includegraphics[width=0.75\columnwidth]{typeIIIbKontar.png}
-\caption[The type IIIb radio burst from \cite{Kontar2017}]{A type IIIb radio burst on 16 April 2015 analysed by \cite{Kontar2017}. Panel a shows the full duration of the type IIIb. Panel b is a zoom in of the 3 second wide box in panel a.}
+\includegraphics[width=0.5\columnwidth]{typeIIIbKontar.png}
+\caption[The type IIIb radio burst from \cite{Kontar2017}.]{A type IIIb radio burst on 16 April 2015 analysed by \cite{Kontar2017}. Panel a shows the full duration of the type IIIb. Panel b is a zoom in of the 3 second wide box in panel a.}
 \label{fig:typeIIIbKontar}
 \end{figure}
+
+Fine frequency structures are sometimes seen in type III bursts. Type IIIb radio bursts are defined as a number of narrow, nearly horizontal, frequency bands called striae, or striations, in the envelope of a type III. The frequency width of an individual striae is typically 0.05~MHz \citep{McLean1985} and they have a frequency drift rate of $\lesssim 150$~kHz~s$^{-1}$, which implies a speed of 0.6~Mm~s$^{-1}$ \cite{Sharykin2018}. Figure \ref{fig:typeIIIbKontar} shows a dynamic spectrum of a type IIIb burst from \cite{Kontar2017}. Individual striae can be clearly seen in panel b of Figure \ref{fig:typeIIIbKontar}. The theory describing the origin of this fine frequency structure has recently been revisited by \cite{Reid2021}.
 
 \paragraph{Type U and J bursts.}
 
 In the case where electrons are travelling along a closed magnetic field line, a turning point in the frequency drift of a type III burst can be observed. For electrons that generate radio emission down to the footpoint of the magnetic field line, a U burst is observed. A U burst can be identified as an inverted U on a dynamic spectrum. More often, electrons stop generating radio emission as they travel back down the magnetic field line so only the turning point in frequency drift is visible in dynamic spectra. These are known as J type bursts. U and J bursts are far less common than type III bursts, despite the similar number of open and closed magnetic field lines along which electron beams can propagate. The reason for this proposed by \cite{Reid2017} is that the length of these closed loops is not long enough for the electron beam to become unstable to Langmuir waves.
-\\
-The study of type III bursts offers an insight into the process of Langmuir wave generation in the solar corona and as such are an important tool in understanding the physics of coronal plasma \citep{Reid2014}. However, the effects of radio wave propagation from the source to the observer through the corona must but understood before inferences can be drawn from observations. 
+
+\paragraph*{} The study of type III bursts offers an insight into the process of Langmuir wave generation in the solar corona and as such are an important tool in understanding the physics of coronal plasma \citep{Reid2014}. However, the effects of radio wave propagation from the source to the observer through the corona must but understood before inferences can be drawn from observations. 
 
 \subsection{Low Frequency Radio Wave Scattering}
 

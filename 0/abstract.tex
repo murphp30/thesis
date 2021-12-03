@@ -2,13 +2,13 @@
 %Adding the above line, with the name of your base .tex file (in this case "thesis.tex") will allow you to compile the whole thesis even when working inside one of the chapter tex files
 \newgeometry{left=2.5cm, right=2.5cm, top=2.0cm, bottom=2.0cm, footskip=1cm}
 \begin{abstracts} 
-The solar corona is the outermost layer of the Sun's atmosphere. Advancements in radio astronomy over the last 50 years have revealed a number of radio phenomena which occur in the corona each with different temporal and spectral characteristics. Current generation interferometers such as the LOw Frequency ARray (LOFAR) give an unprecedented insight into the fine spatial, spectral and temporal structure of these radio bursts. Of particular interest are what are known as Type III radio bursts, which are indicative of electrons being accelerated along open magnetic field lines in the solar corona. Due to the relation between emission at the plasma frequency and electron density, observations of Type III bursts allow for the remote sensing of the plasma at various heights in the corona. High spatial resolution observations of radio bursts give insight into the role of radio wave scattering on the observed source sizes while high temporal and spectral resolution observations can be used to determine the power density of electron density fluctuations in the corona.
+The solar corona is the outermost layer of the Sun's atmosphere. Advancements in radio astronomy over the last 50 years have revealed a number of radio phenomena which occur in the corona each with different temporal and spectral characteristics. Current generation interferometers such as the LOw Frequency ARray (LOFAR) give an unprecedented insight into the fine spatial, spectral and temporal structure of these radio bursts. Of particular interest are what are known as Type III radio bursts, which are indicative of electrons being accelerated along open magnetic field lines in the solar corona. Observations of Type III bursts allow for the remote sensing of the plasma at various heights in the corona due to the relation between emission at the plasma frequency and electron density. High spatial resolution observations of radio bursts give insight into the role of radio wave scattering on the observed source sizes while high temporal and spectral resolution observations can be used to determine the power density of electron density fluctuations in the corona.
 
 Key results of this thesis come from observations of solar radio emission at the highest temporal, spectral and spatial resolutions to date. Firstly, the REAL-time Transient Acquisition backend (REALTA) was developed and installed at the Irish LOFAR station (I-LOFAR) to record the raw voltages from the station at $5.12 \mu$s temporal resolution. Some first light observations of solar radio burst are shown.
 
-Secondly, a new technique was implemented for the first time to directly measure the size of radio bursts from their interferometric visibilities. For a burst at 34.76~MHz, the full width at half maximum height (FWHM) along the major and minor axes is found to be $18.8$~$\pm~0.1$ arcmin and $10.2$~$\pm~0.1$ arcmin respectively at a plane of sky heliocentric distance of 1.75~R$_\odot$. These results suggest that the level of density fluctuations in the solar corona  is  the  major  cause  of  the  scattering  of  radio  waves, resulting in  large  source  sizes.
+Secondly, for the first time a new technique was implemented to directly measure the size of radio bursts from their interferometric visibilities. For a burst at 34.76~MHz, the full width at half maximum height (FWHM) along the major and minor axes is found to be $18.8$~$\pm~0.1$ arcmin and $10.2$~$\pm~0.1$ arcmin respectively at a plane of sky heliocentric distance of 1.75~R$_\odot$. These results suggest that the level of density fluctuations in the solar corona  is  the  major  cause  of  the  scattering  of  radio  waves, resulting in  large  source  sizes.
 
-This technique was utilised to determine the size and shape of 30 Type III bursts that were compared with predictions from state-of-the-art scattering simulations. It is found that these bursts have a mean size along the major and minor axis of FWHM\textsubscript{x} = 16.27 arcmin and FWHM\textsubscript{y} = 11.96 arcmin respectively. No trend of source size with respect to helioprojective angle is found, which is in direct contrast to predictions from modelling of anisotropic scattering from a point source.
+Finally, this technique was utilised to determine the size and shape of 30 Type III bursts that were compared with predictions from state-of-the-art scattering simulations. It is found that these bursts have a mean size along the major and minor axis of FWHM\textsubscript{x} = 16.27 arcmin and FWHM\textsubscript{y} = 11.96 arcmin respectively. No trend of source size with respect to helioprojective angle is found, which is in direct contrast to predictions from modelling of anisotropic scattering from a point source.
 
 I highlight some future work that could be built upon the research presented in this thesis to further advance the knowledge of radio wave generation and propagation in the solar corona.
 
@@ -38,13 +38,15 @@ I highlight some future work that could be built upon the research presented in 
 
 \begin{declaration}      
 
-I have read and I understand the plagiarism provisions in the General Regulations of the University Calendar for the current year, found at: \url{https://www.tcd.ie/calendar}
-
-I have also completed the Online Tutorial on avoiding plagiarism ‘Ready, Steady, Write’, located at \url{http://tcd-ie.libguides.com/plagiarism/ready-steady-write}  
-
-\vspace{10mm}
-
-I declare that this report is my own work, is not copied from any other person's work (published or unpublished), and has not previously submitted for assessment either at Trinity College Dublin or elsewhere.
+%I have read and I understand the plagiarism provisions in the General Regulations of the University Calendar for the current year, found at: \url{https://www.tcd.ie/calendar}
+%
+%I have also completed the Online Tutorial on avoiding plagiarism ‘Ready, Steady, Write’, located at \url{http://tcd-ie.libguides.com/plagiarism/ready-steady-write}  
+%
+%\vspace{10mm}
+%
+%I declare that this report is my own work, is not copied from any other person's work (published or unpublished), and has not previously submitted for assessment either at Trinity College Dublin or elsewhere.
+I declare that this thesis has not been submitted as an exercise for a degree at this or any other university and it is entirely my own work. 
+I agree to deposit this thesis in the University’s open access institutional repository or allow the Library to do so on my behalf, subject to Irish Copyright Legislation and Trinity College Library conditions of use and acknowledgement.
 
 \vspace{30mm}
 
@@ -63,7 +65,29 @@ I declare that this report is my own work, is not copied from any other person's
 \end{dedication}
 
 \begin{acknowledgements}
-I would firstly like to thank my supervisors Peter Gallagher and Eoin Carley. Your guidance and support throughout my PhD has been constant 
+I would firstly like to thank my supervisors Peter Gallagher and Eoin Carley. Your guidance and support throughout my PhD has been constant and has saved me from sounding foolish on more than one occasion. It has been a pleasure working with you both over the last four years.
+
+Operations at I-LOFAR, and my understanding thereof, would not be where they are today without Joe McCauley. Thank you for always being on hand to troubleshoot failed observations.
+
+Brian Coghlan was an invaluable resource during installation of REALTA and the development of recording data from the Transient Buffer Boards at I-LOFAR. I am grateful for your patience while I was finding my feet as a PhD student. 
+
+Sophie and Shane
+
+I have been incredibly lucky to spend some of my time as a PhD student in a place as steeped in myth as the Astrophysics student office at Trinity College Dublin. Here I met some amazing people who I am truly honoured to call friends. Laura Hayes and Aoife McCloskey, you are both everything I aspire to be as a scientist and as a person.  Dúalta Ó Fionnagáin and Ioana Boian words of wisdom foreshadowing
+
+Rob Kavanagh, Steven Farrell and Eoin Farrell, although our time together was cut short by a move to a new institute 
+Tadhg contant source of slightly worrying humour
+
+DIAS too many to name 
+
+I started this PhD in the company of four people without whom I couldn't imagine being where I am today. Laura Murphy, Brendan Clarke, Aoife Ryan and Ciara Maguire
+
+Aoife and Ciara shared the journey through LOFAR
+
+Family
+
+Camille
+
 \end{acknowledgements}
 
 %!TEX root = ../thesis.tex
@@ -131,6 +155,9 @@ I would firstly like to thank my supervisors Peter Gallagher and Eoin Carley. Yo
 
 \section*{Publications}
 \begin{enumerate}
+\item Corentin K. Louis, Caitriona M. Jackman, Jean-Mathias Griessmeier, Olaf Wucknitz, David. J. McKenna, \textbf{Pearse C. Murphy}, Peter T. Gallagher, Eoin Carley, Dúalta Ó Fionnagáin, Aaron Golden, Joe McCauley, Paul Callanan, Matt Redman, Christian Vocks.
+\\``Observing Jupiter's radio emissions using multiple LOFAR stations: a first case study of the Io-decametric emission using the Irish IE613, French FR606 and German DE604 stations"
+\\ \textit{Royal Astronomical Society Techniques and Instruments journal} (2021 submitted)
 \item \textbf{P. C. Murphy}, P. Callanan, J. McCauley, D. J. McKenna, D. Ó Fionnagáin, C. K. Louis, M. P. Redman, L. A. Cañizares, E. P. Carley, S. A. Maloney, B. Coghlan, M. Daly, J. Scully, J. Dooley, V. Gajjar, C. Giese, A. Brennan, E. F. Keane, C. A. Maguire, J. Quinn, S. Mooney, A. M. Ryan, J. Walsh, C. M. Jackman, A. Golden, T. P. Ray, J. G. Doyle, J. Rigney, M. Burton, P. T. Gallagher.
 \\``First Results from the REAL-time Transient Acquisition backend (REALTA) at the Irish LOFAR station",
 \\ \textit{Astronomy and Astrophysics} Volume 655, A16 (2021)
