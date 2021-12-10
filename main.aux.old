@@ -1,0 +1,256 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\bbl@cs{beforestart}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\FN@pp@footnotehinttrue 
+\babel@aux{english}{}
+\providecommand {\FN@pp@footnotehinttrue }{}
+\providecommand {\FN@pp@footnote@aux }[2]{}
+\FN@pp@footnotehinttrue 
+\@input{0/declaration.aux}
+\FN@pp@footnotehinttrue 
+\@input{0/abstract.aux}
+\FN@pp@footnotehinttrue 
+\@input{0/dedication.aux}
+\FN@pp@footnotehinttrue 
+\@input{0/acknowledgements.aux}
+\FN@pp@footnotehinttrue 
+\@input{0/publications.aux}
+\FN@pp@footnotehinttrue 
+\FN@pp@footnotehinttrue 
+\FN@pp@footnotehinttrue 
+\@writefile{toc}{\contentsline {chapter}{List of Figures}{xiii}{chapter*.4}\protected@file@percent }
+\FN@pp@footnotehinttrue 
+\@writefile{toc}{\contentsline {chapter}{List of Tables}{xv}{chapter*.5}\protected@file@percent }
+\FN@pp@footnotehinttrue 
+\@input{1/introduction.aux}
+\FN@pp@footnotehinttrue 
+\@input{2/theory.aux}
+\FN@pp@footnotehinttrue 
+\@input{3/instrumentation.aux}
+\FN@pp@footnotehinttrue 
+\@input{7/realta.aux}
+\FN@pp@footnotehinttrue 
+\@input{4/measuring_source_sizes.aux}
+\FN@pp@footnotehinttrue 
+\@input{5/observations_vs_theory.aux}
+\FN@pp@footnotehinttrue 
+\@input{6/future_work.aux}
+\FN@pp@footnotehinttrue 
+\bibstyle{apalike}
+\bibdata{thesis_references}
+\bibcite{PSRDADA}{{PSR}{}{{}}{{}}}
+\bibcite{Amiri2020}{{2}{2020}{{Amiri et~al.}}{{}}}
+\bibcite{Amiri2018}{{3}{2018}{{Amiri et~al.}}{{}}}
+\bibcite{Anantharamaiah1994}{{4}{1994}{{Anantharamaiah et~al.}}{{}}}
+\bibcite{CHIME2019}{{5}{2019}{{Andersen et~al.}}{{}}}
+\bibcite{Appleton1946}{{6}{1946}{{Appleton and Hey}}{{}}}
+\bibcite{Arzner1999}{{7}{1999}{{{Arzner} and {Magun}}}{{}}}
+\bibcite{Aschwanden2004}{{8}{2004}{{Aschwanden}}{{}}}
+\bibcite{Bartosz2020}{{9}{2020}{{Bartosz et~al.}}{{}}}
+\FN@pp@footnotehinttrue 
+\FN@pp@footnotehinttrue 
+\@writefile{toc}{\contentsline {chapter}{References}{134}{chapter*.62}\protected@file@percent }
+\bibcite{Bassa2017}{{10}{2017}{{Bassa et~al.}}{{}}}
+\bibcite{Bastian1994}{{11}{1994}{{Bastian}}{{}}}
+\bibcite{Benz2004}{{12}{2005}{{Benz et~al.}}{{}}}
+\bibcite{Bhat2003}{{13}{2003}{{Bhat et~al.}}{{}}}
+\bibcite{Bian2019}{{14}{2019}{{Bian et~al.}}{{}}}
+\bibcite{Bigg1964}{{15}{1964}{{Bigg}}{{}}}
+\bibcite{Bilous2020}{{16}{2020}{{Bilous et~al.}}{{}}}
+\bibcite{Bilous2014}{{17}{2014}{{Bilous et~al.}}{{}}}
+\bibcite{Bisoi2014}{{18}{2014}{{Bisoi et~al.}}{{}}}
+\bibcite{Blaszkiewicz2020}{{19}{2020}{{Blaszkiewicz et~al.}}{{}}}
+\bibcite{Boischot1957}{{20}{1957}{{Boischot}}{{}}}
+\bibcite{Bondonneau2020}{{21}{2021}{{Bondonneau et~al.}}{{}}}
+\bibcite{Bondonneau2017}{{22}{2017}{{Bondonneau et~al.}}{{}}}
+\bibcite{Briggs1995}{{23}{1995}{{Briggs}}{{}}}
+\bibcite{Broekema2018}{{24}{2018}{{Broekema et~al.}}{{}}}
+\bibcite{Brueckner1995}{{25}{1995}{{Brueckner et~al.}}{{}}}
+\bibcite{Burke1955}{{26}{1955}{{Burke and Franklin}}{{}}}
+\bibcite{Carley2021}{{27}{2021}{{Carley et~al.}}{{}}}
+\bibcite{Carley2020}{{28}{2020}{{Carley et~al.}}{{}}}
+\bibcite{Carley2019}{{29}{2019}{{Carley et~al.}}{{}}}
+\bibcite{Carley2015}{{30}{2015}{{Carley et~al.}}{{}}}
+\bibcite{Chandrasekhar1952}{{31}{1952}{{Chandrasekhar}}{{}}}
+\bibcite{Chen2021}{{32}{2021}{{{Chen} et~al.}}{{}}}
+\bibcite{Chrysaphi2018}{{33}{2018}{{Chrysaphi et~al.}}{{}}}
+\bibcite{Clark1980}{{34}{1980}{{Clark}}{{}}}
+\bibcite{Clarke2019}{{35}{2019}{{Clarke et~al.}}{{}}}
+\bibcite{Cliver2009}{{36}{2009}{{Cliver and Ling}}{{}}}
+\bibcite{Coles1989}{{37}{1989}{{Coles and Harmon}}{{}}}
+\bibcite{Cornwell2008}{{38}{2008}{{Cornwell}}{{}}}
+\bibcite{DeGasperin2019}{{39}{2019}{{de~Gasperin et~al.}}{{}}}
+\bibcite{DeLaNoe1975}{{40}{1975}{{de La Noe}}{{}}}
+\bibcite{DeLaNoe1972}{{41}{1972}{{{de La Noe} and Boischot}}{{}}}
+\bibcite{Dewdney2009}{{42}{2009}{{Dewdney et~al.}}{{}}}
+\bibcite{Donner2019}{{43}{2019}{{Donner et~al.}}{{}}}
+\bibcite{Driessen2019}{{44}{2019}{{Driessen et~al.}}{{}}}
+\bibcite{Eastwood2017}{{45}{2017}{{Eastwood et~al.}}{{}}}
+\bibcite{Edler2021}{{46}{2021}{{Edler et~al.}}{{}}}
+\bibcite{Ellis1969}{{47}{1969}{{Ellis}}{{}}}
+\bibcite{Ellis1967}{{48}{1967}{{Ellis and McCulloch}}{{}}}
+\bibcite{Enriquez2017}{{49}{2017}{{Enriquez et~al.}}{{}}}
+\bibcite{Fokker1965}{{50}{1965}{{Fokker}}{{}}}
+\bibcite{Foreman-Mackey2012}{{51}{2013}{{Foreman-Mackey et~al.}}{{}}}
+\bibcite{Foukal2004}{{52}{2013}{{Foukal}}{{}}}
+\bibcite{Fox2016}{{53}{2016}{{Fox et~al.}}{{}}}
+\bibcite{Gajjar2019}{{54}{2019}{{Gajjar et~al.}}{{}}}
+\bibcite{Ginzburg1958}{{55}{1958}{{Ginzburg and Zhelezniakov}}{{}}}
+\bibcite{Goodman2010}{{56}{2010}{{{Goodman} and {Weare}}}{{}}}
+\bibcite{Gopalswamy2000}{{57}{2000}{{Gopalswamy and Thompson}}{{}}}
+\bibcite{Gordovskyy2019}{{58}{2019}{{Gordovskyy et~al.}}{{}}}
+\bibcite{Hankins1987}{{59}{1987}{{Hankins and Rajkowski}}{{}}}
+\bibcite{Hare2018}{{60}{2018}{{{Hare} et~al.}}{{}}}
+\bibcite{Hermsen2018}{{61}{2018}{{Hermsen et~al.}}{{}}}
+\bibcite{Hess2009}{{62}{2009}{{Hess et~al.}}{{}}}
+\bibcite{Hess2007}{{63}{2007}{{Hess et~al.}}{{}}}
+\bibcite{Hogbom1974}{{64}{1974}{{H{\"{o}}gbom}}{{}}}
+\bibcite{Hollweg1967}{{65}{1967}{{Hollweg}}{{}}}
+\bibcite{Hotan2004}{{66}{2004}{{Hotan et~al.}}{{}}}
+\bibcite{Hurford2002}{{67}{2002}{{Hurford et~al.}}{{}}}
+\bibcite{Inan2010}{{68}{2010}{{Inan and Golkowski}}{{}}}
+\bibcite{Ingale2015}{{69}{2015}{{Ingale et~al.}}{{}}}
+\bibcite{Isaacson2017}{{70}{2017}{{Isaacson et~al.}}{{}}}
+\bibcite{Johnston2008}{{71}{2008}{{Johnston et~al.}}{{}}}
+\bibcite{Jonas2016}{{72}{2018}{{Jonas}}{{}}}
+\bibcite{Karako-Argaman2015}{{73}{2015}{{Karako-Argaman et~al.}}{{}}}
+\bibcite{Karastergiou2015}{{74}{2015}{{Karastergiou et~al.}}{{}}}
+\bibcite{Karuppusamy2012}{{75}{2012}{{Karuppusamy et~al.}}{{}}}
+\bibcite{KeanePhaseSpace2018}{{76}{2018}{{Keane}}{{}}}
+\bibcite{Keane2011}{{77}{2011}{{Keane et~al.}}{{}}}
+\bibcite{Kolmogorov1941}{{78}{1941}{{Kolmogorov}}{{}}}
+\bibcite{Kolotkov2018}{{79}{2018}{{Kolotkov et~al.}}{{}}}
+\bibcite{Kontar2019}{{80}{2019}{{Kontar et~al.}}{{}}}
+\bibcite{Kontar2010}{{81}{2010}{{Kontar et~al.}}{{}}}
+\bibcite{Kontar2017}{{82}{2017}{{Kontar et~al.}}{{}}}
+\bibcite{Krupar2018}{{83}{2018}{{Krupar et~al.}}{{}}}
+\bibcite{Krupar2020}{{84}{2020}{{Krupar et~al.}}{{}}}
+\bibcite{Lebofsky2019}{{85}{2019}{{Lebofsky et~al.}}{{}}}
+\bibcite{LeCun1998}{{86}{1998}{{Lecun et~al.}}{{}}}
+\bibcite{Lemen2012}{{87}{2012}{{Lemen et~al.}}{{}}}
+\bibcite{Lonsdale2009}{{88}{2009}{{Lonsdale et~al.}}{{}}}
+\bibcite{Lorimer2011}{{89}{2011}{{Lorimer}}{{}}}
+\bibcite{Lorimer2007}{{90}{2007}{{Lorimer et~al.}}{{}}}
+\bibcite{Louarn2017GRL}{{91}{2017}{{Louarn et~al.}}{{}}}
+\bibcite{Lubberhuizen2009}{{92}{2009}{{Lubberhuizen and Kooistra}}{{}}}
+\bibcite{Lyne2015}{{93}{2015}{{Lyne et~al.}}{{}}}
+\bibcite{Maguire2020}{{94}{2020}{{Maguire et~al.}}{{}}}
+\bibcite{Maguire2021}{{95}{2021}{{{Maguire} et~al.}}{{}}}
+\bibcite{Manchester2017}{{96}{2017}{{Manchester}}{{}}}
+\bibcite{Mann1995}{{97}{1995}{{Mann}}{{}}}
+\bibcite{Marques2017}{{98}{2017}{{Marques et~al.}}{{}}}
+\bibcite{McConnell1980}{{99}{1980}{{McConnell}}{{}}}
+\bibcite{McKay-Bukowski2015}{{100}{2015}{{McKay-Bukowski et~al.}}{{}}}
+\bibcite{McKee2018}{{101}{2018}{{McKee et~al.}}{{}}}
+\bibcite{McKenna2020}{{102}{2020}{{McKenna}}{{}}}
+\bibcite{McLaughlin2006}{{103}{2006}{{McLaughlin et~al.}}{{}}}
+\bibcite{McLean1985}{{104}{1985}{{McLean and Labrum}}{{}}}
+\bibcite{McMullin2020}{{105}{2020}{{McMullin et~al.}}{{}}}
+\bibcite{Melnik2010}{{106}{2010a}{{Melnik et~al.}}{{}}}
+\bibcite{Melnik2010b}{{107}{2010b}{{Melnik et~al.}}{{}}}
+\bibcite{Melrose1982}{{108}{1982}{{Melrose}}{{}}}
+\bibcite{Melrose1987}{{109}{1987}{{Melrose}}{{}}}
+\bibcite{Mereghetti2016}{{110}{2016}{{Mereghetti et~al.}}{{}}}
+\bibcite{Meyers2017}{{111}{2017}{{Meyers et~al.}}{{}}}
+\bibcite{Michilli2020}{{112}{2020}{{Michilli et~al.}}{{}}}
+\bibcite{Michilli2018}{{113}{2018}{{Michilli et~al.}}{{}}}
+\bibcite{Mickaliger2017}{{114}{2017}{{Mickaliger et~al.}}{{}}}
+\bibcite{Mondal2019}{{115}{2019}{{{Mondal} et~al.}}{{}}}
+\bibcite{Mondal2020}{{116}{2020}{{Mondal et~al.}}{{}}}
+\bibcite{Morosan2014}{{117}{2014}{{Morosan et~al.}}{{}}}
+\bibcite{Morosan2015}{{118}{2015}{{Morosan et~al.}}{{}}}
+\bibcite{Morosan2019}{{119}{2019}{{Morosan et~al.}}{{}}}
+\bibcite{Muller2020}{{120}{2020}{{M{\"{u}}ller et~al.}}{{}}}
+\bibcite{Muller2013}{{121}{2013}{{M{\"{u}}ller et~al.}}{{}}}
+\bibcite{Mulrey2020}{{122}{2020}{{{Mulrey} et~al.}}{{}}}
+\bibcite{Murphy2021b}{{123}{021b}{{{Murphy} et~al.}}{{}}}
+\bibcite{Murphy2021}{{124}{021a}{{Murphy et~al.}}{{}}}
+\bibcite{NelsonandMelrose1985}{{125}{1985}{{Nelson and Melrose}}{{}}}
+\bibcite{Newkirk1961}{{126}{1961}{{Newkirk}}{{}}}
+\bibcite{Noutsos2015}{{127}{2015}{{Noutsos et~al.}}{{}}}
+\bibcite{Offringa2014}{{128}{2014}{{Offringa et~al.}}{{}}}
+\bibcite{Offringa2017}{{129}{2017}{{Offringa and Smirnov}}{{}}}
+\bibcite{Parker1960}{{130}{1960}{{Parker}}{{}}}
+\bibcite{Pastor-Marazuela2020}{{131}{2020}{{Pastor-Marazuela et~al.}}{{}}}
+\bibcite{Pick2008}{{132}{2008}{{Pick and Vilmer}}{{}}}
+\bibcite{Pleunis2021}{{133}{2021}{{Pleunis et~al.}}{{}}}
+\bibcite{Porayko2019}{{134}{2019}{{Porayko et~al.}}{{}}}
+\bibcite{Postel}{{135}{1980}{{Postel}}{{}}}
+\bibcite{Rajwade2016}{{136}{2016}{{Rajwade et~al.}}{{}}}
+\bibcite{Ransom2001}{{137}{2001}{{Ransom}}{{}}}
+\bibcite{Yolo9000}{{138}{2016}{{Redmon and Farhadi}}{{}}}
+\bibcite{Reid2017}{{139}{2017}{{Reid and Kontar}}{{}}}
+\bibcite{Reid2010}{{140}{2010}{{Reid and Kontar}}{{}}}
+\bibcite{Reid2018}{{141}{2018}{{Reid and Kontar}}{{}}}
+\bibcite{Reid2021}{{142}{2021}{{Reid and Kontar}}{{}}}
+\bibcite{Reid2014}{{143}{2014}{{Reid and Ratcliffe}}{{}}}
+\bibcite{Reiner1997}{{144}{1997}{{Reiner et~al.}}{{}}}
+\bibcite{Riddle1974}{{145}{1974}{{Riddle}}{{}}}
+\bibcite{Ryan2021}{{146}{2021}{{{Ryan} et~al.}}{{}}}
+\bibcite{Sanidas2019}{{147}{2019}{{Sanidas et~al.}}{{}}}
+\bibcite{SasikumarRaja2016}{{148}{2016}{{{Sasikumar Raja} et~al.}}{{}}}
+\bibcite{Scaife2020}{{149}{2020}{{Scaife}}{{}}}
+\bibcite{Schoonderbeek2019}{{150}{2019}{{Schoonderbeek et~al.}}{{}}}
+\bibcite{Schwab1984}{{151}{1984}{{Schwab}}{{}}}
+\bibcite{Scully2021}{{152}{2021}{{Scully et~al.}}{{}}}
+\bibcite{Serylak2012}{{153}{2012}{{Serylak et~al.}}{{}}}
+\bibcite{Sharma2020}{{154}{2020}{{Sharma and Oberoi}}{{}}}
+\bibcite{Sharykin2018}{{155}{2018}{{Sharykin et~al.}}{{}}}
+\bibcite{Smerd1974}{{156}{1974}{{Smerd et~al.}}{{}}}
+\bibcite{Stansby2020}{{157}{2020}{{Stansby et~al.}}{{}}}
+\bibcite{Stappers2011}{{158}{2011}{{Stappers et~al.}}{{}}}
+\bibcite{Steinberg1971}{{159}{1971}{{Steinberg et~al.}}{{}}}
+\bibcite{Stewart1972}{{160}{1972}{{Stewart}}{{}}}
+\bibcite{Takakura1975}{{161}{1975}{{Takakura and Yousef}}{{}}}
+\bibcite{Tan2020}{{162}{2020}{{Tan et~al.}}{{}}}
+\bibcite{Tarter2001}{{163}{2001}{{Tarter}}{{}}}
+\bibcite{synthesisimaging1999}{{164}{1999}{{Taylor et~al.}}{{}}}
+\bibcite{TerVeen2019}{{165}{2019}{{ter Veen et~al.}}{{}}}
+\bibcite{Thejappa2008}{{166}{2008}{{Thejappa and MacDowall}}{{}}}
+\bibcite{Thejappa2007}{{167}{2007}{{Thejappa et~al.}}{{}}}
+\bibcite{Thornton2013}{{168}{2013}{{Thornton et~al.}}{{}}}
+\bibcite{Tian2017}{{169}{2017}{{Tian}}{{}}}
+\bibcite{Tiburzi2019}{{170}{2019}{{Tiburzi et~al.}}{{}}}
+\bibcite{Treumann2006}{{171}{2006}{{Treumann}}{{}}}
+\bibcite{Turner2019}{{172}{2019}{{Turner et~al.}}{{}}}
+\bibcite{Turner2021}{{173}{2021}{{Turner et~al.}}{{}}}
+\bibcite{VanDiepen2018}{{174}{2018}{{van Diepen et~al.}}{{}}}
+\bibcite{VanHaarlem2013}{{175}{2013}{{van Haarlem et~al.}}{{}}}
+\bibcite{VanLeeuwen2020}{{176}{2020}{{{Van Leeuwen} et~al.}}{{}}}
+\bibcite{vanStraten2011}{{177}{2011}{{van Straten and Bailes}}{{}}}
+\bibcite{Vedenov1963}{{178}{1963}{{Vedenov}}{{}}}
+\bibcite{Virtanen2018}{{179}{2018}{{Virtanen}}{{}}}
+\bibcite{Virtanen2020}{{180}{2020}{{Virtanen et~al.}}{{}}}
+\bibcite{Voronkov2020}{{181}{2020}{{Voronkov}}{{}}}
+\bibcite{Vrsnak2002}{{182}{2002}{{Vr{\v {s}}nak et~al.}}{{}}}
+\bibcite{Wild1950d}{{183}{1950a}{{Wild}}{{}}}
+\bibcite{Wild1950a}{{184}{1950b}{{Wild}}{{}}}
+\bibcite{Wild1950b}{{185}{1950}{{Wild and McCready}}{{}}}
+\bibcite{Wild1959}{{186}{1959}{{Wild et~al.}}{{}}}
+\bibcite{Worden2017}{{187}{2017}{{Worden et~al.}}{{}}}
+\bibcite{Wu1985}{{188}{1985}{{Wu}}{{}}}
+\bibcite{Wu1979}{{189}{1979}{{Wu and Lee}}{{}}}
+\bibcite{Wucknitz2019}{{190}{2019}{{Wucknitz}}{{}}}
+\bibcite{Zarka1998}{{191}{1998}{{Zarka}}{{}}}
+\bibcite{Zhang2021}{{192}{2021}{{{Zhang} et~al.}}{{}}}
+\bibcite{Zhang2020}{{193}{2020}{{Zhang et~al.}}{{}}}
+\bibcite{Zucca2012}{{194}{2012}{{Zucca et~al.}}{{}}}
+\bibcite{Zucca2018}{{195}{2018}{{Zucca et~al.}}{{}}}
+\FN@pp@footnotehinttrue 
+\providecommand\NAT@force@numbers{}\NAT@force@numbers

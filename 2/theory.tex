@@ -233,7 +233,7 @@ Equation \ref{eq:ql_distributionf} can now be substituted into the Vlasov Equati
 \label{eq:linear_vlasov}
 \frac{\partial f_1}{\partial t} + (\mathbf{v} \cdot \nabla)f_1 + \frac{q_e}{m_e} \mathbf{E} \cdot \nabla_\mathbf{v}f_0 = 0.
 \end{equation} 
-It can be shown that in 1D the electron distribution function, $f(v,t)$ where $\int f(v,t) dv = n_e$, and the spectral energy index of Langmuir waves, $W(v,t)$ such that $\int W(v,t) dv = E_L$ the total energy density, can be expressed as follows \citep{Vedenov1963,Reid2014},
+It can be shown that in 1D the electron distribution function, $f(v,t)$ where $\int f(v,t) dv = n_e$, and the spectral energy density of Langmuir waves, $W(v,t)$ such that $\int W(v,t) dv = E_L$ the total energy density, can be expressed as follows \citep{Vedenov1963,Reid2014},
 \begin{equation}\label{eq:dfdt}
     \frac{\partial f(v,t)}{\partial t}=\frac{4 \pi^2 e^2}{m_e^2} \frac{\partial}{\partial v} \left( \frac{W}{v} \right) \frac{\partial f(v,t)}{\partial v}
 \end{equation}
@@ -259,9 +259,9 @@ $$ \omega_S = kv_s $$
 where $V_e$ is the thermal velocity of electrons in the plasma, $v_s$ is the ion sound speed and $k$ is the wave vector. Only transverse waves with $\omega > \omega_p $ can escape and thus a plasma emission mechanism is a process that generates these transverse waves. 
 
 As mentioned in Section \ref{sec:typeIII}, type III bursts have a harmonic structure associated with plasma emission at the plasma frequency and the second harmonic. Both of these transverse waves are formed in different three wave processes that will now be discussed.
-In a plasma, due to scattering from other wave modes and ions in the plasma, a wave mode can be changed from one to the other. This is expressed in the equation 
+In a plasma, due to scattering from other wave modes and ions in the plasma, a wave mode can be changed from one to the other \citep{McLean1985, Melrose1987}. This is expressed in the equation 
 $$ \sigma \rightleftarrows \sigma' + \sigma '' $$
-where $\sigma$, $\sigma'$  and  $\sigma ''$ represent different wave modes. Conservation of energy and momentum state,
+where $\sigma$, $\sigma'$  and  $\sigma ''$ represent different wave modes. Conservation of energy and momentum state \citep{McLean1985},
 $$ \omega^{\sigma}(k)=\omega^{\sigma'}(k')+\omega^{\sigma''}(k'')$$
 $$ k=k'+k''$$
 where $ \omega^{\sigma}(k)$ is the frequency of a particular wave mode with the wave vector $k$. For Langmuir (L), ion sound (S) and transverse (T) wave modes the allowed processes are \citep{Melrose1987}:
@@ -408,14 +408,12 @@ The modelling by \cite{Steinberg1971} made some of the first predictions of the 
 \frac{d \mathbf{r}}{dt} = v_g = \frac{\partial \omega}{\partial \mathbf{k}} = \frac{c^2}{\omega} \mathbf{k} \label{eq:scattering_Hamiltonian_r}\\
 \frac{d \mathbf{k}}{dt} = - \frac{\partial \omega}{\partial \mathbf{r}} = - \frac{\omega_p}{\omega}\frac{\partial \omega_p}{\partial \mathbf{r}} \label{eq:scattering_Hamiltonian_k}
 \end{align}
-
 using the dispersion relation for an electromagnetic wave in a plasma given in Equation \ref{eq:MHDwave_emdispersion}. The spectral number density (photon number) $N(\mathbf{k}, \mathbf{r}, t)$ can be described using a Fokker-Planck equation
 
 \begin{equation}
 \label{eq:scattering_Fokker_Planck}
 \frac{\partial N}{\partial t} +\frac{d \mathbf{r}}{dt} \cdot \frac{\partial N}{\partial \mathbf{r}} + \frac{d \mathbf{k}}{dt} \cdot \frac{\partial N}{\partial \mathbf{k}} = \frac{\partial}{\partial k_i} D_{ij} \frac{\partial N}{\partial k_j} - \gamma N,
 \end{equation}
-
 where $k_i$ are the Cartesian coordinates of $\mathbf{k}$ and $\gamma$ is the collisional absorption coefficient for radio waves in a plasma. The diffusion tensor, $D_{ij}$, is given by
 
 \begin{equation}
@@ -425,7 +423,7 @@ D_{ij} &= \frac{\pi \omega_p^4}{4 \omega^2} \int q_i q_j S(\mathbf{q}) \delta(\m
 &= \frac{\pi \omega_p^4}{4 \omega c^2} \int q_i q_j S(\mathbf{q}) \delta(\mathbf{q} \cdot \mathbf{k}) \frac{d^3 q}{(2 \pi)^3},
 \end{aligned}
 \end{equation}
-where $\mathbf{q}$ is the wavevector of electron density fluctuations and $S(\mathbf{q})$ is the electron density fluctuation spectrum normalised to the relative desnity fluctuation variance
+where $\mathbf{q}$ is the wavevector of electron density fluctuations and $S(\mathbf{q})$ is the electron density fluctuation spectrum normalised to the relative density fluctuation variance
 \begin{equation}
 \varepsilon^2 = \int S(\mathbf{q})  \frac{d^3 q}{(2 \pi)^3}.
 \end{equation}

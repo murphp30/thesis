@@ -76,7 +76,7 @@ The Remote Station Processing boards (RSPs) perform the bulk of digital signal p
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\columnwidth]{RSP.png}
-\caption[A Remote Station Processing board.]{A Remote Station Processing board from I-LOFAR.}
+\caption[A Remote Station Processing board.]{A Remote Station Processing board from I-LOFAR. This is used to perform beamforming with the array and to channelise incoming data.}
 \label{fig:RSP}
 \end{figure}
 
@@ -92,7 +92,7 @@ While the next generation telescopes like the Square Kilometre Array (SKA) and t
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\columnwidth]{TBB_big.png}
-\caption[A Transient Buffer Board.]{A Transient Buffer Board.}
+\caption[A Transient Buffer Board.]{A Transient Buffer Board. This is used to store up to 5~s of raw voltages from LOFAR antennas at 5~ns temporal resolution.}
 \label{fig:TBB}
 \end{figure}
 
@@ -493,7 +493,7 @@ We now choose a convenient coordinate system to describe this measurement. In th
 
 \begin{equation}
 \label{eq:complex_vis_uvw}
-V_\nu(u,v) = \int I_\nu(l,m) e^{-2 \pi i (ul + vm)} dl dm
+V_\nu(u,v) = \int I_\nu(l,m) e^{-2 \pi i (ul + vm)} dl dm.
 \end{equation}
 
 Here we see that the complex visibility (a.k.a spatial coherence function) is the Fourier transform of the sky brightness distribution.
@@ -509,7 +509,6 @@ l &= \cos \delta  \sin \Delta \alpha \\
 m &= \sin \delta \cos \delta_0 - \cos \delta \sin \delta_0 \cos\Delta \alpha \\ 
 n &= \sqrt{1-l^2-m^2}
 \end{align*}
-
 where $\delta, \delta_0$ are the declinations of an object and the phase centre, respectively, and $\Delta \alpha = \alpha -\alpha_0$ is the difference between the right ascension of the object and the right ascension of the phase centre.
 
 Baselines in radio interferometry are described using the \textit{uvw} coordinate system. For baseline $\overrightarrow{\Vec{b}} = \mathbf{r}_1 - \mathbf{r}_2$ where the compenents of $\mathbf{r}$ are $(x,y,z)$, the \textit{uvw} coordinates can be found from the matrix below.
@@ -540,7 +539,7 @@ Baselines in radio interferometry are described using the \textit{uvw} coordinat
 
 Here, $H$ is the hour angle of an object, $\delta$ is its declination, $\overrightarrow{\Vec{b}} = (b_x, b_y, b_z)=(x_2-x_1,y_2-y_1,z_2-z_1)$ is the baseline or distance between two antennas and $\lambda$ is the wavelength of the radio waves being observed. An often appropriate assumption to make for interferometers of short enough baselines is that all measurements are made in a plane where $w = 0$ called the \textit{uv} plane.
 
-So far I've been allusive as to how to invert our measurement of complex visibilities into an image of the observed object, commenting only that they are the Fourier transform of each other. One would think then that you can simply perform the inverse Fourier transform via the readily available fast Fourier transform (FFT) algorithm. Unfortunately, you would be very much mistaken. The reason for this is because when measuring the spatial coherence function with a two element interferometer, we do so for one position in \textit{uv} space only. Adding more antennas to our interferometer will add more points to the \textit{uv} plane however in reality it will remain sparsely sampled. We can represent the sampling of the \textit{uv} plane by a sampling function $S(u,v)$ which is zero everywhere, except for the baseline positions, i.e. a collection of dirac deltas. We then represent the Fourier transform of our sampled visibilities as a \textit{dirty image}
+So far I've been allusive as to how to invert our measurement of complex visibilities into an image of the observed object, commenting only that they are the Fourier transform of each other. One would think then that you can simply perform the inverse Fourier transform via the readily available fast Fourier transform (FFT) algorithm. Unfortunately, this is only the case if \textit{uv} space is perfectly sampled . In real life, when measuring the spatial coherence function with a two element interferometer, we do so for one position in \textit{uv} space only. Adding more antennas to our interferometer will add more points to the \textit{uv} plane however in reality it will remain sparsely sampled. We can represent the sampling of the \textit{uv} plane by a sampling function $S(u,v)$ which is zero everywhere, except for the baseline positions, i.e. a collection of dirac deltas. We then represent the Fourier transform of our sampled visibilities as a \textit{dirty image}
 
 \begin{equation}
 \label{eq:int_dirtyimage}

@@ -8,9 +8,8 @@
 %: Style file for Latex
 % Most style definitions are in the external file PhDthesisPSnPDF.
 % In this template package, it can be found in ./Latex/Classes/
-\documentclass[a4paper,twoside,12pt,usenatbib]{Latex/Classes/PhDthesisPSnPDF}
+\documentclass[a4paper,oneside,12pt]{Latex/Classes/PhDthesisPSnPDF}
 \setcitestyle{numbers}
-
 %Change "oneside" to "twoside" for final submission-grade thesis after viva/corrections
 
 
@@ -22,10 +21,11 @@
 \usepackage{epstopdf}
 \usepackage{fancyhdr}
 \usepackage{hyperref}
+\usepackage[utf8]{inputenc}
 \usepackage{lineno}
 \usepackage{lscape}
 \usepackage{multirow}
-\usepackage[round]{natbib}
+%\usepackage[round]{natbib}
 \usepackage{notoccite}
 \usepackage{paralist}
 \usepackage{quotchap}
@@ -51,8 +51,8 @@
 
 \Crefname{figure}{Fig.}{Figs.}% {<type>}{<singular>}{<plural>}
 
-\renewcommand{\bibpreamble}{\begin{multicols}{2}}
-\renewcommand{\bibpostamble}{\end{multicols}}
+%\renewcommand{\bibpreamble}{\begin{multicols}{2}}
+%\renewcommand{\bibpostamble}{\end{multicols}}
 
 % David McKenna: Macro to make the Specs Tables align better
 \usepackage{array}
@@ -268,6 +268,11 @@ Dr. Eoin P. Carley}\\[0.5mm]
 \frontmatter
 \include{0/declaration}
 \include{0/abstract}
+\include{0/dedication}
+\include{0/acknowledgements}
+%\newpage
+%\thispagestyle{empty}
+%\mbox{}
 \include{0/publications}
 
 
@@ -317,8 +322,8 @@ Dr. Eoin P. Carley}\\[0.5mm]
 
 \newgeometry{left=1.6cm, right=1.6cm, top=1.0cm, bottom=1.0cm, footskip=0cm}
 \singlespacing
-\begin{footnotesize} 
-\bibliographystyle{plainnat}
+%\begin{footnotesize} 
+\bibliographystyle{aa}%{plainnat}
 \renewcommand{\bibname}{References} 
 %\begin{multicols}{2}
 
@@ -327,7 +332,7 @@ Dr. Eoin P. Carley}\\[0.5mm]
 %\end{multicols}
 
 \singlespacing
-\end{footnotesize}
+%\end{footnotesize}
 \restoregeometry
 
 \appendix

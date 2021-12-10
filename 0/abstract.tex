@@ -1,24 +1,49 @@
 %!TEX root = ../main.tex
 %Adding the above line, with the name of your base .tex file (in this case "thesis.tex") will allow you to compile the whole thesis even when working inside one of the chapter tex files
+
+%\begin{declaration}      
+%
+%%I have read and I understand the plagiarism provisions in the General Regulations of the University Calendar for the current year, found at: \url{https://www.tcd.ie/calendar}
+%%
+%%I have also completed the Online Tutorial on avoiding plagiarism ‘Ready, Steady, Write’, located at \url{http://tcd-ie.libguides.com/plagiarism/ready-steady-write}  
+%%
+%%\vspace{10mm}
+%%
+%%I declare that this report is my own work, is not copied from any other person's work (published or unpublished), and has not previously submitted for assessment either at Trinity College Dublin or elsewhere.
+%I declare that this thesis has not been submitted as an exercise for a degree at this or any other university and it is entirely my own work. 
+%I agree to deposit this thesis in the University's open access institutional repository or allow the Library to do so on my behalf, subject to Irish Copyright Legislation and Trinity College Library conditions of use and acknowledgement.
+%
+%\vspace{30mm}
+%
+%\textbf{Name:} Pearse Murphy
+%
+%\vspace{15mm}
+%
+%\textbf{Signature:}  ........................................		\textbf{Date:}  ..........................
+%
+%\end{declaration}
+
 \newgeometry{left=2.5cm, right=2.5cm, top=2.0cm, bottom=2.0cm, footskip=1cm}
 \begin{abstracts} 
-The solar corona is the outermost layer of the Sun's atmosphere. Advancements in radio astronomy over the last 50 years have revealed a number of radio phenomena which occur in the corona each with different temporal and spectral characteristics. Current generation interferometers such as the LOw Frequency ARray (LOFAR) give an unprecedented insight into the fine spatial, spectral and temporal structure of these radio bursts. Of particular interest are what are known as Type III radio bursts, which are indicative of electrons being accelerated along open magnetic field lines in the solar corona. Observations of Type III bursts allow for the remote sensing of the plasma at various heights in the corona due to the relation between emission at the plasma frequency and electron density. High spatial resolution observations of radio bursts give insight into the role of radio wave scattering on the observed source sizes while high temporal and spectral resolution observations can be used to determine the power density of electron density fluctuations in the corona.
+The solar corona is the outermost layer of the Sun's atmosphere. Advancements in radio astronomy over the last 50 years have revealed a number of radio phenomena which occur in the corona each with different temporal and spectral characteristics. Current generation interferometers such as the LOw Frequency ARray (LOFAR) give an unprecedented insight into the fine spatial, spectral and temporal structure of these radio bursts. Of particular interest are what are known as type III radio bursts, which are indicative of electrons propagating along open magnetic field lines in the solar corona. Observations of type III bursts allow for the remote sensing of the plasma at various heights in the corona due to the relation between emission at the plasma frequency and electron density. High spatial resolution observations of radio bursts give insight into the role of radio wave scattering on the observed source sizes while high temporal and spectral resolution observations can be used to determine the power density of electron density fluctuations in the corona.
 
-Key results of this thesis come from observations of solar radio emission at the highest temporal, spectral and spatial resolutions to date. Firstly, the REAL-time Transient Acquisition backend (REALTA) was developed and installed at the Irish LOFAR station (I-LOFAR) to record the raw voltages from the station at $5.12 \mu$s temporal resolution. Some first light observations of solar radio burst are shown.
+Key results of this thesis come from observations of solar radio emission at the highest temporal, spectral and spatial resolutions to date. Firstly, the REAL-time Transient Acquisition backend (REALTA) was developed and installed at the Irish LOFAR station (I-LOFAR) to record the raw voltages from the station at $5.12 \mu$s temporal resolution. This is among the most advanced data acquisition clusters installed at an international LOFAR station to date. First light observations from REALTA are shown, including a variety of solar radio bursts showcasing fine temporal and spectral structure. The installation of REALTA allows for observations of solar radio bursts at some of the highest temporal resolutions to date and is a key resource in investigating the fine temporal structure of solar radio emission.
 
-Secondly, for the first time a new technique was implemented to directly measure the size of radio bursts from their interferometric visibilities. For a burst at 34.76~MHz, the full width at half maximum height (FWHM) along the major and minor axes is found to be $18.8$~$\pm~0.1$ arcmin and $10.2$~$\pm~0.1$ arcmin respectively at a plane of sky heliocentric distance of 1.75~R$_\odot$. These results suggest that the level of density fluctuations in the solar corona  is  the  major  cause  of  the  scattering  of  radio  waves, resulting in  large  source  sizes.
+Secondly, a new technique was implemented to directly measure the size of radio bursts from their interferometric visibilities. This is the first time that such a technique has been used to study a type IIIb radio burst. Spectroscopic analysis of the fine frequency structure of a type IIIb burst is used to calculate an expected a source size of $3.18$~arcsec. The full width at half maximum height (FWHM) along the major and minor axes of the burst at 34.76~MHz is found to be $18.8$~$\pm~0.1$~arcmin and $10.2$~$\pm~0.1$~arcmin respectively.
+% at a plane of sky heliocentric distance of 1.75~R$_\odot$. 
+ The new fitting technique used in this analysis removes the need for interferometric imaging and as such, these results indicate that the large size observed for the type IIIb radio burst is due to radio wave scattering in the corona. It is also determined that this effect may be over estimated by previous tied array imaging observations.% These results suggest that the level of density fluctuations in the solar corona  is  the  major  cause  of  the  scattering  of  radio  waves, resulting in  large  source  sizes.
 
-Finally, this technique was utilised to determine the size and shape of 30 Type III bursts that were compared with predictions from state-of-the-art scattering simulations. It is found that these bursts have a mean size along the major and minor axis of FWHM\textsubscript{x} = 16.27 arcmin and FWHM\textsubscript{y} = 11.96 arcmin respectively. No trend of source size with respect to helioprojective longitude is found, which is in direct contrast to predictions from modelling of anisotropic scattering from a point source.
+Finally, this technique was utilised to determine the size and shape of 29 type III bursts and compare them to predictions from state-of-the-art radio wave scattering simulations. It is found that these bursts have a mean size along the major and minor axis of FWHM\textsubscript{x} = 16.27~arcmin and FWHM\textsubscript{y} = 11.96~arcmin respectively. No trend of source size with respect to helioprojective longitude is found, which is in contrast to predictions from modelling of anisotropic scattering from a point source. I attribute this discrepancy to an intrinsic source size of type III bursts. These results underscore the necessity for thorough comparison between radio observations and radio wave scattering simulations before one can be used to infer information from the other.
 
 I highlight some future work that could be built upon the research presented in this thesis to further advance the knowledge of radio wave generation and propagation in the solar corona.
 
 
-%High temporal resolution data allow the study of rapid temporal variability in radio spectra which are indicative of small-scale turbulence in the solar corona. It is thought that the density inhomogeneities produced by this small-scale turbulence causes scattering of radio waves as they propagate out from the corona and thus pose a fundamental limit on the source size of observed radio bursts. Analysis of radio bursts at the plasma frequency, such as a Type III burst, with highly spatially resolved interferometric data is the most direct way of testing this hypothesis.
+%High temporal resolution data allow the study of rapid temporal variability in radio spectra which are indicative of small-scale turbulence in the solar corona. It is thought that the density inhomogeneities produced by this small-scale turbulence causes scattering of radio waves as they propagate out from the corona and thus pose a fundamental limit on the source size of observed radio bursts. Analysis of radio bursts at the plasma frequency, such as a type III burst, with highly spatially resolved interferometric data is the most direct way of testing this hypothesis.
 %Particularly bright radio bursts can have devastating effects on terrestrial communication including GPS positioning and satellite communication. Given that much of modern society relies on satellite communication, being better able to understand and perhaps predict radio bursts is essential.
 
 % and is one of the fundamental pieces of this PhD. Following this, exploratory work with 5 ns temporal resolution data from the Irish LOFAR station (I-LOFAR) to delve further into the small-scale variations with time in the solar corona will be undertaken.
 
-%	The nature of this PhD is twofold, firstly to observe low frequency radio emission from the Sun at spatial resolution of the order of 15 arcseconds. This will determine whether or not scattering of radio waves in the corona imposes a fundamental limit on spatial resolution and give insight into the processes that might cause this limit. The second aspect of this PhD is to observe the Sun at radio wavelengths at the highest temporal resolution ever. In order to do this, the TBB Acquisition Cluster (TACl) located in the I-LOFAR control room must be further developed to record and store TBB data without corruption. Observing the Sun at nanosecond temporal resolution has yet to be attempted and as such the potential to discover new radio phenomena and temporal variability in existing phenomena is great. It is, of course, possible that such events do not occur or are difficult to detect and as such the focus for this PhD will lie mainly on interferometric observations of the Sun.
+%	The nature of this PhD is twofold, firstly to observe low frequency radio emission from the Sun at spatial resolution of the order of 15~arcseconds. This will determine whether or not scattering of radio waves in the corona imposes a fundamental limit on spatial resolution and give insight into the processes that might cause this limit. The second aspect of this PhD is to observe the Sun at radio wavelengths at the highest temporal resolution ever. In order to do this, the TBB Acquisition Cluster (TACl) located in the I-LOFAR control room must be further developed to record and store TBB data without corruption. Observing the Sun at nanosecond temporal resolution has yet to be attempted and as such the potential to discover new radio phenomena and temporal variability in existing phenomena is great. It is, of course, possible that such events do not occur or are difficult to detect and as such the focus for this PhD will lie mainly on interferometric observations of the Sun.
 
 %The goal for this project is to study known radio phenomena at nanosecond resolution in order to discover new temporal variability, if this exists, and new sub-microsecond radio bursts if they exist. In order to do this a computer cluster dedicated to the recording and storage of such data, which is real, must be further developed
 
@@ -28,160 +53,140 @@ I highlight some future work that could be built upon the research presented in 
 
 \restoregeometry
 
-
-
-% ---------------------------------------------------------------------- 
-% ---------------------------------------------------------------------- 
-%!TEX root = ../thesis.tex
-%Adding the above line, with the name of your base .tex file (in this case "thesis.tex") will allow you to compile the whole thesis even when working inside one of the chapter tex files
-
-
-\begin{declaration}      
-
-%I have read and I understand the plagiarism provisions in the General Regulations of the University Calendar for the current year, found at: \url{https://www.tcd.ie/calendar}
 %
-%I have also completed the Online Tutorial on avoiding plagiarism ‘Ready, Steady, Write’, located at \url{http://tcd-ie.libguides.com/plagiarism/ready-steady-write}  
 %
-%\vspace{10mm}
+%% ---------------------------------------------------------------------- 
+%% ---------------------------------------------------------------------- 
+%%!TEX root = ../thesis.tex
+%%Adding the above line, with the name of your base .tex file (in this case "thesis.tex") will allow you to compile the whole thesis even when working inside one of the chapter tex files
 %
-%I declare that this report is my own work, is not copied from any other person's work (published or unpublished), and has not previously submitted for assessment either at Trinity College Dublin or elsewhere.
-I declare that this thesis has not been submitted as an exercise for a degree at this or any other university and it is entirely my own work. 
-I agree to deposit this thesis in the University's open access institutional repository or allow the Library to do so on my behalf, subject to Irish Copyright Legislation and Trinity College Library conditions of use and acknowledgement.
-
-\vspace{30mm}
-
-\textbf{Name:} Pearse Murphy
-
-\vspace{15mm}
-
-\textbf{Signature:}  ........................................		\textbf{Date:}  ..........................
-
-\end{declaration}
-
-% ----------------------------------------------------------------------
-
-\begin{dedication}
-\textit{For my grandparents.}
-\end{dedication}
-
-\begin{acknowledgements}
-I would firstly like to thank my supervisors Peter Gallagher and Eoin Carley. Your guidance and support throughout my PhD has been constant and has saved me from sounding foolish on more than one occasion. It has been a pleasure working with you both over the last four years.
-
-Operations at I-LOFAR, and my understanding thereof, would not be where they are today without Joe McCauley. Thank you for always being on hand to troubleshoot failed observations.
-
-Brian Coghlan was an invaluable resource during the installation of REALTA and the development of recording data from the Transient Buffer Boards at I-LOFAR. I am grateful for your patience while I was finding my feet as a PhD student. 
-
-I want to express my gratitude to Sophie Murray and Shane Maloney. You've opened my eyes to the wonderful world of open source software and ``basic version control techniques". Thank you, also, for many great ideas from many long group meetings.
-
-I have been incredibly lucky to spend some of my time as a PhD student in a place as steeped in myth as the astrophysics student office at Trinity College Dublin. Here I met some amazing people who I am truly honoured to call friends. Laura Hayes and Aoife McCloskey, you are both everything I aspire to be as a scientist and as a person. Thank you for making me feel welcome from the moment I first walked into the office.
-D\'ualta \'O Fionnag\'ain and Ioana Boian, I still find it hard that I don't see you every day. Thank you both for many geography quizzes and to D\'ualta in particular for getting me interested in, and subsequently losing money to, cryptocurrencies.
-To Rob Kavanagh, Stephen Carolan, Eoin Farrell and Amanda Mesquita. Although our time together was cut short by a move to a new institute you are all part of the many great memories I made throughout the last four years.
-To Tadhg Garton, thank you for being a wall to bounce ideas off and introducing me to your slightly worrying sense of humour/coping mechanism.
-
-%Thank you also to Donna, Gopal, Carolina and Ankit 
-During my PhD I have had the fortune to share my time with many wonderful people at the Dublin Institute for Advanced Studies (\#DIASDiscovers). There are too many to name but I'm going to try anyway. Alberto, Anton, David, Eoin, Jeremy, Johnny, Maria K, Maria M, Mario, Ruben, Sam and Shilpi.
-
-I started this PhD in the company of four people who have made the last four years incredibly enjoyable. Laura Murphy, Brendan Clarke, Aoife Ryan and Ciara Maguire, sharing this journey with you has been a blessing. I don't know how I would have made it this far without you all, thank you.
-In particular I want to thank Aoife and Ciara for answering my almost constant stream of questions about radio interferometry and for putting up with impromptu drum solos on my desk.
-
-My thanks also go to Conor, Marlon, John, Dan, the former residents of 40 Greenmount Road and the Mullinguardians of the Galaxy.
-
-To my family Noel and Siobhan, Conor and \'Eadaoin. Thank you for everything. Your love and support has brought me to where I am today and I am eternally grateful for that.
-
-Finally I want to say thank you to Camille Stock. Despite having written tens of thousands of words to describe solar radio physics, I don't know what to say to express how much you mean to me. In the most bleak moments of writing this thesis you have picked me up off the floor both metaphorically and literally. I am incredibly lucky to be loved by someone as generous, kind and caring as you. Thank you.
-
-\end{acknowledgements}
-
-%!TEX root = ../thesis.tex
-%Adding the above line, with the name of your base .tex file (in this case "thesis.tex") will allow you to compile the whole thesis even when working inside one of the chapter tex files
-\chapter{List of Publications}
-\label{chapter:publications}
 %
-\begin{singlespace}
-\vspace{-5mm}
-
 %
-%\section*{Oral Presentations}
-%\begin{enumerate}
-%STELLAR Space Weather Workshop
-%Virtual
-%12th - 15th July 2021
 %
-%\item \textit{LOFAR Single Station Radio Data Analysis Tutorial}
-%I-LOFAR Science and Techniques Workshop
-%I-LOFAR Education Centre, Birr Castle, Co. Offaly, Ireland
-%2nd - 4th March 2020
+%% ----------------------------------------------------------------------
 %
-%Scattering of Radio Waves in the Solar Corona
-%I-LOFAR Science and Techniques Workshop
-%I-LOFAR Education Centre, Birr Castle, Co. Offaly, Ireland
-%2nd - 4th March 2020
+%\begin{dedication}
+%\textit{For my grandparents.}
+%\end{dedication}
 %
-%Single Station Data Analysis Tutorial
-%Young European Radio Astronomers Conference
-%Dublin Institute for Advanced Studies/Trinity College Dublin, Ireland
-%26th - 29th August 2019
+%\begin{acknowledgements}
+%I would firstly like to thank my supervisors Peter Gallagher and Eoin Carley. Your guidance and support throughout my PhD has been constant and has saved me from sounding foolish on more than one occasion. It has been a pleasure working with you both over the last four years.
 %
-%Interferometric Imaging of Type III Bursts in the Solar Corona
-%Community of European Solar Radio Astronomers Workshop
-%Leibniz-Institut für Astrophysik Potsdam, Germany
-%8th - 12th July 2019
+%Operations at I-LOFAR, and my understanding thereof, would not be where they are today without Joe McCauley. Thank you for always being on hand to troubleshoot failed observations.
 %
-%Interferometric Imaging of Type III Bursts in the Solar Corona
-%\item \textit{Finding Fast Solar Radio Transients in I-LOFAR Transient Buffer Board Data},\\ Irish National Astronomy Meeting (INAM), 2018
-%\item \textit{Finding Fast Solar Radio Transients in I-LOFAR Transient Buffer Board Data},\\ Community of European Solar Radio Astronomers (CESRA) Summer School, 2018
-%\end{enumerate}
+%Brian Coghlan was an invaluable resource during the installation of REALTA and the development of recording data from the Transient Buffer Boards at I-LOFAR. I am grateful for your patience while I was finding my feet as a PhD student. 
+%
+%I want to express my gratitude to Sophie Murray and Shane Maloney. You've opened my eyes to the wonderful world of open source software and ``basic version control techniques". Thank you, also, for many great ideas from many long group meetings.
+%
+%I have been incredibly lucky to spend some of my time as a PhD student in a place as steeped in myth as the astrophysics student office at Trinity College Dublin. Here I met some amazing people who I am truly honoured to call friends. Laura Hayes and Aoife McCloskey, you are both everything I aspire to be as a scientist and as a person. Thank you for making me feel welcome from the moment I first walked into the office.
+%D\'ualta \'O Fionnag\'ain and Ioana Boian, I still find it hard that I don't see you every day. Thank you both for many geography quizzes and to D\'ualta in particular for getting me interested in, and subsequently losing money to, cryptocurrencies.
+%To Rob Kavanagh, Stephen Carolan, Eoin Farrell and Amanda Mesquita. Although our time together was cut short by a move to a new institute you are all part of the many great memories I made throughout the last four years.
+%To Tadhg Garton, thank you for being a wall to bounce ideas off and introducing me to your slightly worrying sense of humour/coping mechanism.
+%
+%%Thank you also to Donna, Gopal, Carolina and Ankit 
+%During my PhD I have had the fortune to share my time with many wonderful people at the Dublin Institute for Advanced Studies (\#DIASDiscovers). There are too many to name but I'm going to try anyway. Alberto, Anton, David, Eoin, Jeremy, Johnny, Maria K, Maria M, Mario, Ruben, Sam and Shilpi.
+%
+%I started this PhD in the company of four people who have made the last four years incredibly enjoyable. Laura Murphy, Brendan Clarke, Aoife Ryan and Ciara Maguire, sharing this journey with you has been a blessing. I don't know how I would have made it this far without you all, thank you.
+%In particular I want to thank Aoife and Ciara for answering my almost constant stream of questions about radio interferometry and for putting up with impromptu drum solos on my desk.
+%
+%My thanks also go to Conor, Marlon, John, Dan, the former residents of 40 Greenmount Road and the Mullinguardians of the Galaxy.
+%
+%To my family Noel and Siobhan, Conor and \'Eadaoin. Thank you for everything. Your love and support has brought me to where I am today and I am eternally grateful for that.
+%
+%Finally I want to say thank you to Camille Stock. Despite having written tens of thousands of words to describe solar radio physics, I don't know what to say to express how much you mean to me. In the most bleak moments of writing this thesis you have picked me up off the floor both metaphorically and literally. I am incredibly lucky to be loved by someone as generous, kind and caring as you. Thank you.
+%
+%\end{acknowledgements}
+%
+%%!TEX root = ../thesis.tex
+%%Adding the above line, with the name of your base .tex file (in this case "thesis.tex") will allow you to compile the whole thesis even when working inside one of the chapter tex files
+%\chapter{List of Publications}
+%\label{chapter:publications}
+%%
+%\begin{singlespace}
+%\vspace{-5mm}
 %
 %%
-%\section*{Poster Presentations}
-%\begin{enumerate}
-%\item \textit{The Irish LOw Frequency ARray (I-LOFAR)}, \\ International Workshop on Solar, Heliospheric and Magnetospheric Radioastronomy, 2017
-%\\ DOI: \url{https://doi.org/10.6084/m9.figshare.5572660.v1}
-%\item \textit{Nanosecond Sampling of the Radio Sky with I-LOFAR's Transient Buffer Boards (TBB)}, \\ 17th RHESSI (Reuven Ramaty High Energy Solar Spectroscopic Imager) Workshop, 2018
-%\\ DOI: \url{https://doi.org/10.6084/m9.figshare.6669173.v1}
-%\end{enumerate}
-%
-%
+%%\section*{Oral Presentations}
+%%\begin{enumerate}
+%%STELLAR Space Weather Workshop
+%%Virtual
+%%12th - 15th July 2021
 %%
-%\section*{Workshops \& Conferences Attended}
+%%\item \textit{LOFAR Single Station Radio Data Analysis Tutorial}
+%%I-LOFAR Science and Techniques Workshop
+%%I-LOFAR Education Centre, Birr Castle, Co. Offaly, Ireland
+%%2nd - 4th March 2020
+%%
+%%Scattering of Radio Waves in the Solar Corona
+%%I-LOFAR Science and Techniques Workshop
+%%I-LOFAR Education Centre, Birr Castle, Co. Offaly, Ireland
+%%2nd - 4th March 2020
+%%
+%%Single Station Data Analysis Tutorial
+%%Young European Radio Astronomers Conference
+%%Dublin Institute for Advanced Studies/Trinity College Dublin, Ireland
+%%26th - 29th August 2019
+%%
+%%Interferometric Imaging of type III Bursts in the Solar Corona
+%%Community of European Solar Radio Astronomers Workshop
+%%Leibniz-Institut für Astrophysik Potsdam, Germany
+%%8th - 12th July 2019
+%%
+%%Interferometric Imaging of type III Bursts in the Solar Corona
+%%\item \textit{Finding Fast Solar Radio Transients in I-LOFAR Transient Buffer Board Data},\\ Irish National Astronomy Meeting (INAM), 2018
+%%\item \textit{Finding Fast Solar Radio Transients in I-LOFAR Transient Buffer Board Data},\\ Community of European Solar Radio Astronomers (CESRA) Summer School, 2018
+%%\end{enumerate}
+%%
+%%%
+%%\section*{Poster Presentations}
+%%\begin{enumerate}
+%%\item \textit{The Irish LOw Frequency ARray (I-LOFAR)}, \\ International Workshop on Solar, Heliospheric and Magnetospheric Radioastronomy, 2017
+%%\\ DOI: \url{https://doi.org/10.6084/m9.figshare.5572660.v1}
+%%\item \textit{Nanosecond Sampling of the Radio Sky with I-LOFAR's Transient Buffer Boards (TBB)}, \\ 17th RHESSI (Reuven Ramaty High Energy Solar Spectroscopic Imager) Workshop, 2018
+%%\\ DOI: \url{https://doi.org/10.6084/m9.figshare.6669173.v1}
+%%\end{enumerate}
+%%
+%%
+%%%
+%%\section*{Workshops \& Conferences Attended}
+%%\begin{enumerate}
+%%\item INAM, Maynooth University, 2017
+%%\item International Workshop on Solar, Heliospheric and Magnetospheric Radioastronomy, Observatoire de Paris, 2017
+%%\item I-LOFAR User's Data Workshop, University College Dublin, 2018
+%%\item 17th RHESSI Workshop, Trinity College Dublin, 2018
+%%\item Astro Hack Week, Lorentz Cetnre, Leiden University, 2018
+%%\item INAM, Birr Theatre, Birr, Co. Offaly, 2018
+%%\item CESRA Summer School, Observatoire Royal de Belgique, 2018 
+%%\item LOFAR Data Processing School, Netherlands Institute for Radio Astronomy (ASTRON), 2018
+%%\end{enumerate}
+%
+%\section*{Publications}
 %\begin{enumerate}
-%\item INAM, Maynooth University, 2017
-%\item International Workshop on Solar, Heliospheric and Magnetospheric Radioastronomy, Observatoire de Paris, 2017
-%\item I-LOFAR User's Data Workshop, University College Dublin, 2018
-%\item 17th RHESSI Workshop, Trinity College Dublin, 2018
-%\item Astro Hack Week, Lorentz Cetnre, Leiden University, 2018
-%\item INAM, Birr Theatre, Birr, Co. Offaly, 2018
-%\item CESRA Summer School, Observatoire Royal de Belgique, 2018 
-%\item LOFAR Data Processing School, Netherlands Institute for Radio Astronomy (ASTRON), 2018
+%\item Corentin K. Louis, Caitriona M. Jackman, Jean-Mathias Griessmeier, Olaf Wucknitz, David. J. McKenna, \textbf{Pearse C. Murphy}, Peter T. Gallagher, Eoin Carley, Dúalta Ó Fionnagáin, Aaron Golden, Joe McCauley, Paul Callanan, Matt Redman, Christian Vocks.
+%\\``Observing Jupiter's radio emissions using multiple LOFAR stations: a first case study of the Io-decametric emission using the Irish IE613, French FR606 and German DE604 stations"
+%\\ \textit{Royal Astronomical Society Techniques and Instruments journal} (2021 submitted)
+%\item \textbf{P. C. Murphy}, P. Callanan, J. McCauley, D. J. McKenna, D. Ó Fionnagáin, C. K. Louis, M. P. Redman, L. A. Cañizares, E. P. Carley, S. A. Maloney, B. Coghlan, M. Daly, J. Scully, J. Dooley, V. Gajjar, C. Giese, A. Brennan, E. F. Keane, C. A. Maguire, J. Quinn, S. Mooney, A. M. Ryan, J. Walsh, C. M. Jackman, A. Golden, T. P. Ray, J. G. Doyle, J. Rigney, M. Burton, P. T. Gallagher.
+%\\``First Results from the REAL-time Transient Acquisition backend (REALTA) at the Irish LOFAR station",
+%\\ \textit{Astronomy and Astrophysics} Volume 655, A16 (2021)
+%\item A. M. Ryan, P. T. Gallagher, E. P. Carley, M. A. Brentjens,\textbf{ P. C. Murphy}, C. Vocks, D. E. Morosan, H. Reid, J. Magdalenic, F. Breitling, P. Zucca, R. Fallows, G. Mann, A. Kerdraon, R. Halfwerk.
+%\\``LOFAR imaging of the solar corona during the 2015 March 20 solar eclipse",
+%\\ \textit{Astronomy and Astrophysics}, Volume 648, A43 (2021)
+%\item \textbf{Pearse C. Murphy}, Eoin P. Carely, Aoife Maria Ryan, Pietro Zucca, Peter T. Gallagher.
+%\\ ``LOFAR Observations of Radio Burst Source Sizes and Scattering in the Solar Corona",
+%\\ \textit{Astronomy and Astrophysics}, Volume 645, A11 (2021)
+%\item Vishal Gajjar, Andrew Siemion, Steve Croft, Bryan Brzycki, Marta Burgay, Tobia Carozzi, Raimondo Concu, Daniel Czech, David DeBoer, Julia DeMarines, Jamie Drew, J. Emilio Enriquez, James Fawcett, Peter Gallagher, Michael Gerret, Nectaria Gizani, Greg Hellbourg, Jamie Holder, Howard Isaacson, Sanjay Kudale, Brian Lacki, Matthew Lebofsky, Di Li, David H. E. MacMahon, Joe McCauley, Andrea Melis, Emilio Molinari, \textbf{Pearse Murphy}, Delphine Perrodin, Maura Pilia, Danny C. Price, Claire Webb, Dan Werthimer, David Williams, Pete Worden, Philippe Zarka, and Yunfan Gerry Zhang.
+%\\``The Breakthrough Listen Search for Extraterrestrial Intelligence ",
+%\\ \textit{Astro2020: Decadal Survey on Astronomy and Astrophysics, APC white papers, no. 223; Bulletin of the American Astronomical Society}, Vol. 51, Issue 7, id. 223 (2019)
+%\item David M. Long, \textbf{Pearse C. Murphy}, Georgina Graham, Eoin P. Carley, David P\'{e}rez-Su\'{a}rez.
+%\\ ``A Statistical Analysis of the Solar Phenomena Associated with Global EUV Waves",
+%\\ \textit{Solar Physics}, Volume 292 , Issue 185, (2017).
+%%Long, D.M., \textbf{Murphy, P. C.}, Graham, G. et al. Sol Phys (2017) 292: 185. \doihttps{https://doi.org/10.1007/s11207-017-1206-0}
 %\end{enumerate}
-
-\section*{Publications}
-\begin{enumerate}
-\item Corentin K. Louis, Caitriona M. Jackman, Jean-Mathias Griessmeier, Olaf Wucknitz, David. J. McKenna, \textbf{Pearse C. Murphy}, Peter T. Gallagher, Eoin Carley, Dúalta Ó Fionnagáin, Aaron Golden, Joe McCauley, Paul Callanan, Matt Redman, Christian Vocks.
-\\``Observing Jupiter's radio emissions using multiple LOFAR stations: a first case study of the Io-decametric emission using the Irish IE613, French FR606 and German DE604 stations"
-\\ \textit{Royal Astronomical Society Techniques and Instruments journal} (2021 submitted)
-\item \textbf{P. C. Murphy}, P. Callanan, J. McCauley, D. J. McKenna, D. Ó Fionnagáin, C. K. Louis, M. P. Redman, L. A. Cañizares, E. P. Carley, S. A. Maloney, B. Coghlan, M. Daly, J. Scully, J. Dooley, V. Gajjar, C. Giese, A. Brennan, E. F. Keane, C. A. Maguire, J. Quinn, S. Mooney, A. M. Ryan, J. Walsh, C. M. Jackman, A. Golden, T. P. Ray, J. G. Doyle, J. Rigney, M. Burton, P. T. Gallagher.
-\\``First Results from the REAL-time Transient Acquisition backend (REALTA) at the Irish LOFAR station",
-\\ \textit{Astronomy and Astrophysics} Volume 655, A16 (2021)
-\item A. M. Ryan, P. T. Gallagher, E. P. Carley, M. A. Brentjens,\textbf{ P. C. Murphy}, C. Vocks, D. E. Morosan, H. Reid, J. Magdalenic, F. Breitling, P. Zucca, R. Fallows, G. Mann, A. Kerdraon, R. Halfwerk.
-\\``LOFAR imaging of the solar corona during the 2015 March 20 solar eclipse",
-\\ \textit{Astronomy and Astrophysics}, Volume 648, A43 (2021)
-\item \textbf{Pearse C. Murphy}, Eoin P. Carely, Aoife Maria Ryan, Pietro Zucca, Peter T. Gallagher.
-\\ ``LOFAR Observations of Radio Burst Source Sizes and Scattering in the Solar Corona",
-\\ \textit{Astronomy and Astrophysics}, Volume 645, A11 (2021)
-\item Vishal Gajjar, Andrew Siemion, Steve Croft, Bryan Brzycki, Marta Burgay, Tobia Carozzi, Raimondo Concu, Daniel Czech, David DeBoer, Julia DeMarines, Jamie Drew, J. Emilio Enriquez, James Fawcett, Peter Gallagher, Michael Gerret, Nectaria Gizani, Greg Hellbourg, Jamie Holder, Howard Isaacson, Sanjay Kudale, Brian Lacki, Matthew Lebofsky, Di Li, David H. E. MacMahon, Joe McCauley, Andrea Melis, Emilio Molinari, \textbf{Pearse Murphy}, Delphine Perrodin, Maura Pilia, Danny C. Price, Claire Webb, Dan Werthimer, David Williams, Pete Worden, Philippe Zarka, and Yunfan Gerry Zhang.
-\\``The Breakthrough Listen Search for Extraterrestrial Intelligence ",
-\\ \textit{Astro2020: Decadal Survey on Astronomy and Astrophysics, APC white papers, no. 223; Bulletin of the American Astronomical Society}, Vol. 51, Issue 7, id. 223 (2019)
-\item David M. Long, \textbf{Pearse C. Murphy}, Georgina Graham, Eoin P. Carley, David P\'{e}rez-Su\'{a}rez.
-\\ ``A Statistical Analysis of the Solar Phenomena Associated with Global EUV Waves",
-\\ \textit{Solar Physics}, Volume 292 , Issue 185, (2017).
-%Long, D.M., \textbf{Murphy, P. C.}, Graham, G. et al. Sol Phys (2017) 292: 185. \doihttps{https://doi.org/10.1007/s11207-017-1206-0}
-\end{enumerate}
-
-
-
-
-\end{singlespace}
+%
+%
+%
+%
+%\end{singlespace}
 
 
 
