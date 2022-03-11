@@ -194,20 +194,29 @@ For a longitudinal wave $\nabla \cdot \mathbf{E} \neq 0$ and thus, using \ref{eq
 which is the plasma frequency we found earlier from our discussion at the beginning of Section\ref{sec:plasma_intro}! Note also that, because $\omega$ does not depend on $\mathbf{k}$, the group velocity $v_g = d\omega / d k$ of this wave is 0. This means that the plasma oscillation does not propagate from the location where they are generated. For a magnetised plasma with finite temperature the dispersion relation of Langmuir waves becomes 
 \begin{equation}
 \label{eq:MHDwave_langmuir}
-\omega^2 = \omega_p^2(1 + \gamma \lambda_D^2k^2).
+\omega^2 = \omega_p^2(1 + \gamma \lambda_D^2k^2),
 \end{equation}
+where $\gamma$ is the adiabatic index.
 This propagating plasma oscillation is known as a Langmuir wave and will be instrumental in describing the process of plasma emission in a type III radio burst.
 
-Electromagnetic waves traveling through a plasma have their own dispersion relation which can be found from the refractive index
+Electromagnetic waves travelling through a plasma have their own dispersion relation which can be found from the refractive index
 \begin{equation}
-\mu \equiv \frac{kc}{\omega} = (1 - \frac{\omega_p^2}{\omega^2})^{\frac{1}{2}}
+\mu \equiv \frac{kc}{\omega} = \left(1 - \frac{\omega_p^2}{\omega^2}\right)^{\frac{1}{2}}
 \end{equation}
 to be
 \begin{equation}
 \label{eq:MHDwave_emdispersion}
 \omega = (\omega_p +k^2 c^2)^\frac{1}{2}.
 \end{equation}
-Here it is obvious that $\omega_p$ acts as a cutoff frequency, below which electromagnetic waves become evanescent and are rapidly attenuated.
+Here it is obvious that $\omega_p$ acts as a cutoff frequency, below which electromagnetic waves become evanescent and are rapidly attenuated. To further demonstrate this effect, consider the group velocity of radio waves travelling through a plasma
+\begin{align}
+v_g & = \frac{\partial \omega}{\partial k} = \frac{\partial}{\partial k} (\omega_p +k^2 c^2)^\frac{1}{2} \\ \nonumber
+& = \frac{1}{2}(\omega_p +k^2 c^2)^{-\frac{1}{2}} (2kc^2)\\ \nonumber
+& = \frac{kc^2}{\omega} = c\mu.
+\end{align}
+For a radio wave at the plasma frequency $\omega_p$, $\mu = 0$ and thus the group velocity is 0. Therefore radio waves at the plasma frequency cannot travel through the corona, this explains why the ratio for fundamental to harmonic emission mentioned in section \ref{sec:typeIII} is less than 2:1. 
+
+
 \section{The Plasma Emission Mechanism}
 \label{sec:plasma_emission}
 The plasma emission mechanism occurs over a number of stages. First, an instability must be generated in the velocity distribution function. This leads to the growth of Langmuir waves before finally these Langmuir waves are converted to transverse electromagnetic waves. In a type III radio burst a high velocity, low density, electron beam passes through the background plasma to form a ``bump on tail" distribution. This distribution is unstable and leads to the growth of Langmuir waves. These Langmuir waves in turn generate electromagnetic waves by coalescing with other Langmuir waves or by decaying. The electromagnetic waves are the radio bursts that are observed. In this section the generation of Langmuir waves in 1D and the process of plasma emission are discussed under the framework of quasi-linear theory.
