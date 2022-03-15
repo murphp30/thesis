@@ -439,17 +439,21 @@ E_\nu(\mathbf{r}) = \int \mathcal{E}_\nu (\mathbf{R}) \frac{e^{2\pi i \nu \vert 
 where $dS$ is the surface area element on the celestial sphere. The correlation of the field at two points $\mathbf{r}_1$ and $\mathbf{r}_2$ is defined as $\mathsf{V}_\nu (\mathbf{r}_1, \mathbf{r}_2) = \langle E_\nu(\mathbf{r}_1) E^{*}_\nu(\mathbf{r}_2) \rangle$, where the asterisk denotes the complex conjugate. Substituting in Equation \ref{eq:int_fieldstrength} gives
 \begin{equation}
 \label{eq:int_correlation}
-\mathsf{V}_\nu (\mathbf{r}_1, \mathbf{r}_2) = \bigg \langle \int \int \mathcal{E}_\nu(\mathbf{r}_1) \mathcal{E}^{*}_\nu(\mathbf{r}_2) 
-\frac{e^{2\pi i \nu \vert \mathbf{R}_1 - \mathbf{r}_1 \vert/c}}{\vert \mathbf{R}_1 - \mathbf{r}_1 \vert} \frac{e^{-2\pi i \nu \vert \mathbf{R}_2 - \mathbf{r}_2 \vert/c}}{\vert \mathbf{R}_2 - \mathbf{r}_2 \vert} dS_1 sS_2 \bigg \rangle.
+\mathsf{V}_\nu (\mathbf{r}_1, \mathbf{r}_2) = \bigg \langle \int \int \mathcal{E}_\nu(\mathbf{R}_1) \mathcal{E}^{*}_\nu(\mathbf{R}_2) 
+\frac{e^{2\pi i \nu \vert \mathbf{R}_1 - \mathbf{r}_1 \vert/c}}{\vert \mathbf{R}_1 - \mathbf{r}_1 \vert} \frac{e^{-2\pi i \nu \vert \mathbf{R}_2 - \mathbf{r}_2 \vert/c}}{\vert \mathbf{R}_2 - \mathbf{r}_2 \vert} dS_1 dS_2 \bigg \rangle.
 \end{equation}
 If we assume that the radiation from the astrophysical source is spatially incoherent, then  $\langle \mathcal{E}_\nu(\mathbf{r}_1) \mathcal{E}^{*}_\nu(\mathbf{r}_2) \rangle = 0$ for $\mathbf{R}_1 \neq \mathbf{R}_2$ and Equation \ref{eq:int_fieldstrength} can be simplified to  
 
 \begin{equation}
 \label{eq:int_correlation2}
-\mathsf{V}_\nu (\mathbf{r}_1, \mathbf{r}_2) =  \int \langle \vert \mathcal{E}_\nu(\mathbf{r})^2 \vert \rangle \vert \mathbf{R} \vert^2
+\mathsf{V}_\nu (\mathbf{r}_1, \mathbf{r}_2) =  \int \langle \vert \mathcal{E}_\nu(\mathbf{R})^2 \vert \rangle \vert \mathbf{R} \vert^2
 \frac{e^{2\pi i \nu \vert \mathbf{R} - \mathbf{r}_1 \vert/c}}{\vert \mathbf{R} - \mathbf{r}_1 \vert} \frac{e^{-2\pi i \nu \vert \mathbf{R} - \mathbf{r}_2 \vert/c}}{\vert \mathbf{R} - \mathbf{r}_2 \vert} dS.
 \end{equation}
-By introducing the unit vector $\mathbf{s} = \mathbf{R}/ \vert \mathbf{R} \vert$ and writing the observed intensity $I_\nu(\mathbf{s}) = \mathcal{E}_\nu(\mathbf{r})^2 \vert \rangle \vert \mathbf{R} \vert^2$ and ignoring terms of order $\vert \mathbf{r}/\mathbf{R} \vert$ we finally arrive at a useful form of $\mathsf{V}_\nu (\mathbf{r}_1, \mathbf{r}_2)$
+By introducing the unit vector $\mathbf{s} = \mathbf{R}/ \vert \mathbf{R} \vert$ and writing the observed intensity $I_\nu(\mathbf{s}) = \rangle \mathcal{E}_\nu(\mathbf{r})^2 \vert \rangle \vert \mathbf{R} \vert^2$ and ignoring terms of order $\vert \mathbf{r}/\mathbf{R} \vert$, such that
+$$
+\vert \mathbf{R} - \mathbf{r} \vert = \sqrt{\vert \mathbf{R} \vert^2 + \vert \mathbf{r} \vert^2 - 2 \mathbf{r} \cdot \mathbf{R}} \approx \vert \mathbf{R} \vert - \frac{\mathbf{r} \cdot \mathbf{R}}{\vert \mathbf{R} \vert},
+$$
+we finally arrive at a useful form of $\mathsf{V}_\nu (\mathbf{r}_1, \mathbf{r}_2)$
 
 \begin{equation}
 \label{eq:int_correlation_final}
