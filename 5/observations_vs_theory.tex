@@ -7,9 +7,10 @@ Recent developments in the modelling of radio waves in a turbulent corona have m
 
 \section{Introduction}
 \label{sec:obsvtheory_intro}
-The computational modelling of radio wave scattering has seen considerable development over the 50-odd years since some of the first simulations by e.g. \cite{Fokker1965} and \cite{Steinberg1971}. The theory for these early works followed from a generalisation of \cite{Chandrasekhar1952}, as was discussed in Chapter \ref{chap:theory}, and was developed to explain the observations of radio burst source size, position, directivity (power received from source in some solid angle compared to power from an isotropic source in the same solid angle) and time profile. These models considered scattering of radio photons off of density inhomogeneities in the solar corona. Notably, each of these scattering events occurred at a small angle. Simulations of this kind fell out of favour by the mid 1980s and remained mostly dormant until \cite{Thejappa2007} investigated the source directivity and time profiles of bursts using a different power spectrum of isotropic density inhomogeneities. In the studies by e.g. \cite{Fokker1965} and \cite{Steinberg1971}, the inhomogeneities were assumed to have a Gaussian power spectrum. However, in the intervening 30 years knowledge of turbulence in the solar corona proved this assumption to be incorrect. \cite{Coles1989} collated the results of numerous experiments to give the following description of the density inhomogeneity power spectrum. At large scales, greater than a few hundred kilometres, the spectrum is well described with a power law index of 11/3, which agrees with the Kolmogorov description of turbulence \citep{Kolmogorov1941}. For scales smaller than these but greater than a few kilometres, the spectrum becomes shallower and is better described with a power law index of $\sim 3$. Finally, on the smallest scales less than a few kilometres the spectrum steepens again. This steepening has been interpreted as the scale at which energy is dissipated by turbulence. \cite{Coles1989} also found that this inner scale increases with heliocentric distance. \cite{Bastian1994} expanded on this description of the density inhomogeneity power spectrum and investigated the angular broadening of radio waves sources at centimetre wavelengths.
+The computational modelling of radio wave scattering has seen considerable development over the 50-odd years since some of the first simulations by e.g. \cite{Fokker1965} and \cite{Steinberg1971}. The theory for these early works followed from a generalisation of \cite{Chandrasekhar1952}, as was discussed in Chapter \ref{chap:theory}, and was developed to explain the observations of radio burst source size, position, directivity (power received from source in some solid angle compared to power from an isotropic source in the same solid angle) and time profile. These models considered scattering of radio photons off of density inhomogeneities in the solar corona. Notably, each of these scattering events occurred at a small angle. Simulations of this kind fell out of favour by the mid 1980s and remained mostly dormant until \cite{Thejappa2007} investigated the source directivity and time profiles of bursts using a different power spectrum of isotropic density inhomogeneities. In the studies by e.g. \cite{Fokker1965} and \cite{Steinberg1971}, the inhomogeneities were assumed to have a Gaussian power spectrum. However, in the intervening 30 years knowledge of turbulence in the solar corona proved this assumption to be incorrect. As mentioned in Chapter \ref{chap:measuring_source_sizes}, \cite{Coles1989} collated the results of numerous experiments to give the following description of the density inhomogeneity power spectrum, shown in Figure \ref{fig:CH_density_spectrum}. At large scales, greater than a few hundred kilometres, the spectrum is well described with a power law index of -5/3, which agrees with the Kolmogorov description of turbulence \citep{Kolmogorov1941}. For scales smaller than these but greater than a few kilometres, the spectrum becomes shallower and is better described with a power law index of $\sim -1$. Finally, on the smallest scales less than a few kilometres the spectrum steepens again. This steepening has been interpreted as the scale at which energy is dissipated by turbulence. \cite{Coles1989} also found that this inner scale increases with heliocentric distance. \cite{Bastian1994} expanded on this description of the density inhomogeneity power spectrum and investigated the angular broadening of radio waves sources at centimetre wavelengths.
 
-Comparisons between the models mentioned above and observations of radio bursts have also developed over time. \cite{Stewart1972} compared the observed positions of fundamental and harmonic emission and related it to the then contemporary scattering models \citep[e.g.][]{Fokker1965,Steinberg1971}. As our knowledge of solar turbulence and the power spectrum of density inhomogeneities improved so too did the instrumentation, allowing for more accurate observations of radio bursts and thus more accurate comparisons. In particular, radio interferometers such as LOFAR and the MWA have the angular resolution to investigate radio emission from both bursts \citep[e.g.][]{Zhang2020} and the quiet sun \citep[e.g.][]{Sharma2020}. Data from space-craft has also been used to directly compare with the model of \cite{Thejappa2007}. \cite{Krupar2018} use observations from STEREO A and B to study the time profiles of type III radio bursts and find that these can be explained from Monte Carlo scattering simulations with a value for the relative r.m.s density fluctuations of $\varepsilon \sim 0.06-0.07$. This was expanded on by \cite{Krupar2020} who used data from Parker Solar Probe and found that $\varepsilon$ decreased with height in the solar wind.
+Comparisons between the models mentioned above and observations of radio bursts have also developed over time. \cite{Stewart1972} compared the observed positions of fundamental and harmonic emission and related it to the then contemporary scattering models \citep[e.g.][]{Fokker1965,Steinberg1971}. As our knowledge of solar turbulence and the power spectrum of density inhomogeneities improved so too did the instrumentation, allowing for more accurate observations of radio bursts and thus more accurate comparisons. In particular, radio interferometers such as LOFAR and the MWA have the angular resolution to investigate radio emission from both bursts \citep[e.g.][]{Zhang2020} and the quiet sun \citep[e.g.][]{Sharma2020}. 
+%Data from space-craft has also been used to directly compare with the model of \cite{Thejappa2007}. \cite{Krupar2018} use observations from STEREO A and B to study the time profiles of type III radio bursts and find that these can be explained from Monte Carlo scattering simulations with a value for the relative r.m.s density fluctuations of $\varepsilon \sim 0.06-0.07$. This was expanded on by \cite{Krupar2020} who used data from Parker Solar Probe and found that $\varepsilon$ decreased with height in the solar wind.
 
 The latest development in the modelling of radio wave scattering is by \cite{Kontar2019}. Rather than using the small scattering angle approximation of previous work, \cite{Kontar2019} build on the work of \cite{Arzner1999} and \cite{Bian2019}. In this approach, the effect of anisotropic density inhomogeneities is treated as photon diffusion in momentum space and the Hamiltonian equations for photon position and momentum can be solved iteratively to trace a photon's path. This allows for a continuous transition from weak to strong scattering, whereas previous work is limited to regime of small angle scattering. \cite{Kontar2019} assume a spherically symmetric corona with an anisotropic distribution of electron density fluctuations, with wavenumber $\mathbf{q}$, such that $q_\parallel$ is parallel to the local radial direction. They perform Monte Carlo simulations of photons emitted from a point source at $\omega = 1.1 \omega_p(R_s)$ via fundamental plasma emission at a distance $R_s$ and an electron density from the \cite{Parker1960} density model of a spherically symmetric corona with constant temperature. In the \cite{Kontar2019} model, the kinematic properties and arrival time of each photon was recorded at a predetermined distance from the burst source where scattering is considered negligible. An image was then created by projecting photons directed towards the observer back to the plane of the source. For a radio burst that would be observed at $\sim 35$~MHz ($f_p = \omega_p/2 \pi \sim 32$~MHz), \cite{Kontar2019} find that value for the root mean square (r.m.s) of density fluctuations $\varepsilon = 0.8$ and an anisotropy factor of $\alpha = 0.3$ are necessary to explain previous observations \citep{Kontar2017}. The effect of source location on the modelled image are also investigated and it is found that sources appear more elongated in solar latitude close to the disk limb than they do at disk centre. \cite{Kontar2019} determine that this effect is less evident when an anisotropy factor of $\alpha = 0.5$ is used.
 
@@ -24,7 +25,7 @@ By measuring the aspect ratio of type III bursts as a function of heliographic l
 \label{obsvtheory_observations}
 During the period 04 April 2019 to 14 April 2019 a type III storm occurred on the Sun. This storm was observed in the frequency range of 20 - 80~MHz using LOFAR in both tied-array and interferometric mode. Interferometric visibilities at a frequency of 30.47~MHz from 12:00 UTC - 13:00 UTC on April 4-8 and 11-14 are used for this study. During this time a large active region (AR) rotated across the solar disk. Figure \ref{fig:ar_evolve} shows the active region with NOAA identification number 12738 revolves onto the disk. The active region is first classified on 08 April 2019 as a unipolar sunspot under the Hale classification and evolves to a bipolar structure by 14 April 2019. Assuming type III radio bursts occur above this active region, it offers a perfect opportunity to study the variation of source size and shape with respect to position. The heliographic longitude of AR 12738 changes by $\sim 80^\circ$ from close to the limb on 08 April 2019 to close to disk centre on 14 April 2019. This is an ideal range to measure variability of source size with respect to longitude.
 
-\begin{figure}[ht]
+\begin{figure}
 \centering
 \includegraphics[width=\columnwidth]{aia193_ar_evolve.png}
 \caption[Evolution of active region 12738 as it revolves around the disk.]{Evolution of active region 12738 as it revolves around the disk. Images are in the 193 \AA \ passband of AIA showing hot material in the solar corona. It is expected that type III bursts should be centred above the active region. The left panel shows the Sun on the first day of the observation where active region 12738 has not yet rotated onto disk. The middle panel shows the active region on the solar limb and is the first day where the active region is classified. The right panel shows the active region closer to the centre of the disk. In both the middle and right panel active region 12738 is marked with a white cross.}
@@ -33,19 +34,19 @@ During the period 04 April 2019 to 14 April 2019 a type III storm occurred on th
 
 \section{Method}
 \label{sec:obsvtheory_method}
-The size and position of 29 type III radio bursts over the period of 04 April 2019 to 14 April 2019 were determined by directly fitting their interferometric visibilities. The bursts were identified in LOFAR beamformed observations and their peak time determined using an automatic peak finding algorithm. Peaks are found from the spectrum by first averaging over 16 subbands around 30~MHz and smoothing the resulting time series. Then the \texttt{scipy} Python library \citep{Virtanen2020} is used to determine the peaks by comparing to neighbouring values. This list of peaks is filtered so that only peaks greater than the background plus five times the standard deviation are returned.
+The size and position of 29 type III radio bursts over the period of 04 April 2019 to 14 April 2019 were determined by directly fitting their interferometric visibilities. The bursts were identified in LOFAR beamformed observations and their peak time determined using an automatic peak finding algorithm. Peaks are found from the spectrum by first averaging over 16 subbands around 30~MHz, in order to match the spectral resolution of the interferometric observation, and smoothing the resulting time series. Then the \texttt{scipy} Python library \citep{Virtanen2020} is used to determine the peaks by comparing to neighbouring values. This list of peaks is filtered so that only peaks greater than the background plus five times the standard deviation are returned.
 Figure \ref{fig:dynamic_spectrum_070419} shows the automatically identified bursts at 30~MHz. In total, 320 bursts were identified in this way. 
 
-\begin{figure}[ht]
+\begin{figure}
 \centering
 \includegraphics[width=\columnwidth]{peak_times_30MHz_wlightcurve_2019-04-07T120000_130000.png}
 \caption[Type III storm observed on 07 April 2019.]{Type III storm observed on 07 April 2019. The top panel is the light curve at 30~MHz and the red dots indicate the detected peaks. The maximum peak is marked with a white cross. The bottom panel shows the dynamic spectrum of the storm. The white dots indicate the bursts identified by an automatic peak finding algorithm, the red cross indicates the brightest burst.}
 \label{fig:dynamic_spectrum_070419}
 \end{figure}
 
-Unfortunately, due to the strength of some of the radio bursts, the calibration of interferometric data did not converge for $\sim 90 \%$ of them. This occurs when flux from the source is detected in the side lobes of the beam observing the calibrator. Poor calibration is identified by manual inspection of the calibrated visibilities. An example of burst visbilities with good and bad calibration solutions is shown in Figure \ref{fig:cal_comp}a and Figure \ref{fig:cal_comp}b respectively. Calibration was successful for 29 bursts.  
+Unfortunately, due to the intensity of many radio bursts exceeding $\sim 500 kJy$, the calibration of interferometric data did not converge for $\sim 90 \%$ of them. This occurs when flux from the source is detected in the side lobes of the beam observing the calibrator. An example of burst visbilities with good and bad calibration solutions is shown in Figure \ref{fig:cal_comp}a and Figure \ref{fig:cal_comp}b respectively. 
 
-\begin{figure}[ht]
+\begin{figure}
 \centering
 \includegraphics[width=\columnwidth]{cal_comp_vis.png}
 \caption[Comparison of type III burst visibilities with good and bad calibration.]{Comparison of type III burst visibilities with good and bad calibration. Plotted are the amplitude of the burst visibilities with respect to angular scale in arcmin for a burst where calibtration did (a) and did not (b) converge. The red lines are the 2D Gaussian fitted to the visibilities.}
@@ -83,7 +84,7 @@ where $a$ is an adjustable parameter set to 2 by \cite{Goodman2010}. The probabi
 q = \min \left(1, Z^{N-1} \frac{p(x^\prime)}{p(x_k^{(t)})}\right),
 \end{equation} 
 where $N$ is the dimension of the parameter space. This process is then repeated in series for the remaining walkers in the ensemble.
-The ensemble of walkers for each parameter in the 2D Gaussian which is being fit are show in Figure \ref{fig:MCMCchain}. Each black line represents a walker's individual Markov Chain and the cyan line is the mean of the ensemble. Here a ``burn-in" time of 500 steps was used to fine-tune the MCMC. 
+The ensemble of walkers for each parameter in the 2D Gaussian which is being fit are show in Figure \ref{fig:MCMCchain}. Each black line represents a walker's individual Markov Chain and the cyan line is the mean of the ensemble. Here a ``burn-in" time of 500 steps was used to allow the walkers to explore the parameter space and ``forget" their initial position. This is a typical way to fine-tune an MCMC. 
 \begin{figure}
 \centering
 \includegraphics[width=\columnwidth]{chain2.png}
@@ -99,6 +100,8 @@ Once the MCMC has run for enough time to generate independent samples of the pos
 \caption[A corner plot of parameter histograms determined by MCMC algorithm.]{The corner plot of parameter histograms determined by MCMC algorithm. This shows the one (along the diagonal) and two dimensional projections of the sampled probability function. This can be used to determine the covariances between different parameters. The parameter labels are as described in the caption to Figure \ref{fig:MCMCchain}.}
 \label{fig:MCMCcorner}
 \end{figure}
+
+The corner plots of all 320 identified bursts were manually inspected to identify cases where calibration succeeded. Any that did not show gaussian-like distributions such as in Figure \ref{fig:MCMCcorner} were deemed to have failed. Calibration was successful for 29 bursts.  
 
 %As well as determining the source shape and position at its peak, the area of the source over its duration was also measured. This was done by fitting a straight line to the source area over the duration of the burst, which was estimated to be 1 second before its peak and 2 seconds afterwards.
 The magnetic field structure around AR 12738 was determined by using a Potential Field Source Surface (PFSS) model using the Python library \texttt{pfsspy} \citep{Stansby2020}. This library solves the equations for magnetic field assuming there is no electrical field. Boundary conditions for the magnetic field are imposed from a spherical shell starting at the solar surface and ending at some configurable outer radius, 2.5 R$_\odot$ in this case.
@@ -134,43 +137,45 @@ There is no trend in the aspect ratio of the bursts, which is expected to be a l
 
 %\begin{landscape}
 \begin{table}
+
 \centering
 \caption[Table of burst parameters from direct fitting to interferometric visibilities.]{Table of fitted burst parameters for each of the 29 bursts described in Section \ref{sec:obsvtheory_method} fitted with a 2D Gaussian in visibility space. The units in each column are given in brackets. Here $I_0$ is the maximum intensity of the burst, $x_0$ and $y_0$ are the x and y helioprojective coordinates of the burst, FWHM\textsubscript{x} and FWHM\textsubscript{y} are the burst sizes along the minor and major axes and $\theta$ is the position angle of the fitted Gaussian.}
 \label{tab:dataset}
-\begin{tabular}{lcccccc p{\columnwidth}}
+\sisetup{separate-uncertainty}
+\begin{tabular}{lS[table-format=6.0(4)]S[table-format=+4.0(1)]S[table-format=+3.0(1)]S[table-format=2.1(1)]S[table-format=2.1(1)]S[table-format=+3.0(2)]}%p{\columnwidth}}
 \toprule
-Burst Time & $I_0$  & $x_0$ & $y_0$  & FWHM\textsubscript{x} & FWHM\textsubscript{y} & $\theta$ \\
- 2019-04 & (Jy) & (arcsec) & (arcsec) & (arcmin) & (arcmin) &  (deg) \\
+Burst Time & {$I_0$}  & {$x_0$} & {$y_0$}  & {FWHM\textsubscript{x}} & {FWHM\textsubscript{y}} & {$\theta$} \\
+ 2019-04 & {(Jy)} & {(arcsec)} & {(arcsec)} & {(arcmin)} & {(arcmin)} &  {(deg)} \\
 \midrule
-05T12:08:08 &  $ 90300 \pm 1310$ & $-1773 \pm 6$  & $  214 \pm 8$  &  $  8.8 \pm 0.3$ &  $ 17.58 \pm 0.6$ & $ -27 \pm 2$ \\
-07T12:02:29 &  $ 83800 \pm  678$ & $-1924 \pm 3$  & $  412 \pm 4$  &  $ 10.3 \pm 0.2$ &  $ 14.48 \pm 0.4$ & $ -55 \pm 2$ \\
-07T12:04:22 &  $108000 \pm 1110$ & $-1990 \pm 5$  & $  372 \pm 5$  &  $ 11.3 \pm 0.3$ &  $ 14.52 \pm 0.5$ & $ -67 \pm 3$ \\
-07T12:15:08 &  $160000 \pm 1100$ & $-1677 \pm 3$  & $ 1229 \pm 4$  &  $ 12.5 \pm 0.2$ &  $ 15.59 \pm 0.3$ & $ -44 \pm 2$ \\
-07T12:31:00 &  $120000 \pm 1010$ & $-1897 \pm 4$  & $  165 \pm 4$  &  $ 10.0 \pm 0.2$ &  $ 14.02 \pm 0.4$ & $ -56 \pm 2$ \\
-07T12:51:39 &  $ 47900 \pm  505$ & $-1979 \pm 5$  & $  420 \pm 5$  &  $ 12.2 \pm 0.3$ &  $ 14.72 \pm 0.5$ & $ -67 \pm 4$ \\
-08T12:00:16 &  $117000 \pm 1770$ & $-1310 \pm 7$  & $ 1021 \pm 7$  &  $ 11.2 \pm 0.6$ &  $ 16.93 \pm 1.4$ & $ -64 \pm 78$ \\
-08T12:06:41 &  $316000 \pm 3380$ & $-1580 \pm 6$  & $  819 \pm 6$  &  $ 13.1 \pm 0.3$ &  $ 18.67 \pm 0.5$ & $ -66 \pm 2$ \\
-08T12:08:37 &  $ 60700 \pm  442$ & $-1617 \pm 3$  & $  841 \pm 4$  &  $ 11.3 \pm 0.2$ &  $ 14.28 \pm 0.3$ & $ -50 \pm 3$ \\
-08T12:22:34 &  $171000 \pm 1530$ & $-1381 \pm 5$  & $  643 \pm 5$  &  $ 13.6 \pm 0.2$ &  $ 18.40 \pm 0.4$ & $ -61 \pm 2$ \\
-08T12:26:54 &  $111000 \pm  800$ & $-1479 \pm 4$  & $  339 \pm 4$  &  $ 11.9 \pm 0.2$ &  $ 18.69 \pm 0.3$ & $ -58 \pm 1$ \\
-08T12:29:00 &  $ 77400 \pm  862$ & $-1341 \pm 6$  & $  534 \pm 6$  &  $ 13.3 \pm 0.3$ &  $ 18.65 \pm 0.6$ & $ -59 \pm 1$ \\
-08T12:34:57 &  $177000 \pm 1900$ & $ -935 \pm 5$  & $  947 \pm 5$  &  $ 12.1 \pm 0.3$ &  $ 17.18 \pm 0.5$ & $ -72 \pm 2$ \\
-08T12:35:35 &  $278000 \pm 4130$ & $ -903 \pm 8$  & $  931 \pm 8$  &  $ 12.4 \pm 0.4$ &  $ 18.46 \pm 0.7$ & $ -62 \pm 3$ \\
-08T12:43:00 &  $120000 \pm 1180$ & $-1653 \pm 5$  & $  878 \pm 5$  &  $ 12.4 \pm 0.3$ &  $ 16.18 \pm 0.5$ & $ -60 \pm 1$ \\
-08T12:47:07 &  $160000 \pm 1500$ & $-1382 \pm 5$  & $  723 \pm 5$  &  $ 13.6 \pm 0.3$ &  $ 18.22 \pm 0.5$ & $ -62 \pm 2$ \\
-08T12:48:49 &  $300000 \pm 2630$ & $-1305 \pm 4$  & $  648 \pm 5$  &  $ 12.8 \pm 0.2$ &  $ 16.99 \pm 0.4$ & $ -62 \pm 2$ \\
-08T12:50:27 &  $130000 \pm 2080$ & $-1332 \pm 9$  & $  924 \pm 9$  &  $ 13.6 \pm 0.5$ &  $ 19.59 \pm 0.8$ & $ -90 \pm 88$ \\
-08T12:54:35 &  $207000 \pm 1370$ & $-1485 \pm 4$  & $  898 \pm 4$  &  $ 13.6 \pm 0.2$ &  $ 17.91 \pm 0.3$ & $ -72 \pm 2$ \\
-08T12:59:25 &  $177000 \pm 1380$ & $-1473 \pm 4$  & $  769 \pm 4$  &  $ 12.9 \pm 0.2$ &  $ 15.54 \pm 0.4$ & $ -66 \pm 3$ \\
-11T12:56:27 &  $216000 \pm 1510$ & $-1222 \pm 3$  & $ -106 \pm 4$  &  $ 13.3 \pm 0.2$ &  $ 17.15 \pm 0.3$ & $  0  \pm 2$ \\
-12T12:00:18 &  $180000 \pm 2350$ & $ -363 \pm 6$  & $  501 \pm 6$  &  $ 11.4 \pm 0.4$ &  $ 14.77 \pm 0.6$ & $ -87 \pm 2$ \\
-12T12:04:55 &  $131000 \pm 1550$ & $    3 \pm 6$  & $  400 \pm 6$  &  $ 12.3 \pm 0.3$ &  $ 17.88 \pm 0.6$ & $-102 \pm 2$ \\
-12T12:14:51 &  $ 43300 \pm  549$ & $-1439 \pm 6$  & $ -549 \pm 6$  &  $ 12.0 \pm 0.4$ &  $ 16.08 \pm 0.6$ & $ -83 \pm 3$ \\
-12T12:39:32 &  $ 86000 \pm  918$ & $-1040 \pm 5$  & $ -147 \pm 5$  &  $ 11.0 \pm 0.3$ &  $ 15.73 \pm 0.5$ & $ -91 \pm 1$ \\
-12T12:49:34 &  $ 74800 \pm  855$ & $ -889 \pm 5$  & $ -202 \pm 6$  &  $ 12.6 \pm 0.3$ &  $ 15.84 \pm 0.5$ & $ -80 \pm 4$ \\
-12T12:51:54 &  $133000 \pm 1340$ & $ -805 \pm 5$  & $ -338 \pm 5$  &  $ 11.7 \pm 0.3$ &  $ 16.05 \pm 0.5$ & $ -82 \pm 3$ \\
-12T12:53:51 &  $128000 \pm 1000$ & $ -688 \pm 4$  & $ -436 \pm 4$  &  $ 10.3 \pm 0.2$ &  $ 14.56 \pm 0.4$ & $ -83 \pm 2$ \\
-13T12:30:31 &  $101000 \pm 1210$ & $ -162 \pm 4$  & $ -766 \pm 5$  &  $  7.2 \pm 0.4$ &  $  8.98 \pm 0.7$ & $ -76 \pm 84$ \\
+05T12:08:08 &   90300 \pm 1310 & -1773 \pm 6  &   214 \pm 8  &    8.8 \pm 0.3 &   17.6 \pm 0.6 &  -27 \pm 2 \\
+07T12:02:29 &   83800 \pm  678 & -1924 \pm 3  &   412 \pm 4  &   10.3 \pm 0.2 &   14.5 \pm 0.4 &  -55 \pm 2 \\
+07T12:04:22 &  108000 \pm 1110 & -1990 \pm 5  &   372 \pm 5  &   11.3 \pm 0.3 &   14.5 \pm 0.5 &  -67 \pm 3 \\
+07T12:15:08 &  160000 \pm 1100 & -1677 \pm 3  &  1229 \pm 4  &   12.5 \pm 0.2 &   15.6 \pm 0.3 &  -44 \pm 2 \\
+07T12:31:00 &  120000 \pm 1010 & -1897 \pm 4  &   165 \pm 4  &   10.0 \pm 0.2 &   14.0 \pm 0.4 &  -56 \pm 2 \\
+07T12:51:39 &   47900 \pm  505 & -1979 \pm 5  &   420 \pm 5  &   12.2 \pm 0.3 &   14.7 \pm 0.5 &  -67 \pm 4 \\
+08T12:00:16 &  117000 \pm 1770 & -1310 \pm 7  &  1021 \pm 7  &   11.2 \pm 0.6 &   16.9 \pm 1.4 &  -64 \pm 78 \\
+08T12:06:41 &  316000 \pm 3380 & -1580 \pm 6  &   819 \pm 6  &   13.1 \pm 0.3 &   18.7 \pm 0.5 &  -66 \pm 2 \\
+08T12:08:37 &   60700 \pm  442 & -1617 \pm 3  &   841 \pm 4  &   11.3 \pm 0.2 &   14.3 \pm 0.3 &  -50 \pm 3 \\
+08T12:22:34 &  171000 \pm 1530 & -1381 \pm 5  &   643 \pm 5  &   13.6 \pm 0.2 &   18.4 \pm 0.4 &  -61 \pm 2 \\
+08T12:26:54 &  111000 \pm  800 & -1479 \pm 4  &   339 \pm 4  &   11.9 \pm 0.2 &   18.7 \pm 0.3 &  -58 \pm 1 \\
+08T12:29:00 &   77400 \pm  862 & -1341 \pm 6  &   534 \pm 6  &   13.3 \pm 0.3 &   18.7 \pm 0.6 &  -59 \pm 1 \\
+08T12:34:57 &  177000 \pm 1900 &  -935 \pm 5  &   947 \pm 5  &   12.1 \pm 0.3 &   17.2 \pm 0.5 &  -72 \pm 2 \\
+08T12:35:35 &  278000 \pm 4130 &  -903 \pm 8  &   931 \pm 8  &   12.4 \pm 0.4 &   18.5 \pm 0.7 &  -62 \pm 3 \\
+08T12:43:00 &  120000 \pm 1180 & -1653 \pm 5  &   878 \pm 5  &   12.4 \pm 0.3 &   16.2 \pm 0.5 &  -60 \pm 1 \\
+08T12:47:07 &  160000 \pm 1500 & -1382 \pm 5  &   723 \pm 5  &   13.6 \pm 0.3 &   18.2 \pm 0.5 &  -62 \pm 2 \\
+08T12:48:49 &  300000 \pm 2630 & -1305 \pm 4  &   648 \pm 5  &   12.8 \pm 0.2 &   17.0 \pm 0.4 &  -62 \pm 2 \\
+08T12:50:27 &  130000 \pm 2080 & -1332 \pm 9  &   924 \pm 9  &   13.6 \pm 0.5 &   19.6 \pm 0.8 &  -90 \pm 88 \\
+08T12:54:35 &  207000 \pm 1370 & -1485 \pm 4  &   898 \pm 4  &   13.6 \pm 0.2 &   17.9 \pm 0.3 &  -72 \pm 2 \\
+08T12:59:25 &  177000 \pm 1380 & -1473 \pm 4  &   769 \pm 4  &   12.9 \pm 0.2 &   15.5 \pm 0.4 &  -66 \pm 3 \\
+11T12:56:27 &  216000 \pm 1510 & -1222 \pm 3  &  -106 \pm 4  &   13.3 \pm 0.2 &   17.2 \pm 0.3 &   0  \pm 2 \\
+12T12:00:18 &  180000 \pm 2350 &  -363 \pm 6  &   501 \pm 6  &   11.4 \pm 0.4 &   14.8 \pm 0.6 &  -87 \pm 2 \\
+12T12:04:55 &  131000 \pm 1550 &     3 \pm 6  &   400 \pm 6  &   12.3 \pm 0.3 &   17.9 \pm 0.6 & -102 \pm 2 \\
+12T12:14:51 &   43300 \pm  549 & -1439 \pm 6  &  -549 \pm 6  &   12.0 \pm 0.4 &   16.1 \pm 0.6 &  -83 \pm 3 \\
+12T12:39:32 &   86000 \pm  918 & -1040 \pm 5  &  -147 \pm 5  &   11.0 \pm 0.3 &   15.7 \pm 0.5 &  -91 \pm 1 \\
+12T12:49:34 &   74800 \pm  855 &  -889 \pm 5  &  -202 \pm 6  &   12.6 \pm 0.3 &   15.8 \pm 0.5 &  -80 \pm 4 \\
+12T12:51:54 &  133000 \pm 1340 &  -805 \pm 5  &  -338 \pm 5  &   11.7 \pm 0.3 &   16.1 \pm 0.5 &  -82 \pm 3 \\
+12T12:53:51 &  128000 \pm 1000 &  -688 \pm 4  &  -436 \pm 4  &   10.3 \pm 0.2 &   14.6 \pm 0.4 &  -83 \pm 2 \\
+13T12:30:31 &  101000 \pm 1210 &  -162 \pm 4  &  -766 \pm 5  &    7.2 \pm 0.4 &    9.0 \pm 0.7 &  -76 \pm 84 \\
 \bottomrule
 
 \end{tabular}

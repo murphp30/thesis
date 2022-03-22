@@ -95,7 +95,7 @@ Figure \ref{fig:uv_fit}c shows the increase in the amplitude of recorded visibil
 \begin{figure}
     \centering
     \includegraphics[width=0.5\columnwidth]{uv_fit_remote_20200826.png}
-    \caption[Results of directly fitting LOFAR visibilities.]{\textbf{a)} Amplitudes of visibilities in the \textit{uv} plane for LOFAR observation. Background colour map shows a Gaussian fit. Red ellipse shows the FWHM of the normalised amplitude. \textbf{b)} Visibility phase in the \textit{uv} plane. Background colour map shows fitted phase angle. \textbf{c)} Visibility amplitudes received from different angular scales. Red curves indicate the FWHM of the semi-major and semi-minor axes of the fitted Gaussian.}
+    \caption[Results of directly fitting LOFAR visibilities.]{Modelled visibilities determined from a direct fit to observed interferometric visibilities. \textbf{a)} Amplitudes of visibilities in the \textit{uv} plane for LOFAR observation. Background colour map shows a Gaussian fit. Red ellipse shows the FWHM of the normalised amplitude. \textbf{b)} Visibility phase in the \textit{uv} plane. Background colour map shows fitted phase angle. The fringe spacing is indicative of the distance of the source from the centre of the image while their orientation gives information on the source position. \textbf{c)} Visibility amplitudes received from different angular scales. Red curves indicate the FWHM of the semi-major and semi-minor axes of the fitted Gaussian.}
     \label{fig:uv_fit}
 \end{figure}
 
@@ -112,7 +112,7 @@ The visibility fit reveals a source with a FWHM in real space of 18.8~arcmin $\p
 \subsection{Type IIIb striae}
 In the above I determined the source size and position using a direct modelling of LOFAR visibility observations. This provides us with an opportunity to compare the observed source size to its actual size, which can be estimated from spectroscopic observations, similar to the method of \cite{Kontar2017}.
 
-To estimate the source size from spectroscopic measurements, I relate the FWHM of the frequency of the striation to its vertical extent in the solar corona $\Delta r {\sim} 2L \left(\Delta f/f\right)$ where $L$ is the characteristic density scale height \citep{Kontar2017}.
+To estimate the source size from spectroscopic measurements, I relate the FWHM of the frequency of the striation to its vertical extent in the solar corona $\Delta r {\sim} 2L \left(\Delta f/f\right)$ where $L$ is the characteristic density scale height \citep{Kontar2017} determined using a \cite{Newkirk1961} density model. Assuming emission occurs at the distance where the plasma frequency is $\sim 35$~MHz, this gives $L \approx 6200$~km.
 A single striation was manually identified at 34.76~MHz from the dynamic spectrum. The time of maximum intensity for the burst was found and a vertical frequency slice was obtained from which $\Delta f/f$ was calculated. The individual striation, the centre of which is indicated by a white cross in the inset panel of Figure \ref{fig:context}b, was fit with a Gaussian. The value for $\Delta f$ of the striation was found from the FWHM of the fitted peak was found to be $\Delta f \sim 0.2$~MHz. The ratio of frequency to bandwidth for the striation was found to be $\Delta f/f = 0.006$, leading to an estimated source size of $3.18$~arcsec. 
 Similar to \cite{Kontar2017}, this is far smaller than the source size observed from the visibility fit.
 
