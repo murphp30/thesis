@@ -32,7 +32,7 @@ The most distinct feature of the photosphere in white light are sunspots. Sunspo
 %This is the point at which the optical depth for visible light photons is 1 and their mean free path is much greater than the distance between scattering centres on the solar surface. 
 
 Above the photosphere the temperature and density profile change dramatically, see Figure \ref{fig:corona_temp}, throughout the remaining layers of the Sun's atmosphere; the chromosphere, the transition region and the corona. 
-\begin{figure}[ht]
+\begin{figure}
     \centering
     \includegraphics[width=\columnwidth]{Images/Corona_temp.png}
     \caption[Model of electron density and temperature with height in the solar atmosphere.]{Model of electron density and temperature with height in the solar atmosphere. The x axis shows height above the chromosphere in kilometres while the y axes show particle density in cm$^{-3}$ and temperature in Kelvin. The chromosphere begins $\sim 500$~km above the photosphere. The region around 2000 km showing a sharp rise in temperature and sharp fall in electron density is known as the transition region. Above this height plasma becomes fully ionised and is known as the corona. Image from \cite{Aschwanden2004}.}
@@ -65,22 +65,37 @@ The electron density in the corona ranges from $10^{9} \mbox{ cm}^{-3}$ at the b
 
 Observing the white light corona is done with a number of ground-based and space-based instruments called coronographs, that emulate the effect of a total eclipse. The Large Angle and Spectrometric Coronagraph \citep[LASCO;][]{Brueckner1995} on board the Solar and Heliospheric Observatory (SOHO) is one such instrument and allows the corona to be observed from distances of 2-32 R$_\odot$. The corona is also observed in extreme ultraviolet (EUV) lines, soft X-rays and at radio wavelengths. Observations at various wavelengths show a plethora of structure in the corona both on disk and on the limb that exist on varying time scales of a few minutes to a number of days. All particle acceleration events that produce radio emission of interest to this thesis occur in the solar corona. Figure \ref{fig:aia_quad} shows the corona and other layers of the solar atmosphere observed with the Atmospheric Imaging Assembly \citep[AIA;][]{Lemen2012}.
 
+The sun observed at low radio frequencies looks different to that in EUV images, mostly due to the reduced spatial resolution of radio images. However, some key features of the solar corona are still seen in radio image, as depicted in Figure \ref{fig:qs_radio}. Here the contours show radio emission between 140 and 160~MHz and are overlaid on a 193{\AA} image taken with AIA. The peak in the contours is seen to overlap with a small active region while coronal holes show no radio emission.
+
 The high temperature of the corona remains one of the greatest mysteries in all of solar physics. Energetic events in the corona such as solar flares and CMEs, described in \ref{subsec:sf} and \ref{subsec:CMEs}, are observed across the electromagnetic spectrum. They are studied in order to understand how particles are accelerated, how energy is released and ultimately, why the corona has such an unaccountably high temperature.
 
 % have a diagnostic in radio spectra. This PhD focuses on studying these radio diagnostics at their highest temporal and spatial resolutions to date.
-\begin{figure}[ht]
+\begin{figure}
 \centering
 \includegraphics[width=0.8\columnwidth]{pm_aia_quad.png}
-\caption[The solar atmosphere at different wavelengths.]{The Sun observed with AIA in four different wavelengths. Panel a shows the photosphere at 4500{\AA}, a group of sunspots is visible towards the southwestern limb of the sun. Panel b shows the chromosphere at 1600{\AA} and exhibits the chromospheric network. Panel c shows the upper chromosphere and transition region at 304{\AA}. Panel d shows the upper corona at 211{\AA} the active region is noticeable as the bright region in the same location as the sunspot group as in panel a.}
+\caption[The solar atmosphere at different wavelengths.]{The Sun observed with AIA in four different wavelengths and thus in four different layers of its atmosphere. Panel a shows the photosphere at 4500{\AA}, a group of sunspots is visible towards the southwestern limb of the sun. Panel b shows the chromosphere at 1600{\AA} and exhibits the chromospheric network. Panel c shows the upper chromosphere and transition region at 304{\AA}. Panel d shows the upper corona at 211{\AA} the active region is noticeable as the bright region in the same location as the sunspot group as in panel a.}
 \label{fig:aia_quad}
 \end{figure}
 
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{Aoife_quiet_radio_sun.jpg}
+\caption[The quiet Sun at low frequency radio wavelengths.]{The solar corona observed at low radio frequencies overlayed on a 193 {\AA} AIA image of the corona. The contours show the radio emission tracing out features in the solar corona, e.g. and intense peak above an active region and no emission around coronal holes. Image from \cite{Ryan2021}.}
+\label{fig:qs_radio}
+\end{figure}
+\subsection{The Plasma Beta Parameter}
+The plasma beta parameter is effectively a ratio of pressure due to the plasma and the magnetic field pressure. It is given, in SI units, as
+\begin{equation}
+\label{eq:pbeta}
+\beta = \frac{nk_BT}{B^2/2\mu_0}
+\end{equation}
+where $n$ is the electron density, $k_B$ is the Boltzmann constant, $T$ is the plasma temperature, $B$ is the magnetic field strength and $\mu_0$ is the permeability of free space. Using values of $n$ and $T$ from Figure \ref{fig:corona_temp} and typical values for the magnetic field strength in the chromosphere ($\sim 100$~G) and corona ($\sim 10$~G) we can see that the value for $\beta$ changes from values $>1$ in the chromosphere to $<1$ in the corona. In low $\beta$ environments the magnetic pressure dominates and plasma is confined along magnetic field lines. It is for this reason that the magnetic field structure of the solar corona gives rise to a number of energetic phenomena such as solar flares and coronal mass ejections.
 \section{Solar Flares}
 \label{subsec:sf}
 Solar flares are massive releases of magnetic energy commonly believed to be due to a reconfiguration in the complicated magnetic field structure in an active region.  They are some of the most energetic events in the solar system, releasing $\sim 10^{25}$ J of energy over a matter of minutes. Flares are observed across the electromagnetic spectrum from radio waves to $\gamma$ rays with energies $> 10$ MeV. They are classified by the amount of X-ray flux (W m$^{-2}$) detected by the Geostationary Operational Environmental Satellite (GOES) 1-8 {\AA} band on a logarithmic scale as being A, B, C, M or X class with A being the lowest flux ($10^{-8} \mbox{ W m}^{-2}$) and X the highest ($10^{-4} \mbox{ W m}^{-2}$). Each class is further subdivided into a linear scale.
 A timeseries of X-ray flux from a solar flare is often called a lightcurve and has three characteristic phases; a pre-flare phase which shows X-ray flux associated with the active region where the flare occurs, an impulsive phase showing a sharp rise in X-ray flux corresponding to accelerated particles colliding with the solar surface, and a gradual decay phase where plasma heated by the flare gradually cools back to its pre-flare state. Figure \ref{fig:GOES_Xclass} shows a GOES light curve of the X9 class flare that occurred on 10 September 2017 and the three flare phases described above.
 
-\begin{figure}[ht]
+\begin{figure}
     \centering
     \includegraphics[width=\columnwidth]{Images/GOES_Xclass.png}
     \caption[GOES lightcurve for X9 class flare on 10 September 2017.]{The GOES lightcurve of the X9 flare that occurred on 10 September 2017. The x axis indicates the time of day on 10 September 2017 while the y axes show the X-ray flux in Wm$^{-2}$ and the flare classification. The red curve shows the 1-8 {\AA} channel by which the flare is classified while the blue curve shows the 0.5-4 {\AA} band. The three characteristic phases of a solar flare are clearly displayed here. The pre-flare phase before $\sim$ 16:00 UTC, the impulsive phase indicated by the sharp rise in flux and the gradual decay phase where X-ray flux gradually returns to the pre-flare level.}
@@ -92,10 +107,10 @@ During solar flares, magnetic structures known as coronal loops fill with hot pl
 \label{subsec:CMEs}
 In certain magnetic reconnection events, plasma suspended in a magnetic flux rope erupts from the corona into the heliosphere, the volume around the Sun where the interplanetary medium is dominated by particles flowing outward from the Sun. These eruption events are known as coronal mass ejections and accelerate 10$^{15}$ g of charged particles at typical speeds of up to $\sim 2500 \mbox{ km s}^{-1}$ \citep{Gopalswamy2000}. A ``textbook" CME structure consists of a bright front that surrounds a dark cavity and a bright central core. CMEs are observed using coronographs as they are much fainter than the solar disk. An example of a CME observed using the LASCO C2 corona with a field of view from 1.5 R$_\odot$ to 6 R$_\odot$ can be seen in Figure \ref{fig:CME}. Ejected material from a CME can interact with the Earth's magnetosphere and are known to have caused adverse effects including satellite communication disruption, radio blackouts, wide spread power outages and large inaccuracies in GPS postions \citep{Eastwood2017}. CMEs can travel faster than local Alfv\'{e}n speed in the corona leading to a shock which can accelerate particles. 
 
-\begin{figure}[ht]
+\begin{figure}
     \centering
     \includegraphics[width=0.75\columnwidth]{Images/LASCO_C2_CME.jpg}
-    \caption[CME observed with the LASCO C2 coronograph on 27 February 2000.]{A coronal mass ejection (CME) observed with the LASCO C2 coronograph on 27 February 2000. The area covered by the coronograph is shown in the red disk in the centre of the image and the white circle represents the solar disk. The bright feature in the top of the image is the CME while less bright structures known as streamers are also seen.  }
+    \caption[CME observed with the LASCO C2 coronograph on 27 February 2000.]{A coronal mass ejection (CME) observed with the LASCO C2 coronograph on 27 February 2000. The area covered by the coronograph is shown in the red disk in the centre of the image and the white circle represents the solar disk. The bright feature in the top of the image is the CME while less bright structures known as streamers are also seen.}
     \label{fig:CME}
 \end{figure}
 
@@ -107,7 +122,7 @@ Since then the field of solar radio astronomy has flourished and significant adv
 Solar radio emission often comes in the form of bursts of varying time scales. These were initially classified into three types by \cite{Wild1950b} with a fourth and fifth type being discovered by \cite{Boischot1957} and \cite{Wild1959} respectively. A wealth of other fine structure radio bursts are also observed, predominantly found in radio storms such as S bursts, drift pairs and stria \citep{McConnell1980,Melrose1982,NelsonandMelrose1985}. 
 The fine structure of these bursts can often reveal information about small-scale turbulence in the corona \citep{Reid2021}.
 Figure \ref{fig:burst_cartoon} shows a schematic of the five ``classic" types of solar radio burst. A brief description of some solar radio phenomena is given below.
-\begin{figure}[ht]
+\begin{figure}
     \centering
     \includegraphics[width=0.75\columnwidth]{Images/Burst_cartoon.jpg}
     \caption[Cartoon of type I-V radio bursts.]{A cartoon of type I-V radio bursts. The x axis shows the time scale of the various bursts which can range from less than 1 minute to greater than 10 minutes. The y axis shows the typical frequency range of the bursts. The different drift rates of the different burst types are apparent. Image from \cite{Cliver2009}.}
@@ -152,7 +167,7 @@ Type III bursts are possibly the most useful radio burst for studying properties
 where $N_e$ is the number density of electrons, $m_e$ is the electron mass, $e$ is the electron charge and $\varepsilon_0$ is the permittivity of free space. A more detailed description of the plasma emission process is given in Section \ref{sec:plasma_emission}.
 Although Eq. \ref{eq:1} is relatively simple, it contains an important relationship in plasma physics. Namely, the plasma frequency is proportional to the square root of the electron density. This means that plasmas at higher electron densities will oscillate at higher frequencies than those of lower densities. The drift in type III bursts, which are emitted at $\omega_p$, is therefore an indication of the emission source moving from an area of high electron density to low density, i.e. from the lower to the upper corona. Using a model of electron density in the corona such as the \cite{Newkirk1961} model, it can be inferred that the exciter of type III bursts has a speed of $\sim 0.3$~c.
 
-\begin{figure}[ht]
+\begin{figure}
     \centering
     \includegraphics[width=0.75\columnwidth]{Images/Pietro_typeIII.png}
     \caption[A number of type III bursts observed by \cite{Zucca2012} on 21 October 2011.]{A number of type III bursts observed by \cite{Zucca2012} on 21 October 2011. The x axis gives the time on 21 October 2011 while the y axis shows the frequency in MHz. A number of type III bursts extend to frequencies below 200~MHz. A type II burst can be seen between 140 and 330~MHz later in the day.}
@@ -168,10 +183,10 @@ A typical type III burst is produced when an electron beam travels along a magne
 
 \paragraph{Type IIIb bursts.}
 
-\begin{figure}[ht]
+\begin{figure}
 \centering
 \includegraphics[width=0.5\columnwidth]{typeIIIbKontar.png}
-\caption[The type IIIb radio burst from \cite{Kontar2017}.]{A type IIIb radio burst on 16 April 2015 analysed by \cite{Kontar2017}. Panel a shows the full duration of the type IIIb. Panel b is a zoom in of the 3 second wide box in panel a.}
+\caption[The type IIIb radio burst from \cite{Kontar2017}.]{A type IIIb radio burst on 16 April 2015 analysed by \cite{Kontar2017}. Here the x axes show the time and the y axes show frequency in MHz. The colourbars denote the flux of the radio burst measured in solar flux units (1 sfu = $10^4$ Jy). Panel a shows the full duration of the type IIIb. Panel b is a zoom in of the 3 second wide box in panel a.}
 \label{fig:typeIIIbKontar}
 \end{figure}
 

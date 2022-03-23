@@ -13,7 +13,7 @@ The LOw Frequency ARray \citep[LOFAR;][]{VanHaarlem2013} is a radio interferomet
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\columnwidth]{LOFAR_Superterp.jpg}
-\caption[The LOFAR superterp.]{A dense collection of LOFAR core stations known as the ``superterp". Image credit ASTRON/LOFAR. The large black tiles are the HBAs while the smaller grey squares mark the locations of the LBAs.}
+\caption[The LOFAR superterp.]{A dense collection of LOFAR core stations known as the ``superterp". The large black tiles are the HBAs while the smaller grey squares mark the locations of the LBAs. A moat is dug around the superterp to keep the antennas above the ground water. Image credit ASTRON/LOFAR. }
 \label{fig:superterp}
 \end{figure}
 %The LOw Frequncy ARray \citep[LOFAR;][]{VanHaarlem2013} is a radio interferometric array located in across Europe. The first LOFAR core station was completed in 2008. Since then, LOFAR has continued to grow to 40 stations in the Netherlands alone with a further 14 across the rest of Europe and another station planned for completion in Italy in the near future. Along with the addition of new stations, an extensive set of software for imaging, calibration, RFI flagging and more has been written for use with data produced by LOFAR. Imaging pipelines described in \cite{VanHaarlem2013} have also been developed to further maximise the quality of the sub-arcsecond spatial resolution data LOFAR can provide with its full $\sim 2000$ km baseline.
@@ -28,7 +28,7 @@ The LBA is a cross dipole antenna in an inverted V shape consisting of two lengt
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\columnwidth]{LBA.jpg}
-\caption[Low Band Antennas at I-LOFAR.]{Low Band Antennas on a rare sunny day at I-LOFAR. The dipoles are connected via coaxial cable down through the PVC pipe to the station container in the background.}
+\caption[Low Band Antennas at I-LOFAR.]{Low Band Antennas on a rare sunny day at I-LOFAR. These dipole antennas observe between 10 and 90 MHz. The dipoles are connected to a preamplifier on top of a PVC pipe via coaxial cables which run underground to the station container in the background.}
 \label{fig:LBA}
 \end{figure}
 
@@ -37,14 +37,14 @@ Each arm of the dipole is 1.38m long which results in a 52MHz resonance peak how
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\columnwidth]{lba_powerspec.png}
-    \caption[Typical power spectrum for an LBA.]{Typical power spectrum for an LBA. The peak at 58~MHz is determined by the length of the dipole arms and the impedance of the low noise amplifier. The `knee' in the spectrum at $\sim 63$~MHz is due to the wires being turned up at the ends.}
+    \caption[Typical power spectrum for an LBA.]{Typical power spectrum for an LBA. The x axis shows frequency in MHz while the y axis is the intensity in arbitrary units. The peak at 58~MHz is determined by the length of the dipole arms and the impedance of the low noise amplifier. The `knee' in the spectrum at $\sim 63$~MHz is due to the wires being turned up at the ends.}
     \label{fig:LBA_power_spec}
 \end{figure}
 
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\columnwidth]{lba_allsky.png}
-\caption[A total intensity all sky image taken with I-LOFAR LBAs.]{An all-sky image taken with I-LOFAR LBAs at 28.91~MHz. The positions of Cassiopeia A and Cygnus A are shown to line up well with the brightest parts of the image.}
+\caption[A total intensity all sky image taken with I-LOFAR LBAs.]{An all-sky image taken with I-LOFAR LBAs at 28.91~MHz. The wide field of view of the LBAs allows the entire sky to be imaged at once. The colourbar shows intensity in arbitrary units. The positions of Cassiopeia A and Cygnus A are shown to line up well with the brightest parts of the image.}
 \label{fig:LBA_allsky}
 \end{figure}
 
@@ -56,7 +56,7 @@ The spectrum above the FM band is observed by the HBA. In order to reduce system
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\columnwidth]{HBA.jpg}
-\caption[The inside of a High Band Antenna tile.]{A High Band Antenna before the tile lid has been placed. The  4 $\times$ 4 grid of bow-tie cross dipole antenna elements is clearly visible inside the expanded polystyrene casing.}
+\caption[The inside of a High Band Antenna tile.]{A High Band Antenna before the tile lid has been placed. These antennas measure radio frequencies from 110 - 240~MHz. The  4 $\times$ 4 grid of bow-tie cross dipole antenna elements is clearly visible inside the expanded polystyrene casing.}
 \label{fig:HBA}
 \end{figure}
 
@@ -65,7 +65,7 @@ Each antenna element in a HBA tile is connected to a front-end which performs pr
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\columnwidth]{hba_powerspec.png}
-    \caption[Typical power spectrum for a HBA 100 - 200~MHz.]{Typical power spectrum for a HBA in the frequency range 100 - 200~MHz. Large peaks here are typically associated with noise from digital audio broadcasting (DAB) radio and other sources of RFI.}
+    \caption[Typical power spectrum for a HBA 100 - 200~MHz.]{Typical power spectrum for a HBA in the frequency range 100 - 200~MHz. The x axis shows frequency in MHz while the y axis is the intensity in arbitrary units. Large peaks here are typically associated with noise from digital audio broadcasting (DAB) radio and other sources of RFI.}
     \label{fig:HBA_power_spec}
 \end{figure}
 
@@ -466,7 +466,7 @@ The most important conclusion to draw from Equation \ref{eq:int_correlation_fina
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.75\columnwidth]{Images/2_elem_int.png}
-    \caption[A two element interferometer.]{A two element interferometer separated by a baseline $\overrightarrow{\Vec{b}}$. The signal from each antenna is correlated by first multiplying the two voltages then time averaging them.}
+    \caption[A two element interferometer.]{A two element interferometer separated by a baseline $\overrightarrow{\Vec{b}}$. The signal reaches antenna 1 a time of $\tau_g$ after it reaches antenna 2. The signal from each antenna is correlated by first multiplying the two voltages then time averaging them. This gives a cosine response $R_c$.}
     \label{fig:2_el_int}
 \end{figure}
 
@@ -569,7 +569,7 @@ We will discuss methods for undoing this convolution shortly but first, a brief 
 
 \subsection{Phase Delays and Beamforming}
 \label{sec:beamform_theory}
-For steerable antennas, pointing at a phase centre is simply a matter of steering the antennas to that direction. For phased arrays such as LOFAR, and in particular the LBAs, this is unsurprisingly not possible. Instead, a time delay is digitally added to the signal from each antenna. For example, in order to maximise the response of the two element interferometer in Figure \ref{fig:2_el_int} to the direction $\hat{\Vec{s}}$, a delay of $\tau_0 = \tau_g$ must be added to the signal of antenna 2. 
+For steerable antennas, pointing at a phase centre is simply a matter of steering the antennas to that direction. For phased arrays such as LOFAR, and in particular the LBAs, this is unsurprisingly not possible. Instead, a time delay is digitally added to the signal from each antenna. For example, in order to maximise the response of the two element interferometer in Figure \ref{fig:2_el_int} to the direction $\hat{\Vec{s}}$, a delay of $\tau_0 = \tau_g$ must be added to the signal of antenna 2. This is illustrated in Figure \ref{fig:2_el_int_delay}.
 
 \begin{figure}[ht]
     \centering
@@ -609,5 +609,34 @@ It is for this reason that the real image cannot be obtained by simply applying 
 You may have noticed that this is performed entirely in the image domain. This has some significant disadvantages, specifically because the PSF must be offset before subtraction, which limits how much of the image that can be deconvolved. An implementation of CLEAN in the visibility domain was developed by \cite{Clark1980} and operates in two cycles, a major and minor cycle. The major cycle starts as above by finding the position of the brightest peak. The minor cycle is then run by implementing a partial H\"ogbom clean with the threshold set based on the first sidelobe of the PSF. The output model from the minor cycle and the PSF are both Fourier transformed and multiplied. This product is then inverse Fourier transformed and subtracted from the dirty image and the major cycle begins again. This method relies heavily on the FFT algorithm which requires the visibilities to be on a regular grid. The effect of gridding can lead to aliasing errors in the deconvolved image. 
 
 The final implementation of the CLEAN algorithm that I will discuss, and the one that is in prevalent use in modern radio imaging software, is the Cotton-Schwab implementation from \cite{Schwab1984}. It follows the same major cycle minor cycle format as the Clark clean however the ungridded visibilities are computed for the sky model. This is done in two methods, for observations with only a few sources in the sky model, the direct Fourier transform is taken. In the more likely case of a large number of sources in the sky model, the visibilities are de-gridded after they have undergone an FFT. These model visibilities are then subtracted from the observed visibilities to produce residual visibilities. These are then imaged and the next iteration occurs.
+
+\subsection{Calibration of Interferometric Visibilities.}
+Interferometric visibilities require calibration in order to account for the effects of the ionosphere. For LOFAR data this is performed using the Default Pre-Processing Pipeline \citep[DPPP;][]{VanDiepen2018}. An observation is made of a known calibrator source for which there is a set of model visibilities. The DPPP calibration algorithm aims to minimise the following equation
+\begin{equation}
+\label{eq:gain}
+\vert \vert \mathbf{V}_{pq} - \mathbf{G}_p \mathbf{M}_{pq} \mathbf{G}^\dag_q \vert \vert
+\end{equation}
+for each baseline $pq$. Here $\mathbf{V}$ are the measured visibilities, $\mathbf{M}$ are the modelled visibilities and $\mathbf{G}$ are known as the gain matrices for each antenna $p$, $q$ and the superscript $\dag$ indicates the Hermitian conjugate. Calibration is done under the assumption of time invariability of the calibrator source. Unfortunately, if the calibrator is close enough to the Sun so that it can be seen in the sidelobes, during bursty periods such as solar radio noise storms this assumption breaks down. Calibration solutions found during these periods are inaccurate at best. The image in Figure \ref{fig:bad_cal} was made with a bad calibration solution and as such, multiple sources can be seen.
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{2019-04-11T12:21:36-image.png}
+\caption[An example of a solar radio burst imaged with poor calibration.]{A solar radio burst imaged with poor calibration. The colourbar shows intensity in units of Jy/beam. The red circle indicates the solar limb while the dashed white ellipse is the CLEAN beam. Multiple bright peaks and negative bowls are typical artefacts of failed calibration.}
+\label{fig:bad_cal}
+\end{figure}
+
+Calibration is arguably the most important step in the data processing of interferometric observations. To date, direction dependent calibration on LOFAR solar observations is not a common step taken, despite its proven success in astrophysical observations \citep{DeGasperin2019}. A method to correct for radio bursts in calibration solutions and combine this with direction dependent calibration should be developed  and self-calibration techniques developed for solar imaging with the Murchison Widefield Array \citep[MWA;][]{Mondal2019} should be implemented before the parameter space for imaging algorithms can be fully explored. 
+
+Imaging algorithms such as CLEAN have proven themselves to be widely successful in the field of radio astronomy. However, the ability to produce different results with the same data by only changing the parameters of the algorithm is too subjective when the main focus of one's research is to determine the size of a radio burst. A number of parameters are necessary to run the CLEAN algorithm with number of iterations and weighting scheme having the most notable effect on the output image. Figure \ref{fig:briggs_comparison} shows how changing the Briggs robustness parameter for weighting the visibilites \citep{Briggs1995} affects the resulting image. The top panel shows the results for the CLEAN algorithm implemented in WSCLEAN and the bottom panel shows the results when using multiscale cleaning \citep{Offringa2017}. 
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{briggs_comparison.png}
+\caption[An example of the same solar radio burst imaged with different weighting parameters.]{A solar radio burst imaged multiple times changing the Briggs robustness parameter with (bottom) and without (top) multiscale cleaning. From left to right the Briggs robustness parameter is chosen as -2, -1, 0, 1 and 2. The effect of this change on the source is most evident when multiscale cleaning is not used. What appears to be a two peak structure with Briggs -2 is completely obfuscated when using Briggs 2. Even when using multiscale cleaning, it is evident that the source size changes considerably with increasing Briggs robustness.}
+\label{fig:briggs_comparison}
+\end{figure}
+
+In order to consistently image the Sun it is important to determine an appropriate calibration procedure as well as standardise which parameters are to be used in imaging algorithms. Currently, there is little in the way of consensus as to how interferometric solar imaging should be done. \cite{Maguire2021} and \cite{Ryan2021} show interferometric imaging of a radio burst and the quiet radio Sun respectively using LOFAR. Their methodology is broadly similar however, was only finalised after multiple trial and error attempts. Unlike wide-field imaging or other astrophysical sources which can build upon years of research using aperture synthesis techniques, the Sun is a time dependent source and does not enjoy the legacy software that has been developed for other radio astronomy applications. 
+In order to extract the most scientific value from current observations, the parameter space for the CLEAN algorithm needs to be explored to avoid making images to a subjective standard. A good start to this work would be to compare how well the algorithm can recreate a known model within the parameter space. The use of supercomputing facilities will be crucial for this to take any reasonable amount of time.
 
 Despite its algorithmic origins, radio imaging can be a very subjective endeavour. Not only can things like the number of iterations or gain parameter be changed to give different results, each baseline can be weighted based on their distance from the centre of the \textit{uv} plane, how many are in a given region, and everything in between \citep{Briggs1995}. As such, when trying to quantify the size of radio bursts with interferometric observations it can be undesirable to rely images that \textit{look} correct. In Chapter \ref{chap:measuring_source_sizes} I outline a technique, never before used in the context of solar radio imaging, to directly fit the visibilities and thus avoid any undesired effects from the various tweaks that can be made with imaging algorithms.
