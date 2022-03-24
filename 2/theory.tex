@@ -129,10 +129,10 @@ where $\mu_n$ is the $n$th order moment. This procedure gives up our knowledge o
 & \mu_1 \rightarrow  \mbox{momentum transport equation or conservation of momentum} \\
 & \mu_2 \rightarrow  \mbox{energy transport equation or conservation of energy}
 \end{align*}
-The moments of the Boltzmann equation allows us to develop the theory of plasmas as being made up of multiple fluids each of their different particle species, e.g. electrons and ions. Under certain conditions it is possible to consider the entire plasma as a single fluid and it is this approach, called magnetohydrodynamics, that I discuss next\footnote{The derivations of the equations of motion for a two-fluid plasma and their subsequent combination to a single fluid are complex and tedious. I therefore once again refer an interested reader to e.g. \cite{Inan2010}}.
+The moments of the Boltzmann equation allow us to develop the theory of plasmas as being made up of multiple fluids each of their different particle species, e.g. electrons and ions. Under certain conditions it is possible to consider the entire plasma as a single fluid and it is this approach, called magnetohydrodynamics, that I discuss next\footnote{The derivations of the equations of motion for a two-fluid plasma and their subsequent combination to a single fluid are complex and tedious. I therefore once again refer an interested reader to e.g. \cite{Inan2010}}.
 \section{Magnetohydrodynamics}
 \label{sec:MHD}
-Magnetohydrodynamics (MHD) is a framework to describe the dynamics of an electrically conducting fluid in the presence of a magnetic field. It is a useful method that can be used to model large-scale, slowly varying plasma phenomena in a highly ionised plasma. For plasmas that are either collision-dominated or contain a strong external magnetic field the MHD description of a plasma is particularly appropriate. Given that these conditions are met in the solar corona, it is worth expanding upon some key ideas of MHD theory. For now we assume a collison-dominated plasma but the same ideas can be applied to collisionless plasmas with strong magnetic fields.
+Magnetohydrodynamics (MHD) is a framework to describe the dynamics of an electrically conducting fluid in the presence of a magnetic field. It is a useful method that can be used to model large-scale, slowly varying plasma phenomena in a highly ionised plasma. For plasmas that are either collision-dominated or contain a strong external magnetic field the MHD description of a plasma is particularly appropriate. Given that these conditions are met in the solar corona, it is worth expanding upon some key ideas of MHD theory. For now we assume a collision-dominated plasma but the same ideas can be applied to collisionless plasmas with strong magnetic fields.
 
 The single fluid equations, derived from the moments of the Boltzmann equation, and the generalised Ohm's law can be simplified using several approximations to form what are known as the simplified MHD equations.
 \begin{subequations} \label{eq:MHD_simplified}
@@ -165,10 +165,11 @@ As we shall see shortly, the generation and propagation of waves in plasmas can 
 \begin{align}
 & \frac{\partial N_1}{\partial t} + N_0 \nabla \cdot \mathbf{u} = 0 \\
 & N_0 m \frac{\partial \mathbf{u}}{\partial t} = q N_0 (\mathbf{E} + \mathbf{u} \times \mathbf{B}_0) - \nabla p_1 \\
-& \frac{p_1}{p_0} = \gamma \frac{N_1}{N_0} \rightarrow p_1 = \gamma k_B T N_1 
+& \frac{p_1}{p_0} = \gamma \frac{N_1}{N_0} \rightarrow p_1 = \gamma k_B T N_1.
 \end{align}
 \end{subequations}
-where the assumption that each particle species is an isothermal gas with temperature $T$ gives $p_0 = N_0 k_b T$. Maxwell's equations then become
+Here $N$ is the electron density, $\mathbf{u}$ is the fluid velocity, $m$ is the particle mass, $\mathbf{B}$ is the magnetic field strength, $p$ is the pressure, $\gamma$ is the adiabatic index and $T$ is the temperature.
+The assumption that each particle species is an isothermal gas with temperature $T$ gives $p_0 = N_0 k_b T$. Maxwell's equations then become
 \begin{subequations} \label{eq:MHDwaves_Maxwell}
 \begin{align}
 & \nabla \cdot \mathbf{E} = \frac{\rho_1}{\epsilon_0} \\
@@ -256,7 +257,7 @@ Equation \ref{eq:dWdt} shows that the growth rate of Langmuir waves is proportio
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\columnwidth]{Images/L_wave_growth.png}
-    \caption[Langmuir wave distriburtion function and spectral energy density.]{Modelled evolution of the electron distribution function and spectral energy density with time. Left: Evolution of distribution function in time where the x axis is velocity normalised by the electron thermal velocity $v_{Te}=V_e$. The diffusive term in Equation \ref{eq:dfdt} causes the bump-on-tail Gaussian to turn into a plateau, thereby eliminating the instability caused by the positive velocity gradient. Right: The spectral energy density of generated Langmuir waves, x axis is wave number normalised to the Debye length $\lambda_D=\sqrt{\frac{\epsilon_0 k_B T_e}{e^2 n_e}}$. Each panel shows successive times of t=0.15s (green, dot-dashed line) and t=2.50s (red, dotted line). Figure taken from \cite{Reid2014}.} %(Figure taken from \citeauthor{Reid2014} \citeyear{Reid2014})}
+    \caption[Langmuir wave distriburtion function and spectral energy density.]{Modelled evolution of the electron distribution function (cm$^{-4}$ s) and spectral energy density (erg cm$^{-2}$) with time. Left: Evolution of distribution function in time where the x axis is velocity normalised by the electron thermal velocity $v_{Te}=V_e$. The diffusive term in Equation \ref{eq:dfdt} causes the bump-on-tail Gaussian to turn into a plateau, thereby eliminating the instability caused by the positive velocity gradient. Right: The spectral energy density of generated Langmuir waves, x axis is wave number normalised to the Debye length $\lambda_D=\sqrt{\frac{\epsilon_0 k_B T_e}{e^2 n_e}}$. Each panel shows successive times of t=0.15s (green, dot-dashed line) and t=2.50s (red, dotted line). Figure taken from \cite{Reid2014}.} %(Figure taken from \citeauthor{Reid2014} \citeyear{Reid2014})}
     \label{fig:Lwavegrowth}
 \end{figure}
 
@@ -267,7 +268,7 @@ $$ \omega_L \cong \omega_p + \frac{3k^2V_e^2}{2 \omega_p}$$
 $$ \omega_S = kv_s $$
 where $V_e$ is the thermal velocity of electrons in the plasma, $v_s$ is the ion sound speed and $k$ is the wave vector. Only transverse waves with $\omega > \omega_p $ can escape and thus a plasma emission mechanism is a process that generates these transverse waves. 
 
-As mentioned in Section \ref{sec:typeIII}, type III bursts have a harmonic structure associated with plasma emission at the plasma frequency and the second harmonic. Both of these transverse waves are formed in different three wave processes that will now be discussed.
+As mentioned in Section \ref{sec:typeIII}, type III bursts have a harmonic structure associated with plasma emission at the plasma frequency and the second harmonic. Both of these transverse waves are formed in different three-wave processes that will now be discussed.
 In a plasma, due to scattering from other wave modes and ions in the plasma, a wave mode can be changed from one to the other \citep{McLean1985, Melrose1987}. This is expressed in the equation 
 $$ \sigma \rightleftarrows \sigma' + \sigma '' $$
 where $\sigma$, $\sigma'$  and  $\sigma ''$ represent different wave modes. Conservation of energy and momentum state \citep{McLean1985},
@@ -283,27 +284,27 @@ where $ \omega^{\sigma}(k)$ is the frequency of a particular wave mode with the 
 & T+S\rightarrow T^\prime \\ 
 & L+L^\prime \rightarrow T.
 \end{align*}
-Of these L+S$\rightarrow$T and L$\rightarrow$T+S are responsible for fundamental emission while harmonic emission is associated with the three wave process L+L$^\prime \rightarrow$T \citep{Melrose1987}.
+Of these L+S$\rightarrow$T and L$\rightarrow$T+S are responsible for fundamental emission while harmonic emission is associated with the three-wave process L+L$^\prime \rightarrow$T \citep{Melrose1987}.
 
-Originally \cite{Ginzburg1958} considered fundamental emission to be due to Langmuir waves scattering off of thermal ions in the plasma. It is now commonly accepted that the biggest cause of fundamental emission is due to the three wave processes of a Langmuir wave coalescing with an ion sound wave generated by L$\rightarrow$L$^\prime$+S or when a Langmuir wave decays into an ion sound wave and an electromagnetic transverse wave. The process L$\rightarrow$T+S can be visualised as in Figure \ref{fig:Femission}. In solar radio physics it is often assumed that $k_L \gg k_T$, knowing this and that the wave vectors must satisfy $\mathbf{k}_L \pm \mathbf{k}_s = \mathbf{k}_T$ ($+$ for L+S$\rightarrow$T , $-$ for L$\rightarrow$T+S) implies $\mathbf{k}_s \approx \mp \mathbf{k}_L$.
+Originally \cite{Ginzburg1958} considered fundamental emission to be due to Langmuir waves scattering off of thermal ions in the plasma. It is now commonly accepted that the biggest cause of fundamental emission is due to the three-wave processes of a Langmuir wave coalescing with an ion sound wave generated by L$\rightarrow$L$^\prime$+S or when a Langmuir wave decays into an ion sound wave and an electromagnetic transverse wave. The process L$\rightarrow$T+S can be visualised as in Figure \ref{fig:Femission}. In solar radio physics it is often assumed that $k_L \gg k_T$, knowing this and that the wave vectors must satisfy $\mathbf{k}_L \pm \mathbf{k}_s = \mathbf{k}_T$ ($+$ for L+S$\rightarrow$T , $-$ for L$\rightarrow$T+S) implies $\mathbf{k}_s \approx \mp \mathbf{k}_L$.
 
 \begin{figure}[ht]
 \centering
 \includegraphics[width=0.5\columnwidth]{Images/Fundamental_emission_Lwaves.png}
-\caption[A three wave process of fundamental plasma emission L$\rightarrow$T+S.]{A three wave process of fundamental plasma emission L$\rightarrow$T+S. A Langmuir wave decaying into an ion sound wave and an electromagnetic transverse wave at the plasma frequency. (Figure adapted from Solar (interplanetary) Radio Bursts: the Generation of Radio Waves,	an oral presentation by David Malaspina at the Jean Louis Steinberg International Workshop on Solar, Heliospheric and Magnetospheric Radioastronomy, November 2017)}
+\caption[A three-wave process of fundamental plasma emission L$\rightarrow$T+S.]{A three-wave process of fundamental plasma emission L$\rightarrow$T+S. A Langmuir wave decaying into an ion sound wave and an electromagnetic transverse wave at the plasma frequency. (Figure adapted from Solar (interplanetary) Radio Bursts: the Generation of Radio Waves,	an oral presentation by David Malaspina at the Jean Louis Steinberg International Workshop on Solar, Heliospheric and Magnetospheric Radioastronomy, November 2017)}
 \label{fig:Femission}
 \end{figure}
 
-Second harmonic emission occurs when two Langmuir waves coalesce in the process L+L$^\prime \rightarrow$T, shown in Figure \ref{fig:Hemission}. Conservation of momentum requires that $\mathbf{k}_L + \mathbf{k'}_L = \mathbf{k}_T$ and for second harmonic (H) generation, $k_T=k_H \approx \frac{\sqrt{3} \omega_p}{c}$. The phase speed $v_\phi$ of Langmuir waves is much less than $\frac{c}{\sqrt{3}}$ meaning that $k_L \gg k_T$ which results in $\mathbf{k}_L \approx -\mathbf{k'}_L$. This means that for a transverse wave at the second harmonic to be created, two Langmuir waves must coalesce almost exactly head on. These backward propagating Langmuir waves are generated: in the three wave processes of L+S$\rightarrow$L$^\prime$ and L$\rightarrow$L$^\prime$+S, i.e. scattering off of thermal ions, and by refraction at density inhomogeneities.
+Second harmonic emission occurs when two Langmuir waves coalesce in the process L+L$^\prime \rightarrow$T, shown in Figure \ref{fig:Hemission}. Conservation of momentum requires that $\mathbf{k}_L + \mathbf{k'}_L = \mathbf{k}_T$ and for second harmonic (H) generation, $k_T=k_H \approx \frac{\sqrt{3} \omega_p}{c}$. The phase speed $v_\phi$ of Langmuir waves is much less than $\frac{c}{\sqrt{3}}$ meaning that $k_L \gg k_T$ which results in $\mathbf{k}_L \approx -\mathbf{k'}_L$. This means that for a transverse wave at the second harmonic to be created, two Langmuir waves must coalesce almost exactly head on. These backward propagating Langmuir waves are generated in the three-wave processes of L+S$\rightarrow$L$^\prime$ and L$\rightarrow$L$^\prime$+S, i.e. scattering off of thermal ions, and by refraction at density inhomogeneities.
  \begin{figure}[ht]
 
      \centering
      \includegraphics[width=0.5\columnwidth]{Images/Harmonic_emission_Lwaves.png}
-     \caption[Three wave process of second harmonic plasma emission L+L' $\rightarrow$ T.]{Three wave process of second harmonic plasma emission L+L' $\rightarrow$ T. A Langmuir wave (L) and a backwards propagating Langmuir wave (L') coalesce to form a transverse wave (T) at $2 \omega_p$. (Figure adapted from Solar (interplanetary) Radio Bursts: the Generation of Radio Waves,	an oral presentation by David Malaspina at the Jean Louis Steinberg International Workshop on Solar, Heliospheric and Magnetospheric Radioastronomy, November 2017)}
+     \caption[Three-wave process of second harmonic plasma emission L+L' $\rightarrow$ T.]{Three-wave process of second harmonic plasma emission L+L' $\rightarrow$ T. A Langmuir wave (L) and a backwards propagating Langmuir wave (L') coalesce to form a transverse wave (T) at $2 \omega_p$. (Figure adapted from Solar (interplanetary) Radio Bursts: the Generation of Radio Waves,	an oral presentation by David Malaspina at the Jean Louis Steinberg International Workshop on Solar, Heliospheric and Magnetospheric Radioastronomy, November 2017)}
      \label{fig:Hemission}
  \end{figure}
  
-\section{Scattering of radio wave light in the solar corona}
+\section{Scattering of radio waves in the solar corona}
 \label{sec:scattering_theory}
 
 \cite{Chandrasekhar1952} outlined a statistical description of ``stellar scintillation" in order to account for observations with astronomical seeing.  The basis of this description is that a plane wave front travels through a turbulent layer whose refractive index, $\mu$, is subject to random fluctuations. The auto correlation function of these fluctuations at two different points $\mathbf{r_1}$ and $\mathbf{r_2}$ is given by
@@ -405,13 +406,13 @@ where $\alpha = \sqrt{\pi}$ in the case $M(r) = \exp{(-r^2/r_0^2)}$.
 %\end{equation}
 %where $\alpha = \sqrt{\pi}$ in the case $M(r) = \exp{(-r^2/r_0^2)}$.
 
-This framework was first used by \cite{Fokker1965} to statistically model rays in a spherically stratified corona however, they did not include the effects of spherical refraction which are relevant when describing radio bursts that are produced near where $\mu = 0$. \cite{Hollweg1967} extended upon the \cite{Chandrasekhar1952} description in particular, for the case $\mu \neq 1$. Using this, \cite{Steinberg1971} consider an unmagnetised, spherical corona with an electron density distribution not dissimilar to \cite{Newkirk1961} and performed a similar ray tracing experiment to \cite{Fokker1965} in order to determine the centre to limb variation of the apparent source intensity, the brightness distribution over a scattered image and its time variability. \cite{Steinberg1971} describe the correlation of refractive index functions in an identical manner to Equation \ref{eq:scattering_correlation} with $M(r) =  \exp{(-r^2/r_0^2)}$. They also introduce the variable 
+This framework was first used by \cite{Fokker1965} to statistically model rays in a spherically stratified corona, however they did not include the effects of spherical refraction which are relevant when describing radio bursts that are produced near where $\mu = 0$. \cite{Hollweg1967} extended upon the \cite{Chandrasekhar1952} description in particular, for the case $\mu \neq 1$. Using this, \cite{Steinberg1971} consider an unmagnetised, spherical corona with an electron density distribution not dissimilar to \cite{Newkirk1961} and performed a similar ray tracing experiment to \cite{Fokker1965} in order to determine the centre to limb variation of the apparent source intensity, the brightness distribution over a scattered image and its time variability. \cite{Steinberg1971} describe the correlation of refractive index functions in an identical manner to Equation \ref{eq:scattering_correlation} with $M(r) =  \exp{(-r^2/r_0^2)}$. They also introduce the variable 
 $$
 \varepsilon =\left( \frac{\langle \delta n^2 \rangle}{n}\right)^{1/2},
 $$
 which is the root mean squared (r.m.s) relative fluctuation of electron density $n$ and note that all observable quantities from their model vary as $\varepsilon^2/r_0$ only. For convenience, I will use the lower case $n$ for electron density for the remainder of the section as the upper case $N$ is needed to describe photon number, as we shall see.
 
-The modelling by \cite{Steinberg1971} made some of the first predictions of the effect of radio wave scattering on the source size of a solar radio burst some of which are still used to date \citep[e.g.][]{Chrysaphi2018}. \cite{Thejappa2007} were the first to perform a similar analysis using improved knowledge of the power spectrum of density fluctuations \citep{Coles1989}. Modern treatments of radio wave scattering are done under a Fokker-Planck framework \citep{Arzner1999, Bian2019}. This approach is based off the Hamiltonian equations of the evolution of a wavevector $\mathbf{k}$ and position $\mathbf{r}$
+The modelling by \cite{Steinberg1971} made some of the first predictions of the effect of radio wave scattering on the source size of a solar radio burst some of which are still used to date \citep[e.g.][]{Chrysaphi2018}. \cite{Thejappa2007} were the first to perform a similar analysis using improved knowledge of the power spectrum of density fluctuations \citep{Coles1989}. Modern treatments of radio wave scattering are done under a Fokker-Planck framework \citep{Arzner1999, Bian2019}. This approach is based on the Hamiltonian equations of the evolution of a wave vector $\mathbf{k}$ and position $\mathbf{r}$
 
 \begin{align}
 \frac{d \mathbf{r}}{dt} = v_g = \frac{\partial \omega}{\partial \mathbf{k}} = \frac{c^2}{\omega} \mathbf{k} \label{eq:scattering_Hamiltonian_r}\\
