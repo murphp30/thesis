@@ -8,7 +8,7 @@
 %: Style file for Latex
 % Most style definitions are in the external file PhDthesisPSnPDF.
 % In this template package, it can be found in ./Latex/Classes/
-\documentclass[a4paper,oneside,12pt]{Latex/Classes/PhDthesisPSnPDF}
+\documentclass[a4paper,twoside,12pt]{Latex/Classes/PhDthesisPSnPDF}
 \setcitestyle{numbers}
 %Change "oneside" to "twoside" for final submission-grade thesis after viva/corrections
 
@@ -199,8 +199,9 @@
 \usepackage{setspace}
 \singlespacing
 \graphicspath{{./}{Images/}}
+\tracingmacros=1
 \begin{document}
-
+\tracingmacros=0
 \setcitestyle{authoryear}
 
 \renewcommand\baselinestretch{1.2}
@@ -252,7 +253,7 @@ Prof. Peter T. Gallagher}\\[0.5mm]
 \textit{Co-Supervisor:} \\
 Dr. Eoin P. Carley}\\[0.5mm]
 \end{flushright}
-{December 2021}\\[5mm]
+{April 2022}\\[5mm]
 \rule{0.9\textwidth}{0.5mm}\\[4mm]
 %
 \begin{figure}[ht!]
